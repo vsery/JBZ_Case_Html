@@ -1,0 +1,163 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb"> 
+        <li><a href="index.html">首页</a></li>
+        <li class="active">领读</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="alert alert-info fade in" role="alert">
+                <a type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></a>
+                <strong>提示!</strong> 显示排序数字越小,排在越前面!
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <ul class="nav navbar-nav">
+                <li><a href="javascript:;" onclick="srcpage('view-platform/new_add_lead_time.html')" class='btn'>新建</a></li>
+            </ul>
+            <div class="navbar-form navbar-right" role="search">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="请输入文章标题">
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">发布时间</span>
+                    <input class="form-control datetimepicker" placeholder="开始时间" type="text">
+                    <span class="input-group-addon">~</span>
+                    <input class="form-control datetimepicker" placeholder="结束时间" type="text">
+                </div>
+                <a href="javascript:;" class="btn btn-info">查询</a>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-lg-12 ">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center">显示排序</th>
+                            <th class="text-center">文章标题</th>
+                            <th class="text-center">文章封面</th>
+                            <th class="text-center">文章内容</th>
+                            <th class="text-center">发布时间</th>
+                            <th class="text-center">查看权限</th>
+                            <th class="text-center">查看人数</th>
+                            <th class="text-center">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center" id="article_table">
+                        <tr>
+                            <td><span class="SequenceID">1</span></td>
+                            <td>绿色建材</td>
+                            <td><img src="images/books/book07.jpg" alt="" class="img-small"></td>
+                            <td><span class="nowrap">绿色建材,又称生态建材、环保建材和健康建材，指健康型、环保型、安全型的建筑材料，在国际上也成为“健康建材”和“环保建材”，绿色建材不是指单独的建材产品，而是对建材“健康、环保、安全”品性的评价。它注重建材对人体健康和环保所造成的影响及安全防火性能。它具有消磁、消声、调光、隔热、防火、抗静电的性能，并具有调节人体技能的特种新型功能建材材料。</span></td>
+                            <td>2015-12-10 21:22:22</td>
+                            <td>来访可读</td>
+                            <td>3789</td>
+                            <td>
+                                <a href="javascript:;" onclick="srcpage('view-platform/new_lead_time_chapter.html')" class="btn"><i class="fa fa-map-o"></i> 章节</a>
+                                <a href="javascript:;" onclick="srcpage('view-platform/new_add_lead_time.html')" class="btn"><i class="fa fa-edit"></i> 修改</a><br/>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                    <div class="close_box text-right">
+                                        <span class='colse_txt text-center'>您确定删除么?</span>
+                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="SequenceID">2</span></td>
+                            <td>建筑材料与肌理</td>
+                            <td><img src="images/books/book01.jpg" alt="" class="img-small"></td>
+                            <td><span class="nowrap">它注重建材对人体健康和环保所造成的影响及安全防火性能。它具有消磁、消声、调光、隔热、防火、抗静电的性能，并具有调节人体技能的特种新型功能建材材料。</span></td>
+                            <td>2015-12-1 7:38:22</td>
+                            <td>会员可读</td>
+                            <td>5329</td>
+                            <td>
+                                <a href="javascript:;" onclick="srcpage('view-platform/new_lead_time_chapter.html')" class="btn"><i class="fa fa-map-o"></i> 章节</a>
+                                <a href="javascript:;" onclick="srcpage('view-platform/new_add_lead_time.html')" class="btn"><i class="fa fa-edit"></i> 修改</a><br/>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                    <div class="close_box text-right">
+                                        <span class='colse_txt text-center'>您确定删除么?</span>
+                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="SequenceID">3</span></td>
+                            <td>买的起的正版设计</td>
+                            <td><img src="images/books/book05.jpg" alt="" class="img-small"></td>
+                            <td><span class="nowrap">它具有消磁、消声、调光、隔热、防火、抗静电的性能，并具有调节人体技能的特种新型功能建材材料。</span></td>
+                            <td>2015-11-20 9:20:22</td>
+                            <td>来访可读</td>
+                            <td>5489</td>
+                            <td>
+                                <a href="javascript:;" onclick="srcpage('view-platform/new_lead_time_chapter.html')" class="btn"><i class="fa fa-map-o"></i> 章节</a>
+                                <a href="javascript:;" onclick="srcpage('view-platform/new_add_lead_time.html')" class="btn"><i class="fa fa-edit"></i> 修改</a><br/>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                    <div class="close_box text-right">
+                                        <span class='colse_txt text-center'>您确定删除么?</span>
+                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="SequenceID">4</span></td>
+                            <td>东湖家具尊享宴</td>
+                            <td><img src="images/books/book06.jpg" alt="" class="img-small"></td>
+                            <td><span class="nowrap">在国际上也成为“健康建材”和“环保建材”，绿色建材不是指单独的建材产品，而是对建材“健康、环保、安全”品性的评价。它注重建材对人体健康和环保所造成的影响及安全防火性能。它具有消磁、消声、调光、隔热、防火、抗静电的性能，并具有调节人体技能的特种新型功能建材材料。</span></td>
+                            <td>2015-11-11 18:23:22</td>
+                            <td>会员可读</td>
+                            <td>4789</td>
+                            <td>
+                                <a href="javascript:;" onclick="srcpage('view-platform/new_lead_time_chapter.html')" class="btn"><i class="fa fa-map-o"></i> 章节</a>
+                                <a href="javascript:;" onclick="srcpage('view-platform/new_add_lead_time.html')" class="btn"><i class="fa fa-edit"></i> 修改</a><br/>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                    <div class="close_box text-right">
+                                        <span class='colse_txt text-center'>您确定删除么?</span>
+                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <nav class='navbar-right'>
+                    <ul class="pagination">
+                        <li class="disabled">
+                            <a href="javascript:;" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="javascript:;">1</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">2</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">3</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/public.js"></script>

@@ -1,0 +1,101 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb"> 
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/account_list.html')">账号管理</a></li>
+        <li class="active">账号编辑</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="input-group">
+                <span class="input-group-addon">登录账号</span>
+                <input type="text" class="form-control" placeholder="请填写账号名">
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <a class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 选择角色 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="javascript:;" class="btn">经销商</a></li>
+                        <li><a href="javascript:;" class="btn">营销经理</a></li>
+                        <li><a href="javascript:;" class="btn">产品经理</a></li>
+                        <li><a href="javascript:;" class="btn">财务经理</a></li>
+                    </ul>
+                </div>
+                <input type="name" class="form-control" placeholder="选择角色" readonly>
+            </div>
+        </div>
+        <div class="col-lg-4 text-right">
+            <label class="js-switch ui-switcher ui-switcher-on"></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="input-group">
+                <span class="input-group-addon">登录密码</span>
+                <input class="password form-control" value="123456" type="password">
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="input-group">
+                <span class="input-group-addon">确认密码</span>
+                <input class="password form-control" value="123456" type="password">
+            </div>
+        </div>
+    </div><hr/>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="input-group">
+                <span class="input-group-addon">真实姓名</span>
+                <input type="text" class="form-control" placeholder="请填写真实姓名">
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="input-group">
+                <span class="input-group-addon">手机号码</span>
+                <input type="text" class="form-control" placeholder="请填写手机号码">
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="input-group">
+                <span class="input-group-addon">QQ</span>
+                <input type="text" class="form-control" placeholder="请填写QQ">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="input-group">
+                <span class="input-group-addon">微信账号</span>
+                <input type="text" class="form-control" placeholder="请填写微信号">
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-group">
+                <span class="input-group-addon">管理地区</span>
+                <select id="s_province" style="width: 100%;" name="s_province"></select>
+                <span class="input-group-addon">城市</span>
+                <select id="s_city" style="width: 100%;" name="s_city" ></select>
+                <span class="input-group-addon">区域</span>
+                <select id="s_county" style="width: 100%;" name="s_county"></select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="input-group">
+                <span class="input-group-addon">备注</span>
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 text-center">            
+            <a href="javascript:;" onclick="srcpage('view-platform/account_list.html')" class="btn btn-info">保存信息</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">    
+    _init_area();
+</script>
+<script type="text/javascript" src="js/public.js"></script>

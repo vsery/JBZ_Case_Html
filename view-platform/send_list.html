@@ -1,0 +1,304 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">派送组</li>
+    </ol>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="javascript:;" onclick="srcpage('view-platform/send_edit.html')" class='btn'>添加</a></li>
+                </ul>
+                <div class="navbar-form navbar-right" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入地区">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入状态">
+                    </div>
+                    <a href="javascript:;" class="btn btn-info">查询</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-lg-12 ">
+            <div class="table-responsive">
+                <table class="table table-condensed table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center">派送组</th>
+                            <th class="text-center">通知分类</th>
+                            <th class="text-center">派送区域</th>
+                            <th class="text-center">状态</th>
+                            <th class="text-center">派送组成员</th>
+                            <th class="text-center">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td class="length">长沙派送雨花组</td>
+                            <td>地区分单</td>
+                            <td>长沙-雨花</td>
+                            <td><a href="javascript:;" type="button" class="btn" disabled="disabled">激活</a></td>
+                            <td><a href="javascript:;" class="text-info" data-toggle="modal" data-target="#courier_item">派送组成员</a></td>
+                            <td>
+                                <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#add_courier"><i class="fa fa-user-plus"></i> 加员 </a>
+                                <a href="javascript:;" onclick="srcpage('view-platform/send_grouping_list.html')" class="btn"><i class="fa fa-check"></i> 分单</a><br/>
+                                <a href="javascript:;" onclick="srcpage('view-platform/send_edit.html')" class='btn'><i class="fa fa-edit"></i> 修改</a>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                    <div class="close_box text-right">
+                                        <span class='colse_txt text-center'>您确定删除么?</span>
+                                        <a href="javascript:;" class="btn btn-info">确定</a>
+                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="length">长沙派送天心组</td>
+                            <td>地区分单</td>
+                            <td>长沙-天心</td>
+                            <td><a href="javascript:;" type="button" class="btn" disabled="disabled">激活</a></td>
+                            <td><a href="javascript:;" class="text-info" data-toggle="modal" data-target="#courier_item">派送组成员</a></td>
+                            <td>
+                                <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#add_courier"><i class="fa fa-user-plus"></i> 加员 </a>
+                                <a href="javascript:;" onclick="srcpage('view-platform/send_grouping_list.html')" class="btn"><i class="fa fa-check"></i> 分单</a><br/>
+                                <a href="javascript:;" onclick="srcpage('view-platform/send_edit.html')" class='btn'><i class="fa fa-edit"></i> 修改</a>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                    <div class="close_box text-right">
+                                        <span class='colse_txt text-center'>您确定删除么?</span>
+                                        <a href="javascript:;" class="btn btn-info">确定</a>
+                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="length">长沙派送开福组</td>
+                            <td>地区分单</td>
+                            <td>长沙-开福</td>
+                            <td><a href="javascript:;" type="button" class="btn">激活</a></td>
+                            <td><a href="javascript:;" class="text-info" data-toggle="modal" data-target="#courier_item">派送组成员</a></td>
+                            <td>
+                                <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#add_courier"><i class="fa fa-user-plus"></i> 加员 </a>
+                                <a href="javascript:;" onclick="srcpage('view-platform/send_grouping_list.html')" class="btn"><i class="fa fa-check"></i> 分单</a><br/>
+                                <a href="javascript:;" onclick="srcpage('view-platform/send_edit.html')" class='btn'><i class="fa fa-edit"></i> 修改</a>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                    <div class="close_box text-right">
+                                        <span class='colse_txt text-center'>您确定删除么?</span>
+                                        <a href="javascript:;" class="btn btn-info">确定</a>
+                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="length">长沙派送岳麓组</td>
+                            <td>地区分单</td>
+                            <td>长沙-岳麓</td>
+                            <td><a href="javascript:;" type="button" class="btn" disabled='disabled'>激活</a></td>
+                            <td><a href="javascript:;" class="text-info" data-toggle="modal" data-target="#courier_item">派送组成员</a></td>
+                            <td>
+                                <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#add_courier"><i class="fa fa-user-plus"></i> 加员 </a>
+                                <a href="javascript:;" onclick="srcpage('view-platform/send_grouping_list.html')" class="btn"><i class="fa fa-check"></i> 分单</a><br/>
+                                <a href="javascript:;" onclick="srcpage('view-platform/send_edit.html')" class='btn'><i class="fa fa-edit"></i> 修改</a>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                    <div class="close_box text-right">
+                                        <span class='colse_txt text-center'>您确定删除么?</span>
+                                        <a href="javascript:;" class="btn btn-info">确定</a>
+                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <nav class='navbar-right'>
+                    <ul class="pagination">
+                        <li><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                        <li><a href="javascript:;">1</a></li>
+                        <li><a href="javascript:;">2</a></li>
+                        <li><a href="javascript:;">3</a></li>
+                        <li><a href="javascript:;">4</a></li>
+                        <li><a href="javascript:;">5</a></li>
+                        <li><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="courier_item" tabindex="-1" role="dialog" aria-labelledby="courier_itemLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="courier_itemLabel">派送组成员</h4>
+            </div>
+            <div class="modal-body">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="javascript:;" type="button" class="btn" class="close" data-dismiss="modal" aria-label="Close">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="navbar-form navbar-right" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="请输入昵称">
+                                </div>
+                                <a href="javascript:;" class="btn btn-info">查询</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center"><input type="checkbox"></th>
+                                <th class="text-center">昵称</th>
+                                <th class="text-center">联系电话</th>
+                                <th class="text-center">真实姓名</th>
+                                <th class="text-center">所在地区</th>
+                                <th class="text-center">负责人/组长</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>派送员E</td>
+                                <td>18075173728</td>
+                                <td>李浩</td>
+                                <td>湖南-长沙-雨花区</td>
+                                <td><input type="radio" name="courier_admin" title="设为组长"> 组长</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-trash-o"></i> 删除 </a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>派送员E</td>
+                                <td>18855173728</td>
+                                <td>李洁</td>
+                                <td>湖南-长沙-雨花区</td>
+                                <td><input type="radio" name="courier_admin" title="设为组长"> 组长</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-trash-o"></i> 删除 </a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>派送员E</td>
+                                <td>18075573728</td>
+                                <td>李杰</td>
+                                <td>湖南-长沙-雨花区</td>
+                                <td><input type="radio" name="courier_admin" title="设为组长"> 组长</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-trash-o"></i> 删除 </a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <nav class='navbar-right'>
+                        <ul class="pagination">
+                            <li><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                            <li><a href="javascript:;">1</a></li>
+                            <li><a href="javascript:;">2</a></li>
+                            <li><a href="javascript:;">3</a></li>
+                            <li><a href="javascript:;">4</a></li>
+                            <li><a href="javascript:;">5</a></li>
+                            <li><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="add_courier" tabindex="-1" role="dialog" aria-labelledby="courier_itemLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="courier_itemLabel"> 派送组增加成员 </h4>
+            </div>
+            <div class="modal-body">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="javascript:;" type="button" class="btn" class="close" data-dismiss="modal" aria-label="Close">
+                                        <i class="fa fa-plus"></i> 添加
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="navbar-form navbar-right" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="请输入昵称">
+                                </div>
+                                <a href="javascript:;" class="btn btn-info">查询</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center"><input type="checkbox"></th>
+                                <th class="text-center">昵称</th>
+                                <th class="text-center">联系电话</th>
+                                <th class="text-center">真实姓名</th>
+                                <th class="text-center">地区</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>派送员E</td>
+                                <td>18075173728</td>
+                                <td>李浩</td>
+                                <td>湖南-长沙-雨花区</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-plus"></i> 添加</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>派送员E</td>
+                                <td>18855173728</td>
+                                <td>李洁</td>
+                                <td>湖南-长沙-雨花区</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-plus"></i> 添加</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>派送员E</td>
+                                <td>18075573728</td>
+                                <td>李杰</td>
+                                <td>湖南-长沙-雨花区</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-plus"></i> 添加</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <nav class='navbar-right'>
+                        <ul class="pagination">
+                            <li><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                            <li><a href="javascript:;">1</a></li>
+                            <li><a href="javascript:;">2</a></li>
+                            <li><a href="javascript:;">3</a></li>
+                            <li><a href="javascript:;">4</a></li>
+                            <li><a href="javascript:;">5</a></li>
+                            <li><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/public.js"></script>

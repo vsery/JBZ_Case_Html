@@ -1,0 +1,60 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/new_lead_time.html')">领读</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/new_lead_time_chapter.html')">章节管理</a></li>
+        <li class="active">新建章节</li>
+    </ol>
+    <div id="books-info">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="input-group">
+                    <span class="input-group-addon">章节标题</span>
+                    <input class="form-control" placeholder="请输入章节标题" type="text" id="article_name">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <a class="btn btn-default file_btn" onclick="showFile()">章节内容</a>
+                    </span>
+                    <input class="file_info form-control" placeholder="选择章节内容" disabled="disabled" type="text">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-addon">发布时间</span>
+                    <input class="form-control datetimepicker" placeholder="开始时间" type="text">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            选择类型
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a href="javascript:;" class="btn">视频</a></li>
+                            <li><a href="javascript:;" class="btn">音频</a></li>
+                        </ul>
+                    </div>
+                    <input class="form-control" placeholder="请选择视频" disabled="disabled" type="text">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center"><a href="javascript:;" class="btn btn-info">保存</a></div>
+        </div>
+    </div>
+</div>
+<div id="FileAdmin"></div>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript">
+    $("body").off();
+    fileobj = $.ajax({ type:"GET", url:"plugins/resourceManager/FileAdmin.html", dataType:"html", async:false });
+    $("#FileAdmin").html( fileobj.responseText); //ajax加载资源管理器
+    function showFile() { $("#FileAdminBox").addClass('open'); } //打开资源管理
+</script>

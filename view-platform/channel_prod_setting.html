@@ -1,0 +1,409 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">产品分成</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="alert alert-info fade in" role="alert">
+                <a type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></a>
+                <strong>提示!</strong> 分成金额设置为0元,改商品将不计算分成!
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#prod_commission_tab" aria-controls="prod_commission_tab" role="tab" data-toggle="tab">渠道直营店产品分成</a></li>
+                <li role="presentation"><a href="#not_commission_tab" aria-controls="not_commission_tab" role="tab" data-toggle="tab">渠道经销商产品分成</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav"><li><a href="javascript:;" class='btn' data-toggle="modal" data-target="#channel_prod_modal">添加</a></li></ul>
+                                <div class="navbar-form navbar-right" role="search">
+                                    <div class="input-group"><input type="text" class="form-control" placeholder="请输入产品名称"></div>
+                                    <a href="javascript:;" class="btn btn-info">查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-hover">
+                            <thead><tr>
+                                    <th class="text-center">分成产品名称</th>
+                                    <th class="text-center">产品销售价(元)</th>
+                                    <th class="text-center">享受分成等级</th>
+                                    <th class="text-center">分成多少(元)</th>
+                                    <th class="text-center">操作</th>
+                            </tr></thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td>青果槟榔黑色包装</td>
+                                    <td><ul>
+                                            <li>56.88</li><li>56.88</li><li>56.88</li>
+                                        </ul>
+                                    </td>
+                                    <td><ul>
+                                        <li>省级直营店</li>
+                                        <li>省级直营店</li>
+                                        <li>省级直营店</li>
+                                    </ul></td>
+                                    <td><ul>
+                                        <li>3.55</li>
+                                        <li>3.55</li>
+                                        <li>3.55</li>
+                                    </ul></td>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#channel_prod_modal"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                    <div class="close_bomb">
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除 </a>
+                                        <div class="close_box text-right">
+                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                        </div>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>高档槟榔味赢天下</td>
+                                    <td>56.88</td>
+                                    <td>省级直营店</td>
+                                    <td>3.55</td>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#channel_prod_modal"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                    <div class="close_bomb">
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除 </a>
+                                        <div class="close_box text-right">
+                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                        </div>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>高档槟榔</td>
+                                    <td>56.88</td>
+                                    <td>省级直营店</td>
+                                    <td>3.55</td>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#channel_prod_modal"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                    <div class="close_bomb">
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除 </a>
+                                        <div class="close_box text-right">
+                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                        </div>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>口味王槟郎</td>
+                                    <td>56.88</td>
+                                    <td>省级直营店</td>
+                                    <td>3.55</td>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#channel_prod_modal"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                    <div class="close_bomb">
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除 </a>
+                                        <div class="close_box text-right">
+                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                        </div>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>口味王青果槟榔</td>
+                                    <td>56.88</td>
+                                    <td>省级直营店</td>
+                                    <td>3.55</td>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#channel_prod_modal"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                    <div class="close_bomb">
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除 </a>
+                                        <div class="close_box text-right">
+                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                        </div>
+                                    </div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <nav class='navbar-right'>
+                            <ul class="pagination">
+                                <li><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                <li class="active"><a href="javascript:;">1</a></li>
+                                <li><a href="javascript:;">2</a></li>
+                                <li><a href="javascript:;">3</a></li>
+                                <li><a href="javascript:;">4</a></li>
+                                <li><a href="javascript:;">5</a></li>
+                                <li><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="not_commission_tab">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav"><li><a href="javascript:;" class='btn' data-toggle="modal" data-target="#channel_prod_modal2">添加</a></li></ul>
+                                <div class="navbar-form navbar-right" role="search">
+                                    <div class="input-group"><input type="text" class="form-control" placeholder="请输入产品名称"></div>
+                                    <a href="javascript:;" class="btn btn-info">查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-hover">
+                            <thead><tr>
+                                    <th class="text-center">分成产品名称</th>
+                                    <th class="text-center">产品销售价(元)</th>
+                                    <th class="text-center">享受分成等级</th>
+                                    <th class="text-center">分成多少(元)</th>
+                                    <th class="text-center">操作</th>
+                            </tr></thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td>青果槟榔黑色包装</td>
+                                    <td>56.88</td>
+                                    <td>省级经销商</td>
+                                    <td>3.55</td>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#channel_prod_modal2"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                    <div class="close_bomb">
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除 </a>
+                                        <div class="close_box text-right">
+                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                        </div>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>高档槟榔味赢天下</td>
+                                    <td>56.88</td>
+                                    <td>省级经销商</td>
+                                    <td>3.55</td>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#channel_prod_modal2"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                    <div class="close_bomb">
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除 </a>
+                                        <div class="close_box text-right">
+                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                        </div>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>高档槟榔</td>
+                                    <td>56.88</td>
+                                    <td>省级经销商</td>
+                                    <td>3.55</td>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#channel_prod_modal2"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                    <div class="close_bomb">
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除 </a>
+                                        <div class="close_box text-right">
+                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                        </div>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>口味王槟郎</td>
+                                    <td>56.88</td>
+                                    <td>省级经销商</td>
+                                    <td>3.55</td>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#channel_prod_modal2"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                    <div class="close_bomb">
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除 </a>
+                                        <div class="close_box text-right">
+                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                        </div>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>口味王青果槟榔</td>
+                                    <td>56.88</td>
+                                    <td>省级经销商</td>
+                                    <td>3.55</td>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#channel_prod_modal2"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                    <div class="close_bomb">
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除 </a>
+                                        <div class="close_box text-right">
+                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                        </div>
+                                    </div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <nav class='navbar-right'>
+                            <ul class="pagination">
+                                <li><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                <li class="active"><a href="javascript:;">1</a></li>
+                                <li><a href="javascript:;">2</a></li>
+                                <li><a href="javascript:;">3</a></li>
+                                <li><a href="javascript:;">4</a></li>
+                                <li><a href="javascript:;">5</a></li>
+                                <li><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="channel_prod_modal" tabindex="-1" role="dialog" aria-labelledby="channel_prod_modalLabel"><!--渠道直营店产品分成设置-->
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                <h4 class="modal-title" id="channel_prod_modalLabel">渠道产品分佣设置</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">产品:</span>
+                            <input type="text" class="form-control" placeholder="'有赞'对应产品">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">价格:</span>
+                            <input type="text" class="form-control" placeholder="产品销售价">
+                            <span class="input-group-addon">元</span>
+                        </div>
+                    </div>
+                </div>
+				<div class="row">
+					<div class="col-lg-6">
+						<div class="input-group">
+                            <div class="input-group-btn">
+                                <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="权重越大,优先级越高"> 分成等级 <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="btn" href="javascript:;">省级直营店</a></li>
+                                    <li><a class="btn" href="javascript:;">市级直营店</a></li>
+                                    <li><a class="btn" href="javascript:;">县级直营店</a></li>
+                                </ul>
+                            </div>
+							<input type="text" class="form-control" placeholder="分成等级" disabled="disable">
+						</div>
+					</div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="分多少">
+                            <span class="input-group-addon">元</span>
+							<div class="input-group-btn">
+								<a class="btn btn-default" onclick="delrow(this)"><i class="fa fa-times"></i></a>
+							</div>
+                        </div>
+                    </div>
+				</div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-default float-left" onclick="addrow(this)"><i class="fa fa-plus"></i></a>
+                <a class="btn btn-info">保存</a>
+                <a class="btn btn-default" data-dismiss="modal">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="channel_prod_modal2" tabindex="-1" role="dialog" aria-labelledby="channel_prod_modal2Label"><!--渠道经销商产品分成设置-->
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                <h4 class="modal-title" id="channel_prod_modal2Label">渠道产品分佣设置</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">产品:</span>
+                            <input type="text" class="form-control" placeholder="'有赞'对应产品">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">价格:</span>
+                            <input type="text" class="form-control" placeholder="产品销售价">
+                            <span class="input-group-addon">元</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="权重越大,优先级越高"> 分成等级 <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="btn" href="javascript:;">省级直营店</a></li>
+                                    <li><a class="btn" href="javascript:;">市级直营店</a></li>
+                                    <li><a class="btn" href="javascript:;">县级直营店</a></li>
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control" placeholder="分成等级" disabled="disable">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="分多少">
+                            <span class="input-group-addon">元</span>
+                            <div class="input-group-btn">
+                                <a class="btn btn-default" onclick="delrow(this)"><i class="fa big fa-times"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-default float-left" onclick="addrow(this)"><i class="fa big fa-plus"></i></a>
+                <a class="btn btn-info">保存</a>
+                <a class="btn btn-default" data-dismiss="modal">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function delrow(e) {
+        $(e).parents("div.row").remove();
+    }
+    function addrow(e) {
+        $(e).parents(".modal-dialog").find('.modal-body').append('<div class="row">'+
+                    '<div class="col-lg-6">'+
+                        '<div class="input-group">'+
+                            '<div class="input-group-btn">'+
+                                '<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="权重越大,优先级越高"> 分成等级 <span class="caret"></span></a>'+
+                                '<ul class="dropdown-menu">'+
+                                    '<li><a class="btn" href="javascript:;">省级直营店</a></li>'+
+                                    '<li><a class="btn" href="javascript:;">市级直营店</a></li>'+
+                                    '<li><a class="btn" href="javascript:;">县级直营店</a></li>'+
+                                '</ul>'+
+                            '</div>'+
+                            '<input type="text" class="form-control" placeholder="分成等级" disabled="disable">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="col-lg-6">'+
+                        '<div class="input-group">'+
+                            '<input type="text" class="form-control" placeholder="分多少">'+
+                            '<span class="input-group-addon">元</span>'+
+                            '<div class="input-group-btn">'+
+                                '<a class="btn btn-default" onclick="delrow(this)"><i class="fa big fa-times"></i></a>'+
+                            '</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</div>');
+        //下拉按钮内容显示到文本框
+        $('.dropdown-menu li').on("click", "a", function() {
+            dropdown($(this));
+            form_dropdown($(this));
+            $('.danger_txt').removeClass("in");
+        });
+    }
+</script>
+<script type="text/javascript" src='js/public.js'></script>

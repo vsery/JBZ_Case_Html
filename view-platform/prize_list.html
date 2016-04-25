@@ -1,0 +1,379 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">兑换商品</li>
+    </ol>        
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">            
+                    <li><a href="javascript:;" class='btn' data-toggle="modal" data-target="#intergral_info">添加</a></li>
+                    <li>
+                        <div class="close_bomb">
+                            <a href="javascript:;" class="btn close_btn">删除</a>
+                            <div class="close_box text-right" id="all">
+                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                <a href="javascript:;" class="btn btn-info">确定</a>
+                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="navbar-form navbar-right" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入产品名称/商品码"></div>
+                    <a href="javascript:;" class="btn btn-info">查询</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-lg-12 ">
+            <div class="table-responsive">
+                <table class="table table-condensed table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center"><input type="checkbox"></th>
+                            <th class="text-center">排序</th>
+                            <th class="text-center">名称</th>
+                            <th class="text-center">类型</th>
+                            <th class="text-center">预览</th>
+                            <th class="text-center">所需积分</th>
+                            <th class="text-center">价格(元)</th>
+                            <th class="text-center">剩余数</th>
+                            <th class="text-center">状态</th>
+                            <th class="text-center">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center" id="prize_table">
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><span class="sort">1</span></td>
+                            <td class="leng"><a href="javascript:;" class='btn prize_name' data-toggle="modal" data-target="#intergral_info" title="口味王槟郎兑换商品详情">口味王槟郎口味王槟郎口味王槟郎口味王槟郎口味王槟郎</a></td>
+                            <td><span class="type">兑换码</span></td>
+                            <td><a href="images/product/product_2.png" target="_blank"><img class="img-small" src="images/product/product_2.png"></a></td>
+                            <td><span class="integral">1200</span></td>
+                            <td><span class="price">5</span></td>
+                            <td><span class="num">2789</span></td>
+                            <td><a class="btn success_btn hide" onclick="upcircle(this)" title="商品上架"><i class="fa fa-chevron-circle-up" ></i> 上架 </a>
+                                <a class="btn error_btn" onclick="downcircle(this)" title="商品下架"><i class="fa fa-chevron-circle-down"></i> 下架 </a>
+                            </td>
+                            <td><a class="btn" data-toggle="modal" data-target="#file_open" title="导入优惠码"><i class="fa fa-file" ></i> 导入 </a>
+                                <a class="btn left_nav_btn" onclick="srcpage('view-platform/prize_discount_code_list.html')" title="查询优惠码"><i class="fa fa-eye" ></i> 查询 </a><br/>
+                                <a class="btn" data-toggle="modal" data-target="#intergral_info" title="修改兑换商品"><i class="fa fa-edit" ></i> 修改 </a>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                                    <div class="close_box text-right">
+                                        <span class='colse_txt text-center'>您确定删除么?</span>
+                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><span class="sort">1</span></td>
+                            <td class="leng"><a href="javascript:;" class='btn prize_name' data-toggle="modal" data-target="#intergral_info" title="口味王槟郎兑换商品详情">口味王槟郎口味王槟郎口味王槟郎口味王槟郎口味王槟郎</a></td>
+                            <td><span class="type">兑换码</span></td>
+                            <td><a href="images/product/product_2.png" target="_blank"><img class="img-small" src="images/product/product_2.png"></a></td>
+                            <td><span class="integral">1200</span></td>
+                            <td><span class="price">5</span></td>
+                            <td><span class="num">2789</span></td>
+                            <td><a class="btn success_btn hide" onclick="upcircle(this)" title="商品上架"><i class="fa fa-chevron-circle-up" ></i> 上架 </a>
+                                <a class="btn error_btn" onclick="downcircle(this)" title="商品下架"><i class="fa fa-chevron-circle-down"></i> 下架 </a>
+                            </td>
+                            <td><a class="btn" data-toggle="modal" data-target="#file_open" title="导入优惠码"><i class="fa fa-file" ></i> 导入 </a>
+                                <a class="btn left_nav_btn" onclick="srcpage('view-platform/prize_discount_code_list.html')" title="查询优惠码"><i class="fa fa-eye" ></i> 查询 </a><br/>
+                                <a class="btn" data-toggle="modal" data-target="#intergral_info" title="修改兑换商品"><i class="fa fa-edit" ></i> 修改 </a>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                                    <div class="close_box text-right">
+                                        <span class='colse_txt text-center'>您确定删除么?</span>
+                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><span class="sort">1</span></td>
+                            <td class="leng"><a href="javascript:;" class='btn prize_name' data-toggle="modal" data-target="#intergral_info" title="口味王槟郎兑换商品详情">口味王槟郎口味王槟郎口味王槟郎口味王槟郎口味王槟郎</a></td>
+                            <td><span class="type">兑换码</span></td>
+                            <td><a href="images/product/product_2.png" target="_blank"><img class="img-small" src="images/product/product_2.png"></a></td>
+                            <td><span class="integral">1200</span></td>
+                            <td><span class="price">5</span></td>
+                            <td><span class="num">2789</span></td>
+                            <td><a class="btn success_btn hide" onclick="upcircle(this)" title="商品上架"><i class="fa fa-chevron-circle-up" ></i> 上架 </a>
+                                <a class="btn error_btn" onclick="downcircle(this)" title="商品下架"><i class="fa fa-chevron-circle-down"></i> 下架 </a>
+                            </td>
+                            <td><a class="btn" data-toggle="modal" data-target="#file_open" title="导入优惠码"><i class="fa fa-file" ></i> 导入 </a>
+                                <a class="btn left_nav_btn" onclick="srcpage('view-platform/prize_discount_code_list.html')" title="查询优惠码"><i class="fa fa-eye" ></i> 查询 </a><br/>
+                                <a class="btn" data-toggle="modal" data-target="#intergral_info" title="修改兑换商品"><i class="fa fa-edit" ></i> 修改 </a>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                                    <div class="close_box text-right">
+                                        <span class='colse_txt text-center'>您确定删除么?</span>
+                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <nav class='navbar-right'>
+        <ul class="pagination">
+            <li>
+                <a href="javascript:;" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:;">1</a>
+            </li>
+            <li>
+                <a href="javascript:;">2</a>
+            </li>
+            <li>
+                <a href="javascript:;">3</a>
+            </li>
+            <li>
+                <a href="javascript:;">4</a>
+            </li>
+            <li>
+                <a href="javascript:;">5</a>
+            </li>
+            <li>
+                <a href="javascript:;" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="modal fade" id="intergral_info" tabindex="-1" role="dialog" aria-labelledby="intergral_infoLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="intergral_infoLabel">兑换商品详情</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="intergral text-center" id="result">
+                            <img src="images/public/wp6.jpg">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group mb">
+                            <span class="input-group-addon">名称</span>
+                            <input type="text" class="form-control" placeholder="微信红包一元" >
+                        </div>                        
+                        <div class="input-group mb">
+                            <span class="input-group-btn">
+                                <a class="btn btn-default file_btn" onclick="javascript:;">
+                                    上传
+                                    <input type="file" name="" class="file_input" id='file_input'></a>
+                            </span>
+                            <input type="text" class="file_info form-control" placeholder="请上传产品图片" disabled="disabled">
+                        </div>
+                        <div class="input-group mb">
+                            <div class="input-group-btn">
+                                <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    类型选择
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                    <li><a href="javascript:;" class="btn">兑换码商品</a></li>
+                                    <li><a href="javascript:;" class="btn">红包商品</a></li>
+                                    <li><a href="javascript:;" class="btn">优惠券商品</a></li>
+                                    <li><a href="javascript:;" class="btn">平台发货商品</a></li>
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control" placeholder="红包商品" disabled="disabled" >                        
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">排序</span>
+                            <input type="text" class="form-control" placeholder="1" >
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">价格</span>
+                            <input type="text" class="form-control" placeholder="1" >
+                            <span class="input-group-addon">元</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    状态选择
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                    <li>
+                                        <a href="javascript:;" class="btn">上架</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" class="btn">下架</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control" placeholder="上架" disabled='disabled'>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">商品</span>
+                            <input type="text" class="form-control" placeholder="3000" >
+                            <span class="input-group-addon">总数</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">兑换</span>
+                            <input type="text" class="form-control" placeholder="1000" >
+                            <span class="input-group-addon">次数</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="input-group">
+                            <span class="input-group-addon">所需</span>
+                            <input type="text" class="form-control" placeholder="500" >
+                            <span class="input-group-addon">积分</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">购买地址:&nbsp; http://</span>
+                            <input type="text" class="form-control" placeholder="wap...." >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-info" id="save_line">保存</a>
+                <a class="btn btn-default" data-dismiss="modal">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="file_open" tabindex="-1" role="dialog" aria-labelledby="file_open">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="intergral_infoLabel">导入优惠码</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">      
+                        <div class="input-group">
+                            <span class="input-group-addon">请选择文件</span>
+                            <input type="text" class="file_info form-control" placeholder="请上传的文件" disabled="disabled">
+                            <span class="input-group-btn">
+                                <a class="btn btn-default file_btn" onclick="javascript:;">
+                                    &nbsp;上&nbsp;传&nbsp;
+                                    <input type="file" name="" class="file_input" id='up_file'></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-info">导入</a>
+                <a class="btn btn-default" data-dismiss="modal">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="js-message success">
+    <div class="message-suceess">商品上架成功!</div>
+</div>
+
+<div class="js-message error">
+    <div class="message-error">商品下架了!</div>
+</div>
+
+<script type="text/javascript">
+    $('#save_line').click(function () {    
+        addTable();        
+    });
+
+    function addTable() {
+
+        htmlobj=$.ajax({
+            type:"GET", 
+            url:"text/aa.html",
+            dataType:"html", 
+            async:false
+        });
+        $("#prize_table").append(htmlobj.responseText);
+        $("#intergral_info").modal('hide');
+    }
+
+
+    // 显示默认图片和显示图片方法
+    upimg('result','file_input');
+    function upimg (resur,file) {
+        var result = document.getElementById(resur);
+        var input = document.getElementById(file);
+        if (typeof FileReader === 'undefined') {
+            result.innerHTML = "抱歉，你的浏览器不支持 FileReader";
+            input.setAttribute('disabled', 'disabled');
+        } else {
+            $('#'+file).change(function () {
+                var file_url =$(this).val();
+                $(this).parents(".input-group").find(".file_info").val(file_url);
+            });
+            input.addEventListener('change', function () {
+                var file = this.files[0];
+                if (!/image\/\w+/.test(file.type)) {
+                    alert("请确保文件为图像类型");
+                    return false;
+                }
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function(e) {
+                    result.innerHTML = '<img src="' + this.result + '" alt=""/>'
+                }
+            }, false);
+        }
+    };
+
+    //查看详情框,不可进行保存操作
+    $(".prize_name").click(function () {
+        $("#intergral_info").find(".modal-footer").hide();
+    });
+
+    //离开详情框,底部显示
+    $("#intergral_info").mouseleave(function () {
+        if( $(this).hasClass("in") == false ){
+            $("#intergral_info").find(".modal-footer").show();
+        }
+    });
+
+    //文件上传按钮
+    $('#up_file').change(function () {
+        var file_url =$(this).val();
+        $(this).parents(".input-group").find(".file_info").val(file_url);
+    });
+</script>
+<script type="text/javascript" src="js/public.js"></script>

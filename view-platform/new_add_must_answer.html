@@ -1,0 +1,32 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb"> 
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/new_must_answer.html')">必答</a></li>
+        <li class="active">编辑章节</li>
+    </ol>
+    <div id="books-info">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="input-group">
+                    <span class="input-group-addon">问题</span>
+                    <input class="form-control" placeholder="请输入问题" type="text" id="article_name">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-addon">发布时间</span>
+                    <input type="text" class="form-control datetimepicker">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app__content js-app-main" id="PhoneEditAdmin">
+    </div>
+</div>
+<script type="text/javascript" src="js/public.js"></script>
+
+<script type="text/javascript">
+    $("body").off();
+    fileobj = $.ajax({ type:"GET", url:"plugins/PowerPage/PowerPage.html", dataType:"html", async:false });
+    $("#PhoneEditAdmin").html( fileobj.responseText); //ajax打开手机编辑界面
+</script>

@@ -1,0 +1,111 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/table_list.html')">数据管理</a></li>
+        <li class="active">扫码表</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-2">
+            <label for="" class="text-info"><i class="fa fa-clock-o"></i> 选择日期</label>
+        </div>
+        <div class="form-group col-lg-4">
+            <div class="input-group"><span class="input-group-addon">开始日期</span>
+                <input type="text" class="form-control date_end" gldp-id="begin_code_data" placeholder="请选择 开始日期" id="begin_code_data" />
+                <span class="input-group-btn">
+                    <a class="btn btn-default date_end_but" type="button">
+                        <i class="fa fa-clock-o"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="form-group col-lg-4">
+            <div class="input-group"><span class="input-group-addon">结束日期</span>
+                <input type="text" class="form-control date_end" gldp-id="end_code_data" placeholder="请选择 结束日期" id="end_code_data" />
+                <span class="input-group-btn">
+                    <a class="btn btn-default date_end_but" type="button">
+                        <i class="fa fa-clock-o"></i>
+                    </a>
+                </span>    
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <a type="button" class="btn btn-info" id="code_data_select_btn"><i class="fa fa-qrcode"></i> 查询扫码量</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12"id="table_in">
+            <div class="text-left">
+                <span class='title'><i class='blue'></i>当日扫码量</span>
+                <span class='title'><i class="green"></i>当日新增粉丝量</span>
+            </div>
+            <canvas id="code_table"></canvas>
+        </div>
+    </div>
+</div>                
+<script type="text/javascript">    
+    var randomScalingFactor = function(){ return Math.round(Math.random()*6000)};
+    var lineChartData = {
+        labels : ["2015年06月","2015年07月","2015年08月","2015年09月","2015年10月","2015年11月","2015年12月"],
+        datasets : [
+            {
+                label: "扫码量",
+                fillColor : "rgba(89,155,239,0.2)",
+                strokeColor : "rgba(89,155,239,1)",
+                pointColor : "rgba(89,155,239,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(89,155,239,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+            ,{
+                label: "粉丝",
+                fillColor : "rgba(94,203,105,0.2)",
+                strokeColor : "rgba(94,203,105,1)",
+                pointColor : "rgba(94,203,105,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(94,203,105,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    }
+    var ctx = $("#code_table").get(0).getContext("2d");
+    window.myLine = new Chart(ctx).Line(lineChartData, {
+        responsive: true
+    });
+    $('#code_data_select_btn').click(function () {
+        $('#code_table').remove();
+        $('#table_in').append('<canvas id="code_table"></canvas>');
+        var begin = $('#begin_code_data').val();
+        var end = $('#end_code_data').val();
+        if (end == 0) {
+            var myDate = new Date();
+            var vYear = myDate.getFullYear();
+            var vMon = myDate.getMonth();
+            var vDay = myDate.getDate();
+            var begin = vYear + "-" + vMon +"-" + (vDay-7);
+            var end = vYear + "-" + vMon +"-" + vDay;
+        } 
+        var sArr = begin.split("-");
+        var eArr = end.split("-");
+        var sRDate = new Date(sArr[0], sArr[1], sArr[2]);
+        var eRDate = new Date(eArr[0], eArr[1], eArr[2]);
+        if (sRDate>=eRDate) {
+            alert("您选择的开始时间大于结束时间");
+        }else{
+            var str ="";
+            lineChartData.labels.length =0;
+            lineChartData.datasets[0].length=0;
+            lineChartData.datasets[1].length=0;
+            for( var i=0 ; i<= (eRDate-sRDate)/(24*60*60*1000); i++ ) {
+                lineChartData.labels[i]= sArr[0] +"年" + sArr[1] +"月" + (parseInt(sArr[2])+i);
+                lineChartData.datasets[0].data[i] = randomScalingFactor() ;
+                lineChartData.datasets[1].data[i] = randomScalingFactor() ;
+                str += lineChartData.datasets[0].data[i] +"\n";
+            }            
+            var ctx = $("#code_table").get(0).getContext("2d");
+            var myNewChart = new Chart(ctx).Line(lineChartData,{ responsive: true});
+        }
+    })
+</script>
+<script type="text/javascript" src="js/public.js"></script>

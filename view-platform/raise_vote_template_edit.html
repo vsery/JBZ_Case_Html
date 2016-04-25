@@ -1,0 +1,232 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/Raise_vote_template.html')">投票模板管理</a></li>
+        <li class="active">新建/修改投票模板</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-addon">模板名称</span>
+                <input type="text" class="form-control" placeholder="请输入模板名称">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">            
+            <div class="input-group mb">
+                <span class="input-group-addon">顶部显示图片</span>
+                <span class="input-group-btn">
+                    <a class="btn btn-default" onclick="addUpImg()"><i class="fa fa-plus"></i></a>
+                </span>
+            </div> 
+            <div id="head_img_show">
+                <div class="input-group">
+                    <span class="input-group-btn">
+                        <a class="btn btn-default file_btn" onclick="javascript:;">
+                            上传
+                            <input name="" class="file_input" id="file_input" type="file"></a>
+                    </span>
+                    <input class="file_info form-control" placeholder="请上传图片" disabled="disabled" type="text">
+                    <span class="input-group-btn">
+                        <a class="btn btn-default" onclick="Delete_img(this)"><i class="fa fa-times"></i></a>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <div class="carousel-inner" role="listbox" id="resur_show">
+                    <div class="item active" id="result">
+                        <img src="images/public/wp6.jpg">
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="fa fa-caret-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="fa fa-caret-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="table-responsive showdoan">
+                <table class="table table-condensed table-hover" id="item">
+                    <thead>
+                        <tr>
+                            <th>属性名</th>
+                            <th>属性类型</th>
+                            <th>是否显示</th>
+                            <th>排序</th>
+                            <th>删除</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input class="form-control pname" type="text">
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-btn">
+                                        <a class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 选择类型 <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                            <li><a href="javascript:;" class="btn">文字</a></li>
+                                            <li><a href="javascript:;" class="btn">图片</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="请选择类型" readonly>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="input-group">
+                                    <div class="input-group-btn">
+                                        <a class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 选择状态 <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                            <li><a href="javascript:;" class="btn">是</a></li>
+                                            <li><a href="javascript:;" class="btn">否</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="请选择状态" readonly>
+                                </div>
+                            </td>
+                            <td>
+                                <input class="form-control ordernum" value="0" type="text">
+                            </td>
+                            <td>
+                                <button class="btn btn-default" onclick="Delete(this)">-</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                    <tr>
+                        <td colspan="5"><a class="btn btn-default" onclick="Add()">+</a></td>
+                    </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <a href="javascript:;" class="btn btn-info" onclick="srcpage('view-platform/Raise_vote_template.html')">保存</a>
+            <a href="javascript:;" class="btn btn-default" onclick="srcpage('view-platform/Raise_vote_template.html')">取消</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    upimg('result','file_input');
+    function upimg (resur,file) {
+        var result = document.getElementById(resur);
+        var input = document.getElementById(file);
+        if (typeof FileReader === 'undefined') {
+            result.innerHTML = "抱歉，你的浏览器不支持 FileReader";
+            input.setAttribute('disabled', 'disabled');
+        } else {
+            $('#'+file).change(function () {
+                $("#resur_show .item").removeClass("active");
+                $('#'+resur).addClass("active");
+                var file_url =$(this).val();
+                $(this).parents(".input-group").find(".file_info").val(file_url);
+            });
+            input.addEventListener('change', function () {
+                var file = this.files[0];
+                if (!/image\/\w+/.test(file.type)) {
+                    alert("请确保文件为图像类型");
+                    return false;
+                }
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function(e) {
+                    result.innerHTML = '<img src="' + this.result + '" alt=""/>';
+                }
+            }, false);
+        }
+    }
+    
+    //添加图片方法
+    function addUpImg() {
+        var id=Math.floor(Math.random()*999+1);
+        $("#head_img_show").append("<div class='input-group'>"+
+                                        "<span class='input-group-btn'>"+
+                                            "<a class='btn btn-default file_btn' onclick='javascript:;'>"+
+                                                "上传"+
+                                                "<input name='' class='file_input' id='file_input" + id + "' type='file'></a>"+
+                                        "</span>"+
+                                        "<input class='file_info form-control' placeholder='请上传图片' disabled='disabled' type='text'>"+
+                                        "<span class='input-group-btn'>"+
+                                            "<a class='btn btn-default' onclick='Delete_img(this)'><i class='fa fa-times'></i></a>"+
+                                        "</span>"+
+                                    "</div>");
+        $("#resur_show .item").removeClass("active");
+        $("#resur_show").append("<div class='item active' id='result"+id+"'>"+
+                                    "<img src='images/public/wp6.jpg'>"+
+                                "</div>");
+        upimg('result'+id,'file_input'+id);
+    }
+    
+    //删除图片方法
+    function Delete_img(e){
+        var id = $(e).parents('.input-group').find('.file_input').attr('id').substr(10,3);
+        $("#result"+id).remove();
+        $("#resur_show .item").removeClass("active");
+        $("#resur_show .item:eq(0)").addClass("active");
+        $(e).parent().parent().remove();
+    }
+    
+    //删除表格行方法
+    function Delete(e){
+        $(e).parent().parent().remove();
+    }
+
+    //添加表格行方法
+    function Add(){
+        $("#item tbody").append("<tr>"+
+            "<td>"+
+                "<input class='form-control pname' type='text'>"+
+            "</td>"+
+            "<td>"+
+                "<div class='input-group'>"+
+                    "<div class='input-group-btn'>"+
+                        "<a class='btn btn-default' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>选择类型"+
+                            "<span class='caret'></span>"+
+                        "</a>"+
+                        "<ul class='dropdown-menu' aria-labelledby='dLabel'>"+
+                            "<li><a href='javascript:;' class='btn'>文字</a></li>"+
+                            "<li><a href='javascript:;' class='btn'>图片</a></li>"+
+                        "</ul>"+
+                    "</div>"+
+                    "<input type='text' class='form-control' placeholder='请选择类型' readonly>"+
+                "</div>"+
+            "</td>"+
+            "<td>"+
+                "<div class='input-group'>"+
+                    "<div class='input-group-btn'>"+
+                        "<a class='btn btn-default' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>选择状态"+
+                            "<span class='caret'></span>"+
+                        "</a>"+
+                        "<ul class='dropdown-menu' aria-labelledby='dLabel'>"+
+                            "<li><a href='javascript:;' class='btn'>是</a></li>"+
+                            "<li><a href='javascript:;' class='btn'>否</a></li>"+
+                        "</ul>"+
+                    "</div>"+
+                    "<input type='text' class='form-control' placeholder='请选择类型' readonly>"+
+                "</div>"+
+            "</td>"+
+            "<td>"+
+                "<input class='form-control ordernum' value='0' type='text'>"+
+            "</td>"+
+            "<td>"+
+                "<button class='btn btn-default' onclick='Delete(this)'>-</button>"+
+            "</td>"+
+        "</tr>");        
+        $('.dropdown-menu li').on("click","a", function () {
+            dropdown($(this));
+        });
+    }
+</script>
+<script type="text/javascript" src="js/public.js"></script>

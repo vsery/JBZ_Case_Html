@@ -1,0 +1,556 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb"> 
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/activity_list.html')">促销活动</a></li>
+        <li class="active">活动编辑</li>
+    </ol>
+    <form>
+        <ul class="nav nav-tabs" role="tablist" id="activity_tab">
+            <li role="presentation" class="active"><a class="btn btn-default btn-tab" href="#activity_create" aria-controls="activity_create" role="tab" data-toggle="tab"> 创建活动 </a></li>
+            <li role="presentation"><a class="btn btn-default btn-tab" href="#activity_product" aria-controls="activity_product" role="tab" data-toggle="tab"> 设置参与产品 </a></li>
+            <li role="presentation"><a class="btn btn-default btn-tab" href="#activity_winning" aria-controls="activity_winning" role="tab" data-toggle="tab"> 中奖设置 </a></li>
+            <li role="presentation"><a class="btn btn-default btn-tab" href="#activity_setting" aria-controls="activity_setting" role="tab" data-toggle="tab"> 完成 </a></li>
+        </ul>
+        <div class="row">
+            <div class=" col-lg-5">
+                <div id="ipone-activity">
+                    <img src="images/public/iphone6.png" class="img-responsive activity-ipone" alt="Responsive image">
+                    <div class="activity-body">
+                        <div id="lottery">
+                            <div id="lottery_title">
+                                <h4 class="text-center">此包产品编码为:<span> HN0011 </span></h4>
+                                <div class="bg"></div>
+                            </div>
+                            <table border="0" cellpadding="0" cellspacing="0">
+                                <tr class="lottery-group">
+                                    <td class="lottery-unit four active"><span class="prize_item"><img src="images/LuckDraw/1.png" /></span></td>
+                                    <td class="lottery-unit second"><span class="prize_item"><img src="images/LuckDraw/2.png" /></span></td>
+                                    <td class="lottery-unit third"><span class="prize_item"><img src="images/LuckDraw/4.png" /></span></td>
+                                    <td class="lottery-unit four"><span class="prize_item"><img src="images/LuckDraw/3.png" /></span></td>
+                                </tr>
+                                <tr class="lottery-group">
+                                    <td class="lottery-unit first"><span class="prize_item"><img src="images/LuckDraw/7.png" /></span></td>
+                                    <td colspan="2"><a href="javascript:;" id="Luck_draw_btn"></a></td>
+                                    <td class="lottery-unit first"><span class="prize_item"><img src="images/LuckDraw/5.png" /></span></td>
+                                </tr>
+                                <tr class="lottery-group">
+                                    <td class="lottery-unit third"><span class="prize_item"><img src="images/LuckDraw/3.png" /></span></td>
+                                    <td class="lottery-unit four"><span class="prize_item"><img src="images/LuckDraw/6.png" /></span></td>
+                                    <td class="lottery-unit first"><span class="prize_item"><img src="images/LuckDraw/8.png" /></span></td>
+                                    <td class="lottery-unit third"><span class="prize_item"><img src="images/LuckDraw/11.png" /></span></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="contaniner-fluid" id='activity_info'>
+                            <div class="row">
+                                <h4 class="text-center text-danger">双十一促销活动</h4>
+                                <p><span class="title">主题：</span>双十一促销活动</p>
+                                <p><span class="title">活动日期：</span>20xx年xx月x日0:00至20xx年x月x日24:00止（以腾讯网计算机系统的时间为标准时间）</p>
+                                <p><span class="title">兑换奖品设置：</span></p>
+                                <p><span class="title">活动参与方式：</span></p>
+                                <p><span class="title">活动区域：</span></p>
+                                <p><span class="title">奖品兑换流程：</span></p>
+                                <p><span class="title">活动声明与注意事项：</span></p>
+                            </div>
+                        </div>
+                        <div class="" id="result">
+                            <img src="images/public/activity.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="tab-content" id="activity_tab_body">
+                    <div role="tabpanel" class="tab-pane active bg-default" id="activity_create"><!-- 创建活动选项卡 -->
+                        <div class="row form-group"> <!-- 活动名称 -->
+                            <label class='col-xs-3 col-lg-3 text-right control-label'> 活动名称: </label>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control" placeholder="请填写活动名称">
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class='col-xs-3 col-lg-3 text-right control-label'> 活动图片: </label>
+                            <div class="col-lg-7">
+                                <a class="btn btn-info file_btn" type="button" onclick="javascript:;">
+                                    上传图片
+                                    <input type="file" name="" class="file_input" id='file_input'></a>
+                                <span class="file_info"> ( 请上传 活动背景图片 ）</span>
+                            </div>
+                        </div>
+                        <div class="row form-group">    
+                            <label class='col-xs-3 col-lg-3 text-right control-label'> 选择开始日期: </label>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control date_select_panel" placeholder="请选择开始日期"/>
+                            </div>
+                        </div>
+                        <div class="row form-group">  
+                            <label class='col-xs-3 col-lg-3 text-right control-label'> 选择结束日期: </label>
+                            <div class="col-lg-8">
+                                <input type="text" class="form-control date_select_panel" placeholder="请选择结束日期"/>
+                            </div>
+                        </div>
+                        <div class="row form-group">
+                            <label class='col-xs-3 col-lg-3 text-right control-label'> 活动描述: </label>
+                            <div class="col-lg-8">
+                                <textarea rows="7"></textarea> 
+                            </div>
+                        </div>
+                        <div class="godown_btn">
+                            <div class="col-lg-12 text-center">
+                                <a class="btn btn-default godown" href="javascript:;">上一步</a>
+                                <a class="btn btn-info goup" href="javascript:;">下一步</a>
+                            </div>
+                        </div>
+                    </div><!-- 创建活动选项卡结束标签 -->
+                    <div role="tabpanel" class="tab-pane" id="activity_product"><!-- 设置参与产品选项卡 -->
+                        <div class="row">
+                            <div class="col-lg-12 text-center"><a class="btn btn-info" href="javascript:;" data-toggle="modal" data-target="#add_prod">添加参与产品</a></div><!--添加参与产品 弹框按钮-->
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="table-responsive">
+                                    <table class="table table-condensed table-hover"><!--已经添加参与产品表格-->
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center">ID</th>
+                                                <th class="text-center">产品名称</th>
+                                                <th class="text-center">批次号</th>
+                                                <th class="text-center">数量</th>
+                                                <th class="text-center">操作</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center">
+                                            <tr>
+                                                <td>1</td>
+                                                <td>味赢天下</td>
+                                                <td>ACS3782033</td>
+                                                <td>2000</td>
+                                                <td><div class="close_bomb">
+                                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                                                        <div class="close_box text-right">
+                                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>味赢天下</td>
+                                                <td>ACS3782034</td>
+                                                <td>2000</td>
+                                                <td><div class="close_bomb">
+                                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                                                        <div class="close_box text-right">
+                                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>口味王槟郎</td>
+                                                <td>DCS3782033</td>
+                                                <td>2000</td>
+                                                <td><div class="close_bomb">
+                                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                                                        <div class="close_box text-right">
+                                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>口味王槟郎</td>
+                                                <td>DCS3782034</td>
+                                                <td>2000</td>
+                                                <td><div class="close_bomb">
+                                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                                                        <div class="close_box text-right">
+                                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>        
+                            </div>
+                        </div>
+                        <div class="modal fade" id="add_prod" tabindex="-1" role="dialog" aria-labelledby="add_prodLabel"><!--添加产品弹框-->
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="add_prodLabel">添加参与产品</h4>
+                                    </div>
+                                    <div class="modal-body">            
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="input-group">
+                                                    <div class="input-group-btn">
+                                                        <a class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            选择产品
+                                                            <span class="caret"></span>
+                                                        </a>
+                                                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                                            <li><a href="javascript:;" class="btn">味赢天下</a></li>
+                                                            <li><a href="javascript:;" class="btn">口味王槟郎</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="请选择产品" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-12">
+                                                <div class="table-responsive">
+                                                    <table class="table table-condensed table-hover">
+                                                        <thead>
+                                                            <tr>
+                                                                <th class="text-center"><input type="checkbox"></th>
+                                                                <th class="text-center">ID</th>
+                                                                <th class="text-center">产品名称</th>
+                                                                <th class="text-center">批次号</th>
+                                                                <th class="text-center">数量</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody class="text-center">
+                                                            <tr>
+                                                                <td><input type="checkbox"></td>
+                                                                <td>1</td>
+                                                                <td>味赢天下</td>
+                                                                <td>ACS3782033</td>
+                                                                <td>20000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"></td>
+                                                                <td>2</td>
+                                                                <td>味赢天下</td>
+                                                                <td>ACS3782034</td>
+                                                                <td>30000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"></td>
+                                                                <td>3</td>
+                                                                <td>味赢天下</td>
+                                                                <td>ACS3782035</td>
+                                                                <td>20000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"></td>
+                                                                <td>4</td>
+                                                                <td>味赢天下</td>
+                                                                <td>ACS3782037</td>
+                                                                <td>40000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td><input type="checkbox"></td>
+                                                                <td>5</td>
+                                                                <td>味赢天下</td>
+                                                                <td>ACS3782038</td>
+                                                                <td>50000</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>                                                
+                                                <nav class='navbar-right'>
+                                                    <ul class="pagination">
+                                                        <li>
+                                                            <a href="javascript:;" aria-label="Previous">
+                                                                <span aria-hidden="true">&laquo;</span>
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">1</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">2</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">3</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">4</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;">5</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="javascript:;" aria-label="Next">
+                                                                <span aria-hidden="true">&raquo;</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-info">添加</button>
+                                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="godown_btn">
+                            <div class="col-lg-12 text-center">
+                                <a class="btn btn-default godown" href="javascript:;">上一步</a>
+                                <a class="btn btn-info goup" href="javascript:;">下一步</a>
+                            </div>
+                        </div>
+                    </div><!-- 设置参与产品选项卡结束标签 -->
+                    <div role="tabpanel" class="tab-pane" id="activity_winning"><!-- 中奖设置选项卡 -->
+                        <div class="separate-line-wrap first-line">
+                            <hr>
+                            <div class="separate-line">
+                                <p class="text-center">中奖设置</p>
+                            </div>
+                        </div>
+                        <p class="text-center">奖品数量越多，则该等级中奖率越高。<br/>例如：设置一等奖 10个，二等奖20个，则中二等奖概率高于一等奖<br/></p>
+                        <ul class="nav nav-tabs" role="tablist" id="winning_tab">
+                            <li role="presentation" class="active">
+                                <a class="btn" href="#prize_1" aria-controls="prize_1" role="tab" data-toggle="tab">奖品一</a>
+                            </li>
+                            <li role="presentation">
+                                <a class="btn" href="#prize_2" aria-controls="prize_2" role="tab" data-toggle="tab">奖品二</a>
+                            </li>
+                            <li role="presentation">
+                                <a class="btn" href="#prize_3" aria-controls="prize_3" role="tab" data-toggle="tab">奖品三</a>
+                            </li>
+                            <li role="presentation">
+                                <a class="btn" href="#prize_4" aria-controls="prize_4" role="tab" data-toggle="tab">奖品四</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="winning_tab_body"><!--奖品设置选项卡-->
+                            <div role="tabpanel" class="tab-pane active bg-default" id="prize_1"><!--第1个奖品设置-->
+                                <div class="panel-group" id="winning" role="tablist" aria-multiselectable="true">
+                                    <div class="panel">
+                                        <div class="panel-winning" role="tab" id="winning_One">
+                                            <div class="panel-heading text-center">
+                                                <a class="btn btn-default" role="button" data-toggle="collapse" data-parent="#winning" href="#winn_One" aria-expanded="true" aria-controls="winn_One">赠送积分</a>
+                                                <a class="btn btn-default" role="button" data-toggle="collapse" data-parent="#winning" href="#winn_Two" aria-expanded="false" aria-controls="winn_Two">赠送红包</a>
+                                                <a class="btn btn-default" role="button" data-toggle="collapse" data-parent="#winning" href="#winn_Three" aria-expanded="false" aria-controls="winn_Three">赠送礼品</a>
+                                            </div>
+                                        </div>
+                                        <div id="winn_One" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="winningOne"><!-- 赠品 -->
+                                            <div class="panel-body">
+                                                <div class="row form-group">
+                                                    <label class='col-lg-2 text-right' for="Red_Radios_11">
+                                                        <input type="radio" name="Red_Radios_1" id="Red_Radios_11" value="option1" checked> 固定
+                                                    </label>
+                                                    <div class="col-xs-9 col-lg-10">
+                                                        <input type="text" class="form-control" placeholder="自定义">
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <label class='col-lg-2 text-right' for="Red_Radios_12">
+                                                        <input type="radio" name="Red_Radios_1" id="Red_Radios_12" value="option2"> 随机
+                                                    </label>
+                                                    <div class="col-xs-9 col-lg-10">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="最小值">
+                                                            <span class="input-group-addon">~</span>
+                                                            <input type="text" class="form-control" placeholder="最大值">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group"><!-- 奖品数量 -->
+                                                    <label class='col-lg-2 text-right' >数量:</label>
+                                                    <div class="col-xs-9 col-lg-10">
+                                                        <input type="text" class="form-control" placeholder="自定义">
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group"><!-- 中奖率 -->
+                                                    <label class='col-lg-2 text-right' >中奖率:</label>
+                                                    <div class="col-xs-9 col-lg-10">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="0.013" readonly>
+                                                            <span class="input-group-addon">%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group"><!-- 说明 -->
+                                                    <label class='col-lg-2 text-right' >说明:</label>
+                                                    <div class="col-xs-9 col-lg-10">
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="winn_Two" class="panel-collapse collapse" role="tabpanel" aria-labelledby="winningTwo"><!-- 赠送红包 -->
+                                            <div class="panel-body">
+                                                <div class="row form-group">
+                                                    <label class='col-lg-2 text-right' for="Red_Radios_11">
+                                                        <input type="radio" name="Red_Radios_1" id="Red_Radios_11" value="option1" checked> 固定
+                                                    </label>
+                                                    <div class="col-xs-9 col-lg-10">
+                                                        <input type="text" class="form-control" placeholder="自定义">
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group">
+                                                    <label class='col-lg-2 text-right' for="Red_Radios_12">
+                                                        <input type="radio" name="Red_Radios_1" id="Red_Radios_12" value="option2"> 随机
+                                                    </label>
+                                                    <div class="col-xs-9 col-lg-10">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="最小值">
+                                                            <span class="input-group-addon">~</span>
+                                                            <input type="text" class="form-control" placeholder="最大值">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group"><!-- 奖品数量 -->
+                                                    <label class='col-lg-2 text-right' >数量:</label>
+                                                    <div class="col-xs-9 col-lg-10">
+                                                        <input type="text" class="form-control" placeholder="自定义">
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group"><!-- 中奖率 -->
+                                                    <label class='col-lg-2 text-right' >中奖率:</label>
+                                                    <div class="col-xs-9 col-lg-10">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="0.013" readonly>
+                                                            <span class="input-group-addon">%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group"><!-- 说明 -->
+                                                    <label class='col-lg-2 text-right' >说明:</label>
+                                                    <div class="col-xs-9 col-lg-10">
+                                                            <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="winn_Three" class="panel-collapse collapse" role="tabpanel" aria-labelledby="winningThree"><!-- 赠送积分 -->
+                                            <div class="panel-body">
+                                                <div class="row form-group"><!-- 赠品 -->
+                                                    <label class='col-lg-2 text-right' >赠品:</label>
+                                                    <div class="col-xs-9 col-lg-10">
+                                                            <input type="text" class="form-control" placeholder="自定义">
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group"><!-- 奖品数量 -->
+                                                    <label class='col-lg-2 text-right' >数量:</label>
+                                                    <div class="col-xs-9 col-lg-10">
+                                                        <input type="text" class="form-control" placeholder="自定义">
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group"><!-- 中奖率 -->
+                                                    <label class='col-lg-2 text-right' >中奖率:</label>
+                                                    <div class="col-xs-9 col-lg-10">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" placeholder="0.013" readonly>
+                                                            <span class="input-group-addon">%</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row form-group"><!-- 说明 -->
+                                                    <label class='col-lg-2 text-right' >说明:</label>
+                                                    <div class="col-xs-9 col-lg-10">
+                                                            <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div><!--第1个奖品设置结束标签-->
+                            <div role="tabpanel" class="tab-pane bg-default" id="prize_2"><!--第2个奖品设置/复制上面内容,注意ID-->
+                                <div class="panel-group" id="winning_2" role="tablist" aria-multiselectable="true">
+                                    <div class="panel">
+                                        第2个奖品设置/复制上面内容,注意ID
+                                    </div>
+                                </div>
+                            </div><!--第2个奖品设置结束标签-->
+                            <div role="tabpanel" class="tab-pane bg-default" id="prize_3"><!--第3个奖品设置/复制上面内容,注意ID-->
+                                <div class="panel-group" id="winning_3" role="tablist" aria-multiselectable="true">
+                                    <div class="panel">
+                                        第2个奖品设置/复制上面内容,注意ID
+                                    </div>
+                                </div>
+                            </div><!--第3个奖品设置结束标签-->
+                            <div role="tabpanel" class="tab-pane bg-default" id="prize_4"><!--第4个奖品设置/复制上面内容,注意ID-->
+                                <div class="panel-group" id="winning_4" role="tablist" aria-multiselectable="true">
+                                    <div class="panel">
+                                        第2个奖品设置/复制上面内容,注意ID
+                                    </div>
+                                </div>
+                            </div><!--第4个奖品设置结束标签-->
+                        </div>
+                        <div class="godown_btn">
+                            <div class="col-lg-12 text-center">
+                                <a class="btn btn-default godown" href="javascript:;">上一步</a>
+                                <a class="btn btn-info goup" href="javascript:;">下一步</a>
+                            </div>
+                        </div>
+                    </div><!-- 中奖设置选项卡结束标签 -->
+                    <div role="tabpanel" class="tab-pane" id="activity_setting"><!-- 中奖完成选项卡 -->
+                        <h4 class="success-title">您已成功创建该活动！</h4>
+                        <div class="godown_btn">
+                            <div class="col-lg-12 text-center">
+                                <a class="btn btn-default godown" href="javascript:;">上一步</a>
+                                <a class="btn btn-info goup" href="javascript:;">完成</a>
+                            </div>
+                        </div>
+                    </div><!-- 中奖完成选项卡结束标签 -->
+                </div><!--选项卡集合结束标签-->
+            </div><!--右侧内容结束标签-->
+        </div><!--行结束标签-->
+    </form>
+</div>
+<script type="text/javascript" src="js/lottery.js"></script>
+<script type="text/javascript">
+    lottery.lottery({
+        selector:     '#lottery',
+        width:        4,
+        height:       3,
+        index:        0,    // 初始位置
+        initSpeed:    500,  // 初始转动速度
+        // upStep:       50,   // 加速滚动步长
+        // upMax:        50,   // 速度上限
+        // downStep:     30,   // 减速滚动步长
+        // downMax:      500,  // 减速上限
+        // waiting:      5000, // 匀速转动时长
+        beforeRoll: function () { // 重写滚动前事件：beforeRoll
+            // console.log(this);
+            // alert(1);
+        }
+    });
+    var result = document.getElementById("result");
+    var input = document.getElementById("file_input");
+    if (typeof FileReader === 'undefined') {
+        result.innerHTML = "抱歉，你的浏览器不支持 FileReader";
+        input.setAttribute('disabled', 'disabled');
+    } else {
+        $('#file_input').change(function () {
+            var file_url =$(this).val();
+            $("span.file_info").html(file_url);
+        });
+        input.addEventListener('change', readFile, false);
+    }
+    $("a.godown").click(function () {
+        var s_temp = $("#activity_tab li.active").index();
+        if( s_temp > 0) {
+            $("#activity_tab li").eq(s_temp-1).addClass('active').siblings().removeClass('active');
+            $("#activity_tab_body>.tab-pane").eq(s_temp-1).addClass('active').siblings().removeClass('active');
+        }
+    });
+    $("a.goup").click(function () {
+        var s_temp = $("#activity_tab li.active").index();
+        if( s_temp < 4) {
+            $("#activity_tab li").eq(s_temp+1).addClass('active').siblings().removeClass('active');
+            $("#activity_tab_body>.tab-pane").eq(s_temp+1).addClass('active').siblings().removeClass('active');
+        }
+    });
+</script>
+<script type="text/javascript" src="js/public.js"></script>

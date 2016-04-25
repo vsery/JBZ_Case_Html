@@ -1,0 +1,693 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="store-index.html">首页</a></li>
+        <li class="active">可提现分佣</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 交易状态 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="javascript:;" class="btn">&nbsp;全&nbsp;部&nbsp;</a></li>
+                        <li><a href="javascript:;" class="btn">待付款</a></li>
+                        <li><a href="javascript:;" class="btn">待发货</a></li>
+                        <li><a href="javascript:;" class="btn">已发货</a></li>
+                        <li><a href="javascript:;" class="btn">已完成</a></li>
+                        <li><a href="javascript:;" class="btn">已关闭</a></li>
+                        <li><a href="javascript:;" class="btn">退款中</a></li>
+                    </ul>
+                </div>
+                <input type="text" class="form-control" placeholder="选择输入关键词">
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-group">
+                <span class="input-group-addon">交易时间</span>
+                <input type="text" class="form-control mydate" placeholder="开始时间">
+                <span class="input-group-addon">~</span>
+                <input type="text" class="form-control mydate" placeholder="结束时间">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 查询选项 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="javascript:;" class="btn">订单编号</a></li>
+                        <li><a href="javascript:;" class="btn">商品名称</a></li>
+                        <li><a href="javascript:;" class="btn">购买粉丝</a></li>
+                    </ul>
+                </div>
+                <input type="text" class="form-control" placeholder="选择输入关键词">
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="input-group">
+                <span class="input-group-addon">提现金额</span>
+                <input type="text" class="form-control" placeholder="最小金额">
+                <span class="input-group-addon">~</span>
+                <input type="text" class="form-control" placeholder="最大金额">
+            </div>
+        </div>
+        <div class="col-lg-3 text-center">
+            <a href="javascript:;" class="btn btn-info">搜索</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#all_order_tab" aria-controls="all_order_tab" role="tab" data-toggle="tab">全部</a></li>
+                <li role="presentation"><a href="#payment_order_tab" aria-controls="payment_order_tab" role="tab" data-toggle="tab">待付款</a></li>
+                <li role="presentation"><a href="#tobeshipped_order_tab" aria-controls="tobeshipped_order_tab" role="tab" data-toggle="tab">待发货</a></li>
+                <li role="presentation"><a href="#shipped_order_tab" aria-controls="shipped_order_tab" role="tab" data-toggle="tab">已发货</a></li>
+                <li role="presentation"><a href="#completed_order_tab" aria-controls="completed_order_tab" role="tab" data-toggle="tab">已完成</a></li>
+                <li role="presentation"><a href="#closed_order_tab" aria-controls="closed_order_tab" role="tab" data-toggle="tab">已关闭</a></li>
+                <li role="presentation"><a href="#refund_order_tab" aria-controls="refund_order_tab" role="tab" data-toggle="tab">退款中</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="all_order_tab">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">商品</th>
+                                            <th class="text-center">单价/数量</th>
+                                            <th class="text-center length">购买粉丝(买家)</th>
+                                            <th class="text-center length">下单时间</th>
+                                            <th class="text-center">状态</th>
+                                            <th class="text-center">实际金额</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_0.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('order_product.html')" title="英皇豪华手表-SE3I76">英皇豪华手表-SE3I76</a></td>
+                                            <td class="text-right">
+                                                <p>6800.00</p>
+                                                <p>(1件)</p>
+                                            </td>
+                                            <td><a href="javascript:;" onstalled="srcpage('order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-success">已完成</span></td>
+                                            <td class="text-center">6800</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_1.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('order_product.html')" title="英皇豪华手表-SE3I76">英皇豪华手表-SE3I76</a></td>
+                                            <td class="text-right">
+                                                <p>6800.00</p>
+                                                <p>(1件)</p>
+                                            </td>
+                                            <td><a href="javascript:;" onstalled="srcpage('order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-danger">待付款</span></td>
+                                            <td class="text-center">6800</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_2.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('order_product.html')" title="英皇豪华手表-SE3I76">英皇豪华手表-SE3I76</a></td>
+                                            <td class="text-right">
+                                                <p>6800.00</p>
+                                                <p>(1件)</p>
+                                            </td>
+                                            <td><a href="javascript:;" onstalled="srcpage('order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-danger">代发货</span></td>
+                                            <td class="text-center">6800</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_3.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('order_product.html')" title="英皇豪华手表-SE3I76">英皇豪华手表-SE3I76</a></td>
+                                            <td class="text-right">
+                                                <p>6800.00</p>
+                                                <p>(1件)</p>
+                                            </td>
+                                            <td><a href="javascript:;" onstalled="srcpage('order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-warning">已发货</span></td>
+                                            <td class="text-center">6800</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_4.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('order_product.html')" title="英皇豪华手表-SE3I76">英皇豪华手表-SE3I76</a></td>
+                                            <td class="text-right">
+                                                <p>6800.00</p>
+                                                <p>(1件)</p>
+                                            </td>
+                                            <td><a href="javascript:;" onstalled="srcpage('order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-success">已完成</span></td>
+                                            <td class="text-center">6800</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_5.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('order_product.html')" title="英皇豪华手表-SE3I76">英皇豪华手表-SE3I76</a></td>
+                                            <td class="text-right">
+                                                <p>6800.00</p>
+                                                <p>(1件)</p>
+                                            </td>
+                                            <td><a href="javascript:;" onstalled="srcpage('order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-info">已关闭</span></td>
+                                            <td class="text-center">6800</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_6.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('order_product.html')" title="英皇豪华手表-SE3I76">英皇豪华手表-SE3I76</a></td>
+                                            <td class="text-right">
+                                                <p>6800.00</p>
+                                                <p>(1件)</p>
+                                            </td>
+                                            <td><a href="javascript:;" onstalled="srcpage('order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-success">已退款</span></td>
+                                            <td class="text-center">6800</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_8.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('order_product.html')" title="索尼高清晰极限耳机S873">索尼高清晰极限耳机S873</a></td>
+                                            <td class="text-right">
+                                                <p>6800.00</p>
+                                                <p>(1件)</p>
+                                            </td>
+                                            <td><a href="javascript:;" onstalled="srcpage('order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-warning">退款中</span></td>
+                                            <td class="text-center">6800</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav class='navbar-right'>
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="javascript:;" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="javascript:;">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="payment_order_tab">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">商品</th>
+                                            <th class="text-center">单价/数量</th>
+                                            <th class="text-center length">购买粉丝(买家)</th>
+                                            <th class="text-center length">下单时间</th>
+                                            <th class="text-center">状态</th>
+                                            <th class="text-center">实际金额</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_1.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('order_product.html')" title="英皇豪华手表-SE3I76">英皇豪华手表-SE3I76</a></td>
+                                            <td class="text-right">
+                                                <p>6800.00</p>
+                                                <p>(1件)</p>
+                                            </td>
+                                            <td><a href="javascript:;" onstalled="srcpage('order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-danger">待付款</span></td>
+                                            <td class="text-center">6800</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav class='navbar-right'>
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="javascript:;" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="javascript:;">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="tobeshipped_order_tab">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">商品</th>
+                                            <th class="text-center">单价/数量</th>
+                                            <th class="text-center length">购买粉丝(买家)</th>
+                                            <th class="text-center length">下单时间</th>
+                                            <th class="text-center">状态</th>
+                                            <th class="text-center">实际金额</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_2.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('order_product.html')" title="英皇豪华手表-SE3I76">英皇豪华手表-SE3I76</a></td>
+                                            <td class="text-right">
+                                                <p>6800.00</p>
+                                                <p>(1件)</p>
+                                            </td>
+                                            <td><a href="javascript:;" onstalled="srcpage('order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-danger">代发货</span></td>
+                                            <td class="text-center">6800</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav class='navbar-right'>
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="javascript:;" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="javascript:;">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="shipped_order_tab">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">商品</th>
+                                            <th class="text-center">单价/数量</th>
+                                            <th class="text-center length">购买粉丝(买家)</th>
+                                            <th class="text-center length">下单时间</th>
+                                            <th class="text-center">状态</th>
+                                            <th class="text-center">实际金额</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_3.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('order_product.html')" title="英皇豪华手表-SE3I76">英皇豪华手表-SE3I76</a></td>
+                                            <td class="text-right">
+                                                <p>6800.00</p>
+                                                <p>(1件)</p>
+                                            </td>
+                                            <td><a href="javascript:;" onstalled="srcpage('order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-warning">已发货</span></td>
+                                            <td class="text-center">6800</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav class='navbar-right'>
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="javascript:;" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="javascript:;">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="completed_order_tab">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">商品</th>
+                                            <th class="text-center">单价/数量</th>
+                                            <th class="text-center length">购买粉丝(买家)</th>
+                                            <th class="text-center length">下单时间</th>
+                                            <th class="text-center">状态</th>
+                                            <th class="text-center">实际金额</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_4.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('order_product.html')" title="英皇豪华手表-SE3I76">英皇豪华手表-SE3I76</a></td>
+                                            <td class="text-right">
+                                                <p>6800.00</p>
+                                                <p>(1件)</p>
+                                            </td>
+                                            <td><a href="javascript:;" onstalled="srcpage('order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-success">已完成</span></td>
+                                            <td class="text-center">6800</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav class='navbar-right'>
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="javascript:;" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="javascript:;">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="closed_order_tab">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">商品</th>
+                                            <th class="text-center">单价/数量</th>
+                                            <th class="text-center length">购买粉丝(买家)</th>
+                                            <th class="text-center length">下单时间</th>
+                                            <th class="text-center">状态</th>
+                                            <th class="text-center">实际金额</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_5.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('order_product.html')" title="英皇豪华手表-SE3I76">英皇豪华手表-SE3I76</a></td>
+                                            <td class="text-right">
+                                                <p>6800.00</p>
+                                                <p>(1件)</p>
+                                            </td>
+                                            <td><a href="javascript:;" onstalled="srcpage('order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-info">已关闭</span></td>
+                                            <td class="text-center">6800</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav class='navbar-right'>
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="javascript:;" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="javascript:;">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="refund_order_tab">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">商品</th>
+                                            <th class="text-center">单价/数量</th>
+                                            <th class="text-center length">购买粉丝(买家)</th>
+                                            <th class="text-center length">下单时间</th>
+                                            <th class="text-center">状态</th>
+                                            <th class="text-center">实际金额</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_6.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('order_product.html')" title="英皇豪华手表-SE3I76">英皇豪华手表-SE3I76</a></td>
+                                            <td class="text-right">
+                                                <p>6800.00</p>
+                                                <p>(1件)</p>
+                                            </td>
+                                            <td><a href="javascript:;" onstalled="srcpage('order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-success">已退款</span></td>
+                                            <td class="text-center">6800</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_8.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('order_product.html')" title="索尼高清晰极限耳机S873">索尼高清晰极限耳机S873</a></td>
+                                            <td class="text-right">
+                                                <p>6800.00</p>
+                                                <p>(1件)</p>
+                                            </td>
+                                            <td><a href="javascript:;" onstalled="srcpage('order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-warning">退款中</span></td>
+                                            <td class="text-center">6800</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav class='navbar-right'>
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="javascript:;" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="javascript:;">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="order_remark" tabindex="-1" role="dialog" aria-labelledby="order_remarkLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="shopping_infoLabel">卖家备注</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="javascript:;" class="btn btn-info" data-dismiss="modal">提交</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src='js/public.js'></script>

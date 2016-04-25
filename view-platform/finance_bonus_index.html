@@ -1,0 +1,425 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">会员分红管理</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 会员等级 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="javascript:;" class="btn">经销商区域经理</a></li>
+                        <li><a href="javascript:;" class="btn">经销商</a></li>
+                        <li><a href="javascript:;" class="btn">经销商业务员</a></li>
+                        <li><a href="javascript:;" class="btn">直营店区域经理</a></li>
+                        <li><a href="javascript:;" class="btn">直营店</a></li>
+                        <li><a href="javascript:;" class="btn">直营店业务员</a></li>
+                    </ul>
+                </div>
+                <input class="form-control" placeholder="全部" type="text" disabled="disabled">
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-group">
+                <span class="input-group-addon">交易时间</span>
+                <input type="text" class="form-control mydate" placeholder="开始时间" id="s_time_t">
+                <span class="input-group-addon">~</span>
+                <input type="text" class="form-control mydate" placeholder="结束时间" id="e_time_t">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="input-group">
+                <span class="input-group-addon"> 销售前多少名</span>
+                <input type="text" class="form-control" placeholder="10">
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 关键词 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="javascript:;" class="btn">手机号</a></li>
+                        <li><a href="javascript:;" class="btn">会员昵称</a></li>
+                    </ul>
+                </div>
+                <input type="text" class="form-control" placeholder="选择输入关键词">
+            </div>
+        </div>
+        <div class="col-lg-4 text-right">
+            <a href="javascript:;" class="btn btn-info" id="select_btn_bonus">搜索</a>
+            <a href="javascript:;" class="btn btn-success" id="sort_btn">升序</a>
+            <a href="javascript:;" class="btn btn-danger" data-toggle="modal" data-target="#moneyall">分红</a>
+            <a href="text/commission.et" class="btn btn-warning">下载</a>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-condensed table-hover">
+            <thead>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th class="text-center">会员</th>
+                    <th class="text-center">头像</th>
+                    <th class="text-center">招募人</th>
+                    <th class="text-center">等级</th>
+                    <th class="text-center">销售量</th>
+                    <th class="text-center">交易时间</th>
+                    <th class="text-center">分红金额</th>
+                    <th class="text-center">已分金额</th>
+                    <th class="text-center">操作</th>
+                </tr>
+            </thead>
+            <tbody class="text-center" id="sales_list">
+                <tr>
+                    <td class="text-left"><input type="checkbox"></td>
+                    <td>李天优<br/>138384138</td>
+                    <td><img src="images/fans/teacher2.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李娭毑</td>
+                    <td>直营店区域经理</td>
+                    <td><a href="javascript:;" onclick="srcpage('view-platform/finance_bonus_list.html')" ><span class="sales_num">850</span></a></td>
+                    <td><span class="sales_time"></span></td>
+                    <td><span class="sales_bonus_all"></span></td>
+                    <td><span class="sales_bonus_money">2</span></td>
+                    <td>
+                        <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#cash_info">分红 </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left"><input type="checkbox"></td>
+                    <td>李天优<br/>138384138</td>
+                    <td><img src="images/fans/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李娭毑</td>
+                    <td>直营店区域经理</td>
+                    <td><a href="javascript:;" onclick="srcpage('view-platform/finance_bonus_list.html')" ><span class="sales_num">50</span></a></td>
+                    <td><span class="sales_time"></span></td>
+                    <td><span class="sales_bonus_all"></span></td>
+                    <td><span class="sales_bonus_money">2</span></td>
+                    <td>
+                        <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#cash_info">分红 </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left"><input type="checkbox"></td>
+                    <td>李天优<br/>138384138</td>
+                    <td><img src="images/fans/teacher3.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李娭毑</td>
+                    <td>直营店区域经理</td>
+                    <td><a href="javascript:;" onclick="srcpage('view-platform/finance_bonus_list.html')" ><span class="sales_num">123</span></a></td>
+                    <td><span class="sales_time"></span></td>
+                    <td><span class="sales_bonus_all"></span></td>
+                    <td><span class="sales_bonus_money">2</span></td>
+                    <td>
+                        <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#cash_info">分红 </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left"><input type="checkbox"></td>
+                    <td>李天优<br/>138384138</td>
+                    <td><img src="images/fans/teacher5.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李娭毑</td>
+                    <td>直营店区域经理</td>
+                    <td><a href="javascript:;" onclick="srcpage('view-platform/finance_bonus_list.html')" ><span class="sales_num">22</span></a></td>
+                    <td><span class="sales_time"></span></td>
+                    <td><span class="sales_bonus_all"></span></td>
+                    <td><span class="sales_bonus_money">2</span></td>
+                    <td>
+                        <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#cash_info">分红 </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left"><input type="checkbox"></td>
+                    <td>李天优<br/>138384138</td>
+                    <td><img src="images/fans/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李娭毑</td>
+                    <td>直营店区域经理</td>
+                    <td><a href="javascript:;" onclick="srcpage('view-platform/finance_bonus_list.html')" ><span class="sales_num">13</span></a></td>
+                    <td><span class="sales_time"></span></td>
+                    <td><span class="sales_bonus_all"></span></td>
+                    <td><span class="sales_bonus_money">0</span></td>
+                    <td>
+                        <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#cash_info">分红 </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left"><input type="checkbox"></td>
+                    <td>李天优<br/>138384138</td>
+                    <td><img src="images/fans/teacher2.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李娭毑</td>
+                    <td>直营店区域经理</td>
+                    <td><a href="javascript:;" onclick="srcpage('view-platform/finance_bonus_list.html')" ><span class="sales_num">5</span></a></td>
+                    <td><span class="sales_time"></span></td>
+                    <td><span class="sales_bonus_all"></span></td>
+                    <td><span class="sales_bonus_money">0</span></td>
+                    <td>
+                        <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#cash_info">分红 </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left"><input type="checkbox"></td>
+                    <td>李天优<br/>138384138</td>
+                    <td><img src="images/fans/teacher3.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李娭毑</td>
+                    <td>直营店区域经理</td>
+                    <td><a href="javascript:;" onclick="srcpage('view-platform/finance_bonus_list.html')" ><span class="sales_num">5</span></a></td>
+                    <td><span class="sales_time"></span></td>
+                    <td><span class="sales_bonus_all"></span></td>
+                    <td><span class="sales_bonus_money">0</span></td>
+                    <td>
+                        <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#cash_info">分红 </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left"><input type="checkbox"></td>
+                    <td>李天优<br/>138384138</td>
+                    <td><img src="images/fans/teacher4.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李娭毑</td>
+                    <td>直营店区域经理</td>
+                    <td><a href="javascript:;" onclick="srcpage('view-platform/finance_bonus_list.html')" ><span class="sales_num">23</span></a></td>
+                    <td><span class="sales_time"></span></td>
+                    <td><span class="sales_bonus_all"></span></td>
+                    <td><span class="sales_bonus_money">2</span></td>
+                    <td>
+                        <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#cash_info">分红 </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left"><input type="checkbox"></td>
+                    <td>李天优<br/>138384138</td>
+                    <td><img src="images/fans/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李娭毑</td>
+                    <td>直营店区域经理</td>
+                    <td><a href="javascript:;" onclick="srcpage('view-platform/finance_bonus_list.html')" ><span class="sales_num">12</span></a></td>
+                    <td><span class="sales_time"></span></td>
+                    <td><span class="sales_bonus_all"></span></td>
+                    <td><span class="sales_bonus_money">0</span></td>
+                    <td>
+                        <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#cash_info">分红 </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left"><input type="checkbox"></td>
+                    <td>李天优<br/>138384138</td>
+                    <td><img src="images/fans/teacher2.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李娭毑</td>
+                    <td>直营店区域经理</td>
+                    <td><a href="javascript:;" onclick="srcpage('view-platform/finance_bonus_list.html')" ><span class="sales_num">23</span></a></td>
+                    <td><span class="sales_time"></span></td>
+                    <td><span class="sales_bonus_all"></span></td>
+                    <td><span class="sales_bonus_money">2</span></td>
+                    <td>
+                        <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#cash_info">分红 </a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <nav class='navbar-right'>
+        <ul class="pagination">
+            <li>
+                <a href="javascript:;" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="javascript:;">1</a>
+            </li>
+            <li>
+                <a href="javascript:;">2</a>
+            </li>
+            <li>
+                <a href="javascript:;">3</a>
+            </li>
+            <li>
+                <a href="javascript:;">4</a>
+            </li>
+            <li>
+                <a href="javascript:;">5</a>
+            </li>
+            <li>
+                <a href="javascript:;" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="modal fade" id="moneyall" tabindex="-1" role="dialog" aria-labelledby="moneyallLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">打款操作</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">打款总金额</span>
+                            <input class="form-control" placeholder="2400" type="text" readonly="">
+                            <span class="input-group-addon">元</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">打款总人数</span>
+                            <input class="form-control" placeholder="30" type="text" readonly="">
+                            <span class="input-group-addon">个</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">验证码</span>
+                            <input class="form-control" placeholder="请输入验证码" type="text">
+                              <span class="input-group-btn">
+                                <a href="javascript:;" class="btn btn-default send_btn">发送</a>
+                              </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:;" class="btn btn-success">打款</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="cash_info" tabindex="-1" role="dialog" aria-labelledby="cash_infoLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">分红操作</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">打款金额</span>
+                            <input class="form-control" placeholder="20" type="text">
+                            <span class="input-group-addon">元</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">验证码</span>
+                            <input class="form-control" placeholder="请输入验证码" type="text">
+                              <span class="input-group-btn">
+                                <a href="javascript:;" class="btn btn-default send_btn">发送</a>
+                              </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:;" class="btn btn-success">打款</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $('.profit').each(function () {     //计算每个商品的利润
+        var pofit = parseInt($(this).text());
+        var sales_price = parseInt( $(this).parents('tr').find('.sales_price').text() );        //销售价
+        var buying_pirce = parseInt( $(this).parents('tr').find('.buying_pirce').text() );      //进货价
+        var sales_num = parseInt( $(this).parents('tr').find('.sales_num').text() );        //销售量
+        pofit =( sales_price - buying_pirce ) * sales_num ;
+        $(this).text(pofit);
+    });
+    var sort_up=0;
+    $('#sort_btn').click(function () {
+        var txt= $(this).text();
+        if ( txt == '降序' ) { $(this).text("升序") } else{ $(this).text("降序") }
+        var temp;
+        var temp_zero;
+        var award = new Array();
+        $("#sales_list tr").each(function (e) {
+            award[e] = "<tr>"+$(this).html()+"</tr>";
+        });
+        var sales = new Array();
+        $(".sales_num").each(function (e) {
+            sales[e] = parseInt( $(this).parents('tr').find('.sales_num').text() );
+        });
+        if( sort_up == 0 ){
+            for ( var i=0; i<sales.length; i++){
+                for ( var j=0; j<(sales.length-1); j++) {
+                    if ( sales[j] > sales[j+1] ){
+                        temp = sales[j];
+                        sales[j] = sales[j +1];
+                        sales[j +1] = temp;
+                        temp = award[j];
+                        award[j] = award[j +1];
+                        award[j +1] = temp;
+                    }
+                }
+            }
+            sort_up++;
+        }else{
+            for ( var i=0; i<sales.length; i++){
+                for ( var j=0; j<(sales.length-1); j++) {
+                    if ( sales[j] < sales[j+1] ){
+                        temp = sales[j];
+                        sales[j] = sales[j +1];
+                        sales[j +1] = temp;
+                        temp = award[j];
+                        award[j] = award[j +1];
+                        award[j +1] = temp;
+                    }
+                }
+            }
+            sort_up--;
+        }
+        $("#sales_list").empty();
+        $("#sales_list").append(award);
+    });
+
+    //初始化时间面板
+    var myDate = new Date();
+    var vYear = myDate.getFullYear();
+    var vMon = myDate.getMonth();
+    var vDay = myDate.getDate();
+    var s = vYear + "-" + vMon +"-" + (vDay-7);
+    var e = vYear + "-" + vMon +"-" + vDay;
+    // $("#s_time_t").val(s);
+    // $("#e_time_t").val(e);
+    $("span.sales_time").text( s + " ~ " + e );
+    $("#select_btn_bonus").click(function(event) {
+        if( $("#s_time_t").val() ==''){ $("#s_time_t").val(s); }
+        if( $("#e_time_t").val() ==''){ $("#e_time_t").val(e); }
+        s = $("#s_time_t").val();
+        e = $("#e_time_t").val();
+        $("span.sales_time").text( s + " ~ " + e );    
+    });
+    $("span.sales_bonus_all").each(function() {
+        var num =parseInt( $(this).parents('tr').find('.sales_num').text() ) * 0.07;
+        $(this).text( parseInt(num) );
+    });
+    var time = 61;
+    $("a.send_btn").bind("click",function () {
+        var e =$(this);
+        wait_time(e);
+    });
+    function wait_time(e) {
+        var e= $(e);
+        if( time == 0) {
+            e.removeAttr('disabled');
+            e.text("发送");
+            time=61;
+        }else{
+            time--;
+            e.attr('disabled', 'disabled');
+            e.text("发送("+time+"s)");
+            setTimeout(function() {
+                wait_time(e);
+            }, 1000);
+        }
+    }
+</script>
+<script type="text/javascript" src='js/public.js'></script>

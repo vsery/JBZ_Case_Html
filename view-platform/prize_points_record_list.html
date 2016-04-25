@@ -1,0 +1,209 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/prize_points_list.html')">会员积分</a></li>
+        <li class="active">积分记录</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-heading"><h4 class="text-center">35207</h4></div>
+                <div class="panel-footer text-center">剩余积分
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-info">
+                <div class="panel-heading"><h4 class="text-center">66.3</h4></div>
+                <div class="panel-footer text-center">销售金额总计
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-warning">
+                <div class="panel-heading"><h4 class="text-center">46.4</h4></div>
+                <div class="panel-footer text-center">累计推广金额</div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-danger">
+                <div class="panel-heading"><h4 class="text-center">102.7</h4></div>
+                <div class="panel-footer text-center">可提现的金额</div>
+            </div>
+        </div>
+    </div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#commission_first_tab" aria-controls="commission_first_tab" role="tab" data-toggle="tab">积分来源</a></li>
+        <li role="presentation"><a href="#commission_second_tab" aria-controls="commission_second_tab" role="tab" data-toggle="tab">积分消费</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="commission_first_tab">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid"> 
+                    <div class="collapse navbar-collapse">
+                        <div class="navbar-form navbar-right" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="请输入销售员">
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 贡献缘由 <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="javascript:;" class="btn">首次关注</a></li>
+                                        <li><a href="javascript:;" class="btn">购买指定产品</a></li>
+                                        <li><a href="javascript:;" class="btn">推广收益</a></li>
+                                        <li><a href="javascript:;" class="btn">消费商品</a></li>
+                                    </ul>
+                                </div>
+                                <input type="text" class="form-control" placeholder="请输入..." readonly>
+                            </div>
+                            <a href="javascript:;" class="btn btn-info">查询</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="table-responsive">
+                <table class="table table-condensed table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center">ID</th>
+                            <th class="text-center">贡献人</th>
+                            <th class="text-center">贡献缘由</th>
+                            <th class="text-center">贡献时间</th>
+                            <th class="text-center">贡献(分)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td>1</td>
+                            <td>枫叶-老蒋</td>
+                            <td>首次关注</td>
+                            <td>2015-12-23 20:21:21</td>
+                            <td>30</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>枫叶</td>
+                            <td>购买指定产品(三选一)</td>
+                            <td>2015-12-23 20:21:21</td>
+                            <td>20</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>枫叶-老蒋</td>
+                            <td>推广收益</td>
+                            <td>2015-12-23 20:21:21</td>
+                            <td>2</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>枫叶</td>
+                            <td>消费商品</td>
+                            <td>2015-12-23 20:21:21</td>
+                            <td>30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <nav class='navbar-right'>
+                <ul class="pagination">
+                    <li>
+                        <a href="javascript:;" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="javascript:;">1</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">2</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">3</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">4</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">5</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="commission_second_tab">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid"> 
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <div class="navbar-form navbar-right" role="search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="请输入提现金额">
+                            </div>
+                            <a href="javascript:;" class="btn btn-info">查询</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="table-responsive">
+                <table class="table table-condensed table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center">消费事件</th>
+                            <th class="text-center">提现时间</th>
+                            <th class="text-center">到账时间</th>
+                            <th class="text-center">状态</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td>领取***商品折扣券</td>
+                            <td>2015-12-23 20:21:21</td>
+                            <td>2015-12-24 20:21:21</td>
+                            <td><span class="text-success">已完成</span></td>
+                        </tr>
+                        <tr>
+                            <td>领取***商品折扣券</td>
+                            <td>2015-10-23 20:21:21</td>
+                            <td>2015-10-24 20:21:21</td>
+                            <td><span class="text-success">已完成</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <nav class='navbar-right'>
+                <ul class="pagination">
+                    <li>
+                        <a href="javascript:;" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="javascript:;">1</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">2</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">3</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">4</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;">5</a>
+                    </li>
+                    <li>
+                        <a href="javascript:;" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/public.js"></script>

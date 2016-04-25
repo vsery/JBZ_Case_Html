@@ -1,0 +1,25 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb"> 
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/new_lead_time.html')">领读</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/new_lead_time_chapter.html')">章节管理</a></li>
+        <li class="active">编辑章节</li>
+    </ol>
+    <div id="books-info">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="input-group">
+                    <span class="input-group-addon">章节标题</span>
+                    <input class="form-control" placeholder="请输入章节标题" type="text" id="article_name">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app__content js-app-main" id="PhoneEditAdmin">
+    </div>
+</div>
+<script type="text/javascript">    
+    fileobj = $.ajax({ type:"GET", url:"plugins/PowerPage/PowerPage.html", dataType:"html", async:false });
+    $("body").off();
+    $("#PhoneEditAdmin").html( fileobj.responseText); //ajax打开手机编辑界面
+</script>

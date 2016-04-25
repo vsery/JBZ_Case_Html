@@ -1,0 +1,299 @@
+<link rel="stylesheet" media="screen" type="text/css"href="plugins/colorpicker/colorpicker.css">
+<script type="text/javascript" src="plugins/colorpicker/colorpicker.js"></script>
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="javascript:;" onclick="srcpage('view-platform/home.html')">首页</a></li>
+        <li class="active">海报设置</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="activity-body" id="poster">
+                <img src="images/public/code.jpg" alt="" id="code">
+                <img src="images/fans/head (4).jpg" alt="" id="head">
+                <div id="name">微信营销</div>
+                <div id="poster_bg">
+                    <img src="images/code/bg.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <form>
+        <div class="col-lg-4">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">菜单</span>
+                        <input class="form-control" placeholder="设置菜单名称" type="text">
+                        <span class="input-group-btn">
+                            <a href="javascript:;" class="btn btn-default">发布</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#poster_set_tab" aria-controls="poster_set_tab" role="tab" data-toggle="tab">基础设置</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="poster_set_tab">
+                    <div class="navbar navbar-default modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon">说明:</span>
+                                    <input class="form-control" placeholder="是否永久生成海报" type="text" disabled="disabled">
+                                </div>                                
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 text-center">                               
+                                <div class="input-group">
+                                    <span class="input-group-addon"><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked="checkced">临时</span>
+                                    <span class="input-group-addon"><input type="radio" name="optionsRadios" id="optionsRadios1" value="option2">永久</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <a class="btn btn-default file_btn" type="button" onclick="javascript:;"> 上传<input name="" class="file_input" id="file_input" type="file"></a>       
+                                <span class="file_info">（请上传海报背景图片）</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br/>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#poster_name_tab" aria-controls="poster_name_tab" role="tab" data-toggle="tab">名称</a></li>
+                <li role="presentation"><a href="#poster_head_tab" aria-controls="poster_head_tab" role="tab" data-toggle="tab">头像</a></li>
+                <li role="presentation"><a href="#poster_code_tab" aria-controls="poster_code_tab" role="tab" data-toggle="tab">二维码</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane name-switch active" id="poster_name_tab">
+                    <nav class="navbar navbar-default modal-body">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <a class="btn eye" href="javascript:;">
+                                    <input name="name_show" value="1" checked="" type="radio"> 显示</a>
+                                <a class="btn not eye" href="javascript:;">
+                                    <input name="name_show" value="0" type="radio"> 不显示</a>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon">字大小:</span>
+                                    <input class="form-control font-size" placeholder="18" type="text">
+                                    <span class="input-group-addon">px</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon">字颜色:</span>
+                                    <input class="form-control color" placeholder="000000" type="text" id="picker">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon">上边距:</span>
+                                    <input class="form-control margin-top" placeholder="20" type="text">
+                                    <span class="input-group-addon">px</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon">左边距:</span>
+                                    <input class="form-control margin-left" placeholder="200" type="text">
+                                    <span class="input-group-addon">px</span>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div role="tabpanel" class="tab-pane head-switch" id="poster_head_tab">
+                    <nav class="navbar navbar-default modal-body">
+                        <div class="row">
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <a class="btn eye" href="javascript:;">
+                                    <input name="head_show" value="1" checked="" type="radio"> 显示</a>
+                                <a class="btn not eye" href="javascript:;">
+                                    <input name="head_show" value="0" type="radio"> 不显示</a>
+                            </div>
+                        </div>
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon">宽度:</span>
+                                    <input class="form-control height" placeholder="110" type="text">
+                                    <span class="input-group-addon">px</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon">高度:</span>
+                                    <input class="form-control width" placeholder="110" type="text">
+                                    <span class="input-group-addon">px</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon">上边距:</span>
+                                    <input class="form-control margin-top" placeholder="15" type="text">
+                                    <span class="input-group-addon">px</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon">左边距:</span>
+                                    <input class="form-control margin-left" placeholder="25" type="text">
+                                    <span class="input-group-addon">px</span>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+                <div role="tabpanel" class="tab-pane code-switch" id="poster_code_tab">
+                    <nav class="navbar navbar-default modal-body">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon ">宽度:</span>
+                                    <input class="form-control width" placeholder="168" type="text">
+                                    <span class="input-group-addon">px</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon">高度:</span>
+                                    <input class="form-control height" placeholder="168" type="text">
+                                    <span class="input-group-addon">px</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon">上边距:</span>
+                                    <input class="form-control margin-top" placeholder="300" type="text">
+                                    <span class="input-group-addon">px</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon">左边距:</span>
+                                    <input class="form-control margin-left" placeholder="20" type="text">
+                                    <span class="input-group-addon">px</span>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div><br/>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <button class="btn btn-info" type="button">生成海报</button>                        
+                </div>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    $('input').change(function () {
+        input_txt($(this));
+    });
+    $('a.eye').click(function () {
+        input_txt($(this));
+    });
+    function input_txt (this_index) {
+        var cls = this_index.attr("class");
+        var index = this_index.val();
+        var par = this_index.parents('.tab-pane');
+        var target;
+        if ( par.hasClass('name-switch') ){
+            target = "div#name";
+        }
+        if ( par.hasClass('head-switch') ){
+            target = "img#head";
+        }
+        if ( par.hasClass('code-switch') ){
+            target = "img#code";
+        }
+        if ( cls.indexOf('eye')>0 ) {
+            $(target).css('display','block');
+        }
+        if ( cls.indexOf('not')>0 ) {
+            $(target).css('display','none');
+        }
+        if ( cls.indexOf('width')>0 ) {
+            $(target).css('width',index+'px');
+        }
+        if ( cls.indexOf('height')>0  ) {
+            $(target).css('height',index+'px');
+        }
+        if ( cls.indexOf('font')>0 ) {
+            $(target).css('font-size',index+'px');
+        }
+        if ( cls.indexOf('color')>0  ) {
+            $(target).css('color','#'+index);
+            alert(target);
+        }
+        if ( cls.indexOf('margin-left')>0 ){
+            $(target).css('left',index+'px');
+        }
+        if ( cls.indexOf('margin-top')>0 ){
+            $(target).css('top',index+'px');
+        }
+    }
+    
+    if ( $(".colorpicker").length > 0 ) {
+        $(".colorpicker").remove();
+        cpicker();
+    }else{
+        cpicker();
+    }
+    function cpicker() {
+        $('#picker').ColorPicker({                          //颜色面板初始化
+            onSubmit: function(hsb, hex, rgb, el) {
+                $(el).val(hex);
+                $(el).ColorPickerHide();
+                $('#name').css("color","#"+$(el).val());
+            },
+            onBeforeShow: function () {
+                $(this).ColorPickerSetColor(this.value);
+            }
+        }).bind('keyup', function(){
+            $(this).ColorPickerSetColor(this.value);
+        });
+    }
+    $(".colorpicker").css("display","none");
+
+    var result = document.getElementById("poster_bg");
+    var input = document.getElementById("file_input");
+    if (typeof FileReader === 'undefined') {
+        result.innerHTML = "抱歉，你的浏览器不支持 FileReader";
+        input.setAttribute('disabled', 'disabled');
+    } else {
+        $('#file_input').change(function () {
+            var file_url =$(this).val();
+            $("span.file_info").html(file_url);
+        });
+        input.addEventListener('change', readFile, false);
+    }
+</script>
+<script type="text/javascript" src="js/public.js"></script>

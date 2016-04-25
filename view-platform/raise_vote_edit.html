@@ -1,0 +1,78 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/Raise_vote.html')">投票管理</a></li>
+        <li class="active">新建/修改投票</li>
+    </ol>    
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-addon">投票名称</span>
+                <input type="text" class="form-control" placeholder="投票名称">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <a class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 选择模板 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="javascript:;" class="btn">我要上农货</a></li>
+                        <li><a href="javascript:;" class="btn">我要上杂货</a></li>
+                        <li><a href="javascript:;" class="btn">最热销产品</a></li>
+                    </ul>
+                </div>
+                <input type="text" class="form-control" placeholder="请选择模板" readonly>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-addon">开始时间</span>
+                <input type="text"class="form-control date_select_panel" placeholder="开始时间">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-addon">结束时间</span>
+                <input type="text" class="form-control date_select_panel" placeholder="结束时间">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-addon">最大投票</span>
+                <input type="text" class="form-control" placeholder="最多投票数">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-addon">单日最大投票</span>
+                <input type="text" class="form-control" placeholder="单日最多投票数">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="input-group">
+                <span class="input-group-addon">投票简介</span>
+                <textarea class="form-control" rows="3"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+        <label>
+            <input id="needsub" checked="checked" type="checkbox"> 是否需要关注
+        </label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 text-center">        
+            <a href="javascript:;" class="btn btn-success" onclick="srcpage('view-platform/Raise_vote.html')">保存</a>
+            <a href="javascript:;" class="btn btn-default" onclick="srcpage('view-platform/Raise_vote.html')">取消</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/public.js"></script>

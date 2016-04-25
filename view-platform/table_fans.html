@@ -1,0 +1,108 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/table_list.html')">数据管理</a></li>
+        <li class="active">粉丝表</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="form-group col-lg-3">
+            <div class="input-group">
+                <input type="text" class="form-control date_end" gldp-id="begin_data" placeholder="请选择 开始日期" id="begin_data" />
+                <span class="input-group-btn">
+                    <a class="btn btn-default date_end_but" type="button">
+                        <i class="glyphicon glyphicon-time"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="form-group col-lg-3">
+            <div class="input-group">
+                <input type="text" class="form-control date_end" gldp-id="end_data" placeholder="请选择 结束日期" id="end_data" />
+                <span class="input-group-btn">
+                    <a class="btn btn-default date_end_but" type="button">
+                        <i class="glyphicon glyphicon-time"></i>
+                    </a>
+                </span>    
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <a type="button" class="btn btn-info" id="select_data_btn"><i class="glyphicon glyphicon-qrcode"></i> 查询时间</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-left">
+            <span class='title'><i class='green'></i> 粉丝增长表</span>
+        </div>
+        <div class="col-lg-12 " id="table_in">
+            <canvas id="table_intergral_1"></canvas>
+        </div>
+    </div>
+</div>
+                
+<script type="text/javascript" src='js/glDatePicker.min.js'></script>
+<script type="text/javascript" src="js/raphael.min.js"></script>
+<script type="text/javascript" src="js/chinamapPath.js"></script>
+<script type="text/javascript" src="js/Chart.js"></script>
+<script type="text/javascript">
+    var randomScalingFactor = function(){ return Math.round(Math.random()*800)};
+    var lineChartData = {
+        labels : ["12月1日","12月2日","12月3日","12月4日","12月5日","12月6日","12月7日"],
+        datasets : [{
+                label: "粉丝",
+                fillColor : "rgba(94,203,105,0.2)",
+                strokeColor : "rgba(94,203,105,1)",
+                pointColor : "rgba(94,203,105,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(94,203,105,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }]
+        }
+    var options = {
+        scaleOverride :false, //是否显示折线图的线条
+        scaleShowLabels :true,//是否显示纵轴
+        scaleShowGridLines :true,//是否显示坐标轴的标尺
+        bezierCurve :true,//是否显示圆滑的效果
+        pointDot :true,//是否显示折线图的顶点
+        pointDotRadius :3,//折线图定点大小
+        pointDotStrokeWidth:1,//折线图定点外围大小
+        animation :true,//是否显示动画效果
+        animationSteps :60,//图形显示的速度
+    };
+
+    window.onload = function () {
+        var ctx = $("#table_intergral_1").get(0).getContext("2d");
+        window.myLine = new Chart(ctx).Line(lineChartData, {
+            responsive: true
+        });
+    }
+    $('#select_data_btn').click(function () {
+        $('#table_intergral_1').remove();
+        $('#table_in').append('<canvas id="table_intergral_1" ></canvas>');
+        var begin = $('#begin_data').val();
+        var end = $('#end_data').val();    
+        var sArr = begin.split("/");
+        var eArr = end.split("/");
+        var sRDate = new Date(sArr[0], sArr[1], sArr[2]);
+        var eRDate = new Date(eArr[0], eArr[1], eArr[2]);
+        var result = (eRDate-sRDate)/(24*60*60*1000);
+        if (result<=0) {
+            alert("您选择的开始时间大于结束时间");
+        }else{
+            var str ="";
+            lineChartData.labels.length =0;
+            lineChartData.datasets[0].length=0;
+            //lineChartData.datasets[1].length=0;
+            for( var i=0 ; i<= result; i++ ) {
+                lineChartData.labels[i]= sArr[1] +"月" + (parseInt(sArr[2])+i)+"日";
+                lineChartData.datasets[0].data[i] = randomScalingFactor() ;         
+                str += lineChartData.datasets[0].data[i] +"\n";
+            }        
+            var ctx = $("#table_intergral_1").get(0).getContext("2d");
+            var myNewChart = new Chart(ctx).Line(lineChartData,{ responsive: true});
+        }
+    })
+</script>
+  

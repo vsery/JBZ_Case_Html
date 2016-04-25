@@ -1,0 +1,118 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb"> 
+        <li><a href="index.html">首页</a></li>
+        <li class="active">反馈列表</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="alert alert-info fade in" role="alert">
+                <a type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></a>
+                <strong>提示!</strong> 请在第一时间查看回复新的反馈信息!
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-form navbar-right" role="search">
+                <div class="input-group">
+                    <span class="input-group-addon">提交时间</span>
+                    <input class="form-control date_select_panel" placeholder="开始时间" type="text">
+                    <span class="input-group-addon">~</span>
+                    <input class="form-control date_select_panel" placeholder="结束时间" type="text">
+                </div>
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 选择状态 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="btn" href="javascript:;">全部</a></li>
+                            <li><a class="btn" href="javascript:;">已回复</a></li>
+                            <li><a class="btn" href="javascript:;">未回复</a></li>
+                        </ul>
+                    </div>
+                    <input class="form-control" placeholder="请选择状态" disabled="disabled" type="text">
+                </div>
+                <a href="javascript:;" class="btn btn-info">查询</a>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center">反馈标题</th>
+                            <th class="text-center">回答内容</th>
+                            <th class="text-center">提交时间</th>
+                            <th class="text-center">反馈用户/代理名称</th>
+                            <th class="text-center">状态</th>
+                            <th class="text-center">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td><span class="nowrap">赞聚宝平台什么时候能正式上线?</span></td>
+                            <td><span class="nowrap">赞聚宝平台什么时候能正式上线</span></td>
+                            <td>2015-12-10</td>
+                            <td>深圳阳光</td>
+                            <td><span class="text-danger">未回复</span></td>
+                            <td>
+                                <a href="javascript:;" onclick="srcpage('view-admin/feedback_info.html')" class="btn"><i class="fa fa-eye"></i> 查看</a><br/>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                    <div class="close_box text-right">
+                                        <span class='colse_txt text-center'>您确定删除么?</span>
+                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="nowrap">派送员设置在什么地方?</span></td>
+                            <td><span class="nowrap">手机端派送员抢单,不能及时反馈信息.....</span></td>
+                            <td>2015-12-10</td>
+                            <td>深圳阳光</td>
+                            <td><span class="text-default">已回复</span></td>
+                            <td>
+                                <a href="javascript:;" onclick="srcpage('view-admin/feedback_info.html')" class="btn"><i class="fa fa-eye"></i> 查看</a><br/>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                    <div class="close_box text-right">
+                                        <span class='colse_txt text-center'>您确定删除么?</span>
+                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <nav class='navbar-right'>
+                    <ul class="pagination">
+                        <li class="disabled">
+                            <a href="javascript:;" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="active">
+                            <a href="javascript:;">1</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">2</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;">3</a>
+                        </li>
+                        <li>
+                            <a href="javascript:;" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/public.js"></script>

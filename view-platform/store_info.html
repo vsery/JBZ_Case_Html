@@ -1,0 +1,183 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/store_list.html')">门店管理</a></li>
+        <li class="active">门店信息</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a data-toggle="collapse" href="#store_info" aria-expanded="false" aria-controls="store_info">
+                        <h4 class="text-center">长沙雨花旗舰店</h4>
+                    </a>
+                </div>
+                <div class="panel-footer text-center">门店基本信息
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <a href="javascript:;" onclick="srcpage_sale('store_order.html','sale')">
+                    <h4 class="text-center">432222</h4>
+                    </a>
+                </div>
+                <div class="panel-footer text-center">门店销售金额(元)
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                    <a href="javascript:;" onclick="srcpage_sale('store_order.html','stock')">
+                    <h4 class="text-center">3456</h4>
+                    </a>
+                </div>
+                <div class="panel-footer text-center">商品库存总量(个)
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="panel panel-danger">
+                <div class="panel-heading">
+                    <a href="javascript:;" onclick="srcpage_sale('store_order.html','award')">
+                    <h4 class="text-center">207076</h4>
+                    </a>
+                </div>
+                <div class="panel-footer text-center">需要结算金额(元)
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="collapse" id="store_info">
+        <div class="well">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">门店名称</span>
+                        <input type="text" class="form-control" placeholder="长沙雨花旗舰店" disabled="disabled">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">手机号码</span>
+                        <input type="text" class="form-control" placeholder="138384138" disabled="disabled">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">微信昵称</span>
+                        <input type="text" class="form-control" placeholder="QiJianDian" disabled="disabled">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">OPENID</span>
+                        <input type="text" class="form-control" placeholder="OLEBMT1DV3OAUXEQI4SE2URLAE1W" disabled="disabled">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">邮箱地址</span>
+                        <input type="text" class="form-control" placeholder="vsery" disabled="disabled">
+                        <span class="input-group-addon">@</span>
+                        <input type="text" class="form-control" placeholder="163.com" disabled="disabled">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">座机号</span>
+                        <input type="text" class="form-control" placeholder="0731" disabled="disabled">
+                        <span class="input-group-addon">~</span>
+                        <input type="text" class="form-control" placeholder="88888888" disabled="disabled">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">所属地区</span>
+                        <select id="s_province" style="width: 100%;" name="s_province"></select>
+                        <span class="input-group-addon">-</span>
+                        <select id="s_city" style="width: 100%;" name="s_city" ></select>
+                        <span class="input-group-addon">-</span>
+                        <select id="s_county" style="width: 100%;" name="s_county"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">详细地址</span>
+                        <input type="text" class="form-control" placeholder="银盆岭大桥西世茂铂翠湾2期2栋805" disabled="disabled">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div id="store-map"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    //地址栏选中选 ,以及禁止修改
+    _init_area();
+    $("#s_province").find("option[value='湖南省']").attr("selected",true);
+    $("#s_province").change();
+    $("#s_city").find("option[value='长沙市']").attr("selected",true);
+    $("#s_city").change();
+    $("#s_county").find("option[value='岳麓区']").attr("selected",true);
+    $("#s_province").attr("disabled",'disabled');
+    $("#s_city").attr("disabled",'disabled');
+    $("#s_county").attr("disabled",'disabled');
+    var sContent =  "<h4 class='store_name'>湖南长沙雨花旗舰店</h4>" + 
+                    "<img id='imgDemo' src='images/store/1.jpg' title='湖南长沙雨花旗舰店'/>" + 
+                    "<p class='store_info'>湖南长沙雨花旗舰店坐落在中国长沙市中心,岳麓大道与潇湘北路交汇处西北角...</p>" + 
+                    "<p class='store_info'>营业时间:&nbsp;9:00&nbsp;至&nbsp;18:00</p>" + 
+                    "</div>";
+
+    // 百度地图API功能
+    var map = new BMap.Map("store-map");
+    var point = new BMap.Point(112.963847,28.233569);
+    var marker = new BMap.Marker(point);  // 创建标注
+    map.centerAndZoom(point,16);
+    var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+    map.addOverlay(marker);               // 将标注添加到地图中
+    marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+    // map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+    // map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+    marker.addEventListener("click", function(){          
+        map.openInfoWindow(infoWindow,point); //开启信息窗口
+    });
+
+    function srcpage_sale (surl,active) {
+        htmlobj=$.ajax({
+            type:"get", 
+            url:surl,
+            dataType:"html", 
+            async:false
+        });
+        $(".app-init-container").html(htmlobj.responseText);
+        $('a.store').parent().removeClass("active");
+        $('a.store').each(function () {            
+                //alert($(this).hasClass(active));
+            if( $(this).hasClass(active) == true ) {
+                $(this).parent().addClass('active');
+            }
+        })
+        $(".tab-pane").removeClass("active");
+        $(".tab-pane").each(function () {
+            if( $(this).hasClass(active) == true ) {
+                $(this).addClass('active');
+            }
+        })
+    }
+</script>
+<script type="text/javascript" src="js/public.js"></script>

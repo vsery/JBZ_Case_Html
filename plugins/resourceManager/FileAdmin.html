@@ -1,0 +1,622 @@
+<div id="FileAdminBox" class="">
+    <ul class="nav nav-tabs nav-left" role="tablist">
+        <li role="presentation" class="active"><a href="#file-admin-tab" aria-controls="file-admin-tab" role="tab" data-toggle="tab">上传管理</a></li>
+        <li role="presentation"><a href="#imges-admin-tab" aria-controls="imges-admin-tab" role="tab" data-toggle="tab">图片管理<span class="num">897</span></a></li>
+        <li role="presentation"><a href="#video-admin-tab" aria-controls="video-admin-tab" role="tab" data-toggle="tab">视频管理<span class="num">27</span></a></li>
+        <li role="presentation"><a href="#music-admin-tab" aria-controls="music-admin-tab" role="tab" data-toggle="tab">音频管理<span class="num">32</span></a></li>
+        <li role="presentation"><a href="#URL-admin-tab" aria-controls="URL-admin-tab" role="tab" data-toggle="tab">从URL插入</a></li>
+    </ul>
+    <div class="tab-content tab-right">
+        <div role="tabpanel" class="tab-box tab-pane active" id="file-admin-tab">
+            <div class="box-header">
+                <a href="javascript:;" class="close close-file-btn"><span aria-hidden="true">×</span></a>
+                <h4 class="title">插入多媒体</h4>
+            </div>
+            <div class="box-body">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" id="file-tab-btn" class="active"><a href="#src-tab" aria-controls="src-tab" role="tab" data-toggle="tab">上传文件</a></li>
+                    <li role="presentation" id="admin-tab-btn"><a href="#admin-tab" aria-controls="admin-tab" role="tab" data-toggle="tab">媒体库</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="src-tab">
+                        <div class="filesrc file_btn">
+                            <h4 class="title">拖文件到任何地方来上传</h4>
+                            <span class="or">或</span>
+                            <a class="btn btn-default" onclick="javascript:;">
+                                选择文件<input name="" class="file_input" id="file_input" multiple="multiple" type="file"></a>                        
+                            <span class="dec">最大上传文件大小：2 MB。</span>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="admin-tab">
+                        <ul class="img-admin" id="result">
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">45%</div>
+                            </div>
+                        </ul>
+                        <div class="box-footer" id="admin-page">
+                            <nav class="file-page">
+                            <ul class="pagination">
+                                <li class="disabled">
+                                    <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" class="btn btn-info">插入至页面</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-box tab-pane" id="imges-admin-tab">
+            <div class="box-header">
+                <a href="javascript:;" class="close close-file-btn"><span aria-hidden="true">×</span></a>
+                <h4 class="title">图片管理</h4>
+            </div>
+            <div class="box-body">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#imgpacket1" aria-controls="imgpacket1" role="tab" data-toggle="tab">未分组</a></li>
+                    <li role="presentation"><a href="#imgpacket2" aria-controls="imgpacket2" role="tab" data-toggle="tab">广告图<span aria-hidden="true" onclick="delTab(this)">×</span></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="imgpacket1">
+                        <div class="annex-detail">
+                            <div class="detail-info">
+                                <div class="input-group">
+                                    <span class="input-group-addon">名称</span>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-btn">
+                                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 组 <span class="caret"></span> </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="btn group-btn" href="javascript:;">默认分组</a></li>
+                                            <li><a class="btn new-group-btn" href="javascript:;">新建组</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="" disabled="disabled">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">描述</span><textarea class="form-control" rows="2"></textarea>
+                                </div>
+                                <div class="input-group text-center">
+                                    <a href="javascript:;" class="btn btn-info">保存设置</a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="img-admin">
+                            <li class="img-item" onclick="SwitchBtn(this)">
+                                <i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>
+                                <img src="images/books/book02.jpg" alt="" class="img-small">
+                                <span class="title">建筑与肌理建筑与肌理建筑与肌理</span>
+                                <i class="fa fa-check"></i>
+                            </li>
+                            <li class="img-item" onclick="SwitchBtn(this)">
+                                <i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>
+                                <i class="fa fa-play-circle"></i>
+                                <span class="title">coco.mp4</span>
+                                <i class="fa fa-check"></i>
+                            </li>
+                        </ul>
+                        <div class="box-footer">
+                            <nav class="file-page">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li class="active"><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" class="btn btn-info">插入至页面</a>
+                            </nav>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="imgpacket2">
+                        <div class="annex-detail">
+                            <div class="detail-info">
+                                <div class="input-group">
+                                    <span class="input-group-addon">名称</span>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-btn">
+                                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 组 <span class="caret"></span> </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="btn group-btn" href="javascript:;">默认分组</a></li>
+                                            <li><a class="btn new-group-btn" href="javascript:;">新建组</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="" disabled="disabled">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">描述</span><textarea class="form-control" rows="2"></textarea>
+                                </div>
+                                <div class="input-group text-center">
+                                    <a href="javascript:;" class="btn btn-info">保存设置</a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="img-admin">
+                            <li class="img-item" onclick="SwitchBtn(this)">
+                                <i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>
+                                <img src="images/books/book01.jpg" alt="" class="img-small">
+                                <span class="title">建筑与肌理</span>
+                                <i class="fa fa-check"></i>
+                            </li>
+                        </ul>
+                        <div class="box-footer">
+                            <nav class="file-page">
+                            <ul class="pagination">
+                                <li class="disabled">
+                                    <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" class="btn btn-info">插入至页面</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-box tab-pane" id="video-admin-tab">
+            <div class="box-header">
+                <a href="javascript:;" class="close close-file-btn"><span aria-hidden="true">×</span></a>
+                <h4 class="title">视频管理</h4>
+            </div>
+            <div class="box-body">            
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#videopacket1" aria-controls="videopacket1" role="tab" data-toggle="tab">未分组</a></li>
+                    <li role="presentation"><a href="#videoacket2" aria-controls="videoacket2" role="tab" data-toggle="tab">广告图<span aria-hidden="true" onclick="delTab(this)">×</span></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="videopacket1">
+                        <div class="annex-detail">
+                            <div class="detail-info">
+                                <div class="input-group">
+                                    <span class="input-group-addon">名称</span>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-btn">
+                                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 组 <span class="caret"></span> </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="btn group-btn" href="javascript:;">默认分组</a></li>
+                                            <li><a class="btn new-group-btn" href="javascript:;">新建组</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="" disabled="disabled">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">描述</span><textarea class="form-control" rows="2"></textarea>
+                                </div>
+                                <div class="input-group text-center">
+                                    <a href="javascript:;" class="btn btn-info">保存设置</a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="img-admin">
+                            <li class="img-item" onclick="SwitchBtn(this)">
+                                <i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>
+                                <i class="fa fa-play-circle"></i>
+                                <span class="title">coco.mp4</span>
+                                <i class="fa fa-check"></i>
+                            </li>
+                            <li class="img-item" onclick="SwitchBtn(this)">
+                                <i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>
+                                <i class="fa fa-play-circle"></i>
+                                <span class="title">coco.mp4</span>
+                                <i class="fa fa-check"></i>
+                            </li>
+                            <li class="img-item" onclick="SwitchBtn(this)">
+                                <i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>
+                                <i class="fa fa-play-circle"></i>
+                                <span class="title">coco.mp4</span>
+                                <i class="fa fa-check"></i>
+                            </li>
+                        </ul>
+                        <div class="box-footer">
+                            <nav class="file-page">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    </a>`
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li class="active"><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" class="btn btn-info">插入至页面</a>
+                            </nav>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="videoacket2">
+                        <div class="annex-detail">
+                            <div class="detail-info">
+                                <div class="input-group">
+                                    <span class="input-group-addon">名称</span>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-btn">
+                                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 组 <span class="caret"></span> </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="btn group-btn" href="javascript:;">默认分组</a></li>
+                                            <li><a class="btn new-group-btn" href="javascript:;">新建组</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="" disabled="disabled">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">描述</span><textarea class="form-control" rows="2"></textarea>
+                                </div>
+                                <div class="input-group text-center">
+                                    <a href="javascript:;" class="btn btn-info">保存设置</a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="img-admin">
+                            <li class="img-item" onclick="SwitchBtn(this)">
+                                <i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>
+                                <i class="fa fa-play-circle"></i>
+                                <span class="title">coco.mp4</span>
+                                <i class="fa fa-check"></i>
+                            </li>
+                            <li class="img-item" onclick="SwitchBtn(this)">
+                                <i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>
+                                <i class="fa fa-play-circle"></i>
+                                <span class="title">coco.mp4</span>
+                                <i class="fa fa-check"></i>
+                            </li>
+                            <li class="img-item" onclick="SwitchBtn(this)">
+                                <i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>
+                                <i class="fa fa-play-circle"></i>
+                                <span class="title">coco.mp4</span>
+                                <i class="fa fa-check"></i>
+                            </li>
+                        </ul>
+                        <div class="box-footer">
+                            <nav class="file-page">
+                            <ul class="pagination">
+                                <li class="disabled">
+                                    <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" class="btn btn-info">插入至页面</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-box tab-pane" id="music-admin-tab">
+            <div class="box-header">
+                <a href="javascript:;" class="close close-file-btn"><span aria-hidden="true">×</span></a>
+                <h4 class="title">音频管理</h4>
+            </div>
+            <div class="box-body">            
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#musicpacket1" aria-controls="musicpacket1" role="tab" data-toggle="tab">未分组</a></li>
+                    <li role="presentation"><a href="#musicpacket2" aria-controls="musicpacket2" role="tab" data-toggle="tab">广告图<span aria-hidden="true" onclick="delTab(this)">×</span></a></li>
+                </ul>
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="musicpacket1">
+                        <div class="annex-detail">
+                            <div class="detail-info">
+                                <div class="input-group">
+                                    <span class="input-group-addon">名称</span>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-btn">
+                                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 组 <span class="caret"></span> </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="btn group-btn" href="javascript:;">默认分组</a></li>
+                                            <li><a class="btn new-group-btn" href="javascript:;">新建组</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="" disabled="disabled">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">描述</span><textarea class="form-control" rows="2"></textarea>
+                                </div>
+                                <div class="input-group text-center">
+                                    <a href="javascript:;" class="btn btn-info">保存设置</a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="img-admin">
+                            <li class="img-item" onclick="SwitchBtn(this)">
+                                <i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>
+                                <i class="fa fa-play-circle"></i>
+                                <span class="title">coco.mp4</span>
+                                <i class="fa fa-check"></i>
+                            </li>
+                            <li class="img-item" onclick="SwitchBtn(this)">
+                                <i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>
+                                <i class="fa fa-play-circle"></i>
+                                <span class="title">coco.mp4</span>
+                                <i class="fa fa-check"></i>
+                            </li>
+                            <li class="img-item" onclick="SwitchBtn(this)">
+                                <i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>
+                                <i class="fa fa-play-circle"></i>
+                                <span class="title">coco.mp4</span>
+                                <i class="fa fa-check"></i>
+                            </li>
+                        </ul>
+                        <div class="box-footer">
+                            <nav class="file-page">
+                            <ul class="pagination">
+                                <li>
+                                    <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li class="active"><a href="#">5</a></li>
+                                <li class="disabled">
+                                    <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" class="btn btn-info">插入至页面</a>
+                            </nav>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="musicpacket2">
+                        <div class="annex-detail">
+                            <div class="detail-info">
+                                <div class="input-group">
+                                    <span class="input-group-addon">名称</span>
+                                    <input type="text" class="form-control" placeholder="">
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-btn">
+                                    <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 组 <span class="caret"></span> </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="btn group-btn" href="javascript:;">默认分组</a></li>
+                                            <li><a class="btn new-group-btn" href="javascript:;">新建组</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="" disabled="disabled">
+                                </div>
+                                <div class="input-group">
+                                    <span class="input-group-addon">描述</span><textarea class="form-control" rows="2"></textarea>
+                                </div>
+                                <div class="input-group text-center">
+                                    <a href="javascript:;" class="btn btn-info">保存设置</a>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="img-admin">
+                            <li class="img-item" onclick="SwitchBtn(this)">
+                                <i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>
+                                <i class="fa fa-play-circle"></i>
+                                <span class="title">coco.mp4</span>
+                                <i class="fa fa-check"></i>
+                            </li>
+                            <li class="img-item" onclick="SwitchBtn(this)">
+                                <i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>
+                                <i class="fa fa-play-circle"></i>
+                                <span class="title">coco.mp4</span>
+                                <i class="fa fa-check"></i>
+                            </li>
+                            <li class="img-item" onclick="SwitchBtn(this)">
+                                <i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>
+                                <i class="fa fa-play-circle"></i>
+                                <span class="title">coco.mp4</span>
+                                <i class="fa fa-check"></i>
+                            </li>
+                        </ul>
+                        <div class="box-footer">
+                            <nav class="file-page">
+                            <ul class="pagination">
+                                <li class="disabled">
+                                    <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="active"><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li>
+                                    <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            <a href="javascript:;" class="btn btn-info">插入至页面</a>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-box tab-pane" id="URL-admin-tab">
+            <div class="box-header">
+                <a href="javascript:;" class="close close-file-btn"><span aria-hidden="true">×</span></a>
+                <h4 class="title">从URL插入</h4>
+            </div>
+            <div class="box-body">
+                <div class="filesrc">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon2">链接地址</span>
+                                <input type="text" class="form-control" placeholder="http://" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="input-group">
+                                <span class="input-group-addon" id="basic-addon2">链接文本</span>
+                                <input type="text" class="form-control" placeholder="" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <a href="javascript:;" class="btn btn-info">插入至页面</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="msak"></div>
+<div class="js-message success">
+    <div class="message-suceess">您分组的文件已被删除成功!</div>
+</div>
+<div id="Delete-Item">
+    <span class="info text-center">您确定要把此文件删除吗?</span>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <a href="javascript:;" class="btn btn-default" onclick="DeleteConfirm()">确定</a>
+            <a href="javascript:;" class="btn btn-default" onclick="$('#Delete-Item').removeClass('open');">取消</a>
+        </div>
+    </div>
+</div>
+<div class="bg-msak"></div>
+<script type="text/javascript">
+    var waitTime= 0;
+    function delTab(e) {
+        var deltemp = $(e).parents('li').index();
+        $(e).parents('li').remove();
+    }
+    $(function () {
+        // 资源管理器关闭开关
+        $(".close-file-btn").on("click",function(e) {
+            $("#FileAdminBox").removeClass('open');
+        });
+        $("#file_input").change(function() {
+            $("#admin-tab-btn").addClass('active').siblings().removeClass('active');
+            $("#admin-tab").addClass('active').siblings().removeClass('active');
+            //$("#result").find('.progress').addClass('leading');
+            //Leading();
+        });
+        // 文件上传方法
+        upimg('result','file_input');
+        // 新建分组
+        $(".btn.new-group-btn").click(function(e) {
+            $(this).parents('.input-group').find('input').removeAttr('disabled');
+            $(this).parents('.input-group').find('input').val('');
+        });
+        // 选择分组
+        $(".btn.group-btn").click(function(e) {
+            $(this).parents('.input-group').find('input').attr('disabled','disabled');
+            $(this).parents('.input-group').find('input').val($(this).text());
+        });
+    });
+    function upimg (result,file) {
+        var result = document.getElementById(result);
+        var input = document.getElementById(file);
+        if (typeof FileReader === 'undefined') {
+            result.innerHTML = "抱歉，你的浏览器不支持 FileReader";
+            input.setAttribute('disabled', 'disabled');
+        } else {
+            input.addEventListener('change', function () {                
+                for (var i = 0, file; file = this.files[i]; i++ ) {
+                    console.log( this.files[i].name );
+                    console.log( this.value );
+                    // if (!/image\/\w+/.test(file.type)) {
+                    //     alert("请确保文件为图像类型");
+                    //     return false;
+                    // }
+                    var tempname = this.files[i].name;
+                    var reader = new FileReader();
+                    reader.readAsDataURL(file);
+                    reader.onload = function(e) {
+                        $(result).prepend('<li class="img-item" onclick="SwitchBtn(this)">'+
+                            '<i class="fa fa-trash-o" onclick="DeleteItem(this)"></i>'+
+                            '<img src="'+ this.result +'" alt="" class="img-small">'+
+                            '<span class="title">'+ tempname +'</span>'+
+                            '<i class="fa fa-check"></i>'+
+                        '</li>');
+                    }
+                }
+            }, false);
+        }
+    }
+    var delItem = null;
+    // 删除媒体弹框
+    function DeleteItem(e) {
+        $("#Delete-Item").addClass('open');
+        delItem = e;
+    }
+    function DeleteConfirm() {
+        $("#Delete-Item").removeClass('open');
+        $(delItem).parents("li.img-item").remove();
+        $(".js-message.success").addClass("show");
+        setTimeout(function(){
+            $(".js-message.success").removeClass("show");
+        },1000);
+    }
+    // 点击选项,切换状态,并打开附件详情,并没有附带数据
+    function SwitchBtn(e) {
+        if( $(e).hasClass('active') ){
+            $(e).removeClass('active');
+        }else{
+            $(e).addClass('active');
+        }
+    };
+</script>

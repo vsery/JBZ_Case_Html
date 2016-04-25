@@ -1,0 +1,112 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/code_batch_list.html')">众筹设置</a></li>
+        <li class="active">修改</li>
+    </ol>
+    <div class="row">
+        <div class="col-xs-12 col-lg-12">
+            <form action="code_batch_list.html">
+                
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 项目名称 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="味赢天下——金质人生" value=""  type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 类型 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="回报众筹" type="name">
+                    </div>
+                </div>
+
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 状态 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="已结束" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 标签 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="活动" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 众筹天数 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="30" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 开始时间 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="2016-01-23 12:00:00" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 结束时间 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="2016-01-23 12:00:00" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 众筹目标 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="30万" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 众筹上限 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="100%" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 关注 </label>
+                   <div class="col-xs-8 col-lg-9">
+                                        <label><input name="state" value="" type="radio"> 是 </label>
+                                        <label><input name="state" value="" checked="checked" type="radio"> 否 </label>
+                                    </div>
+                </div>
+                
+                
+                
+                <div class="row form-group"> <!-- 表单按钮 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'></label>
+                    <div class="col-xs-9  col-lg-9">
+                        
+                        <button  class="btn btn-success" data-toggle="modal" data-target="#bonus_setting" type="button" class="btn">确定</button>
+                        
+                        <a class="btn btn-warning" type="button" href="javascript:;" onclick="srcpage('view-platform/')">取消</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="bonus_setting" tabindex="-1" role="dialog" aria-labelledby="bonus_settingLabel"> <!--修改回报-->
+ 
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            
+            <div class="modal-body">
+                
+                <div class="row">
+                    <label class="col-xs-7 col-lg-7 text-right">是否确定修改</label>
+                   
+                </div>
+                
+            </div>
+
+            <div class="modal-footer">
+            <button type="button" class="btn btn-info">保存</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src='js/glDatePicker.min.js'></script>
+    <script type="text/javascript" src="js/file.img.js"></script>

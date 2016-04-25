@@ -1,0 +1,273 @@
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12"> <!-- 标题描述 -->
+            <h1 class="breadcrumb"><i class="fa fa-twitter "></i> 希尚科技<small>一袋一码</small></h1>
+            <div class="alert alert-warning alert-dismissable">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                欢迎您光临 <a class="alert-link" href="http://localhost/Samrty/S-Badmin/#">一袋一码</a> 闭环O2O生态系统<br/>为千万家大中小企业的便捷管理、精准营销而作战！
+            </div>
+        </div>
+    </div><!-- /.row -->
+
+    <div class="row">
+        <div class="col-lg-3">
+            <div class="panel panel-info">  <!-- 消息提示 -->
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-6"> <i class="fa fa-bar-chart-o fa-5x"></i></div>
+                        <div class="col-xs-6 text-right">
+                            <a href="table_scan_code.php" class="text-info">
+                                <p class="announcement-text">实时扫码量</p>
+                                <p class="announcement-heading">5.226</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:;">
+                    <div class="panel-footer announcement-bottom">
+                        <div class="row">
+                            <div class="col-xs-6">查看详情</div>
+                            <div class="col-xs-6 text-right"> <i class="fa fa-arrow-circle-right"></i></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div class="panel panel-warning">  <!-- 二维码信息提示 -->
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-6"> <i class="fa fa-qrcode fa-5x"></i></div>
+                        <div class="col-xs-6 text-right">
+                            <p class="announcement-text">生成二维码</p>
+                            <p class="announcement-heading">2.876.500</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:;">
+                    <div class="panel-footer announcement-bottom">
+                        <div class="row">
+                            <a href="code_batch_list.php" class="text-info">
+                                <div class="col-xs-6">查看详情</div>
+                                <div class="col-xs-6 text-right"><i class="fa fa-arrow-circle-right"></i></div>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div class="panel panel-danger">  <!-- 产品信息提示 -->
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-6"> <i class="fa fa-gift fa-5x"></i></div>
+                        <div class="col-xs-6 text-right">
+                            <p class="announcement-text">已出赠品</p>
+                            <p class="announcement-heading">1892</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:;">
+                    <div class="panel-footer announcement-bottom">
+                        <div class="row">
+                            <a href="Gift_list.php" class="text-info">
+                                <div class="col-xs-6">查看详情</div>
+                                <div class="col-xs-6 text-right"><i class="fa fa-arrow-circle-right"></i></div>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-3">
+            <div class="panel panel-success">  <!-- 用户扫码提示 -->
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-6"> <i class="fa fa-user fa-5x"></i></div>
+                        <div class="col-xs-6 text-right">
+                            <p class="announcement-text">关注粉丝</p>
+                            <p class="announcement-heading">274.353</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="javascript:;">
+                    <div class="panel-footer announcement-bottom">
+                        <div class="row">
+                            <a href="fans_list.php" class="text-info">
+                                <div class="col-xs-6">查看详情</div>
+                                <div class="col-xs-6 text-right"><i class="fa fa-arrow-circle-right"></i></div>
+                            </a>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 ">
+            <div class="text-left">
+                <span class='title'><i class='blue'></i>当日扫码量</span>
+                <span class='title'><i class="green"></i>当日新增粉丝量</span>
+            </div>
+            <canvas class="min" id="canvas"></canvas>
+        </div>
+        <div class="col-lg-6 ">
+            <div class="text-left">
+                <span class='title'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class='blue'></i> 区域销售统计</span>
+            </div>
+            <canvas class="min" id="storetData"></canvas>
+        </div>
+    </div>        
+    <div class="row text-right">
+        <div class="col-lg-6">
+            <a href="table_scan_code.php" class="text-info">查看详情</a>
+        </div>
+        <div class="col-lg-6">
+            <a href="table_store.php" class="text-info">查看详情</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 ">
+            <div class="text-left">
+                <span class='title'><i class='green'></i>串货表</span>
+            </div>
+            <canvas class="min" id="conflictcanvas"></canvas>
+        </div>
+        <div class="col-lg-6 ">
+            <div class="text-left">
+                <span class='title'><i class='blue'></i>中奖表</span>
+            </div>
+            <canvas class="min" id="winningData"></canvas>
+        </div>
+    </div>        
+    <div class="row text-right">
+        <div class="col-lg-6">
+            <a href="table_conflict.php" class="text-info">查看详情</a>
+        </div>
+        <div class="col-lg-6">
+            <a href="table_winning.php" class="text-info">查看详情</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src='js/glDatePicker.min.js'></script>
+<script type="text/javascript" src="js/Chart.js"></script>
+<script type="text/javascript">
+    //随机函数
+    var randomScalingFactor = function(){ return Math.round(Math.random()*6000)};
+    //每日新增粉丝量 , 每日扫描量
+    var lineChartData = {
+        labels : ["07月","08月","09月","10月","11月","12月"],
+        datasets : [
+            {
+                label: "扫码量",
+                fillColor : "rgba(89,155,239,0.2)",
+                strokeColor : "rgba(89,155,239,1)",
+                pointColor : "rgba(89,155,239,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(89,155,239,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+            ,{
+                label: "粉丝",
+                fillColor : "rgba(94,203,105,0.2)",
+                strokeColor : "rgba(94,203,105,1)",
+                pointColor : "rgba(94,203,105,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(94,203,105,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    }
+    //区域销售统计
+    var storetData = [
+        {
+            value: 3055,
+            color:"#5a82b6",
+            label: "湖南",
+        },
+        {
+            value : 14420,
+            color : "#599bef",
+            label: "上海"
+        },
+        {
+            value : 10440,
+            color : "#7aaced",
+            label: "湖北"
+        },
+        {
+            value : 9330,
+            color : "#8fb6e8",
+            label: "广州"
+        },
+        {
+            value : 4454,
+            color : "#b4c9e5",
+            label: "深圳"
+        },
+        {
+            value : 1550,
+            color : "#b4c9e5",
+            label: "其他"
+        }
+    ]
+    //串货量总表
+    var conflicttData = {
+        labels : ["07月","08月","09月","10月","11月","12月"],
+        datasets : [
+            {
+                label: "串货量",
+                fillColor : "rgba(94,203,105,0.2)",
+                strokeColor : "rgba(94,203,105,1)",
+                pointColor : "rgba(94,203,105,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(94,203,105,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    }
+    //中奖量表
+    var winningData = {
+        labels : ["07月","08月","09月","10月","11月","12月"],
+        datasets : [
+            {
+                label: "中奖量",
+                fillColor : "rgba(89,155,239,0.2)",
+                strokeColor : "rgba(89,155,239,1)",
+                pointColor : "rgba(89,155,239,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(89,155,239,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }
+        ]
+    }
+    //加载图标信息
+    window.onload = function(){
+        var ctx = $("#canvas").get(0).getContext("2d");
+        window.myLine = new Chart(ctx).Line(lineChartData, {
+            responsive: true
+        });
+        var stx = $("#storetData").get(0).getContext("2d");
+        window.myLine = new Chart(stx).Doughnut(storetData, {
+            responsive: true
+        });
+        var cotx = $("#conflictcanvas").get(0).getContext("2d");
+        window.myLine = new Chart(cotx).Bar(conflicttData, {
+            responsive: true
+        });
+        var cotx = $("#winningData").get(0).getContext("2d");
+        window.myLine = new Chart(cotx).Line(winningData, {
+            responsive: true
+        });
+    }
+</script>
+

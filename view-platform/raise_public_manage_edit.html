@@ -1,0 +1,115 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">众筹管理</li>
+    </ol>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">            
+                    <li>
+                        <a type=button onclick="tableAddRow();" class='btn'>添加</a>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入产品标题">
+                    </div>
+                    <a href="javascript:;" class="btn btn-info">查询</a>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-lg-12 col-xs-12">
+            <div class="table-responsive">
+                <table class="table table-condensed table-hover" id="tableId">
+                    <thead>
+                        <tr>
+                            <th class="length text-center">资金</th>
+                            <th class="length text-center">描述</th>
+                            <th class="length text-center">达到金额</th>
+                            <th class="length text-center">奖品总数</th>
+                            <th class="length text-center">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody id="aaa">
+                        <tr>
+                            
+                            <td class="length text-center"> 25¥ </td>
+                             <td class="length text-center"><span title='感谢您对口味王的支持，众筹结束后我们将在每20名中抽取1名可获得"金质人生"1盒。不满20名也抽取1名。由微信官方抽取，抽奖规则以及中奖名单将在公众平台公布。'>感谢您对口味王的支持，众筹结束后我们将在每20名中抽取1名可获得"金质人生"1盒。不满20名也抽取1名。由微信官方抽取，抽奖规则以及中奖名单将在公众平台公布。  </span></td>
+                             <td class="length text-center"> 5000 </td>
+                             <td class="length text-center"> 50 </td>
+                          <td class="text-center">
+                                <a  type="button" onclick="tableAddRow();"class="btn" ><i class="fa fa-trash-o"></i> 删除 </a>
+                         </td>
+                        </tr>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+   <form> 
+   <div class="row form-group"> <!-- 表单按钮 -->
+        <label class='col-xs-2 col-lg-2 text-right control-label'></label>
+        <div class="col-xs-9[] col-lg-9">
+            <button class="btn btn-success" type="submit" href="javascript:;" onclick="srcpage('view-platform/')">生成</button>
+            <a class="btn btn-warning" type="button" href="javascript:;" onclick="srcpage('view-platform/')">取消</a>
+        </div>
+        </div>
+    </form>
+    <nav class='navbar-right'>
+        <ul class="pagination">
+            <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">1</a>
+            </li>
+            <li>
+                <a href="#">2</a>
+            </li>
+            <li>
+                <a href="#">3</a>
+            </li>
+            <li>
+                <a href="#">4</a>
+            </li>
+            <li>
+                <a href="#">5</a>
+            </li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<script type="text/javascript">
+  function tableAddRow() 
+  { 
+    var inHtml ="<tr><td class='length text-center'><input type='text' class='form-control text-center'></td>"+"<td class='length text-center'><input type='text' class='form-control text-center'></td><td class='length text-center'><input type='text' class='form-control text-center'></td><td class='length text-center'><input type='text' class='form-control text-center'></td><td class='text-center'><a href='javascript:;' type='button' class='btn' data-toggle='modal' data-target='#bonus_setting'><i class='fa fa-trash-o'></i> 删除 </a></td></tr>"
+    $('#aaa').append(inHtml);
+   // var row = tableName.insertRow(tableName.rows.length);  //行对象
+   // var i = tableName.rows.length - 2; //table原有的行数
+   // var col;  //列对象
+   
+   // if(tableName==tableId) 
+   // {
+   //  col = row.insertCell(0);
+   //  col.innerHTML = i+1; 
+   //  col = row.insertCell(1); 
+   //  col.innerHTML = "<input type='text' class='form-control text-center'>"; 
+   //  col = row.insertCell(2); 
+   //  col.innerHTML = "<input type='text' class='form-control text-center'>"; 
+   // }
+  } 
+  </script>
+
+
+

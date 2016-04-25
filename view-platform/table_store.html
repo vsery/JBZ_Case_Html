@@ -1,0 +1,166 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/table_list.php')">数据管理</a></li>
+        <li class="active">门店表</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="form-group col-lg-3">
+            <div class="input-group">
+                <input type="text" class="form-control date_end" gldp-id="begin_data" placeholder="请选择 开始日期" id="begin_data" />
+                <span class="input-group-btn">
+                    <a class="btn btn-default date_end_but" type="button">
+                        <i class="glyphicon glyphicon-time"></i>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="form-group col-lg-3">
+            <div class="input-group">
+                <input type="text" class="form-control date_end" gldp-id="end_data" placeholder="请选择 结束日期" id="end_data" />
+                <span class="input-group-btn">
+                    <a class="btn btn-default date_end_but" type="button">
+                        <i class="glyphicon glyphicon-time"></i>
+                    </a>
+                </span>    
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <a type="button" class="btn btn-info" id="table_data_btn"><i class="glyphicon glyphicon-qrcode"></i> 查询时间</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="text-left">
+            <span class='title'><i class='blue'></i>门店核对奖品总量</span>
+        </div>
+        <div class="col-lg-12 " id="table_in">
+            <canvas id="table_intergral_1"></canvas>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-lg-12 ">
+            <div class="text-right" id="select_address">
+                <div class="row">
+                    <div class="col-lg-7">                        
+                        <select id="s_province" name="s_province"></select>&nbsp;&nbsp;
+                        <select id="s_city" name="s_city" ></select>
+                        <select id="s_county" name="s_county"></select>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="input-group">
+                            <input type="name" class="form-control" placeholder="请填门店">    
+                            <div class="input-group-btn">
+                                <button class="btn btn-info" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 门店 <span class="caret"></span></button>
+                                <ul class="dropdown-menu" aria-labelledby="prod_cate_list">
+                                    <li><a href="javascript:;" class="btn">旗舰店</a></li>
+                                    <li><a href="javascript:;" class="btn">F1旗舰店</a></li>
+                                    <li><a href="javascript:;" class="btn">加盟店</a></li>
+                                    <li><a href="javascript:;" class="btn">华南店</a></li>
+                                    <li><a href="javascript:;" class="btn">华北店</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1">
+                        <a type="button" class="btn btn-info" id="select_data_btn"><i class="glyphicon glyphicon-qrcode"></i> 查询地区</a>
+                    </div>
+                </div>
+                <script class="resources library" src="js/area.js" type="text/javascript"></script>    
+                <script type="text/javascript">
+                    _init_area();
+                    var Gid  = document.getElementById ;
+                    var showArea = function(){
+                    Gid('show').innerHTML = "<h3>省" + Gid('s_province').value + " - 市" +    
+                    Gid('s_city').value + " - 县/区" + 
+                    Gid('s_county').value + "</h3>" }
+                    Gid('s_county').setAttribute('onchange','showArea()');
+                </script>                    
+            </div>
+
+            <div class="text-left">
+                <span class='title'><i class='blue'></i>核奖量</span>
+            </div>
+            <div class="panel-body" id="select_table_in">
+                <canvas id="canvas" hight="300"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var randomScalingFactor = function(){ return Math.round(Math.random()*200)};
+    var lineChartData = {
+        labels : ["12月1日","12月2日","12月3日","12月4日","12月5日","12月6日","12月7日"],
+        datasets : [{
+                label: "串货",
+                fillColor : "rgba(89,155,239,0.2)",
+                strokeColor : "rgba(89,155,239,1)",
+                pointColor : "rgba(89,155,239,1)",
+                pointStrokeColor : "#fff",
+                pointHighlightFill : "#fff",
+                pointHighlightStroke : "rgba(89,155,239,1)",
+                data : [randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor(),randomScalingFactor()]
+            }]
+        }
+    var options = {
+        scaleOverride :false, //是否显示折线图的线条
+        scaleShowLabels :true,//是否显示纵轴
+        scaleShowGridLines :true,//是否显示坐标轴的标尺
+        bezierCurve :true,//是否显示圆滑的效果
+        pointDot :true,//是否显示折线图的顶点
+        pointDotRadius :3,//折线图定点大小
+        pointDotStrokeWidth:1,//折线图定点外围大小
+        animation :true,//是否显示动画效果
+        animationSteps :60,//图形显示的速度
+    };
+
+    window.onload = function () {
+        var ctx = $("#table_intergral_1").get(0).getContext("2d");
+        window.myLine = new Chart(ctx).Line(lineChartData, {
+            responsive: true
+        });
+    }
+    $('#table_data_btn').click(function () {
+        $('#table_intergral_1').remove();
+        $('#table_in').append('<canvas id="table_intergral_1" ></canvas>');
+        var begin = $('#begin_data').val();
+        var end = $('#end_data').val();    
+        var sArr = begin.split("/");
+        var eArr = end.split("/");
+        var sRDate = new Date(sArr[0], sArr[1], sArr[2]);
+        var eRDate = new Date(eArr[0], eArr[1], eArr[2]);
+        var result = (eRDate-sRDate)/(24*60*60*1000);
+        if (result<=0) {
+            alert("您选择的开始时间大于结束时间");
+        }else{
+            var str ="";
+            lineChartData.labels.length =0;
+            lineChartData.datasets[0].length=0;
+            //lineChartData.datasets[1].length=0;
+            for( var i=0 ; i<= result; i++ ) {
+                lineChartData.labels[i]= sArr[1] +"月" + (parseInt(sArr[2])+i)+"日";
+                lineChartData.datasets[0].data[i] = randomScalingFactor() ;         
+                str += lineChartData.datasets[0].data[i] +"\n";
+            }        
+            var ctx = $("#table_intergral_1").get(0).getContext("2d");
+            var myNewChart = new Chart(ctx).Line(lineChartData,{ responsive: true});
+        }
+    });
+    $('#select_data_btn').click(function () {
+        $('#canvas').remove();
+        $('#select_table_in').append('<canvas id="canvas"></canvas>');
+        lineChartData.labels.length =0;
+        lineChartData.labels = ["12年2月","12年2月","12年4月","12年5月","12年6月","15年7月","15年8月","15年9月","15年10月","15年11月","15年12月","16年1月"];
+        var str ="";
+        lineChartData.datasets[0].length=0;
+        for( var i=1 ; i<= 12; i++ ) {
+            lineChartData.datasets[0].data[i] = randomScalingFactor() ;
+            str += lineChartData.datasets[0].data[i] +"\n";
+        }
+        var ctx = $("#canvas").get(0).getContext("2d");
+        var myNewChart = new Chart(ctx).Line(lineChartData,{ responsive: true});
+    });
+</script>
+<script type="text/javascript" src="js/public.js"></script> 

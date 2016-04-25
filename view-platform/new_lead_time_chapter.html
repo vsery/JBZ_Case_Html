@@ -1,0 +1,413 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb"> 
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/new_lead_time.html')">领读</a></li>
+        <li class="active">章节管理</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#music-tab" aria-controls="music-tab" role="tab" data-toggle="tab">音频</a></li>
+                <li role="presentation"><a href="#video-tab" aria-controls="video-tab" role="tab" data-toggle="tab">视频</a></li>
+                <li role="presentation"><a href="#image-tab" aria-controls="image-tab" role="tab" data-toggle="tab">图文</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="music-tab">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="javascript:;" class="btn" onclick="srcpage('view-platform/new_add_chapter.html')">添加</a></li>
+                                </ul>
+                                <div class="navbar-form navbar-right" role="search">
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="章节标题" type="text">
+                                    </div>
+                                    <a href="javascript:;" class="btn btn-info">查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">章节排序</th>
+                                    <th class="text-center">章节标题</th>
+                                    <th class="text-center">章节内容</th>
+                                    <th class="text-center">发布时间</th>
+                                    <th class="text-center">查看人数</th>
+                                    <th class="text-center">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center" id="music-admin-table">
+                                <tr>
+                                    <td><span class="SequenceID">4</span></td>
+                                    <td>Diamond Girl中文说唱</td>
+                                    <td>
+                                        <a href="javascript:;" class="btn play-btn">
+                                            <i class="fa fa-play-circle-o fa-2x"></i>
+                                            <video src="http://sc1.111ttt.com/2016/1/02/25/195251144094.mp3" class="hide"></video>
+                                        </a>
+                                    </td>
+                                    <td>2015-12-10 21:22:22</td>
+                                    <td>3789</td>
+                                    <td>
+                                        <a href="javascript:;" onclick="srcpage('view-platform/new_add_chapter.html')" class="btn"><i class="fa fa-edit"></i> 修改</a><br/>
+                                        <div class="close_bomb">
+                                            <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                            <div class="close_box text-right">
+                                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="SequenceID">4</span></td>
+                                    <td>Super Junior-insomnia - beige 厉旭</td>
+                                    <td>
+                                        <a href="javascript:;" class="btn play-btn">
+                                            <i class="fa fa-play-circle-o fa-2x"></i>
+                                            <video src="http://sc1.111ttt.com/2016/1/02/25/195250001267.mp3" class="hide"></video>
+                                        </a>
+                                    </td>
+                                    <td>2015-12-10 21:22:22</td>
+                                    <td>3789</td>
+                                    <td>
+                                        <a href="javascript:;" onclick="srcpage('view-platform/new_add_chapter.html')" class="btn"><i class="fa fa-edit"></i> 修改</a><br/>
+                                        <div class="close_bomb">
+                                            <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                            <div class="close_box text-right">
+                                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="SequenceID">4</span></td>
+                                    <td>可能认识的人(People You May Know)</td>
+                                    <td>
+                                        <a href="javascript:;" class="btn play-btn">
+                                            <i class="fa fa-play-circle-o fa-2x"></i>
+                                            <video src="http://sc1.111ttt.com/2016/1/02/24/195242357079.mp3" class="hide"></video>
+                                        </a>
+                                    </td>
+                                    <td>2015-12-10 21:22:22</td>
+                                    <td>3789</td>
+                                    <td>
+                                        <a href="javascript:;" onclick="srcpage('view-platform/new_add_chapter.html')" class="btn"><i class="fa fa-edit"></i> 修改</a><br/>
+                                        <div class="close_bomb">
+                                            <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                            <div class="close_box text-right">
+                                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav class='navbar-right'>
+                        <ul class="pagination">
+                            <li class="disabled">
+                                <a href="javascript:;" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="active">
+                                <a href="javascript:;">1</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">2</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">3</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div role="tabpanel" class="tab-pane" id="video-tab">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="javascript:;" class="btn" onclick="srcpage('view-platform/new_add_chapter.html')">添加</a></li>
+                                </ul>
+                                <div class="navbar-form navbar-right" role="search">
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="章节标题" type="text">
+                                    </div>
+                                    <a href="javascript:;" class="btn btn-info">查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">章节排序</th>
+                                    <th class="text-center">章节标题</th>
+                                    <th class="text-center">章节内容</th>
+                                    <th class="text-center">发布时间</th>
+                                    <th class="text-center">查看人数</th>
+                                    <th class="text-center">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center" id="music-admin-table">
+                                <tr>
+                                    <td><span class="SequenceID">4</span></td>
+                                    <td>电影公嗨课127：美版与港版无间道哪家更强？</td>
+                                    <td>
+                                        <a href="javascript:;" class="btn video-btn play-btn">
+                                            <i class="fa fa-play-circle-o fa-2x"></i>
+                                            <!-- <video src="http://player.youku.com/player.php/sid/XMTUyNDU1OTA4NA==/v.swf" class="hide"></video> -->
+                                            <video src="http://yuntv.letv.com/bcloud.swf" class="hide"></video>
+                                        </a>
+                                    </td>
+                                    <td>2015-12-10 21:22:22</td>
+                                    <td>3789</td>
+                                    <td>
+                                        <a href="javascript:;" onclick="srcpage('view-platform/new_add_chapter.html')" class="btn"><i class="fa fa-edit"></i> 修改</a><br/>
+                                        <div class="close_bomb">
+                                            <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                            <div class="close_box text-right">
+                                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="SequenceID">4</span></td>
+                                    <td>《爱丽丝梦游仙境2：镜中奇遇记》正式预告片</td>
+                                    <td>
+                                        <a href="javascript:;" class="btn video-btn play-btn">
+                                            <i class="fa fa-play-circle-o fa-2x"></i>
+                                            <video src="http://player.youku.com/player.php/Type/Folder/Fid/26972490/Ob/1/sid/XMTUxNjU1OTI1Ng==/v.swf" class="hide"></video>
+                                        </a>
+                                    </td>
+                                    <td>2015-12-10 21:22:22</td>
+                                    <td>3789</td>
+                                    <td>
+                                        <a href="javascript:;" onclick="srcpage('view-platform/new_add_chapter.html')" class="btn"><i class="fa fa-edit"></i> 修改</a><br/>
+                                        <div class="close_bomb">
+                                            <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                            <div class="close_box text-right">
+                                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="SequenceID">4</span></td>
+                                    <td>《魔兽》终极版海报磅礴问世 部落联盟生死对抗千钧一发</td>
+                                    <td>
+                                        <a href="javascript:;" class="btn video-btn play-btn">
+                                            <i class="fa fa-play-circle-o fa-2x"></i>
+                                            <video src="http://player.youku.com/player.php/Type/Folder/Fid/26206336/Ob/1/sid/XMTUxODI5MTEyNA==/v.swf" class="hide"></video>
+                                        </a>
+                                    </td>
+                                    <td>2015-12-10 21:22:22</td>
+                                    <td>3789</td>
+                                    <td>
+                                        <a href="javascript:;" onclick="srcpage('view-platform/new_add_chapter.html')" class="btn"><i class="fa fa-edit"></i> 修改</a><br/>
+                                        <div class="close_bomb">
+                                            <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                            <div class="close_box text-right">
+                                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><span class="SequenceID">4</span></td>
+                                    <td>视频: 《侠盗一号：星球大战外传》 首支中文预告片</td>
+                                    <td>
+                                        <a href="javascript:;" class="btn video-btn play-btn">
+                                            <i class="fa fa-play-circle-o fa-2x"></i>
+                                            <video src="http://player.youku.com/player.php/sid/XMTUyNjcyODIyOA==/v.swf" class="hide"></video>
+                                        </a>
+                                    </td>
+                                    <td>2015-12-10 21:22:22</td>
+                                    <td>3789</td>
+                                    <td>
+                                        <a href="javascript:;" onclick="srcpage('view-platform/new_add_chapter.html')" class="btn"><i class="fa fa-edit"></i> 修改</a><br/>
+                                        <div class="close_bomb">
+                                            <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                            <div class="close_box text-right">
+                                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav class='navbar-right'>
+                        <ul class="pagination">
+                            <li>
+                                <a href="javascript:;" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">1</a>
+                            </li>
+                            <li class="active">
+                                <a href="javascript:;">2</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">3</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div role="tabpanel" class="tab-pane" id="image-tab">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="javascript:;" class="btn" onclick="srcpage('view-platform/new_add_chapter_text.html')">添加</a></li>
+                                </ul>
+                                <div class="navbar-form navbar-right" role="search">
+                                    <div class="input-group">
+                                        <input class="form-control" placeholder="章节标题" type="text">
+                                    </div>
+                                    <a href="javascript:;" class="btn btn-info">查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">章节排序</th>
+                                    <th class="text-center">章节标题</th>
+                                    <th class="text-center">章节内容</th>
+                                    <th class="text-center">发布时间</th>
+                                    <th class="text-center">查看人数</th>
+                                    <th class="text-center">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center" id="music-admin-table">
+                                <tr>
+                                    <td><span class="SequenceID">4</span></td>
+                                    <td>Six ---- Bomb</td>
+                                    <td>
+                                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/new_add_chapter_text.html')">
+                                            <i class="fa fa-eye fa-2x"></i>
+                                            <data src='read_info.html'></data>
+                                        </a>
+                                    </td>
+                                    <td>2015-12-10 21:22:22</td>
+                                    <td>3789</td>
+                                    <td>
+                                        <a href="javascript:;" onclick="srcpage('view-platform/new_add_chapter_text.html')" class="btn"><i class="fa fa-edit"></i> 修改</a><br/>
+                                        <div class="close_bomb">
+                                            <a href="javascript:;" class="btn close_btn" type="button"><i class="fa fa-trash-o"></i> 删除</a>
+                                            <div class="close_box text-right">
+                                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav class='navbar-right'>
+                        <ul class="pagination">
+                            <li>
+                                <a href="javascript:;" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">1</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">2</a>
+                            </li>
+                            <li class="active">
+                                <a href="javascript:;">3</a>
+                            </li>
+                            <li class="disabled">
+                                <a href="javascript:;" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div id="show-box">
+    <i class="fa fa-close"></i>    
+    <embed id="video-show" name="cloudPlayer14613099238650" src="http://yuntv.letv.com/bcloud.swf" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" bgcolor="#000000" allowscriptaccess="always" wmode="direct" quality="high" allowfullscreen="true" version="10" flashvars="uu=u1k8j2zfn5&amp;vu=9f776786a5&amp;auto_play=1&amp;gpcflag=1&amp;width=640&amp;height=360&amp;pageControls=1&amp;" width="100%" height="100%" align="middle">
+</div>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $("a.play-btn").click(function() { //播放开关切换
+            var ts = $(this).children("video.hide");
+            var tp = $(this).parents("tr");
+            if( ts[0].paused ){ //判断是否暂停状态
+                $("#music-admin-table tr").each(function(index, el) { //关闭上一音频
+                    if( $(this).hasClass('active') ) { $(this).find("video.hide")[0].pause(); }
+                });
+                $(".tab-content tr").removeClass('active'); //移除所有选中行
+                tp.addClass('active'); //确定当前选中行
+                ts[0].play(); //播放音频
+            }else{
+                tp.removeClass('active'); //移除选中音频
+                ts[0].pause(); //暂停播放
+            }
+        });
+        $("a.btn-goline").click(function() { //表格上下行切换不影响播放
+            if( $(this).parents("tr").hasClass('active') ){
+                $(this).parents("tr").find("video.hide")[0].play();
+            }
+        });
+        $("a.video-btn").click(function() { //打开视频播放
+            $(this).find("video.hide")[0].pause();
+            var tempsrc=$(this).find("video.hide").attr('src');
+            $("#show-box").addClass('open');
+            $("#video-show").attr('src', tempsrc);
+        });
+        $("#show-box .fa-close").click(function() { //关闭视频播放
+            $("#show-box").removeClass('open');
+            $("#video-show").removeAttr('src');
+        });
+    });
+</script>

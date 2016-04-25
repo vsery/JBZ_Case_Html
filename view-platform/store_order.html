@@ -1,0 +1,466 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/store_list.html')">门店管理</a></li>
+        <li class="active">门店销售/库存/核对记录</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a class="store sale" href="#store_sale" aria-controls="store_sale" role="tab" data-toggle="tab">门店销售记录</a>
+                <li role="presentation">
+                    <a class="store stock" href="#store_stock" aria-controls="store_stock" role="tab" data-toggle="tab">门店商品库存</a>
+                </li>
+                </li>
+                <li role="presentation">
+                    <a class="store award" href="#store_award" aria-controls="store_award" role="tab" data-toggle="tab">门店核奖记录</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane sale active bg-default" id="store_sale">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse">
+                                <div class="navbar-form navbar-right" role="search">
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 选择查询 <span class="caret"></span></a>
+                                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                                <li><a href="javascript:;" class="btn">订单编号</a></li>
+                                                <li><a href="javascript:;" class="btn">商品名称</a></li>
+                                                <li><a href="javascript:;" class="btn">购买粉丝</a></li>
+                                            </ul>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="请输入...">
+                                    </div>
+                                    <a href="javascript:;" class="btn btn-info">查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">商品</th>
+                                            <th class="text-center">销售价/数量</th>
+                                            <th class="text-center">购买粉丝(买家)</th>
+                                            <th class="text-center">下单时间</th>
+                                            <th class="text-center">状态</th>
+                                            <th class="text-center">进货价</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('view-platform/order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_10.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="口味王槟郎 和成天下">口味王槟郎 和成天下</a></td>
+                                            <td class="text-right"><p>10</p><p>(1包)</p></td>
+                                            <td><a href="javascript:;" onstalled="srcpage('view-platform/order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-success">已完成</span></td>
+                                            <td class="text-center">8.5</td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="order_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="4" class="text-left">订单号: E20150416142816023120730</td>
+                                            <td colspan="2" class="text-right"><a href="javascript:;" onstalled="srcpage('view-platform/order_info.html')">查看详情</a> -<a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><img class="img-small" src="images/product/prod_11.jpg" alt="..."><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="口味王槟郎 味赢天下">口味王槟郎 味赢天下</a></td>
+                                            <td class="text-right"><p>35</p><p>(1盒)</p></td>
+                                            <td><a href="javascript:;" onstalled="srcpage('view-platform/order_user.html')">吖主-郭琳</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-success">已完成</span></td>
+                                            <td class="text-center">32</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav class='navbar-right'>
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="javascript:;" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="javascript:;">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>                                
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane stock bg-default" id="store_stock">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="javascript:;" type="button" class="btn" id="sort_btn">排序</a></li>
+                                </ul>
+                                <div class="navbar-form navbar-right" role="search">
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 选择查询 <span class="caret"></span></a>
+                                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                                <li><a href="javascript:;" class="btn">商品名称</a></li>
+                                                <li><a href="javascript:;" class="btn">商品编码</a></li>
+                                            </ul>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="请输入...">
+                                    </div>
+                                    <a href="javascript:;" class="btn btn-info">查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hovered">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">商品/商品码</th>
+                                            <th class="text-center">缩略图</th>
+                                            <th class="text-center">销售价</th>
+                                            <th class="text-center">生产时间/保质期</th>
+                                            <th class="text-center">进货价</th>
+                                            <th class="text-center">销售量</th>
+                                            <th class="text-center">库存量</th>
+                                            <th class="text-center">报废量</th>
+                                            <th class="text-center">利润</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center" id="sales_list">
+                                        <tr class="sales_item">
+                                            <td class="length"><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="口味王槟郎 和成天下">口味王槟郎 和成天下</a><br/>
+                                            <span class="prod_id">KWWB-L234</span></td>
+                                            <td><img class="img-small" src="images/product/prod_10.jpg" alt="..."></td>
+                                            <td><span class="sales_price">10</span>(元)</td>
+                                            <td>2015-04-16<br/>12(月)</td>
+                                            <td><span class="buying_pirce">7</span>(元)</td>
+                                            <td><span class="sales_num">850</span>(包)</td>
+                                            <td><span class="inventory_num">80</span>(包)</td>
+                                            <td><span class="scrap_num">12</span>(包)</td>
+                                            <td><span class="profit"></span>(元)</td>
+                                        </tr>
+                                        <tr class="sales_item">
+                                            <td class="length"><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="口味王槟郎 和成天下">口味王槟郎 和成天下</a><br/>
+                                            <span class="prod_id">KWWB-L233</span></td>
+                                            <td><img class="img-small" src="images/product/prod_12.jpg" alt="..."></td>
+                                            <td><span class="sales_price">15</span>(元)</td>
+                                            <td>2015-04-18<br/>12(月)</td>
+                                            <td><span class="buying_pirce">13</span>(元)</td>
+                                            <td><span class="sales_num">930</span>(包)</td>
+                                            <td><span class="inventory_num">40</span>(包)</td>
+                                            <td><span class="scrap_num">2</span>(包)</td>
+                                            <td><span class="profit"></span>(元)</td>
+                                        </tr>
+                                        <tr class="sales_item">
+                                            <td class="length"><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="口味王槟郎 味赢天下">口味王槟郎 味赢天下</a><br/>
+                                            <span class="prod_id">KWWB-L235</span></td>
+                                            <td><img class="img-small" src="images/product/prod_11.jpg" alt="..."></td>
+                                            <td><span class="sales_price">35</span>(元)</td>
+                                            <td>2015-04-20<br/>12(月)</td>
+                                            <td><span class="buying_pirce">32</span>(元)</td>
+                                            <td><span class="sales_num">126</span>(盒)</td>
+                                            <td><span class="inventory_num">320</span>(盒)</td>
+                                            <td><span class="scrap_num">7</span>(盒)</td>
+                                            <td><span class="profit"></span>(元)</td>
+                                        </tr>
+                                        <tr class="sales_item">
+                                            <td class="length"><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="张新发槟郎">张新发槟郎</a><br/>
+                                            <span class="prod_id">KWWB-L244</span></td>
+                                            <td><img class="img-small" src="images/product/prod_13.jpg" alt="..."></td>
+                                            <td><span class="sales_price">15</span>(元)</td>
+                                            <td>2015-04-20<br/>12(月)</td>
+                                            <td><span class="buying_pirce">12</span>(元)</td>
+                                            <td><span class="sales_num">126</span>(包)</td>
+                                            <td><span class="inventory_num">320</span>(包)</td>
+                                            <td><span class="scrap_num">7</span>(包)</td>
+                                            <td><span class="profit"></span>(元)</td>
+                                        </tr>
+                                        <tr class="sales_item">
+                                            <td class="length"><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="张新发槟郎">张新发槟郎</a><br/>
+                                            <span class="prod_id">KWWB-L245</span></td>
+                                            <td><img class="img-small" src="images/product/prod_14.jpg" alt="..."></td>
+                                            <td><span class="sales_price">10</span>(元)</td>
+                                            <td>2015-04-20<br/>12(月)</td>
+                                            <td><span class="buying_pirce">8</span>(元)</td>
+                                            <td><span class="sales_num">26</span>(包)</td>
+                                            <td><span class="inventory_num">220</span>(包)</td>
+                                            <td><span class="scrap_num">8</span>(包)</td>
+                                            <td><span class="profit"></span>(元)</td>
+                                        </tr>
+                                        <tr class="sales_item">
+                                            <td class="length"><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="张三疯槟郎">张三疯槟郎</a><br/>
+                                            <span class="prod_id">KWWB-L336</span></td>
+                                            <td><img class="img-small" src="images/product/prod_15.jpg" alt="..."></td>
+                                            <td><span class="sales_price">10</span>(元)</td>
+                                            <td>2015-04-20<br/>12(月)</td>
+                                            <td><span class="buying_pirce">7.6</span>(元)</td>
+                                            <td><span class="sales_num">426</span>(包)</td>
+                                            <td><span class="inventory_num">220</span>(包)</td>
+                                            <td><span class="scrap_num">15</span>(包)</td>
+                                            <td><span class="profit"></span>(元)</td>
+                                        </tr>
+                                        <tr class="sales_item">
+                                            <td class="length"><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="雄赳赳槟郎">雄赳赳槟郎</a><br/>
+                                            <span class="prod_id">KWWB-L734</span></td>
+                                            <td><img class="img-small" src="images/product/prod_17.jpg" alt="..."></td>
+                                            <td><span class="sales_price">5</span>(元)</td>
+                                            <td>2015-04-20<br/>12(月)</td>
+                                            <td><span class="buying_pirce">4</span>(元)</td>
+                                            <td><span class="sales_num">126</span>(包)</td>
+                                            <td><span class="inventory_num">320</span>(包)</td>
+                                            <td><span class="scrap_num">7</span>(包)</td>
+                                            <td><span class="profit"></span>(元)</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav class='navbar-right'>
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="javascript:;" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="javascript:;">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>                                
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane award bg-default" id="store_award">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="javascript:;" type="button" class="btn">结算</a></li>
+                                </ul>
+                                <div class="navbar-form navbar-right" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="请输入商品名称">
+                                    </div>
+                                    <a href="javascript:;" class="btn btn-info">查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hovered">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-center">商品</th>
+                                            <th class="text-center">缩略图</th>
+                                            <th class="text-center">奖项</th>
+                                            <th class="text-center">核奖数量(个)</th>
+                                            <th class="text-center">未结算量(个)</th>
+                                            <th class="text-center">结算金额(元)</th>
+                                            <th class="text-center">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center">
+                                        <tr>
+                                            <td class="length"><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="口味王槟郎 和成天下">口味王槟郎 和成天下</a></td>
+                                            <td><img class="img-small" src="images/product/prod_10.jpg" alt="..."></td>
+                                            <td><span class="award award_name">加2元再来本品一包</span></td>
+                                            <td><span class="amount award_amount">374</span></td>
+                                            <td><span class="amount no_settlement_amount text-warning">78</span></td>
+                                            <td><span class="award award_money text-danger">980</span></td>
+                                            <td><a href="javascript:;" class="btn btn-defalut"><i class="fa fa-rmb"></i> 结算</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="length"><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="口味王槟郎 和成天下">口味王槟郎 和成天下</a></td>
+                                            <td><img class="img-small" src="images/product/prod_10.jpg" alt="..."></td>
+                                            <td><span class="award award_name">加2元再来15元槟郎一包</span></td>
+                                            <td><span class="amount award_amount">374</span></td>
+                                            <td><span class="amount no_settlement_amount text-warning">78</span></td>
+                                            <td><span class="award award_money text-danger">980</span></td>
+                                            <td><a href="javascript:;" class="btn btn-defalut"><i class="fa fa-rmb"></i> 结算</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="length"><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="口味王槟郎 和成天下">口味王槟郎 和成天下</a></td>
+                                            <td><img class="img-small" src="images/product/prod_10.jpg" alt="..."></td>
+                                            <td><span class="award award_name">加2元再来黄芙蓉一包</span></td>
+                                            <td><span class="amount award_amount">374</span></td>
+                                            <td><span class="amount no_settlement_amount text-warning">78</span></td>
+                                            <td><span class="award award_money text-danger">980</span></td>
+                                            <td><a href="javascript:;" class="btn btn-defalut"><i class="fa fa-rmb"></i> 结算</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="length"><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="口味王槟郎 和成天下">口味王槟郎 和成天下</a></td>
+                                            <td><img class="img-small" src="images/product/prod_12.jpg" alt="..."></td>
+                                            <td><span class="award award_name">加2元再来本品一包</span></td>
+                                            <td><span class="amount award_amount">374</span></td>
+                                            <td><span class="amount no_settlement_amount text-warning">78</span></td>
+                                            <td><span class="award award_money text-danger">980</span></td>
+                                            <td><a href="javascript:;" class="btn btn-defalut"><i class="fa fa-rmb"></i> 结算</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="length"><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="口味王槟郎 和成天下">口味王槟郎 和成天下</a></td>
+                                            <td><img class="img-small" src="images/product/prod_12.jpg" alt="..."></td>
+                                            <td><span class="award award_name">加2元再来黄芙蓉一包</span></td>
+                                            <td><span class="amount award_amount">374</span></td>
+                                            <td><span class="amount no_settlement_amount text-warning">78</span></td>
+                                            <td><span class="award award_money text-danger">980</span></td>
+                                            <td><a href="javascript:;" class="btn btn-defalut"><i class="fa fa-rmb"></i> 结算</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="length"><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="口味王槟郎 味赢天下">口味王槟郎 味赢天下</a></td>
+                                            <td><img class="img-small" src="images/product/prod_11.jpg" alt="..."></td>
+                                            <td><span class="award award_name">加2元再来本品一包</span></td>
+                                            <td><span class="amount award_amount">374</span></td>
+                                            <td><span class="amount no_settlement_amount text-warning">78</span></td>
+                                            <td><span class="award award_money text-danger">980</span></td>
+                                            <td><a href="javascript:;" class="btn btn-defalut"><i class="fa fa-rmb"></i> 结算</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="length"><a href="javascript:;" onstalled="srcpage('view-platform/order_product.html')" title="口味王槟郎 味赢天下">口味王槟郎 味赢天下</a></td>
+                                            <td><img class="img-small" src="images/product/prod_11.jpg" alt="..."></td>
+                                            <td><span class="award award_name">加2元再来黄芙蓉一包</span></td>
+                                            <td><span class="amount award_amount">374</span></td>
+                                            <td><span class="amount no_settlement_amount text-warning">78</span></td>
+                                            <td><span class="award award_money text-danger">980</span></td>
+                                            <td><a href="javascript:;" class="btn btn-defalut"><i class="fa fa-rmb"></i> 结算</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav class='navbar-right'>
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="javascript:;" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="javascript:;">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var sort_up=0;
+    $('.profit').each(function () {     //计算每个商品的利润
+        var pofit = parseInt($(this).text());
+        var sales_price = parseInt( $(this).parents('tr').find('.sales_price').text() );        //销售价
+        var buying_pirce = parseInt( $(this).parents('tr').find('.buying_pirce').text() );      //进货价
+        var sales_num = parseInt( $(this).parents('tr').find('.sales_num').text() );        //销售量
+        pofit =( sales_price - buying_pirce ) * sales_num ;
+        $(this).text(pofit);
+    });
+    $('#sort_btn').click(function () {
+        var temp;
+        var temp_zero;
+        var award = new Array();
+        $("tr.sales_item").each(function (e) {
+            award[e] = "<tr class='sales_item'>"+$(this).html()+"</tr>";
+        });
+        var sales = new Array();
+        $(".sales_num").each(function (e) {
+            sales[e] = parseInt( $(this).parents('tr').find('.sales_num').text() );
+        });
+        if( sort_up == 0 ){
+            for ( var i=0; i<sales.length; i++){
+                for ( var j=0; j<(sales.length-1); j++) {
+                    if ( sales[j] > sales[j+1] ){
+                        temp = sales[j];
+                        sales[j] = sales[j +1];
+                        sales[j +1] = temp;
+                        temp = award[j];
+                        award[j] = award[j +1];
+                        award[j +1] = temp;
+                    }
+                }
+            }
+            sort_up++;
+        }else{
+            for ( var i=0; i<sales.length; i++){
+                for ( var j=0; j<(sales.length-1); j++) {
+                    if ( sales[j] < sales[j+1] ){
+                        temp = sales[j];
+                        sales[j] = sales[j +1];
+                        sales[j +1] = temp;
+                        temp = award[j];
+                        award[j] = award[j +1];
+                        award[j +1] = temp;
+                    }
+                }
+            }
+            sort_up--;
+        }
+        $("#sales_list").empty();
+        $("#sales_list").append(award);
+    })
+</script>
+<script type="text/javascript" src="js/public.js"></script>

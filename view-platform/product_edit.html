@@ -1,0 +1,153 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/product_list.html')">产品管理</a></li>
+        <li class="active">产品编辑</li>
+    </ol>
+    <form>
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">产品名称</span>
+                            <input type="text" class="form-control" placeholder="请填写产品名称">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <a class="btn btn-default file_btn" type="button" onclick="javascript:;"> 上传产品 <input type="file" name="" class="file_input" id='file_input'></a>
+                            </div>
+                            <input class="form-control file_info" placeholder="（请上传产品图片）" type="text" disabled="disabled">                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 选择类别 <span class="caret"></span></button>
+                                <ul class="dropdown-menu" aria-labelledby="prod_cate_list">
+                                    <li><a href="javascript:;" class="btn">槟郎</a></li>
+                                    <li><a href="javascript:;" class="btn">烟</a></li>
+                                    <li><a href="javascript:;" class="btn">酒</a></li>
+                                    <li><a href="javascript:;" class="btn">茶</a></li>
+                                    <li><a href="javascript:;" class="btn">零食</a></li>
+                                    <li><a href="javascript:;" onclick="srcpage('view-platform/product_category_edit.html')" class="btn">其他</a></li>
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control" placeholder="请填写产品类别">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">单品价格</span>
+                            <input type="text" class="form-control" placeholder="请填写价格" aria-describedby="prod_p">    
+                            <span class="input-group-addon">元</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">保质日期</span>
+                            <input type="text" class="form-control" placeholder="请填写保值期（以月为单位）"/>
+                            <span class="input-group-addon">月</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">购买地址 http://www</span>
+                            <input type="text" class="form-control" placeholder="网络商城地址" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>                
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">描<br/>述</span>
+                            <textarea rows="9"></textarea> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div id="ipone">
+                    <img src="images/public/iphone6.png" class="img-responsive bg-ipone" alt="Responsive image">
+                    <div class="prod-info">
+                        <div class="prod prod-img text-center" id="result">
+                            <img src="images/product/product.png" alt="">
+                        </div>
+                        <div class="prod prod-name">
+                            <h4>九总槟郎
+                                <span><i class="fa fa-jpy"></i> 10 </span>
+                            </h4>                            
+                        </div>
+                        <div class="prod">
+                            <h5>产品参数</h5>
+                            <p>净重:26kg; 包装:袋装;</p>
+                        </div>
+                        <div class="prod">
+                            <h5>详细信息</h5>
+                            <p>
+                                “金龙鱼”是新加坡郭兄弟粮油私人有限公司所拥有的食用油品牌...
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <button class="btn btn-info" type="submit">保存信息</button>
+                <button class="btn btn-warning" type="reset">重置信息</button>
+            </div>
+        </div>        
+        <div class="modal fade" id="code_btn" tabindex="-1" role="dialog" aria-labelledby="code_btnLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">生成二维码</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <label class='  col-lg-3 control-label'></label>
+                            <div class="  col-lg-6">                                        
+                                <div class="row input-group">
+                                    <span class="input-group-addon">数量</span>
+                                    <input type="text" class="form-control" placeholder="请输入数量"/>
+                                </div>  
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <a type="button" class="btn btn-info" href="javascript:;" onclick="srcpage('view-platform/code_batch_list.html')">生成</a>
+                        <a type="button" class="btn btn-default" data-dismiss="modal">取消</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<script type="text/javascript">    
+    var result = document.getElementById("result");
+    var input = document.getElementById("file_input");
+    if (typeof FileReader === 'undefined') {
+        result.innerHTML = "抱歉，你的浏览器不支持 FileReader";
+        input.setAttribute('disabled', 'disabled');
+    } else {
+        $('#file_input').change(function () {
+            var file_url =$(this).val();
+            $("input.file_info").val(file_url);
+        });
+        input.addEventListener('change', readFile, false);
+    }
+</script>
+<script type="text/javascript" src="js/public.js"></script>

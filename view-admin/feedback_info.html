@@ -1,0 +1,80 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb"> 
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-admin/feedback_list.html')">反馈列表</a></li>
+        <li class="active">反馈详情</li>
+    </ol>
+    <div id="feedback_body">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="input-group">
+                    <span class="input-group-addon">反馈标题</span>
+                    <input type="text" class="form-control" placeholder="赞聚宝平台什么时候能正式上线?" readonly="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-addon">提交时间</span>
+                    <input type="text" class="form-control" placeholder="2016-4-10 21:20:22" readonly="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-addon">代理名称</span>
+                    <input type="text" class="form-control" placeholder="深圳阳光" readonly="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-addon">手机号码</span>
+                    <input type="text" class="form-control" placeholder="13838384138" readonly="">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 选择通知 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="btn" href="javascript:;">不通知</a></li>
+                            <li><a class="btn" href="javascript:;">短信通知</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" class="form-control" placeholder="不通知" readonly="">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <textarea rows="3" readonly=""></textarea>
+            </div>
+        </div>
+    </div>
+    <hr/>
+    <div class="row">
+        <div class="col-lg-12">
+            <script id="feedbackEditor" type="text/plain"></script>            
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+            <a href="javascript:;" class="btn btn-info" onclick="getContent()">确认回复</a>
+            <a href="javascript:;" class="btn btn-warning" onclick="srcpage('view-admin/feedback_list.html')">取消回复</a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" charset="utf-8" src="plugins/PowerPage/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="plugins/PowerPage/ueditor/ueditor.all.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="plugins/PowerPage/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript">
+    var ue = UE.getEditor('feedbackEditor');
+    function getContent() {
+        var arr = [];
+        arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('feedbackEditor').getContent());
+        alert(arr.join("\n"));
+    }
+</script>
+<script type="text/javascript" src="js/public.js"></script>

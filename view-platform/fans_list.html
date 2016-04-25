@@ -1,0 +1,615 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">粉丝管理</li>
+    </ol>
+    <form>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-addon">微信昵称</span>
+                    <input type="text" class="form-control" placeholder="请输入微信昵称">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 会员类型 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a href="javascript:;" class="btn" data-toggle="collapse" data-parent="#type_grade" data-target="#type_grade1">渠道会员</a></li>
+                            <li><a href="javascript:;" class="btn" data-toggle="collapse" data-parent="#type_grade" data-target="#type_grade2">分销会员</a></li>
+                            <li class="divide"></li>
+                            <li><a href="javascript:;" class="btn" data-toggle="collapse" data-parent="#type_grade" data-target="#type_grade3">内部会员</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请选择类型" disabled="disabled">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="panel-group" id="type_grade" role="tablist">
+                    <div class="panel">
+                        <div id="type_grade1" class="panel-collapse collapse">
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 会员等级 <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="javascript:;" class="btn">省级直营店</a></li>
+                                        <li><a href="javascript:;" class="btn">市级直营店</a></li>
+                                        <li><a href="javascript:;" class="btn">县级直营店</a></li>
+                                        <li class="divide"></li>
+                                        <li><a href="javascript:;" class="btn">省级经销商</a></li>
+                                        <li><a href="javascript:;" class="btn">市级经销商</a></li>
+                                        <li><a href="javascript:;" class="btn">县级经销商</a></li>
+                                    </ul>
+                                </div>
+                                <input type="text" class="form-control" placeholder="请选择渠道会员等级" disabled="disabled">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div id="type_grade2" class="panel-collapse collapse">
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 会员等级 <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="javascript:;" class="btn">太阳</a></li>
+                                        <li><a href="javascript:;" class="btn">月亮</a></li>
+                                        <li><a href="javascript:;" class="btn">星星</a></li>
+                                        <li><a href="javascript:;" class="btn">会员</a></li>
+                                        <li><a href="javascript:;" class="btn">粉丝</a></li>
+                                    </ul>
+                                </div>
+                                <input type="text" class="form-control" placeholder="请选择分销会员等级" disabled="disabled">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel">
+                        <div id="type_grade3" class="panel-collapse collapse">
+                            <div class="input-group">
+                                <div class="input-group-btn">
+                                    <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 会员等级 <span class="caret"></span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                        <li><a href="javascript:;" class="btn">直营店区域经理</a></li>
+                                        <li><a href="javascript:;" class="btn">直营店</a></li>
+                                        <li><a href="javascript:;" class="btn">直营店业务员</a></li>
+                                        <li class="divide"></li>
+                                        <li><a href="javascript:;" class="btn">经销商区域经理</a></li>
+                                        <li><a href="javascript:;" class="btn">经销商</a></li>
+                                        <li><a href="javascript:;" class="btn">经销商业务员</a></li>
+                                        <li class="divide"></li>
+                                        <li><a href="javascript:;" class="btn">派送员</a></li>
+                                        <li><a href="javascript:;" class="btn">门店</a></li>
+                                    </ul>
+                                </div>
+                                <input type="text" class="form-control" placeholder="请选择内部会员等级" disabled="disabled">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">            
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-addon">手机号码</span>
+                    <input type="text" class="form-control" placeholder="请输入手机号码">
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="input-group">
+                    <span class="input-group-addon">筛选日期</span>
+                    <input class="form-control date_select_panel" placeholder="开始时间" type="text" id="begin_data">
+                    <span class="input-group-addon">~</span>
+                    <input class="form-control date_select_panel" placeholder="结束时间" type="text" id="end_data">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 会员状态 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a href="javascript:;" class="btn">激活</a></li>
+                            <li class="divide"></li>
+                            <li><a href="javascript:;" class="btn">冻结</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请选择会员状态" disabled="disabled">
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="input-group">
+                    <span class="input-group-addon">所属省市</span>
+                    <select style="width: 100%;" id="s_province" name="s_province"></select>
+                    <span class="input-group-addon">-</span>
+                    <select style="width: 100%;" id="s_city" name="s_city" ></select>
+                    <span class="input-group-addon">-</span>
+                    <select style="width: 100%;" id="s_county" name="s_county"></select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 排序显示 <span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a href="javascript:;" class="btn">总积分排序</a></li>
+                            <li><a href="javascript:;" class="btn">总消费金额排序</a></li>
+                            <li><a href="javascript:;" class="btn">总分红金额排序(内部)</a></li>
+                            <li><a href="javascript:;" class="btn">总分成金额排序(渠道)</a></li>
+                            <li><a href="javascript:;" class="btn">总分佣金额排序(分销)</a></li>
+                            <li><a href="javascript:;" class="btn">下级会员数排序</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" class="form-control" placeholder="请选择排序显示" disabled="disabled">
+                </div>
+            </div> 
+            <div class="col-lg-8 text-right">
+                <a href="javascript:;" class="btn btn-info" id="select_fans_btn">查询</a>
+                <a href="text/commission.et" class="btn btn-warning">下载</a>
+            </div>
+        </div>
+    </form>
+    <div class="table-responsive">
+        <table class="table table-condensed table-hover">
+            <thead>
+                <tr>
+                    <th class="text-center"><input type="checkbox"></th>
+                    <th class="text-left">头像</th>
+                    <th class="text-left">粉丝</th>
+                    <th class="text-left">统计</th>
+                    <th class="text-left">下级会员数</th>
+                    <th class="text-left">操作</th>
+                </tr>
+            </thead>
+            <tbody class="text-left" ng-controller="FansList">      
+                <tr ng-repeat="fan in fans">
+                    <td><input type="checkbox"></td>
+                    <td><img src=" {{fan.Header}} " alt=" {{fan.Name}} " class="img-circle"></td>
+                    <td> {{fan.WechatName}} | {{fan.Name}} <br/>
+                         分销等级: {{fan.InitialGrade}} <br/>
+                         渠道等级: {{fan.ChannelGrade}} <br/>
+                         OTO等级: {{fan.OTOGrade}} <br/>
+                         注册时间: {{fan.AddTime}} </td>
+                    <td> 本月消费: <i class="fa fa-rmb"></i> {{fan.MonthConsumer}} <br/>
+                         账号余额: <i class="fa fa-rmb"></i> {{fan.Banlance}} <br/>
+                         积分: {{fan.Initial}} </td>
+                    <td> 招募人: {{fan.RecruitPeople}} <br/>
+                         下级分销: 1( {{fan.InitialFirstLevel}} ), 2( {{fan.InitialSecondLevel}} ), 3( {{fan.InitialThreeLevel}} ) <br/>
+                         渠道成员: 1( {{fan.ChannelFirstLevel}} ), 2( {{fan.ChannelSecondLevel}} ), 3( {{fan.ChannelThreeLevel}} ) <br/>
+                         OTO成员: 1( {{fan.OTOFirstLevel}} ), 2( {{fan.OTOSecondLevel}} ), 3( {{fan.OTOThreeLelvel}} ) </td>
+                    <td>
+                        <a href="javascript:;" class="btn" data-toggle="modal" data-target="#leader_modal"><i class="fa fa-user-secret"></i> 招募</a><br/>
+                        <a href="javascript:;" class="btn"><i class="fa fa-eye"></i> 详情</a>
+                        <a href="text/aGQ8hb19.et" class="btn"><i class="fa fa-cloud-download"></i> 导出</a><br/>
+                        <a href="javascript:;" class="btn" data-toggle="modal" data-target="#welfare_modal"><i class="fa fa-gift"></i> 福利</a>
+                        <a href="javascript:;" class="btn" data-toggle="modal" data-target="#pass_modal"><i class="fa fa-key"></i> 改密</a><br/>
+                        <a href="javascript:;" class="btn"><i class="fa fa-edit"></i> 编辑</a>
+                        <div class="close_bomb">
+                            <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                            <div class="close_box text-right">
+                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="6">
+                        <a href="javascript:;" class="btn text-info" id="all_check_btn">全选</a>
+                        <a href="javascript:;" class="btn text-info" id="not_check_btn">取消</a>
+                        <a href="javascript:;" class="btn text-warning" id="intergral_modal_btn">积分清零</a>
+                        <a href="javascript:;" class="btn text-warning" id="message_modal_btn">站内短信</a>
+                        <a href="javascript:;" class="btn text-warning" id="welfare_modal_btn">发送福利</a>
+                        <a href="javascript:;" class="btn text-warning" id="pass_modal_btn">设置密码</a>
+                        <a href="javascript:;" class="btn text-warning" id="leader_modal_btn">设置招募</a>
+                        <a href="javascript:;" class="btn text-warning" id="open_data_btn">导出数据</a>
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+        <nav class='navbar-right'>
+            <ul class="pagination">
+                <li>
+                    <a href="javascript:;" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">1</a>
+                </li>
+                <li class="active">
+                    <a href="javascript:;">2</a>
+                </li>
+                <li>
+                    <a href="javascript:;">3</a>
+                </li>
+                <li>
+                    <a href="javascript:;" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="js-message success">
+    <div class="message-suceess">您没有选择粉丝!</div>
+</div>
+<!-- 选择人数 -->
+<div class="modal fade" id="select_modal" tabindex="-1" role="dialog" aria-labelledby="select_modal_label">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="text-center">您没有选择粉丝!</p>
+                <p class="text-center"><a class="btn" data-dismiss="modal">确定</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 积分清零弹框 -->
+<div class="modal fade" id="intergral_modal" tabindex="-1" role="dialog" aria-labelledby="intergral_modal_label">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p class="text-center">您确定所选粉丝当前积分清零么?</p>
+                <p class="text-center"><a class="btn">确定</a><a class="btn" data-dismiss="modal">取消</a></p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 站内短信弹框 -->
+<div class="modal fade" id="message_modal" tabindex="-1" role="dialog" aria-labelledby="message_modal_label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                <h4 class="modal-title" id="message_modal_label">站内短信</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">标题</span>
+                            <input class="form-control" value="例:...." type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">内容</span>
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-info">确定</a>
+                <a class="btn btn-default" data-dismiss="modal">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 发送福利弹框 -->
+<div class="modal fade" id="welfare_modal" tabindex="-1" role="dialog" aria-labelledby="welfare_modal_label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                <h4 class="modal-title" id="welfare_modal_label">发送福利</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon" id="">赠送标题</span>
+                            <input class="form-control" value="例:七夕情人节送祝福" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 赠送类型 <span class="caret"></span></a>
+                                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                    <li><a href="javascript:;" class="btn" data-toggle="collapse" data-parent="#welfare" data-target="#welfare1">送红包</a></li>
+                                    <li><a href="javascript:;" class="btn" data-toggle="collapse" data-parent="#welfare" data-target="#welfare2">送积分</a></li>
+                                    <li><a href="javascript:;" class="btn" data-toggle="collapse" data-parent="#welfare" data-target="#welfare3">优惠券</a></li>
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control" placeholder="请选择赠送类型" disabled="disabled">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="panel-group" id="welfare" role="tablist"> 
+                            <div class="panel">
+                                <div id="welfare1" class="panel-collapse collapse">
+                                    <div class="input-group">
+                                        <input class="form-control" value="请输入红包金额" type="text">
+                                        <span class="input-group-addon">元</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div id="welfare2" class="panel-collapse collapse">
+                                    <div class="input-group">
+                                        <input class="form-control" value="请输入积分数量" type="text">
+                                        <span class="input-group-addon">分</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel">
+                                <div id="welfare3" class="panel-collapse collapse">
+                                    <div class="input-group">
+                                        <div class="input-group-btn">
+                                            <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 优惠券 <span class="caret"></span></a>
+                                            <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                                <li><a href="javascript:;" class="btn">7.5折扣券</a></li>
+                                                <li><a href="javascript:;" class="btn">8.5折扣券</a></li>
+                                                <li><a href="javascript:;" class="btn">100元优惠券</a></li>
+                                                <li><a href="javascript:;" class="btn">200元优惠券</a></li>
+                                            </ul>
+                                        </div>
+                                        <input type="text" class="form-control" placeholder="请选择优惠券" disabled="disabled">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">备注</span>
+                            <textarea></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-info">确定</a>
+                <a class="btn btn-default" data-dismiss="modal">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 修改密码弹框 -->
+<div class="modal fade" id="pass_modal" tabindex="-1" role="dialog" aria-labelledby="pass_modal_label">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                <h4 class="modal-title" id="pass_modal_label">重置密码</h4>
+            </div>
+            <div class="modal-body">
+                <h5>登录密码</h5>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">登录密码</span>
+                            <input class="password form-control" value="123456" type="password">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">确认登录</span>
+                            <input class="password form-control" value="123456" type="password">
+                        </div>
+                    </div>
+                </div>
+                <h5>支付密码</h5>
+               <div class="row">
+                   <div class="col-lg-12">
+                       <div class="input-group">
+                            <span class="input-group-addon">支付密码</span>
+                            <input class="password form-control" value="123456" type="password">
+                        </div>
+                   </div>
+               </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">确认支付</span>
+                            <input class="password form-control" value="123456" type="password">
+                        </div>
+                    </div>
+                </div>
+            </div>
+                <div class="modal-footer">
+                <a class="btn btn-info">确定</a>
+                <a class="btn btn-default" data-dismiss="modal">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 修改招募人弹框 -->
+<div class="modal fade" id="leader_modal" tabindex="-1" role="dialog" aria-labelledby="leader_modal_label">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
+                <h4 class="modal-title" id="leader_modal_label">修改招募人</h4>
+            </div>
+            <div class="modal-body">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse">
+                            <div class="navbar-form navbar-right" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="请输入昵称">
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-btn">
+                                        <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 会员等级 <span class="caret"></span></a>
+                                        <ul class="dropdown-menu" aria-labelledby="prod_cate_list">
+                                            <li><a href="javascript:;" class="btn">太阳</a></li>
+                                            <li><a href="javascript:;" class="btn">月亮</a></li>
+                                            <li><a href="javascript:;" class="btn">星星</a></li>
+                                            <li><a href="javascript:;" class="btn">会员</a></li>
+                                            <li><a href="javascript:;" class="btn">粉丝</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="请选择会员等级">
+                                </div>
+                                <a href="javascript:;" class="btn btn-info">查询</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table class="table table-condensed table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">昵称</th>
+                                        <th class="text-center">头像</th>
+                                        <th class="text-center">等级</th>
+                                        <th class="text-center">操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td>李娭毑</td>
+                                        <td><img src="images/fans/teacher3.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>太阳</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-user-secret"></i> 设为招募人</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>李大牛</td>
+                                        <td><img src="images/fans/teacher2.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>太阳</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-user-secret"></i> 设为招募人</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>李娭毑</td>
+                                        <td><img src="images/fans/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>月亮</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-user-secret"></i> 设为招募人</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>蒋天生</td>
+                                        <td><img src="images/fans/teacher5.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>月亮</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-user-secret"></i> 设为招募人</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>李大妞</td>
+                                        <td><img src="images/fans/teacher4.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>太阳</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-user-secret"></i> 设为招募人</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <nav class='navbar-right'>
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="javascript:;" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="AngularData/Angular.min.js"></script>
+<script type="text/javascript" src="AngularData/fans_list.js"></script>
+<script type="text/javascript">
+    _init_area();
+    $("#all_check_btn").click(function () {
+        $(this).parents("table").find("input[type='checkbox']").prop('checked', true).attr("checked","checked");
+    });
+    $("#not_check_btn").click(function () {
+        $(this).parents("table").find("input[type='checkbox']").prop('checked', false).removeAttr("checked");
+    });
+    function select() {
+        var temp = 0;
+        $("input[type='checkbox']").each(function() { if ($(this).attr('checked') == 'checked') { temp = temp +1; } });
+        if ( temp >= 1) {
+            return true;   
+        }else{
+            $(".js-message.success").addClass("show");
+            setTimeout(function(){
+                $(".js-message.success").removeClass("show");
+            },1000)
+            //$("#select_modal").modal("show");
+        }
+    }
+    $("#intergral_modal_btn").click(function() {
+        if( select() ) {
+            $('#intergral_modal').modal("show");
+        }
+    });
+    $("#message_modal_btn").click(function() {
+        if( select() ) {
+            $('#message_modal').modal("show");
+        }
+    });
+    $("#welfare_modal_btn").click(function() {
+        if( select() ) {
+            $('#welfare_modal').modal("show");
+        }
+    });
+    $("#pass_modal_btn").click(function() {
+        if( select() ) {
+            $('#pass_modal').modal("show");
+        }
+    });
+    $("#leader_modal_btn").click(function() {
+        if( select() ) {
+            $('#leader_modal').modal("show");
+        }
+    });
+    $("#open_data_btn").click(function() {
+        if( select() ) {
+            $(this).attr("href","text/aGQ8hb19.et");
+        }else{
+            $(this).attr("href","javascript:;");
+        }
+    });
+</script>
+<script type="text/javascript" src="js/public.js"></script>

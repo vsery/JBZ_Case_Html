@@ -1,0 +1,142 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">粉丝管理</li>
+    </ol>
+    <form>
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="input-group">
+                    <span class="input-group-addon">筛选日期</span>
+                    <input class="form-control date_select_panel" placeholder="开始时间" type="text" id="begin_data">
+                    <span class="input-group-addon">~</span>
+                    <input class="form-control date_select_panel" placeholder="结束时间" type="text" id="end_data">
+                </div>
+            </div>
+            <div class="col-lg-2 form">
+                <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 快速查询 <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="prod_cate_list">
+                    <li><a href="javascript:;" class="btn" id="select_fans3">最近3天</a></li>
+                    <li><a href="javascript:;" class="btn" id="select_fans7">最近7天</a></li>
+                    <li><a href="javascript:;" class="btn" id="select_fans30">最近30天</a></li>
+                </ul>
+            </div>
+            <div class="col-lg-3">
+                <a href="javascript:;" class="btn btn-info" id="select_fans_btn">查询</a>
+                <a href="text/commission.et" class="btn btn-warning">下载</a>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="text-left">
+                <span class="title"><i class="blue"></i>新增粉丝量</span>
+                <span class="title"><i class="green"></i>粉丝购买量</span>
+            </div>
+            <div id="fans_in" style="height: 300px;">
+                <canvas class="min" id="fans_canvas"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        //随机赋值
+        var randomScalingFactor = function() {
+            return Math.round(Math.random() * 50)
+        };
+        //定义数据集合
+        var lineChartData = {
+                labels: ["07月", "08月", "09月", "10月", "11月", "12月"],
+                datasets: [{
+                    label: "新增粉丝量",
+                    fillColor: "rgba(89,155,239,0.2)",
+                    strokeColor: "rgba(89,155,239,1)",
+                    pointColor: "rgba(89,155,239,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(89,155,239,1)",
+                    data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+                }, {
+                    label: "粉丝购买量",
+                    fillColor: "rgba(94,203,105,0.2)",
+                    strokeColor: "rgba(94,203,105,1)",
+                    pointColor: "rgba(94,203,105,1)",
+                    pointStrokeColor: "#fff",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(94,203,105,1)",
+                    data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()]
+                }]
+            }
+        //查询粉丝表数据
+        function SelectFans() {
+            $('#fans_canvas').remove();
+            $('#fans_in').append("<canvas class='min' id='fans_canvas'></canvas>");
+            var begin = $('#begin_data').val();
+            var end = $('#end_data').val();    
+            var sArr = begin.split("-");
+            var eArr = end.split("-");
+            var sRDate = new Date(sArr[0], sArr[1], sArr[2]);
+            var eRDate = new Date(eArr[0], eArr[1], eArr[2]);
+            var result = (eRDate-sRDate)/(24*60*60*1000);
+            if (result<=0) {
+                alert("您选择的开始时间大于结束时间");
+            }else{
+                var str ="";
+                lineChartData.labels.length =0;
+                lineChartData.datasets[0].length=0;
+                lineChartData.datasets[1].length=0;
+                for( var i=0 ; i<= (eRDate-sRDate)/(24*60*60*1000); i++ ) {
+                    lineChartData.labels[i]= sArr[0] +"年" + sArr[1] +"月" + (parseInt(sArr[2])+i);
+                    lineChartData.datasets[0].data[i] = randomScalingFactor() ;
+                    lineChartData.datasets[1].data[i] = randomScalingFactor() ;
+                    str += lineChartData.datasets[0].data[i] +"\n";
+                }
+                var ctx = $("#fans_canvas").get(0).getContext("2d");
+                var myNewChart = new Chart(ctx).Line(lineChartData,{ responsive: true});
+            }
+        }
+        //加载图表信息
+        window.myLine = new Chart($("#fans_canvas").get(0).getContext("2d")).Line(lineChartData, { responsive: true });
+        $('#select_fans_btn').click(function () {
+            SelectFans();
+        });
+        $('#select_fans3').click(function() {
+            setData(3);
+            SelectFans();
+        });
+        $('#select_fans7').click(function() {
+            setData(7);
+            SelectFans();
+        });
+        $('#select_fans30').click(function() {
+            setData(30);
+            SelectFans();
+        });
+        function setData(end_d) {            
+            //初始化时间面板
+            var myDate = new Date();
+            var vYear = myDate.getFullYear();
+            var vMon = myDate.getMonth();
+            var vDay = myDate.getDate();
+            var myDate2= myDate-end_d;
+            alert(myDate2);
+
+            var vYear2 = myDate2.getFullYear();
+            var vMon2 = myDate2.getMonth();
+            var vDay2 = myDate2.getDate();
+            alert(vYear2);
+            $('#end_data').val(vYear+"-"+(vMon+1)+"-"+vDay);
+            if(end_d==30){
+                if(vMon==0){
+                    $('#begin_data').val((vYear-1)+"-"+12+"-"+vDay);
+                }else{
+                    $('#begin_data').val(vYear+"-"+vMon+"-"+vDay);
+                }
+            }else{
+                $('#begin_data').val(vYear+"-"+(vMon+1)+"-"+(vDay-end_d));
+            }
+        }
+    })
+</script>
+<script type="text/javascript" src="js/public.js"></script>

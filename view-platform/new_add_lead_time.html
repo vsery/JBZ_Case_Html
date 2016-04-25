@@ -1,0 +1,80 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb"> 
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/new_lead_time.html')">领读</a></li>
+        <li class="active">新建领读</li>
+    </ol>
+    <div id="books-info">
+        <div class="row text-center">
+            <div class="col-lg-3 text-center">
+                <img src="images/public/wp6.jpg" alt="" id="FrontCover">
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">领读标题</span>
+                            <input class="form-control" placeholder="请输入领读标题" type="text" id="article_name">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    选择权限
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                    <li><a href="javascript:;" class="btn">会员可读</a></li>
+                                    <li><a href="javascript:;" class="btn">来访可读</a></li>
+                                </ul>
+                            </div>
+                            <input class="form-control" placeholder="会员可读" disabled="disabled" type="text">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">显示排序</span>
+                            <input class="form-control" placeholder="请输入显示序号,数字越大,越前面" type="text" id="article_name">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <a class="btn btn-default file_btn" onclick="showFile()">上传封面</a>
+                            </span>
+                            <input class="file_info form-control" placeholder="请上传图片,作为封面" disabled="disabled" type="text">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">发布时间</span>
+                            <input class="form-control datetimepicker" placeholder="开始时间" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">简介描述</span>
+                            <textarea class="form-control" rows="3"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="JavaScript:;" class="btn btn-info">保存设置</a>
+        </div>
+    </div>
+</div>
+<div id="FileAdmin"></div>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript">
+    $("body").off();
+    fileobj = $.ajax({ type:"GET", url:"plugins/resourceManager/FileAdmin.html", dataType:"html", async:false });
+    $("#FileAdmin").html( fileobj.responseText); //ajax加载资源管理器
+    function showFile() { $("#FileAdminBox").addClass('open'); } //打开资源管理
+</script>

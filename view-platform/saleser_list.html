@@ -1,0 +1,387 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">销售人员管理</li>
+    </ol>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="javascript:;" onclick="srcpage('view-platform/saleser_grant.html')" class='btn'>添加</a></li>
+                    <li><div class="close_bomb">
+                            <a href="javascript:;" class="btn close_btn">删除</a>
+                            <div class="close_box text-right" id="all">
+                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                            </div>
+                    </div></li>
+                </ul>
+                <div class="navbar-form navbar-right" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入昵称">
+                    </div>                    
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入招募人">
+                    </div>
+                    <a href="javascript:;" class="btn btn-info">查询</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="table-responsive">        
+        <table class="table table-condensed table-hover">
+            <thead>
+                <tr>
+                    <th class="text-center"><input type="checkbox"></th>
+                    <th class="text-center">海报</th>
+                    <th class="text-center">微信昵称</th>
+                    <th class="text-center">头像</th>
+                    <th class="text-center">招募人昵称</th>
+                    <th class="text-center">等级</th>
+                    <th class="text-center">加入时间</th>
+                    <th class="text-center">是否激活</th>
+                    <th class="text-center">操作</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><a class="code_img"></a></td>
+                    <td>任小囡</td>
+                    <td><img src="images/fans/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                    <td></td>
+                    <td>太阳</td>
+                    <td>2015/11/12</td>
+                    <td><a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)">激活</a>
+                        <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)">冻结</a></td>
+                    <td>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_sale_list.html')"><i class="fa fa-shopping-cart"></i> 销售</a>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_commission_list.html')"><i class="fa fa-money"></i> 佣金</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_list_stru.html')"><i class="fa fa-sitemap"></i> 成员</a>
+                        <a href="javascript:;" class="btn poster_btn"><i class="fa fa-file-o"></i> 海报</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_edit.html')"><i class="fa fa-edit"></i> 修改</a>
+                        <div class="close_bomb">
+                            <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                            <div class="close_box text-right">
+                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><a class="code_img"></a></td>
+                    <td>李天优</td>
+                    <td><img src="images/fans/teacher2.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李娭毑</td>
+                    <td>月亮</td>
+                    <td>2015/11/12</td>
+                    <td><a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)">激活</a>
+                        <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)">冻结</a></td>
+                    <td>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_sale_list.html')"><i class="fa fa-shopping-cart"></i> 销售</a>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_commission_list.html')"><i class="fa fa-money"></i> 佣金</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_list_stru.html')"><i class="fa fa-sitemap"></i> 成员</a>
+                        <a href="javascript:;" class="btn poster_btn"><i class="fa fa-file-o"></i> 海报</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_edit.html')"><i class="fa fa-edit"></i> 修改</a>
+                        <div class="close_bomb">
+                            <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                            <div class="close_box text-right">
+                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><a class="code_img"></a></td>
+                    <td>李大牛</td>
+                    <td><img src="images/fans/teacher3.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李天优</td>
+                    <td>星星</td>
+                    <td>2015/11/12</td>
+                    <td><a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)">激活</a>
+                        <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)">冻结</a></td>
+                    <td>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_sale_list.html')"><i class="fa fa-shopping-cart"></i> 销售</a>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_commission_list.html')"><i class="fa fa-money"></i> 佣金</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_list_stru.html')"><i class="fa fa-sitemap"></i> 成员</a>
+                        <a href="javascript:;" class="btn poster_btn"><i class="fa fa-file-o"></i> 海报</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_edit.html')"><i class="fa fa-edit"></i> 修改</a>
+                        <div class="close_bomb">
+                            <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                            <div class="close_box text-right">
+                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><a class="code_img"></a></td>
+                    <td>李大妞</td>
+                    <td><img src="images/fans/teacher5.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李娭毑</td>
+                    <td>星星</td>
+                    <td>2015/11/12</td>
+                    <td><a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)">激活</a>
+                        <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)">冻结</a></td>
+                    <td>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_sale_list.html')"><i class="fa fa-shopping-cart"></i> 销售</a>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_commission_list.html')"><i class="fa fa-money"></i> 佣金</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_list_stru.html')"><i class="fa fa-sitemap"></i> 成员</a>
+                        <a href="javascript:;" class="btn poster_btn"><i class="fa fa-file-o"></i> 海报</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_edit.html')"><i class="fa fa-edit"></i> 修改</a>
+                        <div class="close_bomb">
+                            <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                            <div class="close_box text-right">
+                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><a class="code_img"></a></td>
+                    <td>李小妞</td>
+                    <td><img src="images/fans/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李娭毑</td>
+                    <td>星星</td>
+                    <td>2015/11/12</td>
+                    <td><a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)">激活</a>
+                        <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)">冻结</a></td>
+                    <td>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_sale_list.html')"><i class="fa fa-shopping-cart"></i> 销售</a>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_commission_list.html')"><i class="fa fa-money"></i> 佣金</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_list_stru.html')"><i class="fa fa-sitemap"></i> 成员</a>
+                        <a href="javascript:;" class="btn poster_btn"><i class="fa fa-file-o"></i> 海报</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_edit.html')"><i class="fa fa-edit"></i> 修改</a>
+                        <div class="close_bomb">
+                            <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                            <div class="close_box text-right">
+                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><a class="code_img"></a></td>
+                    <td>蒋天生</td>
+                    <td><img src="images/fans/teacher2.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李天优</td>
+                    <td>月亮</td>
+                    <td>2015/11/12</td>
+                    <td><a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)">激活</a>
+                        <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)">冻结</a></td>
+                    <td>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_sale_list.html')"><i class="fa fa-shopping-cart"></i> 销售</a>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_commission_list.html')"><i class="fa fa-money"></i> 佣金</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_list_stru.html')"><i class="fa fa-sitemap"></i> 成员</a>
+                        <a href="javascript:;" class="btn poster_btn"><i class="fa fa-file-o"></i> 海报</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_edit.html')"><i class="fa fa-edit"></i> 修改</a>
+                        <div class="close_bomb">
+                            <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                            <div class="close_box text-right">
+                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><a class="code_img"></a></td>
+                    <td>蒋天宇</td>
+                    <td><img src="images/fans/teacher3.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李娭毑</td>
+                    <td>月亮</td>
+                    <td>2015/11/12</td>
+                    <td><a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)">激活</a>
+                        <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)">冻结</a></td>
+                    <td>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_sale_list.html')"><i class="fa fa-shopping-cart"></i> 销售</a>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_commission_list.html')"><i class="fa fa-money"></i> 佣金</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_list_stru.html')"><i class="fa fa-sitemap"></i> 成员</a>
+                        <a href="javascript:;" class="btn poster_btn"><i class="fa fa-file-o"></i> 海报</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_edit.html')"><i class="fa fa-edit"></i> 修改</a>
+                        <div class="close_bomb">
+                            <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                            <div class="close_box text-right">
+                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><a class="code_img"></a></td>
+                    <td>蒋天阳</td>
+                    <td><img src="images/fans/teacher4.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>李天优</td>
+                    <td>月亮</td>
+                    <td>2015/11/12</td>
+                    <td><a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)">激活</a>
+                        <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)">冻结</a></td>
+                    <td>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_sale_list.html')"><i class="fa fa-shopping-cart"></i> 销售</a>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_commission_list.html')"><i class="fa fa-money"></i> 佣金</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_list_stru.html')"><i class="fa fa-sitemap"></i> 成员</a>
+                        <a href="javascript:;" class="btn poster_btn"><i class="fa fa-file-o"></i> 海报</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_edit.html')"><i class="fa fa-edit"></i> 修改</a>
+                        <div class="close_bomb">
+                            <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                            <div class="close_box text-right">
+                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><a class="code_img"></a></td>
+                    <td>江天养</td>
+                    <td><img src="images/fans/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>蒋天生</td>
+                    <td>太阳</td>
+                    <td>2015/11/12</td>
+                    <td><a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)">激活</a>
+                        <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)">冻结</a></td>
+                    <td>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_sale_list.html')"><i class="fa fa-shopping-cart"></i> 销售</a>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_commission_list.html')"><i class="fa fa-money"></i> 佣金</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_list_stru.html')"><i class="fa fa-sitemap"></i> 成员</a>
+                        <a href="javascript:;" class="btn poster_btn"><i class="fa fa-file-o"></i> 海报</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_edit.html')"><i class="fa fa-edit"></i> 修改</a>
+                        <div class="close_bomb">
+                            <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                            <div class="close_box text-right">
+                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td><a class="code_img"></a></td>
+                    <td>江天</td>
+                    <td><img src="images/fans/teacher2.jpg" alt="..." class="img-circle img-small"></td>
+                    <td>蒋天生</td>
+                    <td>星星</td>
+                    <td>2015/11/12</td>
+                    <td><a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)">激活</a>
+                        <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)">冻结</a></td>
+                    <td>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_sale_list.html')"><i class="fa fa-shopping-cart"></i> 销售</a>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_commission_list.html')"><i class="fa fa-money"></i> 佣金</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_list_stru.html')"><i class="fa fa-sitemap"></i> 成员</a>
+                        <a href="javascript:;" class="btn poster_btn"><i class="fa fa-file-o"></i> 海报</a><br/>
+                        <a href="javascript:;" class="btn" onclick="srcpage('view-platform/saleser_edit.html')"><i class="fa fa-edit"></i> 修改</a>
+                        <div class="close_bomb">
+                            <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                            <div class="close_box text-right">
+                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <nav class='navbar-right'>
+            <ul class="pagination">
+                <li>
+                    <a href="javascript:;" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="javascript:;">1</a>
+                </li>
+                <li>
+                    <a href="javascript:;">2</a>
+                </li>
+                <li>
+                    <a href="javascript:;">3</a>
+                </li>
+                <li>
+                    <a href="javascript:;">4</a>
+                </li>
+                <li>
+                    <a href="javascript:;">5</a>
+                </li>
+                <li>
+                    <a href="javascript:;" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<div class="js-message success">
+    <div class="message-suceess">销售员激活了,可以使用生成海报功能!</div>
+</div>
+<div class="js-message error">
+    <div class="message-error">销售员冻结了,不能使用生成海报功能!</div>
+</div>
+<div class="mask hide"></div>
+<div id="MessBox" class="hide" >
+    <div class="load">
+        <div class="icon_box">
+            <div class="cirBox cirBox1">
+                <div class="cir1"></div>
+                <div class="cir2"></div>
+                <div class="cir3"></div>
+                <div class="cir4"></div>
+            </div>
+            <div class="cirBox cirBox2">
+                <div class="cir1"></div>
+                <div class="cir2"></div>
+                <div class="cir3"></div>
+                <div class="cir4"></div>
+            </div>
+            <div class="cirBox cirBox3">
+                <div class="cir1"></div>
+                <div class="cir2"></div>
+                <div class="cir3"></div>
+                <div class="cir4"></div>
+            </div>
+        </div>
+    </div>
+    <div class="dec_txt">海报正在生成,请稍等片刻....</div>
+</div>
+<script type="text/javascript">
+    //生成海报.这里只要修改 share_img 的val 
+    var share_img='images/code/share.jpg';
+    $("a.poster_btn").click(function () {
+        var e =$(this);
+        $(".mask").removeClass("hide");
+        $("#MessBox").removeClass("hide");
+        setTimeout(function(){
+            $(".mask").addClass("hide");
+            $("#MessBox").addClass("hide");
+            $(e).parents("tr").find("a.code_img").attr({"href":share_img,"target":"_blank"}).empty().append("<img src='"+share_img+"' class='img-small'>");
+        },700);
+    });
+</script>
+<script type="text/javascript" src="js/public.js"></script>

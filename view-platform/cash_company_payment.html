@@ -1,0 +1,180 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">付款配置</li>
+    </ol>
+    <form>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">管理者微信名称</span>
+                    <input class="form-control" placeholder="" type="text">
+                    <span class="input-group-btn">
+                        <a href="javascript:;" class="btn btn-default" data-toggle="modal" data-target="#query_modal">查询</a>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="input-group">
+                    <span class="input-group-addon">管理者微信OPENID</span>
+                    <input class="form-control" placeholder="" type="text">
+                </div>
+            </div>
+        </div><hr>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-addon">说明</span>
+                    <input class="form-control" placeholder="企业付款配置" disabled="disabled" type="text">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-addon">店铺名称</span>
+                    <input class="form-control" placeholder="希尚科技" type="text">
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <span class="input-group-addon">商户号</span>
+                    <input class="form-control" placeholder="10016603" type="text">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="input-group">
+                    <span class="input-group-addon">API密钥</span>
+                    <input class="form-control" placeholder="eeeb5d77cf0a16977129a1ec21346fb5" type="text">
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <div class="input-group">
+                    <input class="form-control file_info" placeholder="(请上传证书文件)" disabled="disabled" type="text">
+                    <span class="input-group-btn">
+                        <a class="btn btn-default file_btn" onclick="javascript:;" type="button">上传文件<input type="file" class="file_input"></a>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <button class="btn btn-info" type="submit">保存信息</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal fade" id="query_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">微信查询</h4>
+            </div>
+			<div class="modal-body">            
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse">
+                            <div class="navbar-form navbar-right" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="请输入名称">
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 选择状态 <span class="caret"></span></button>
+                                        <ul class="dropdown-menu" aria-labelledby="prod_cate_list">
+                                            <li><a class="btn" href="javascript:;" class="btn">请选择</a></li>
+                                            <li><a class="btn" href="javascript:;" class="btn">待审</a></li>
+                                            <li><a class="btn" href="javascript:;" class="btn">正常</a></li>
+                                            <li><a class="btn" href="javascript:;" class="btn">冻结</a></li>
+                                            <li><a class="btn" href="javascript:;" class="btn">审核不通过</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="请输入名称" readonly="">
+                                </div>
+                                <a href="javascript:;" class="btn btn-info">查询</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+				<div class="table-responsive">
+				    <table class="table table-condensed table-hover">
+						<thead>
+							<tr>
+                                <th class="text-center">微信昵称</th>
+                                <th class="text-center">头像</th>
+                                <th class="text-center">OPENID</th>
+                                <th class="text-center">操作</th>
+							</tr>
+						</thead>
+						<tbody class="text-center">
+							<tr>
+								<td>李娭毑</td>
+                                <td><img src="images/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                                <td>OLEBMT1DV3OAUXEQI4SE2URLAE1W</td>
+                                <td><a href="javascript:;" data-dismiss="modal" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+							</tr>
+							<tr>
+								<td>小钢炮</td>
+                                <td><img src="images/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                                <td>OLEBMT1DV3OAUXEQI4SE2URLAE1W</td>
+                                <td><a href="javascript:;" data-dismiss="modal" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+							</tr>
+							<tr>
+								<td>张飞</td>
+                                <td><img src="images/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                                <td>OLEBMT1DV3OAUXEQI4SE2URLAE1W</td>
+                                <td><a href="javascript:;" data-dismiss="modal" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+							</tr>
+                            <tr>
+                                <td>关羽</td>
+                                <td><img src="images/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                                <td>OLEBMT1DV3OAUXEQI4SE2URLAE1W</td>
+                                <td><a href="javascript:;" data-dismiss="modal" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+                            </tr>
+                            <tr>
+                                <td>斐济</td>
+                                <td><img src="images/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                                <td>OLEBMT1DV3OAUXEQI4SE2URLAE1W</td>
+                                <td><a href="javascript:;" data-dismiss="modal" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+                            </tr>						
+						</tbody>
+					</table>
+                    <nav class='navbar-right'>
+                        <ul class="pagination">
+                            <li>
+                                <a href="javascript:;" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">1</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">2</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">3</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">4</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">5</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+    $(".file_input").change(function () {        
+        $(".file_info").val($(this).val());
+    })
+</script>
+<script type="text/javascript" src="js/public.js"></script>

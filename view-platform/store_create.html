@@ -1,0 +1,410 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/store_list.html')">门店管理</a></li>
+        <li class="active">添加门店</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                    <a href="#store_add" aria-controls="store_add" role="tab" data-toggle="tab">添加门店</a>
+                </li>
+                <li role="presentation">
+                    <a href="#store_code" aria-controls="store_code" role="tab" data-toggle="tab">门店二维码</a>
+                </li>
+                <li role="presentation">
+                    <a href="#store_num" aria-controls="store_num" role="tab" data-toggle="tab">门店序列号</a>
+                </li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active bg-default" id="store_add">
+                    <div class="navbar navbar-default modal-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">门店名称</span>
+                                    <input type="text" class="form-control" placeholder="请填写门店名称" id="store_name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">手机号码</span>
+                                    <input type="text" class="form-control" placeholder="请填写手机号">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">微信昵称</span>
+                                    <input type="text" class="form-control" placeholder="请填写微信昵称">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">OPENID</span>
+                                    <input type="text" class="form-control" placeholder="OLEBMT1DV3OAUXEQI4SE2URLAE1W">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">邮箱地址</span>
+                                    <input type="text" class="form-control" placeholder="请填写邮箱地址">
+                                    <span class="input-group-addon">@</span>
+                                    <input type="text" class="form-control" placeholder="请填写邮箱地址">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="input-group">
+                                    <span class="input-group-addon">座机号</span>
+                                    <input type="name" class="form-control" placeholder="0731">
+                                    <span class="input-group-addon">~</span>
+                                    <input type="name" class="form-control" placeholder="88888888">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <a class="btn btn-default file_btn" onclick="javascript:;">
+                                                    上传形象
+                                                    <input name="" class="file_input" id="file_input" type="file"></a>
+                                            </span>
+                                            <input class="file_info form-control" placeholder="请上传店铺形象照片" disabled="disabled" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">营业时间</span>
+                                            <input type="text" class="form-control time_select_panel" placeholder="请填写开店时间">
+                                            <span class="input-group-addon">@</span>
+                                            <input type="text" class="form-control time_select_panel" placeholder="请填写关店时间">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">描<br/>述</span>
+                                            <textarea id="store_info" onclick="value=''">请填写店铺描述</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="item active" id="result">
+                                    <img src="images/public/wp6.jpg">
+                                </div>
+                            </div>
+                        </div>
+                        <hr/>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group">
+                                    <span class="input-group-addon">所属地区</span>
+                                    <select id="s_province" style="width: 100%;" name="s_province"></select>
+                                    <span class="input-group-addon">-</span>
+                                    <select id="s_city" style="width: 100%;" name="s_city" ></select>
+                                    <span class="input-group-addon">-</span>
+                                    <select id="s_county" style="width: 100%;" name="s_county"></select>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="input-group" id="r-result">
+                                    <span class="input-group-addon">详细地址</span>
+                                    <input type="text" class="form-control" id="suggestId" placeholder="银盆岭大桥西世茂铂翠湾2期2栋805">
+                                    <div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div id="store-map"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 text-center">
+                                <a class="btn btn-info" onclick="srcpage('view-platform/store_list.html')">保存</a>
+                                <a class="btn btn-default"  onclick="srcpage('view-platform/store_list.html')">取消</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="store_code"> <!--门店二维码选项卡-->
+                    <div class="table-responsive">
+                        <!-- 产品列表 -->
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th>作用</th>
+                                    <th>网络地址</th>
+                                    <th>缩略图</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>注册门店入口</td>
+                                    <td><a href="" target="_blank" class="btn show_btn">http://xishang.com/u/1896481783</a></td>
+                                    <td style="width:150px;"><a href="" class="code_btn"></a></td>
+                                    <td>
+                                        <a href="javascript:;" class="btn poster_btn"><i class="fa fa-edit"></i> 生成 </a>
+                                        <a href="" target="_blank" class="btn down_btn"><i class="fa fa-download"></i> 下载 </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="store_num"> <!--门店序列号选项卡-->
+                    <div class="table-responsive">
+                        <!-- 产品列表 -->
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">ID</th>
+                                    <th class="text-center">系列号:</th>
+                                    <th class="text-center">状态:</th>
+                                    <th class="text-center">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td>1</td>
+                                    <td>1330-1570-6911-1944-1775-4209</td>
+                                    <td>激活</td>
+                                    <td class="text-right">
+                                        <a href="javascript:;" type="button" class="btn" disabled="disabled"><i class="fa fa-pencil"></i> 激活 </a><br/>
+                                        <a href="javascript:;" type="button" class="btn" disabled="disabled"><i class="fa fa-edit"></i> 修改 </a>
+                                        <a href="" type="button" class="btn"><i class="fa fa-trash-o"></i> 删除 </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>1330-1642-2756-9196-6949-7762</td>
+                                    <td>未激活</td>
+                                    <td class="text-right">
+                                        <a href="javascript:;" type="button" class="btn"><i class="fa fa-pencil"></i> 激活 </a><br/>
+                                        <a href="javascript:;" type="button" class="btn"><i class="fa fa-edit"></i> 修改 </a>
+                                        <a href="" type="button" class="btn"><i class="fa fa-trash-o"></i> 删除 </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>                    
+                    <nav class='navbar-right'>
+                        <ul class="pagination">
+                            <li>
+                                <a href="javascript:;" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">1</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">2</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">3</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">4</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">5</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="mask hide"></div>
+<div id="MessBox" class="hide" >
+    <div class="load">
+        <div class="icon_box">
+            <div class="cirBox cirBox1">
+                <div class="cir1"></div>
+                <div class="cir2"></div>
+                <div class="cir3"></div>
+                <div class="cir4"></div>
+            </div>
+            <div class="cirBox cirBox2">
+                <div class="cir1"></div>
+                <div class="cir2"></div>
+                <div class="cir3"></div>
+                <div class="cir4"></div>
+            </div>
+            <div class="cirBox cirBox3">
+                <div class="cir1"></div>
+                <div class="cir2"></div>
+                <div class="cir3"></div>
+                <div class="cir4"></div>
+            </div>
+        </div>
+    </div>
+    <div class="dec_txt">海报正在生成,请稍等片刻....</div>
+</div>
+<script type="text/javascript">    
+    _init_area();
+    $("#s_province").change(function () {
+        var province = $("#s_province option:selected").text();
+        map.centerAndZoom(province,10);    // 用省会名设置地图中心点
+    });
+    $("#s_city").change(function () {
+        var city = $("#s_city option:selected").text();
+        map.centerAndZoom(city,11);        // 用城市名设置地图中心点
+    });
+    $("#s_county").change(function () {
+        var county = $("#s_county option:selected").text();
+        map.centerAndZoom(county,16);      // 用地区名设置地图中心点
+    });
+    //生成门店入口以及二维码.这里只要修改 share_img 的val 
+    var code_img='images/public/code.jpg';
+    $("a.poster_btn").click(function () {
+        var e =$(this);
+        $(".mask").removeClass("hide");
+        $("#MessBox").removeClass("hide");
+        setTimeout(function(){
+            $(".mask").addClass("hide");
+            $("#MessBox").addClass("hide");
+            $(e).parents("tr").find("a.code_btn").attr({"href":code_img,"target":"_blank"});
+            $(e).parents("tr").find("a.code_btn").append("<img src='"+code_img+"' class='img-responsive img-thumbnail col-lg-12'>");
+            $(e).parents("tr").find("a.show_btn").attr({"href":code_img,"target":"_blank", "alt":code_img});
+            $(e).parents("tr").find("a.show_btn").text("http://xishang.com/u/"+code_img);
+            $(e).parents("tr").find("a.down_btn").attr({"href":code_img,"target":"_blank"});
+        },700);
+    });
+</script>
+<script type="text/javascript">
+
+    // 百度地图API功能
+    var map = new BMap.Map("store-map");
+    var point = new BMap.Point(112.963847,28.233569);
+    var marker = new BMap.Marker(point);  // 创建标注
+    map.centerAndZoom(point,18);
+    map.enableScrollWheelZoom();   //启用滚轮放大缩小，默认禁用
+    map.enableContinuousZoom();    //启用地图惯性拖拽，默认禁用
+
+    function show_store(point) {
+        var name = $("#store_name").val();
+        var file = $("#result").children("img").attr('src');
+        var s_time = $("#store_s_time").val();
+        var e_time = $("#store_e_time").val();
+        var info = $("#store_info").val();
+        var sContent =
+        "<h4 class='store_name'>"+ name +"</h4>" + 
+        "<img id='imgDemo' src='"+file+"' title='"+name+"'/>" + 
+        "<p class='store_info'>"+ info+"</p>" + 
+        "<p class='store_info'>营业时间:&nbsp;"+ s_time+"&nbsp;至&nbsp;"+ e_time+"</p>" + 
+        "</div>";
+        var infoWindow = new BMap.InfoWindow(sContent);  // 创建信息窗口对象
+        map.openInfoWindow(infoWindow,point); //开启信息窗口
+    }
+
+    //单击获取点击的经纬度
+    map.addEventListener("click",function(e){
+        map.clearOverlays();    //清除地图上所有覆盖物
+        //alert(e.point.lng + "," + e.point.lat);        
+        point = new BMap.Point(e.point.lng,e.point.lat);
+        var marker = new BMap.Marker(point);  // 创建标注
+        map.addOverlay(marker);               // 将标注添加到地图中
+        map.centerAndZoom(point,18);
+        show_store(point);
+    });
+
+    function G(id) {
+        return document.getElementById(id);
+    }
+    var ac = new BMap.Autocomplete(    //建立一个自动完成的对象
+        {"input" : "suggestId"
+        ,"location" : map
+    });
+
+    ac.addEventListener("onhighlight", function(e) {  //鼠标放在下拉列表上的事件
+    var str = "";
+        var _value = e.fromitem.value;
+        var value = "";
+        if (e.fromitem.index > -1) {
+            value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+        }    
+        str = "FromItem<br />index = " + e.fromitem.index + "<br />value = " + value;
+        
+        value = "";
+        if (e.toitem.index > -1) {
+            _value = e.toitem.value;
+            value = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+        }    
+        str += "<br />ToItem<br />index = " + e.toitem.index + "<br />value = " + value;
+        G("searchResultPanel").innerHTML = str;
+    });
+
+    var myValue;
+    ac.addEventListener("onconfirm", function(e) {    //鼠标点击下拉列表后的事件
+    var _value = e.item.value;
+        myValue = _value.province +  _value.city +  _value.district +  _value.street +  _value.business;
+        G("searchResultPanel").innerHTML ="onconfirm<br />index = " + e.item.index + "<br />myValue = " + myValue;
+        
+        setPlace();
+    });
+
+    function setPlace(){
+        map.clearOverlays();    //清除地图上所有覆盖物
+        function myFun(){
+            var pp = local.getResults().getPoi(0).point;    //获取第一个智能搜索的结果
+            map.centerAndZoom(pp, 18);
+            map.addOverlay(new BMap.Marker(pp));    //添加标注
+        }
+        var local = new BMap.LocalSearch(map, { //智能搜索
+          onSearchComplete: myFun
+        });
+        local.search(myValue);
+    }
+
+    upimg('result','file_input');
+    function upimg (resur,file) {
+        var result = document.getElementById(resur);
+        var input = document.getElementById(file);
+        if (typeof FileReader === 'undefined') {
+            result.innerHTML = "抱歉，你的浏览器不支持 FileReader";
+            input.setAttribute('disabled', 'disabled');
+        } else {
+            $('#'+file).change(function () {
+                $("#resur_show .item").removeClass("active");
+                $('#'+resur).addClass("active");
+                var file_url =$(this).val();
+                $(this).parents(".input-group").find(".file_info").val(file_url);
+            });
+            input.addEventListener('change', function () {
+                var file = this.files[0];
+                if (!/image\/\w+/.test(file.type)) {
+                    alert("请确保文件为图像类型");
+                    return false;
+                }
+                var reader = new FileReader();
+                reader.readAsDataURL(file);
+                reader.onload = function(e) {
+                    result.innerHTML = '<img src="' + this.result + '" alt=""/>'; 
+                }
+            }, false);
+        }
+    }
+</script>
+<script type="text/javascript" src="js/public.js"></script>

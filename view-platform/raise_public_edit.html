@@ -1,0 +1,91 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/code_batch_list.html')">众筹管理</a></li>
+        <li class="active">新建众筹</li>
+    </ol>
+    <div class="row">
+        <div class="col-xs-12 col-lg-12">
+            <form action="code_batch_list.html">
+                
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 项目名称 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="项目名称" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 类型 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="类型" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 状态 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="状态" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 标签 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="标签" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 众筹天数 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="众筹天数" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 开始时间 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="开始时间" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 结束时间 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="结束时间" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 众筹目标 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="众筹目标" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 众筹上限 </label>
+                    <div class="  col-lg-9">
+                    <input class="form-control" placeholder="众筹上限" type="name">
+                    </div>
+                </div>
+                <div class="row form-group"> <!-- 数量 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'> 关注 </label>
+                    <div class="col-xs-8 col-lg-9">
+                                        <label><input name="state" value="" type="radio"> 是 </label>
+                                        <label><input name="state" value="" checked="checked" type="radio"> 否 </label>
+                                    </div>
+                </div>
+                
+                
+                
+                <div class="row form-group"> <!-- 表单按钮 -->
+                    <label class='col-xs-2 col-lg-2 text-right control-label'></label>
+                    <div class="col-xs-9[] col-lg-9">
+                        <button class="btn btn-success" type="submit" href="javascript:;" onclick="srcpage('view-platform/code_batch_list.html')">生成</button>
+                        <a class="btn btn-warning" type="button" href="javascript:;" onclick="srcpage('view-platform/code_batch_list.html')">取消</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<script src="js/editor.js"></script>
+<script type="text/javascript">
+$(document).ready( function() {
+    $("#txtEditor").Editor(); 
+});
+</script>

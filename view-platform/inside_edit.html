@@ -1,0 +1,232 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/inside_list.html')">内部管理</a></li>
+        <li class="active">编辑资料</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-6 text-center">
+            <img src="images/fans/teacher1.jpg" alt="..." class="img-circle">
+        </div>
+        <div class="col-lg-6">
+            <div class="row">
+                <div class="col-lg-10">                    
+                    <div class="input-group">
+                        <span class="input-group-addon">微信昵称</span>
+                        <input type="text" class="form-control" placeholder="李娭毑" disabled="disabled">
+                    </div>   
+                </div>
+            </div>            
+            <div class="row">
+                <div class="col-lg-10">
+                    <div class="input-group">
+                        <span class="input-group-addon">OPENID</span>
+                        <input type="text" class="form-control" placeholder="OLEBMT1DV3OAUXEQI4SE2URLAE1W" disabled="disabled">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><hr>
+    <div class="row">
+        <div class="col-lg-4">                        
+            <div class="input-group">
+                <span class="input-group-addon">真实姓名</span>
+                <input type="text" class="form-control" placeholder="李彬">
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="input-group">
+                <span class="input-group-addon">手机账号</span>
+                <input type="text" class="form-control" placeholder="13838384138">
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 内部等级 <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="btn" href="javascript:;">直营店</a></li>
+                        <li><a class="btn" href="javascript:;">直营店区域经理</a></li>
+                        <li><a class="btn" href="javascript:;">直营店业务员</a></li>
+                        <li><a class="btn" href="javascript:;">经销商</a></li>
+                        <li><a class="btn" href="javascript:;">经销商区域经理</a></li>
+                        <li><a class="btn" href="javascript:;">经销商业务员</a></li>
+                    </ul>
+                </div>
+                <input type="text" class="form-control" placeholder="会员">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">            
+            <div class="input-group">
+                <span class="input-group-addon">部门名称</span>
+                <input type="text" class="form-control" placeholder="长沙区域经理">
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-group">
+                <span class="input-group-addon">所属省市</span>
+                <select style="width: 100%;" id="s_province" name="s_province"></select>
+                <span class="input-group-addon">-</span>
+                <select style="width: 100%;" id="s_city" name="s_city" ></select>
+                <span class="input-group-addon">-</span>
+                <select style="width: 100%;" id="s_county" name="s_county"></select>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <a href="javascript:;" class="btn btn-default" data-toggle="modal" data-target="#inside_edit">查询领导</a>
+                </span>
+                <input type="text" class="form-control" placeholder="李娭毑" disabled="disabled">
+            </div>
+        </div>
+        <div class="col-lg-8 text-center">
+            <a href="javascript:;" onclick="srcpage('view-platform/inside_list.html')" class="btn btn-info">保存信息</a>
+        </div>
+    </div><hr>
+</div>
+<div class="modal fade" id="inside_edit" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">内部成员</h4>
+            </div>
+            <div class="modal-body">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse">
+                            <div class="navbar-form navbar-right" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="请输入昵称">
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 业务级别 <span class="caret"></span></button>
+                                        <ul class="dropdown-menu" aria-labelledby="prod_cate_list">
+                                            <li><a href="javascript:;" class="btn">直营店</a></li>
+                                            <li><a href="javascript:;" class="btn">直营店区域经理</a></li>
+                                            <li><a href="javascript:;" class="btn">直营店业务员</a></li>
+                                            <li><a href="javascript:;" class="btn">经销商</a></li>
+                                            <li><a href="javascript:;" class="btn">经销商区域经理</a></li>
+                                            <li><a href="javascript:;" class="btn">经销商业务员</a></li>
+                                        </ul>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="请选择等级" readonly="">
+                                </div>
+                                <a href="javascript:;" class="btn btn-info">查询</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive">
+                            <table class="table table-condensed table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">微信昵称</th>
+                                        <th class="text-center">头像</th>
+                                        <th class="text-center">真实姓名</th>
+                                        <th class="text-center">所在地区</th>
+                                        <th class="text-center">业务级别</th>
+                                        <th class="text-center">操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td>李娭毑</td>
+                                        <td><img src="images/teacher3.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>何佑波</td>
+                                        <td>湖南-长沙-雨花区</td>
+                                        <td>经销商</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-user-secret"></i> 设为上级</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>李大牛</td>
+                                        <td><img src="images/teacher2.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>何佑波</td>
+                                        <td>湖南-长沙-雨花区</td>
+                                        <td>经销商区域经理</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-user-secret"></i> 设为上级</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>李娭毑</td>
+                                        <td><img src="images/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>何佑波</td>
+                                        <td>湖南-长沙-雨花区</td>
+                                        <td>直营店</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-user-secret"></i> 设为上级</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>蒋天生</td>
+                                        <td><img src="images/teacher5.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>何佑波</td>
+                                        <td>湖南-长沙-雨花区</td>
+                                        <td>直营店区域经理</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-user-secret"></i> 设为上级</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>李大妞</td>
+                                        <td><img src="images/teacher4.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>何佑波</td>
+                                        <td>湖南-长沙-雨花区</td>
+                                        <td>经销商</td>
+                                        <td>
+                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-user-secret"></i> 设为上级</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <nav class='navbar-right'>
+                                <ul class="pagination">
+                                    <li>
+                                        <a href="javascript:;" aria-label="Previous">
+                                            <span aria-hidden="true">&laquo;</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">1</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">2</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">3</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">4</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">5</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;" aria-label="Next">
+                                            <span aria-hidden="true">&raquo;</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    _init_area();
+</script>
+<script type="text/javascript" src="js/public.js"></script>

@@ -1,0 +1,403 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">会员提现管理</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 交易状态 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="javascript:;" class="btn">全部</a></li>
+                        <li><a href="javascript:;" class="btn">待付款</a></li>
+                        <li><a href="javascript:;" class="btn">已完成</a></li>
+                    </ul>
+                </div>
+                <input class="form-control" placeholder="请选择交易状态" type="text" disabled="disabled">
+            </div>
+        </div>
+        <div class="col-lg-8">
+            <div class="input-group">
+                <span class="input-group-addon">交易时间</span>
+                <input class="form-control datetimepicker" placeholder="开始时间" type="text">
+                <span class="input-group-addon">~</span>
+                <input class="form-control datetimepicker" placeholder="结束时间" type="text">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 关键词 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        <li><a href="javascript:;" class="btn">流水号</a></li>
+                        <li><a href="javascript:;" class="btn">提现人</a></li>
+                    </ul>
+                </div>
+                <input type="text" class="form-control" placeholder="选择输入关键词">
+            </div>
+        </div>
+        <div class="col-lg-5">
+            <div class="input-group">
+                <span class="input-group-addon">提现金额</span>
+                <input type="text" class="form-control" placeholder="最小金额">
+                <span class="input-group-addon">~</span>
+                <input type="text" class="form-control" placeholder="最大金额">
+            </div>
+        </div>
+        <div class="col-lg-3 text-right">
+            <a href="javascript:;" class="btn btn-info">搜索</a>
+            <a href="javascript:;" class="btn btn-success" data-toggle="modal" data-target="#moneyall">打款</a>
+            <a href="text/commission.et" class="btn btn-warning">下载</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#all_finance_tab" aria-controls="all_finance_tab" role="tab" data-toggle="tab">全部</a></li>
+                <li role="presentation"><a href="#payment_finance_tab" aria-controls="payment_finance_tab" role="tab" data-toggle="tab">待付款</a></li>
+                <li role="presentation"><a href="#completed_finance_tab" aria-controls="completed_finance_tab" role="tab" data-toggle="tab">已完成</a></li>
+            </ul>           
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="all_finance_tab">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox"></th>
+                                            <th colspan="2" class="text-center">提现人(提现用户)</th>
+                                            <th class="text-center">上级</th>
+                                            <th class="text-center">提现金额(元)</th>
+                                            <th class="text-center">下单时间</th>
+                                            <th class="text-center">状态</th>
+                                            <th class="text-center">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="finance_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="7" class="text-left">流水号: E20150416142816023120730</td>
+                                            <td><a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><input type="checkbox"></td>
+                                            <td>小白<br/>1384801238</td>
+                                            <td><img src="images/fans/teacher2.jpg" alt="..." class="img-circle img-small"></td>
+                                            <td>李娭毑</td>
+                                            <td><a href="javascript:;" onclick="srcpage('view-platform/finance_list.html')" >100.00</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-success">已完成</span></td>
+                                            <td><a href="javascript:;" class="btn" disabled="disabled"><i class="fa fa-money"></i> 打款</a></td>
+                                        </tr>
+                                    </tbody>
+                                    <tbody class="finance_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="7" class="text-left">流水号: E20150417665416023124723</td>
+                                            <td><a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><input type="checkbox"></td>
+                                            <td>小白<br/>1384801238</td>
+                                            <td><img src="images/fans/teacher2.jpg" alt="..." class="img-circle img-small"></td>
+                                            <td>李娭毑</td>
+                                            <td><a href="javascript:;" onclick="srcpage('view-platform/finance_list.html')" >100.00</a></td>
+                                            <td>2015-05-20 10:53:26</td>
+                                            <td><span class="text-danger">待付款</span></td>
+                                            <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#money"><i class="fa fa-money"></i> 打款</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav class='navbar-right'>
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="javascript:;" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="javascript:;">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>                                
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="payment_finance_tab">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox"></th>
+                                            <th colspan="2" class="text-center">提现人(提现用户)</th>
+                                            <th class="text-center">上级</th>
+                                            <th class="text-center">提现金额(元)</th>
+                                            <th class="text-center">下单时间</th>
+                                            <th class="text-center">状态</th>
+                                            <th class="text-center">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="finance_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="7" class="text-left">流水号: E20150417665416023124723</td>
+                                            <td><a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><input type="checkbox"></td>
+                                            <td>小白<br/>1384801238</td>
+                                            <td><img src="images/fans/teacher2.jpg" alt="..." class="img-circle img-small"></td>
+                                            <td>李娭毑</td>
+                                            <td><a href="javascript:;" onclick="srcpage('view-platform/finance_list.html')" >100.00</a></td>
+                                            <td>2015-05-20 10:53:26</td>
+                                            <td><span class="text-danger">待付款</span></td>
+                                            <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#money"><i class="fa fa-money"></i> 打款</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav class='navbar-right'>
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="javascript:;" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="javascript:;">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>                                
+                        </div>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="completed_finance_tab">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-condensed table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th><input type="checkbox"></th>
+                                            <th colspan="2" class="text-center">提现人(提现用户)</th>
+                                            <th class="text-center">上级</th>
+                                            <th class="text-center">提现金额(元)</th>
+                                            <th class="text-center">下单时间</th>
+                                            <th class="text-center">状态</th>
+                                            <th class="text-center">操作</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="finance_line_table text-center">
+                                        <tr class="table-header-group">
+                                            <td colspan="7" class="text-left">流水号: E20150416142816023120730</td>
+                                            <td><a href="javascript:;" data-toggle="modal" data-target="#order_remark">备注</a></td>
+                                        </tr>
+                                        <tr class="table-body-group">
+                                            <td class="text-left"><input type="checkbox"></td>
+                                            <td>小白<br/>1384801238</td>
+                                            <td><img src="images/fans/teacher2.jpg" alt="..." class="img-circle img-small"></td>
+                                            <td>李娭毑</td>
+                                            <td><a href="javascript:;" onclick="srcpage('view-platform/finance_list.html')" >100.00</a></td>
+                                            <td>2015-04-16 14:28:16</td>
+                                            <td><span class="text-success">已完成</span></td>
+                                            <td><a href="javascript:;" class="btn" disabled="disabled"><i class="fa fa-money"></i> 打款</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <nav class='navbar-right'>
+                                    <ul class="pagination">
+                                        <li>
+                                            <a href="javascript:;" aria-label="Previous">
+                                                <span aria-hidden="true">&laquo;</span>
+                                            </a>
+                                        </li>
+                                        <li class="active">
+                                            <a href="javascript:;">1</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">3</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:;" aria-label="Next">
+                                                <span aria-hidden="true">&raquo;</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+</div>
+<div class="modal fade" id="order_remark" tabindex="-1" role="dialog" aria-labelledby="order_remarkLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="shopping_infoLabel">卖家备注</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <textarea></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:;" class="btn btn-info" data-dismiss="modal">提交</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="money" tabindex="-1" role="dialog" aria-labelledby="moneyLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">打款操作</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">打款金额</span>
+                            <input class="form-control" placeholder="2400" type="text">
+                            <span class="input-group-addon">元</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">验证码</span>
+                            <input class="form-control" placeholder="请输入验证码" type="text">
+                              <span class="input-group-btn">
+                                <a href="javascript:;" class="btn btn-default send_btn">发送</a>
+                              </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:;" class="btn btn-success">打款</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="moneyall" tabindex="-1" role="dialog" aria-labelledby="moneyallLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">打款操作</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">打款总金额</span>
+                            <input class="form-control" placeholder="2400" type="text" readonly="">
+                            <span class="input-group-addon">元</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">打款总人数</span>
+                            <input class="form-control" placeholder="30" type="text" readonly="">
+                            <span class="input-group-addon">个</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">验证码</span>
+                            <input class="form-control" placeholder="请输入验证码" type="text">
+                              <span class="input-group-btn">
+                                <a href="javascript:;" class="btn btn-default send_btn">发送</a>
+                              </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="javascript:;" class="btn btn-success">打款</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var time = 61;
+    $("a.send_btn").bind("click",function () {
+        var e =$(this);
+        wait_time(e);
+    });
+    function wait_time(e) {
+        var e= $(e);
+        if( time == 0) {
+            e.removeAttr('disabled');
+            e.text("发送");
+            time=61;
+        }else{
+            time--;
+            e.attr('disabled', 'disabled');
+            e.text("发送("+time+"s)");
+            setTimeout(function() {
+                wait_time(e);
+            }, 1000);
+        }
+    }
+</script>
+<script type="text/javascript" src='js/public.js'></script>

@@ -1,0 +1,225 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">销售分组</li>
+    </ol>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="javascript:;" onclick="srcpage('view-admin/admin_group_edit.html')" class='btn'>添加</a></li>
+                </ul>
+                <div class="navbar-form navbar-right" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入组名">
+                    </div>
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入负责地区">
+                    </div>
+                    <a href="javascript:;" class="btn btn-info">查询</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-lg-12 ">
+            <div class="table-responsive">
+                <table class="table table-condensed table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center">销售组名</th>
+                            <th class="text-center">负责地区</th>
+                            <th class="text-center">销售成员</th>
+                            <th class="text-center">备注说明</th>
+                            <th class="text-center">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td class="length">销售华北组</td>
+                            <td>湖南省~长沙市~雨花区</td>
+                            <td><a href="javascript:;" class="text-info" data-toggle="modal" data-target="#admin_item">销售成员</a></td>
+                            <td>由陈芬负责,组员戴鑫,刘俊...</td>
+                            <td class="text-right">
+                                <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#add_courier"><i class="fa fa-user-plus"></i> 加员 </a>
+                                <a href="javascript:;" onclick="srcpage('view-admin/admin_group_edit.html')" class='btn'><i class="fa fa-edit"></i> 修改</a><br/>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                                    <div class="close_box">
+                                        <span class='colse_txt text-center'>您确定删除么?</span>
+                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <nav class='navbar-right'>
+                    <ul class="pagination">
+                        <li><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                        <li><a href="javascript:;">1</a></li>
+                        <li><a href="javascript:;">2</a></li>
+                        <li><a href="javascript:;">3</a></li>
+                        <li><a href="javascript:;">4</a></li>
+                        <li><a href="javascript:;">5</a></li>
+                        <li><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="admin_item" tabindex="-1" role="dialog" aria-labelledby="admin_itemLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="admin_itemLabel">销售组成员</h4>
+            </div>
+            <div class="modal-body">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="javascript:;" type="button" class="btn" class="close" data-dismiss="modal" aria-label="Close">
+                                        <i class="fa fa-trash-o"></i> 删除
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="navbar-form navbar-right" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="请输入昵称">
+                                </div>
+                                <a href="javascript:;" class="btn btn-info">查询</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center"><input type="checkbox"></th>
+                                <th class="text-center">昵称</th>
+                                <th class="text-center">账号</th>
+                                <th class="text-center">组长</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>戴鑫</td>
+                                <td>xskj_daili</td>
+                                <td><input type="radio" name="courier_admin" title="设为组长"> 组长</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-trash-o"></i> 删除 </a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>戴鑫</td>
+                                <td>xskj_daili</td>
+                                <td><input type="radio" name="courier_admin" title="设为组长"> 组长</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-trash-o"></i> 删除 </a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>戴鑫</td>
+                                <td>xskj_daili</td>
+                                <td><input type="radio" name="courier_admin" title="设为组长"> 组长</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-trash-o"></i> 删除 </a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <nav class='navbar-right'>
+                        <ul class="pagination">
+                            <li><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                            <li><a href="javascript:;">1</a></li>
+                            <li><a href="javascript:;">2</a></li>
+                            <li><a href="javascript:;">3</a></li>
+                            <li><a href="javascript:;">4</a></li>
+                            <li><a href="javascript:;">5</a></li>
+                            <li><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="add_courier" tabindex="-1" role="dialog" aria-labelledby="admin_itemLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="admin_itemLabel"> 销售组增加成员 </h4>
+            </div>
+            <div class="modal-body">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="javascript:;" type="button" class="btn" class="close" data-dismiss="modal" aria-label="Close">
+                                        <i class="fa fa-plus"></i> 添加
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="navbar-form navbar-right" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="请输入昵称">
+                                </div>
+                                <a href="javascript:;" class="btn btn-info">查询</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center"><input type="checkbox"></th>
+                                <th class="text-center">昵称</th>
+                                <th class="text-center">账号</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>戴鑫</td>
+                                <td>xskj_daili</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-plus"></i> 添加</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>戴鑫</td>
+                                <td>xskj_daili</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-plus"></i> 添加</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>戴鑫</td>
+                                <td>xskj_daili</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-plus"></i> 添加</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <nav class='navbar-right'>
+                        <ul class="pagination">
+                            <li><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                            <li><a href="javascript:;">1</a></li>
+                            <li><a href="javascript:;">2</a></li>
+                            <li><a href="javascript:;">3</a></li>
+                            <li><a href="javascript:;">4</a></li>
+                            <li><a href="javascript:;">5</a></li>
+                            <li><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/public.js"></script>

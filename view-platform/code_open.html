@@ -1,0 +1,157 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">二维码出库</li>
+    </ol>
+    <form action="">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse">
+                    <div class="navbar-form navbar-right" role="search">
+                        <div class="input-group">
+                            <span class="input-group-addon">派送</span>
+                            <select id="q_province" style="height: 34px" name="q_province"></select>
+                            <span class="input-group-addon">-</span>
+                            <select id="q_city" style="height: 34px" name="q_city" ></select>
+                            <span class="input-group-addon">-</span>
+                            <select id="q_county" style="height: 34px" name="q_county"></select>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="请输入批次号">
+                        </div>
+                        <a href="javascript:;" class="btn btn-info">查询</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col-lg-12 ">
+                <div class="table-responsive"> <!-- 产品列表 -->
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center"><input type="checkbox"></th>
+                                <th class="text-center">ID</th>
+                                <th class="text-center length">批次号</th>
+                                <th class="text-center length">产品</th>
+                                <th class="text-center">数量</th>
+                                <th class="text-center length">派送地</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>1</td>
+                                <td class="length">ACS378203</td>
+                                <td class="length">口味王槟郎</td>
+                                <td>1000</td>
+                                <td>湖南-长沙-雨花区</td>
+                                <td>
+                                    <a href="javascript:;" class="btn" type="button" data-toggle="modal" data-target="#code_open"><i class="fa fa-ambulance"></i> 出库 </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>1</td>
+                                <td class="length">ACS378203</td>
+                                <td class="length">口味王槟郎 和成天下</td>
+                                <td>1000</td>
+                                <td>湖南-长沙-开福区</td>
+                                <td>
+                                    <a href="javascript:;" class="btn" type="button" data-toggle="modal" data-target="#code_open"><i class="fa fa-ambulance"></i> 出库 </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>1</td>
+                                <td class="length">ACS378203</td>
+                                <td class="length">口味王槟郎 味赢天下</td>
+                                <td>1000</td>
+                                <td>湖南-长沙-岳麓区</td>
+                                <td>
+                                    <a href="javascript:;" class="btn" type="button" data-toggle="modal" data-target="#code_open"><i class="fa fa-ambulance"></i> 出库 </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>                    
+                    <nav class='navbar-right'>
+                        <ul class="pagination">
+                            <li>
+                                <a href="javascript:;" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">1</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">2</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">3</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">4</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">5</a>
+                            </li>
+                            <li>
+                                <a href="javascript:;" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal fade" id="code_open" tabindex="-1" role="dialog" aria-labelledby="code_openLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="code_openLabel">二维码出库</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">派送</span>
+                            <select style="width: 100%;" id="s_province" name="s_province"></select>
+                            <span class="input-group-addon">-</span>
+                            <select style="width: 100%;" id="s_city" name="s_city" ></select>
+                            <span class="input-group-addon">-</span>
+                            <select style="width: 100%;" id="s_county" name="s_county"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">备注</span>
+                            <input type="text" class="form-control" placeholder="备注">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-info">保存</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    _init_area();
+    q_init_area();
+    $("#s_province").find("option[value='湖南省']").attr("selected",true);
+    $("#s_province").change();
+    $("#s_city").find("option[value='长沙市']").attr("selected",true);
+    $("#s_city").change();
+    $("#s_county").find("option[value='雨花区']").attr("selected",true);
+</script>
+<script type="text/javascript" src="js/public.js"></script>

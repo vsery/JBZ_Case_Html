@@ -1,0 +1,217 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">会员积分</li>
+    </ol>        
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <div class="close_bomb">
+                            <a href="javascript:;" class="btn close_btn">删除</a>
+                            <div class="close_box text-right" id="all">
+                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                <a href="javascript:;" class="btn btn-info">确定</a>
+                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li><a href="javascript:;" class="btn zero_btn" title="积分余额清零">清零</a></li>
+                </ul>
+                <div class="navbar-form navbar-right" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="请输入名称 "></div>
+                    <a href="javascript:;" class="btn btn-info">查询</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-lg-12 ">
+            <div class="table-responsive">
+                <table class="table table-condensed table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center"><input type="checkbox"></th>
+                            <th class="text-center">ID</th>
+                            <th class="text-center">用户名称</th>
+                            <th class="text-center">用户头像</th>
+                            <th class="text-center">积分总额</th>
+                            <th class="text-center">积分余额</th>
+                            <th class="text-center">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center">
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>1</td>
+                            <td>枫叶-老蒋</td>
+                            <td><a href="images/fans/head2.jpg" target="_blank"><img class="img-circle img-small" src="images/fans/head2.jpg"></a></td>
+                            <td><span class="all_prize">338808</span></td>
+                            <td><span class="balance_prize">35207</span></td>
+                            <td><a class="btn" data-toggle="modal" data-target="#file_open" title="商品上架"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                <a class="btn" onclick="srcpage('view-platform/prize_points_record_list.html')" title="商品下架"><i class="fa fa-book"></i> 记录 </a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>2</td>
+                            <td>老鼠爱上猫</td>
+                            <td><a href="images/fans/head1.gif" target="_blank"><img class="img-circle img-small" src="images/fans/head1.gif"></a></td>
+                            <td><span class="all_prize">34538</span></td>
+                            <td><span class="balance_prize">15237</span></td>
+                            <td><a class="btn" data-toggle="modal" data-target="#file_open" title="商品上架"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                <a class="btn" onclick="srcpage('view-platform/prize_points_record_list.html')" title="商品下架"><i class="fa fa-book"></i> 记录 </a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>3</td>
+                            <td>布吉小戴</td>
+                            <td><a href="images/fans/head.jpg" target="_blank"><img class="img-circle img-small" src="images/fans/head.jpg"></a></td>
+                            <td><span class="all_prize">46438</span></td>
+                            <td><span class="balance_prize">3534</span></td>
+                            <td><a class="btn" data-toggle="modal" data-target="#file_open" title="商品上架"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                <a class="btn" onclick="srcpage('view-platform/prize_points_record_list.html')" title="商品下架"><i class="fa fa-book"></i> 记录 </a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>4</td>
+                            <td>虎唬呼乎忽</td>
+                            <td><a href="images/fans/head (5).gif" target="_blank"><img class="img-circle img-small" src="images/fans/head (5).gif"></a></td>
+                            <td><span class="all_prize">98734</span></td>
+                            <td><span class="balance_prize">63407</span></td>
+                            <td><a class="btn" data-toggle="modal" data-target="#file_open" title="商品上架"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                <a class="btn" onclick="srcpage('view-platform/prize_points_record_list.html')" title="商品下架"><i class="fa fa-book"></i> 记录 </a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>5</td>
+                            <td>坏坏梦琳秽乱后宫</td>
+                            <td><a href="images/fans/head (7).gif" target="_blank"><img class="img-circle img-small" src="images/fans/head (7).gif"></a></td>
+                            <td><span class="all_prize">43603</span></td>
+                            <td><span class="balance_prize">3344</span></td>
+                            <td><a class="btn" data-toggle="modal" data-target="#file_open" title="商品上架"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                <a class="btn" onclick="srcpage('view-platform/prize_points_record_list.html')" title="商品下架"><i class="fa fa-book"></i> 记录 </a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>6</td>
+                            <td>秽乱后宫</td>
+                            <td><a href="images/fans/head5.jpg" target="_blank"><img class="img-circle img-small" src="images/fans/head5.jpg"></a></td>
+                            <td><span class="all_prize">434353</span></td>
+                            <td><span class="balance_prize">334432</span></td>
+                            <td><a class="btn" data-toggle="modal" data-target="#file_open" title="商品上架"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                <a class="btn" onclick="srcpage('view-platform/prize_points_record_list.html')" title="商品下架"><i class="fa fa-book"></i> 记录 </a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>7</td>
+                            <td>坏坏梦</td>
+                            <td><a href="images/fans/head4.jpg" target="_blank"><img class="img-circle img-small" src="images/fans/head4.jpg"></a></td>
+                            <td><span class="all_prize">4223</span></td>
+                            <td><span class="balance_prize">334</span></td>
+                            <td><a class="btn" data-toggle="modal" data-target="#file_open" title="商品上架"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                <a class="btn" onclick="srcpage('view-platform/prize_points_record_list.html')" title="商品下架"><i class="fa fa-book"></i> 记录 </a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>8</td>
+                            <td>梦琳</td>
+                            <td><a href="images/fans/head6.jpg" target="_blank"><img class="img-circle img-small" src="images/fans/head6.jpg"></a></td>
+                            <td><span class="all_prize">2237</span></td>
+                            <td><span class="balance_prize">1344</span></td>
+                            <td><a class="btn" data-toggle="modal" data-target="#file_open" title="商品上架"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                <a class="btn" onclick="srcpage('view-platform/prize_points_record_list.html')" title="商品下架"><i class="fa fa-book"></i> 记录 </a></td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>9</td>
+                            <td>依剑看夕阳</td>
+                            <td><a href="images/fans/head7.jpg" target="_blank"><img class="img-circle img-small" src="images/fans/head7.jpg"></a></td>
+                            <td><span class="all_prize">8673</span></td>
+                            <td><span class="balance_prize">4874</span></td>
+                            <td><a class="btn" data-toggle="modal" data-target="#file_open" title="商品上架"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                <a class="btn" onclick="srcpage('view-platform/prize_points_record_list.html')" title="商品下架"><i class="fa fa-book"></i> 记录 </a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <nav class='navbar-right'>
+        <ul class="pagination">
+            <li>
+                <a href="javascript:;" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li class="active">
+                <a href="javascript:;">1</a>
+            </li>
+            <li>
+                <a href="javascript:;">2</a>
+            </li>
+            <li>
+                <a href="javascript:;">3</a>
+            </li>
+            <li>
+                <a href="javascript:;">4</a>
+            </li>
+            <li>
+                <a href="javascript:;">5</a>
+            </li>
+            <li>
+                <a href="javascript:;" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="modal fade" id="file_open" tabindex="-1" role="dialog" aria-labelledby="file_open">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="intergral_infoLabel">会员积分管理</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">用户名称</span>
+                            <input type="text" class="file_info form-control" placeholder="枫叶-老蒋">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">积分总额</span>
+                            <input type="text" class="file_info form-control" placeholder="338808">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">积分余额</span>
+                            <input type="text" class="file_info form-control" placeholder="35207">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-info">保存</a>
+                <a class="btn btn-default" data-dismiss="modal">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(".zero_btn").click(function () {
+        //$(".all_prize").text(0);
+        $(".balance_prize").text(0);
+    })
+</script>
+<script type="text/javascript" src="js/public.js"></script>

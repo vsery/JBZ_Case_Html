@@ -1,0 +1,78 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb"> 
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/courier_list.html')">派送员</a></li>
+        <li class="active">详情信息</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">用户昵称</span>
+                        <input type="text" class="form-control" placeholder="派送员A" disabled="disabled">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">OPENID</span>
+                        <input type="text" class="form-control" placeholder="OLEBMT1DV3OAUXEQI4SE2UR1223W" disabled="disabled">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">真实姓名</span>
+                        <input type="text" class="form-control" placeholder="OLEBMT1DV3OAUXEQI4SE2UR1223W" disabled="disabled">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">所在地区</span>
+                        <select id="s_province" style="width: 100%;" name="s_province"></select>
+                        <span class="input-group-addon">城市</span>
+                        <select id="s_city" style="width: 100%;" name="s_city" ></select>
+                        <span class="input-group-addon">区域</span>
+                        <select id="s_county" style="width: 100%;" name="s_county"></select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">手机号码</span>
+                        <input type="text" class="form-control" placeholder="请填写手机号" disabled="disabled">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="input-group">
+                        <span class="input-group-addon">用户备注</span>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <a class="btn btn-info" type="button" id="ok_btn">保存</a>
+                    <a class="btn btn-warning" type="button" href="javascript:;" onclick="srcpage('view-platform/courier_list.html')">取消</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    _init_area();
+    $("#s_city").append("<option value='长沙市'>长沙市</option>"); 
+    $("#s_county").append("<option value='雨花区'>雨花区</option>"); 
+    $("#s_province").val("湖南省");
+    $("#s_city").val("长沙市");
+    $("#s_county").val("雨花区");    
+</script>
+<script type="text/javascript" src="js/public.js"></script>

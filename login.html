@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>聚宝赞平台</title>
+    <meta name="keywords" content="聚宝赞系统管理">
+    <meta name="description" content="聚宝赞系统管理">
+    <link rel="icon" sizes="16x16" mask="" href="images/public/logo.ico">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/admin-youzan.css" >
+    <script type="text/javascript" src='js/jquery.min.js'></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/html5shiv.min.js"></script>
+        <script type="text/javascript" src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--[if IE 7]>
+        <link rel="stylesheet" href="assets/css/font-awesome-ie7.min.css">
+    <![endif]-->
+</head>
+<body class="login">
+<div class="row">
+    <div class="col-lg-4 col-lg-offset-4">
+        <div class="row text-center">
+            <img src="images/public/logo.png" alt="" id="login_logo">
+        </div>
+        <form id="login_form" action="index.html">
+            <div class="row form-group"><h3 class="text-center">聚宝赞平台</h3></div>
+            <div class="row form-group">
+                <label class='col-lg-3 control-label reg_tea text-right' for="use_name">用户名:</label>
+                <div class="col-lg-9">
+                    <input type="name" class="form-control" id="use_name" placeholder="请输入用户名">
+                </div>
+            </div>
+            <div class="row form-group">
+                <label class='col-lg-3 control-label reg_tea text-right' for="use_pass">密码:</label>
+                <div class="col-lg-9">
+                    <input class="password form-control" value="123456" type="password" id="use_pass">
+                </div>
+            </div>
+            <div class="row form-group text-center">
+                <button type="submit" class="btn btn-success">登录系统</button>
+            </div>
+            <div class="row alert text-center"><span></span></div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    window.history.forward(1); 
+</script>
+</body>
+</html>

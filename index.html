@@ -1,0 +1,288 @@
+<!-- <!DOCTYPE html> -->
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>聚宝赞</title>
+    <meta name="keywords" content="聚宝赞">
+    <meta name="description" content="聚宝赞">
+    <link rel="icon" sizes="16x16" mask="" href="images/public/logo.ico">
+    <link rel="stylesheet" type="text/css" href="font/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css">    
+    <link rel="stylesheet" type="text/css" href="css/pc.css">
+    <link rel="stylesheet" type="text/css" href="css/assembly.css">
+    <link rel="stylesheet" type="text/css" href="css/admin-youzan.css">
+    <script type="text/javascript" src='js/jquery.min.js'></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=HKZXLyW4V6NSGYe7FWdzg9iu"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/html5shiv.min.js"></script>
+        <script type="text/javascript" src="js/respond.min.js"></script>
+    <![endif]-->
+    <!--[if IE 7]>
+        <link rel="stylesheet" href="font/css/font-awesome-ie7.min.css">
+    <![endif]-->
+</head>
+<body ng-app>
+<header class="ui-header">
+    <div class="ui-header-inner clearfix">
+        <h1 class="ui-header-logo">
+            <a class="top_nav_btn index_btn" href="javascript:;" onclick="srcpage('view-platform/index_body.html')" title="希尚科技"></a>
+        </h1>
+        <nav class="ui-header-nav">
+            <ul class="clearfix" id='top_nav_btn'>
+                <li class="divide">|</li>
+                <li><a class="top_nav_btn btn prod_btn" href="javascript:;" onclick="srcpage('view-platform/product_list.html')">产品</a></li>
+                <li><a class="top_nav_btn btn qecode_btn" href="javascript:;" onclick="srcpage('view-platform/code_batch_list.html')">二维码</a></li>
+                <li class="divide">|</li>
+                <li><a class="top_nav_btn btn merketing_btn" href="javascript:;" onclick="srcpage('view-platform/activity_list.html')">营销</a></li>
+                <li><a class="top_nav_btn btn distr_btn" href="javascript:;" onclick="srcpage('view-platform/cash_initial_setting.html')">分销</a></li>
+                <li><a class="top_nav_btn btn oto_btn" href="javascript:;" onclick="srcpage('view-platform/order_list.html')">o2o</a></li>
+                <li><a class="top_nav_btn btn fans_btn" href="javascript:;" onclick="srcpage('view-platform/fans_list.html')">粉丝</a></li>
+                <li class="divide">|</li>
+                <li><a class="top_nav_btn btn finance_btn" href="javascript:;" onclick="srcpage('view-platform/finance_index.html')">财务</a></li>
+                <li class="divide">|</li>
+                <li><a class="top_nav_btn btn data_btn" href="javascript:;" onclick="srcpage('view-platform/table_list.html')">大数据</a></li>
+                <li class="divide">|</li>
+            </ul>
+        </nav>
+        <div class="ui-header-user ">
+            <div class="customer-wrap"></div>
+            <div class="dropdown hover dropdown-right">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="txt">
+                        <span class="ellipsis team_name">商家/用户</span>
+                        <span class="dash"> - </span>设置
+                    </span>
+                    <i class="caret"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="btn top_nav_btn user_btn" href="javascript:;" onclick="srcpage('view-platform/account_list.html')">账号管理</a></li>
+                    <li><a class="btn top_nav_btn user_btn" href="javascript:;" onclick="srcpage('view-platform/role_list.html')">角色设置</a></li>
+                    <li class="divide"></li>
+                    <li><a class="btn top_nav_btn user_btn" href="javascript:;" onclick="srcpage('view-platform/cash_business_setting.html')">店铺设置</a></li>
+                    <li><a class="btn top_nav_btn user_btn" href="javascript:;" onclick="srcpage('view-platform/user_setting.html')">基础设置</a></li>
+                    <li><a class="btn top_nav_btn user_btn" href="javascript:;" onclick="srcpage('view-platform/cash_company_payment.html')">付款设置</a></li>
+                    <li class="divide"></li>
+                    <li><a class="btn top_nav_btn user_btn" href="javascript:;" onclick="srcpage('view-platform/user_passtxt.html')">修改密码</a></li>
+                    <li><a class="btn" href="login.html">退出</a></li>
+                </ul>
+            </div>
+        </div>
+        <aside class="ui-sidebar sidebar">
+            <nav class="left_tab_nav index_btn open">
+                <ul><li class="active"><a href="javascript:;" onclick="srcpage('view-platform/index_body.html)">整体概况</a></li></ul>
+            </nav>
+            <nav class="left_tab_nav prod_btn">
+                <h4>产品管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/product_list.html')">产品列表</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/product_category_list.html')">产品类别</a></li>
+                </ul>
+            </nav>
+            <nav class="left_tab_nav qecode_btn">
+                <h4>二维码管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/code_batch_list.html')">二维码列表</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/code_open.html')">二维码出库</a></li>
+                </ul>
+            </nav>
+            <nav class="left_tab_nav merketing_btn">
+                <h4>营销管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/activity_list.html')">促销活动</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/intergral_list.html')">积分管理</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/gift_list.html')">赠品管理</a></li>
+                </ul>
+                <h4>领取和必答</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/new_setup.html')">设置</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/new_lead_time.html')">领读</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/new_must_answer.html')">必答</a></li>
+                </ul>
+                <h4>积分管理</h4>
+                <ul>                    
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/prize_list.html')">积分商品</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/prize_points_list.html')">会员积分</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/prize_points_case_list.html')">积分兑换</a></li>
+                </ul>
+                <h4>投票管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/raise_vote.html')">投票管理</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/raise_vote_template.html')">投票模板</a></li>
+                </ul>
+
+                <h4>众筹管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/raise_public.html')">众筹管理</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/raise_public_return_setting.html')">众筹回报</a></li>
+                </ul>
+            </nav>
+            <nav class="left_tab_nav distr_btn">
+                <h4>基本配置</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/cash_initial_setting.html')">初始配置</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/cash_extract_bonus.html')">提现设置</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/cash_poster_setting.html')">海报设置</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/poster_list.html')">海报总数</a></li>
+                </ul>
+                <h4>渠道管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/channel_setting.html')">分成设置</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/channel_prod_setting.html')">产品分成</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/channel_list.html')">渠道员工</a></li>
+                </ul>
+                <h4>分销管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/cash_bonus_setting.html')">分佣设置</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/cash_bonus_prod_setting.html')">产品分佣</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/cash_extension.html')">收益设置</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/saleser_list.html')">分销人员</a></li>
+                </ul>
+            </nav>
+            <nav class="left_tab_nav oto_btn">
+                <h4>订单管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/order_list.html')">订单列表</a></li>
+                </ul>
+                <h4>初始配置</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/oto_setting.html')">初始配置</a></li>
+                </ul>
+                <h4>内部管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/inside_stru_list.html')">内部结构</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/inside_list.html')">内部管理</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/inside_prod_list.html')">产品分成</a></li>
+                </ul>
+                <h4>派送管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/send_list.html')">派送组</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/courier_list.html')">派送员</a></li>
+                </ul>
+                <h4>门店管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/store_list.html')">门店管理</a></li>
+                </ul>
+            </nav>
+            <nav class="left_tab_nav fans_btn">
+                <h4>粉丝管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/fans_list.html')">粉丝列表</a></li>
+                </ul>
+            </nav>
+            <nav class="left_tab_nav finance_btn">
+                <h4>财务管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/finance_index.html')">会员提现</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/finance_bonus_index.html')">会员分红</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/red_envelope_list.html')">红包管理</a></li>
+                </ul>
+                <h4>返现管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/finance_AllReturn_inquire.html')">当日返现</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/finance_bonus_jilv.html')">返现记录</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/finance_AllReturn_members.html')">返现会员</a></li>
+                </ul>
+            </nav>
+            <nav class="left_tab_nav data_btn">
+                <h4>数据管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/table_list.html')">扫码管理</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/table_scan_code.html')">扫码表</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/table_winning.html')">中奖表</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/table_conflict.html')">串货表</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/table_intergral.html')">积分表</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/table_store.html')">门店兑奖表</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/table_fans.html')">粉丝增长表</a></li>
+                </ul>
+            </nav>
+            <nav class="left_tab_nav user_btn">
+                <h4>账号管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/account_list.html')">账号管理</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/role_list.html')">角色设置</a></li>
+                </ul>
+                <h4>商家管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/cash_business_setting.html')">店铺设置</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/user_setting.html')">基础设置</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/cash_company_payment.html')">付款设置</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/user_passtxt.html')">修改密码</a></li>
+                </ul>
+            </nav>
+            <div>
+                <a href="javascript:;"><img src="images/activity/activity_01.jpg"></a>
+            </div>
+            <footer class="ui-footer">
+                <a href="javascript:;" target="_blank"><i>©</i>c3tech.cn</a>
+            </footer>
+        </aside>
+    </div>
+</header>
+<div class="container">
+    <div class="app">
+        <div class="app-inner clearfix">
+            <div class="app-init-container">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer">
+    <div class="Copyright text-center">
+        <a href="view-platform/copyright.html">湖南长沙希尚科技有限公司</a> @2016<br/>
+        <a href="view-platform/copyright.html">使用聚宝赞前必读</a> 湘ICP证0731110号
+    </div>
+</div>
+    <script type="text/javascript" src="js/Chart.js"></script>
+    <script type="text/javascript" src="js/area.js"></script>
+    <script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            htmlobj=$.ajax({
+                type:"GET", 
+                url:"view-platform/index_body.html",
+                dataType:"html", 
+                async:false
+            });
+            $(".app-init-container").html(htmlobj.responseText);
+            window.history.forward(1); 
+            $('a.top_nav_btn').click(function () {
+                $("a.top_nav_btn").parent().removeClass("active");
+                $(this).parent().addClass("active");
+                var open= "";
+                $(".left_tab_nav").removeClass("open");
+                if($(this).hasClass("index_btn")){ open= "index_btn"; }
+                if($(this).hasClass("prod_btn")){ open= "prod_btn"; }
+                if($(this).hasClass("qecode_btn")){ open= "qecode_btn"; }
+                if($(this).hasClass("merketing_btn")){ open= "merketing_btn"; }
+                if($(this).hasClass("distr_btn")){ open= "distr_btn"; }
+                if($(this).hasClass("oto_btn")){ open= "oto_btn"; }
+                if($(this).hasClass("fans_btn")){ open= "fans_btn"; }
+                if($(this).hasClass("finance_btn")){ open= "finance_btn"; }
+                if($(this).hasClass("finance_btn")){ open= "finance_btn"; }
+                if($(this).hasClass("data_btn")){ open= "data_btn"; }
+                if($(this).hasClass("user_btn")){ open= "user_btn"; var user_btn_num = $('.top_nav_btn.user_btn').index(this); }
+                $("nav.left_tab_nav").each(function () {
+                    $(this).find("li").removeClass("active");
+                    if($(this).hasClass(open)){                
+                        $(this).addClass("open");
+                        if($(this).hasClass("user_btn")){
+                            $(this).find("li:eq("+user_btn_num+")").addClass("active");
+                        }else{
+                            $(this).find("li:eq(0)").addClass("active");
+                        }
+                    }
+                })
+            });
+            $("a.left_nav_btn").click(function (){
+                $("a.left_nav_btn").parent().removeClass("active");
+                $(this).parent().addClass("active");
+            });
+        });
+    </script>
+    <script type="text/javascript" src="js/public.js"></script>
+</body>
+</html>
