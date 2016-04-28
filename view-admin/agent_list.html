@@ -45,11 +45,37 @@
             <div class="col-lg-8">
                 <div class="input-group">
                     <span class="input-group-addon">负责地区</span>
-                    <select id="s_province" style="width: 100%;" name="s_province"></select>
-                    <span class="input-group-addon">城市</span>
-                    <select id="s_city" style="width: 100%;" name="s_city" ></select>
-                    <span class="input-group-addon hide">区域</span>
+                    <select id="s_province" style="width: 210px;" name="s_province"></select>
+                    <span class="input-group-addon">~</span>
+                    <select id="s_city" style="width: 210px;" name="s_city" ></select>
+                    <span class="input-group-addon hide">~</span>
                     <select id="s_county" class="hide" style="width: 100%;" name="s_county"></select>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="input-group">
+                    <div class="input-group-btn">
+                        <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  标签状态<span class="caret"></span></a>
+                        <ul class="dropdown-menu" aria-labelledby="dLabel">
+                            <li><a href="javascript:;" class="btn">全部</a></li>
+                            <li><a href="javascript:;" class="btn">有意向</a></li>
+                            <li><a href="javascript:;" class="btn">已开户</a></li>
+                            <li><a href="javascript:;" class="btn">签合同</a></li>
+                            <li><a href="javascript:;" class="btn">已缴费</a></li>
+                            <li><a href="javascript:;" class="btn">已过期</a></li>
+                        </ul>
+                    </div>
+                    <input type="text" class="form-control" placeholder="选择使用状态" readonly="">
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="input-group">
+                    <span class="input-group-addon">账户余额</span>
+                    <input type="text" class="form-control" placeholder="最小金额">
+                    <span class="input-group-addon">~</span>
+                    <input type="text" class="form-control" placeholder="最大金额">
                 </div>
             </div>
         </div>
@@ -60,7 +86,7 @@
                         <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  销售经理<span class="caret"></span></a>
                         <ul class="dropdown-menu" aria-labelledby="dLabel">
                             <li><a href="javascript:;" class="btn">戴鑫</a></li>
-                            <li><a href="javascript:;" class="btn">陈芬</a></li>
+                            <li><a href="javascript:;" class="btn">陈芳</a></li>
                             <li><a href="javascript:;" class="btn">李卓瑜</a></li>
                             <li><a href="javascript:;" class="btn">戴业明</a></li>
                             <li><a href="javascript:;" class="btn">刘俊</a></li>
@@ -69,15 +95,7 @@
                     <input type="text" class="form-control" placeholder="选择销售经理" readonly="">
                 </div>
             </div>
-            <div class="col-lg-5">
-                <div class="input-group">
-                    <span class="input-group-addon">账户余额</span>
-                    <input type="text" class="form-control" placeholder="最小金额">
-                    <span class="input-group-addon">~</span>
-                    <input type="text" class="form-control" placeholder="最大金额">
-                </div>
-            </div>
-            <div class="col-lg-3 text-right">
+            <div class="col-lg-4 col-lg-offset-4 text-right">
                 <a href="javascript:;" class="btn btn-info">搜索</a>
                 <a href="text/commission.et" class="btn btn-warning">下载</a>
             </div>
@@ -87,11 +105,11 @@
         <div class="container-fluid">
             <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="javascript:;" onclick="srcpage('view-admin/agent_edit.html')" class='btn'>添加</a></li>
-                    <li><a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)">启用</a>
-                        <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)">停用</a></li>
+                    <li><a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_edit.html')"> 添加</a></li>
+                    <li><a href="javascript:;" class="btn success_btn" onclick="upcircle(this)"> 启用</a>
+                        <a href="javascript:;" class="btn error_btn hide" onclick="downcircle(this)"> 停用</a></li>
                     <li><div class="close_bomb">
-                        <a href="javascript:;" class="btn close_btn">删除</a>
+                        <a href="javascript:;" class="btn close_btn"> 删除</a>
                         <div class="close_box text-right" id="all">
                             <span class='colse_txt text-center'>您确定删除么?</span>
                             <a href="javascript:;" class="btn btn-info">确定</a>
@@ -109,154 +127,32 @@
                     <thead>
                         <tr>
                             <th class="text-center"><input type="checkbox"></th>
-                            <th class="text-center">ID</th>
                             <th class="text-center">代理名称</th>
-                            <th class="text-center">手机号码</th>
-                            <th class="text-center">负责地区</th>
                             <th class="text-center">开户时间</th>
                             <th class="text-center">代理等级</th>
-                            <th class="text-center">限制用户</th>
+                            <th class="text-center">负责地区</th>
+                            <th class="text-center">标签状态</th>
+                            <th class="text-center">账户余额</th>
                             <th class="text-center">销售经理</th>
-                            <th class="text-center">账户金额</th>
                             <th class="text-center">操作</th>
                         </tr>
                     </thead>
                     <tbody class="text-center">
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td>1</td>
-                            <td>深圳阳光</td>
-                            <td>13838384138</td>
-                            <td>湖南省-长沙市</td>
+                            <td class="length"><span title="广东去省级代理">广东去省级代理</span></td>
                             <td>2014-11-12</td>
-                            <td>渠道</td>
-                            <td>10</td>
-                            <td>戴鑫</td>
-                            <td><a href="javascript:;" onclick="srcpage('view-admin/agent_notes.html')"><i class="fa fa-rmb"></i> 3000</a></td>
-                            <td><a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_client.html')" title="查看商户"><i class="fa fa-sitemap"></i> 商户</a>
-                                <a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)"><i class="fa fa-check-circle-o"></i> 启用</a>
-                                <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)"><i class="fa fa-ban"></i> 停用</a><br/>
-                                <a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_edit.html')"><i class="fa fa-edit"></i> 修改</a>
-                                <div class="close_bomb">
-                                    <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
-                                    <div class="close_box">
-                                        <span class='colse_txt text-center'>您确定删除么?</span>
-                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
-                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
-                                    </div>
-                            </div></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>1</td>
-                            <td>深圳阳光</td>
-                            <td>13838384138</td>
-                            <td>湖南省-长沙市</td>
-                            <td>2014-11-12</td>
-                            <td>渠道</td>
-                            <td>10</td>
-                            <td>戴鑫</td>
-                            <td><a href="javascript:;" onclick="srcpage('view-admin/agent_notes.html')"><i class="fa fa-rmb"></i> 3000</a></td>
-                            <td><a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_client.html')" title="查看商户"><i class="fa fa-sitemap"></i> 商户</a>
-                                <a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)"><i class="fa fa-check-circle-o"></i> 启用</a>
-                                <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)"><i class="fa fa-ban"></i> 停用</a><br/>
-                                <a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_edit.html')"><i class="fa fa-edit"></i> 修改</a>
-                                <div class="close_bomb">
-                                    <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
-                                    <div class="close_box">
-                                        <span class='colse_txt text-center'>您确定删除么?</span>
-                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
-                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
-                                    </div>
-                            </div></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>1</td>
-                            <td>深圳阳光</td>
-                            <td>13838384138</td>
-                            <td>湖南省-长沙市</td>
-                            <td>2014-11-12</td>
-                            <td>渠道</td>
-                            <td>10</td>
-                            <td>戴鑫</td>
-                            <td><a href="javascript:;" onclick="srcpage('view-admin/agent_notes.html')"><i class="fa fa-rmb"></i> 3000</a></td>
-                            <td><a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_client.html')" title="查看商户"><i class="fa fa-sitemap"></i> 商户</a>
-                                <a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)"><i class="fa fa-check-circle-o"></i> 启用</a>
-                                <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)"><i class="fa fa-ban"></i> 停用</a><br/>
-                                <a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_edit.html')"><i class="fa fa-edit"></i> 修改</a>
-                                <div class="close_bomb">
-                                    <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
-                                    <div class="close_box">
-                                        <span class='colse_txt text-center'>您确定删除么?</span>
-                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
-                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
-                                    </div>
-                            </div></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>1</td>
-                            <td>深圳阳光</td>
-                            <td>13838384138</td>
-                            <td>湖南省-长沙市</td>
-                            <td>2014-11-12</td>
-                            <td>渠道</td>
-                            <td>10</td>
-                            <td>戴鑫</td>
-                            <td><a href="javascript:;" onclick="srcpage('view-admin/agent_notes.html')"><i class="fa fa-rmb"></i> 3000</a></td>
-                            <td><a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_client.html')" title="查看商户"><i class="fa fa-sitemap"></i> 商户</a>
-                                <a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)"><i class="fa fa-check-circle-o"></i> 启用</a>
-                                <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)"><i class="fa fa-ban"></i> 停用</a><br/>
-                                <a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_edit.html')"><i class="fa fa-edit"></i> 修改</a>
-                                <div class="close_bomb">
-                                    <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
-                                    <div class="close_box">
-                                        <span class='colse_txt text-center'>您确定删除么?</span>
-                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
-                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
-                                    </div>
-                            </div></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>1</td>
-                            <td>深圳阳光</td>
-                            <td>13838384138</td>
-                            <td>湖南省-长沙市</td>
-                            <td>2014-11-12</td>
-                            <td>渠道</td>
-                            <td>10</td>
-                            <td>戴鑫</td>
-                            <td><a href="javascript:;" onclick="srcpage('view-admin/agent_notes.html')"><i class="fa fa-rmb"></i> 3000</a></td>
-                            <td><a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_client.html')" title="查看商户"><i class="fa fa-sitemap"></i> 商户</a>
-                                <a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)"><i class="fa fa-check-circle-o"></i> 启用</a>
-                                <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)"><i class="fa fa-ban"></i> 停用</a><br/>
-                                <a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_edit.html')"><i class="fa fa-edit"></i> 修改</a>
-                                <div class="close_bomb">
-                                    <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
-                                    <div class="close_box">
-                                        <span class='colse_txt text-center'>您确定删除么?</span>
-                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
-                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
-                                    </div>
-                            </div></td>
-                        </tr>
-                        <tr>
-                            <td><input type="checkbox"></td>
-                            <td>1</td>
-                            <td>深圳阳光</td>
-                            <td>13838384138</td>
-                            <td>湖南省-长沙市</td>
-                            <td>2014-11-12</td>
-                            <td>渠道</td>
-                            <td>10</td>
-                            <td>戴鑫</td>
-                            <td><a href="javascript:;" onclick="srcpage('view-admin/agent_notes.html')"><i class="fa fa-rmb"></i> 3000</a></td>
-                            <td><a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_client.html')" title="查看商户"><i class="fa fa-sitemap"></i> 商户</a>
-                                <a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)"><i class="fa fa-check-circle-o"></i> 启用</a>
-                                <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)"><i class="fa fa-ban"></i> 停用</a><br/>
-                                <a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_edit.html')"><i class="fa fa-edit"></i> 修改</a>
+                            <td>省级代理</td>
+                            <td>广东省-广州市</td>
+                            <td>签合同</td>
+                            <td><a href="javascript:;" onclick="srcpage('view-admin/agent_notes.html')" title="账户余额"><i class="fa fa-rmb"></i> 3000</a></td>
+                            <td class="length"><span title="戴鑫">戴鑫</span></td>
+                            <td>                            
+                                <a href="javascript:;" class="btn success_btn" onclick="upcircle(this)"><i class="fa fa-check-circle-o"></i> 启用</a>
+                                <a href="javascript:;" class="btn error_btn hide" onclick="downcircle(this)"><i class="fa fa-ban"></i> 停用</a><br/>
+                                <a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_client.html')" title="商户管理"><i class="fa fa-users"></i> 商户</a>
+                                <a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_edit.html')" title="修改代理信息"><i class="fa fa-edit"></i> 修改</a><br/>
+                                <a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_client_book.html')" title="跟踪日志"><i class="fa fa-book"></i> 跟踪</a>
                                 <div class="close_bomb">
                                     <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
                                     <div class="close_box">

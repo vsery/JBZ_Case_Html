@@ -1,8 +1,8 @@
 <div id="page-wrapper">
     <ol class="breadcrumb"> 
         <li><a href="index.html">首页</a></li>
-        <li><a href="javascript:;" onclick="srcpage('view-platform/courier_list.html')">派送员</a></li>
-        <li class="active">可授权用户</li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/new_users.html')">会员</a></li>
+        <li class="active">编辑代理</li>
     </ol>
     <div class="row">
         <div class="col-lg-12">
@@ -10,7 +10,7 @@
                 <div class="container-fluid">
                     <div class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li><a href="javascript:;" type="button" class="btn">授权</a></li>
+                            <li><a href="javascript:;" data-toggle="modal" data-target="#new_agent_edit" `type="button" class="btn">授权</a></li>
                         </ul>
                         <div class="navbar-form navbar-right" role="search">
                             <div class="input-group">
@@ -38,38 +38,38 @@
                     <tbody class="text-center">
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td>派送员A</td>
+                            <td>粉丝用户A</td>
                             <td><img src="images/fans/teacher1.jpg" alt="..." class="img-circle img-small"></td>
                             <td>OLEBMT1DV3OAUXEQI4SE2URLAE1W</td>
-                            <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+                            <td><a href="javascript:;" data-toggle="modal" data-target="#new_agent_edit" `type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td>派送员B</td>
+                            <td>粉丝用户B</td>
                             <td><img src="images/fans/teacher2.jpg" alt="..." class="img-circle img-small"></td>
                             <td>OLEBMT1DV3OAUXEQI4SE2UR1223W</td>
-                            <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+                            <td><a href="javascript:;" data-toggle="modal" data-target="#new_agent_edit" `type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td>派送员C</td>
+                            <td>粉丝用户C</td>
                             <td><img src="images/fans/teacher3.jpg" alt="..." class="img-circle img-small"></td>
                             <td>OLEBMT1DSFDSUXEQI4SE2URLA1W</td>
-                            <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+                            <td><a href="javascript:;" data-toggle="modal" data-target="#new_agent_edit" `type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td>派送员D</td>
+                            <td>粉丝用户D</td>
                             <td><img src="images/fans/teacher4.jpg" alt="..." class="img-circle img-small"></td>
                             <td>OLEBMT1DV3FFFFEQI4SE2URLAE1W</td>
-                            <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+                            <td><a href="javascript:;" data-toggle="modal" data-target="#new_agent_edit" `type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
                         </tr>
                         <tr>
                             <td><input type="checkbox"></td>
-                            <td>派送员E</td>
+                            <td>粉丝用户E</td>
                             <td><img src="images/fans/teacher5.jpg" alt="..." class="img-circle img-small"></td>
                             <td>OLEBMT1DV3OAUXEQDSEW2URLA1W</td>
-                            <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+                            <td><a href="javascript:;" data-toggle="modal" data-target="#new_agent_edit" `type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -102,6 +102,39 @@
                         </li>
                     </ul>
                 </nav>
+            </div>
+        </div>
+    </div>    
+</div>
+<div class="modal fade" id="new_agent_edit" tabindex="-1" role="dialog" aria-labelledby="new_agent_edit">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="new_agent_edit">代理授权</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">代理名称</span>
+                            <input class="form-control" placeholder="" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">招募会员</span>
+                            <input class="form-control" placeholder="请输入可招募人数" type="text">
+                            <span class="input-group-addon">数</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a class="btn btn-info">保存</a>
+                    <a class="btn btn-default" data-dismiss="modal">取消</a>
+                </div>
             </div>
         </div>
     </div>

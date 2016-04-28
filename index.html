@@ -101,9 +101,11 @@
                     <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/new_setup.html')">设置</a></li>
                     <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/new_lead_time.html')">领读</a></li>
                     <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/new_must_answer.html')">必答</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/new_users.html')">会员</a></li>
                 </ul>
                 <h4>积分管理</h4>
-                <ul>                    
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/prize_setting.html')">兑换设置</a></li>
                     <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/prize_list.html')">积分商品</a></li>
                     <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/prize_points_list.html')">会员积分</a></li>
                     <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/prize_points_case_list.html')">积分兑换</a></li>
@@ -164,7 +166,7 @@
                 </ul>
                 <h4>门店管理</h4>
                 <ul>
-                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/store_list.html')">门店管理</a></li>
+                    <li><a class="left_nav_btn store" href="javascript:;" onclick="srcpage('view-platform/store_list.html')">门店管理</a></li>
                 </ul>
             </nav>
             <nav class="left_tab_nav fans_btn">
@@ -267,7 +269,7 @@
                 if($(this).hasClass("user_btn")){ open= "user_btn"; var user_btn_num = $('.top_nav_btn.user_btn').index(this); }
                 $("nav.left_tab_nav").each(function () {
                     $(this).find("li").removeClass("active");
-                    if($(this).hasClass(open)){                
+                    if($(this).hasClass(open)){
                         $(this).addClass("open");
                         if($(this).hasClass("user_btn")){
                             $(this).find("li:eq("+user_btn_num+")").addClass("active");

@@ -21,7 +21,7 @@
     <div class="row">
         <div class="col-lg-6">
             <div class="input-group">
-                <span class="input-group-addon">微信昵称</span>
+                <span class="input-group-addon">负责人微信</span>
                 <input type="text" class="form-control" placeholder="请填写微信昵称">
             </div>
         </div>
@@ -29,24 +29,9 @@
             <div class="input-group">
                 <span class="input-group-addon">OPENID</span>
                 <input type="text" class="form-control" placeholder="OLEBMT1DV3OAUXEQI4SE2URLAE1W">
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="input-group">
-                <span class="input-group-addon">邮箱地址</span>
-                <input type="text" class="form-control" placeholder="请填写邮箱地址">
-                <span class="input-group-addon">@</span>
-                <input type="text" class="form-control" placeholder="请填写邮箱地址">
-            </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="input-group">
-                <span class="input-group-addon">座机号</span>
-                <input type="text" class="form-control" placeholder="0731">
-                <span class="input-group-addon">~</span>
-                <input type="text" class="form-control" placeholder="88888888">
+                <span class="input-group-btn">
+                    <a href="javascript:;" class="btn btn-default" data-toggle="modal" data-target="#select_use">查询</a>
+                </span>
             </div>
         </div>
     </div>
@@ -120,6 +105,87 @@
         <div class="col-lg-12 text-center">
             <a class="btn btn-info" onclick="srcpage('view-platform/store_list.html')">保存</a>
             <a class="btn btn-default"  onclick="srcpage('view-platform/store_list.html')">取消</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade in" id="select_use" tabindex="-1" role="dialog" aria-labelledby="select_useLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="select_useLabel">查询粉丝</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <div class="collapse navbar-collapse">
+                                    <div class="navbar-form navbar-right" role="search">
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="请输入昵称" type="text">
+                                        </div>
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="请输入OPENID" type="text">
+                                        </div>
+                                        <a href="javascript:;" class="btn btn-info">查询</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="table-responsive">
+                            <table class="table table-condensed table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">昵称</th>
+                                        <th class="text-center">头像</th>
+                                        <th class="text-center">OPENID</th>
+                                        <th class="text-center">操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td>派送员A</td>
+                                        <td><img src="images/fans/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>OLEBMT1DV3OAUXEQI4SE2URLAE1W</td>
+                                        <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>派送员B</td>
+                                        <td><img src="images/fans/teacher2.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>OLEBMT1DV3OAUXEQI4SE2UR1223W</td>
+                                        <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>派送员D</td>
+                                        <td><img src="images/fans/teacher4.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>OLEBMT1DV3FFFFEQI4SE2URLAE1W</td>
+                                        <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <nav class="navbar-right">
+                                <ul class="pagination">
+                                    <li class="disabled">
+                                        <a href="javascript:;" aria-label="Previous">
+                                            <span aria-hidden="true">«</span>
+                                        </a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:;">1</a>
+                                    </li>
+                                    <li class="disabled">
+                                        <a href="javascript:;" aria-label="Next">
+                                            <span aria-hidden="true">»</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -1,0 +1,246 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">兑换设置</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#extract_tab" aria-controls="extract_tab" role="tab" data-toggle="tab">上门自提</a></li>
+                <li role="presentation"><a href="#exchange_tab" aria-controls="exchange_tab" role="tab" data-toggle="tab">兑换区域</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="extract_tab">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav"><li><a href="javascript:;" class='btn' data-toggle="modal" data-target="#store_list">添加</a></li></ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">门店名称</th>
+                                    <th class="text-center">门店地址</th>
+                                    <th class="text-center">详细地址</th>
+                                    <th class="text-center">负责人</th>
+                                    <th class="text-center">手机号</th>
+                                    <th class="text-center">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td class="leng">湖南长沙雨花旗舰店</td>
+                                    <td>湖南省~长沙市~雨花区</td>
+                                    <td class="leng">银盆岭大桥西世茂铂翠湾2期2栋805</td>
+                                    <td>李杰</td>
+                                    <td>18075668374</td>
+                                    <td><a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)"><i class="fa fa-check-circle-o"></i> 启用</a>
+                                        <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)"><i class="fa fa-ban"></i> 停用</a><br>
+                                        <div class="close_bomb">
+                                            <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除 </a>
+                                            <div class="close_box text-right">
+                                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="exchange_tab">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav"><li><a href="javascript:;" class='btn' data-toggle="modal" data-target="#exchange_list">添加</a></li></ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">可兑换区域</th>
+                                    <th class="text-center">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td>湖南省~长沙市~雨花区</td>
+                                    <td><a class="btn" href="javascript:;" data-toggle="modal" data-target="#exchange_list"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                        <div class="close_bomb">
+                                            <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除 </a>
+                                            <div class="close_box text-right">
+                                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                                <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="store_list" tabindex="-1" role="dialog" aria-labelledby="store_list_h1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="store_list_h1">门店自提</h4>
+            </div>
+            <div class="modal-body">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li>
+                                    <a href="javascript:;" type="button" class="btn" class="close" data-dismiss="modal" aria-label="Close">
+                                        <i class="fa fa-plus"></i> 添加
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="navbar-form navbar-right" role="search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="请输入门店名称">
+                                </div>
+                                <a href="javascript:;" class="btn btn-info">查询</a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="table-responsive">
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center"><input type="checkbox"></th>
+                                <th class="text-center">门店名称</th>
+                                <th class="text-center">负责人</th>
+                                <th class="text-center">手机号</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>湖南长沙雨花旗舰店</td>
+                                <td>李浩</td>
+                                <td>18075173728</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-plus"></i> 添加</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>湖南长沙雨花旗舰店</td>
+                                <td>李洁</td>
+                                <td>18855173728</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-plus"></i> 添加</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>湖南长沙雨花旗舰店</td>
+                                <td>李杰</td>
+                                <td>18075573728</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-plus"></i> 添加</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>湖南长沙雨花旗舰店</td>
+                                <td>李连杰</td>
+                                <td>18075573728</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-plus"></i> 添加</a></td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox"></td>
+                                <td>湖南长沙雨花旗舰店</td>
+                                <td>李小璐</td>
+                                <td>18075573728</td>
+                                <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-plus"></i> 添加</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <nav class='navbar-right'>
+                        <ul class="pagination">
+                            <li><a href="javascript:;" data-dismiss="modal" onclick="hrefpage('view-platform/store_create.html','oto_btn','store')" class="btn">新增门店</a></li>
+                            <li class="disabled"><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                            <li class="active"><a href="javascript:;">1</a></li>
+                            <li class="disabled"><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="exchange_list" tabindex="-1" role="dialog" aria-labelledby="exchange_list_h1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="exchange_list_h1">兑换区域</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">兑换区域</span>
+                            <select style="width: 100%;" id="s_province" name="s_province"></select>
+                            <span class="input-group-addon">-</span>
+                            <select style="width: 100%;" id="s_city" name="s_city" ></select>
+                            <span class="input-group-addon">-</span>
+                            <select style="width: 100%;" id="s_county" name="s_county"></select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-info">添加</a>
+                <a class="btn btn-default" data-dismiss="modal">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="js-message success">
+    <div class="message-suceess">开启此门店上门自提功能!</div>
+</div>
+<div class="js-message error">
+    <div class="message-error">关闭此门店上门自提功能!</div>
+</div>
+<script type="text/javascript" src='js/public.js'></script>
+<script type="text/javascript">
+    function hrefpage (surl,open,ctype) {
+        setTimeout(function () {
+            $("a.top_nav_btn").each(function() {
+                if( $(this).hasClass(open) ) {
+                    $(this).parents("li").addClass('active').siblings().removeClass('active');
+                }
+            });
+            $("nav.left_tab_nav").each(function () {
+                if($(this).hasClass(open)){
+                    $(this).addClass("open").siblings().removeClass('open');
+                }
+            })
+            $("a.left_nav_btn").each(function() {
+                if($(this).hasClass(ctype)){
+                    $(this).parents("li").addClass('active').siblings().removeClass('active');
+                }
+            });
+            htmlobj=$.ajax({
+                type:"get", 
+                url:surl,
+                dataType:"html", 
+                async:false
+            });
+            $(".app-init-container").html(htmlobj.responseText);            
+        }, 500);
+    }
+    _init_area();
+</script>

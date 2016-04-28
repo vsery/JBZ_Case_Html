@@ -14,7 +14,7 @@
                     <a href="#store_code" aria-controls="store_code" role="tab" data-toggle="tab">门店二维码</a>
                 </li>
                 <li role="presentation">
-                    <a href="#store_num" aria-controls="store_num" role="tab" data-toggle="tab">门店序列号</a>
+                    <a href="#store_num" aria-controls="store_num" role="tab" data-toggle="tab">门店激活码</a>
                 </li>
             </ul>
             <div class="tab-content">
@@ -37,7 +37,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="input-group">
-                                    <span class="input-group-addon">微信昵称</span>
+                                    <span class="input-group-addon">负责人微信</span>
                                     <input type="text" class="form-control" placeholder="请填写微信昵称">
                                 </div>
                             </div>
@@ -45,24 +45,9 @@
                                 <div class="input-group">
                                     <span class="input-group-addon">OPENID</span>
                                     <input type="text" class="form-control" placeholder="OLEBMT1DV3OAUXEQI4SE2URLAE1W">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="input-group">
-                                    <span class="input-group-addon">邮箱地址</span>
-                                    <input type="text" class="form-control" placeholder="请填写邮箱地址">
-                                    <span class="input-group-addon">@</span>
-                                    <input type="text" class="form-control" placeholder="请填写邮箱地址">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="input-group">
-                                    <span class="input-group-addon">座机号</span>
-                                    <input type="name" class="form-control" placeholder="0731">
-                                    <span class="input-group-addon">~</span>
-                                    <input type="name" class="form-control" placeholder="88888888">
+                                    <span class="input-group-btn">
+                                        <a href="javascript:;" class="btn btn-default" data-toggle="modal" data-target="#select_use">查询</a>
+                                    </span>
                                 </div>
                             </div>
                         </div>
@@ -140,9 +125,8 @@
                         </div>
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="store_code"> <!--门店二维码选项卡-->
+                <div role="tabpanel" class="tab-pane" id="store_code">
                     <div class="table-responsive">
-                        <!-- 产品列表 -->
                         <table class="table table-condensed table-hover">
                             <thead>
                                 <tr>
@@ -155,49 +139,89 @@
                             <tbody>
                                 <tr>
                                     <td>注册门店入口</td>
-                                    <td><a href="" target="_blank" class="btn show_btn">http://xishang.com/u/1896481783</a></td>
-                                    <td style="width:150px;"><a href="" class="code_btn"></a></td>
+                                    <td><a href="images/public/code.jpg" target="_blank" class="btn show_btn">http://xishang.com/u/1896481783</a></td>
+                                    <td style="width:150px;"><a href="JavaScript:;" class="code_btn"></a></td>
                                     <td>
                                         <a href="javascript:;" class="btn poster_btn"><i class="fa fa-edit"></i> 生成 </a>
-                                        <a href="" target="_blank" class="btn down_btn"><i class="fa fa-download"></i> 下载 </a>
+                                        <a href="JavaScript:;" target="_blank" class="btn down_btn"><i class="fa fa-download"></i> 下载 </a>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div role="tabpanel" class="tab-pane" id="store_num"> <!--门店序列号选项卡-->
+                <div role="tabpanel" class="tab-pane" id="store_num">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav">            
+                                    <li><a href="javascript:;" data-toggle="modal" data-target="#store_edit_tab" class='btn'>添加</a></li>
+                                    <li><div class="close_bomb">
+                                            <a href="javascript:;" class="btn close_btn">删除</a>
+                                            <div class="close_box text-right" id="all">
+                                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                                <a href="javascript:;" class="btn btn-info">确定</a>
+                                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                            </div>
+                                    </div></li>
+                                </ul>                               
+                                <div class="navbar-form navbar-right" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="请输入门店">
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="请输入未核对">
+                                    </div>
+                                    <a href="javascript:;" class="btn btn-info">查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
                     <div class="table-responsive">
-                        <!-- 产品列表 -->
                         <table class="table table-condensed table-hover">
                             <thead>
                                 <tr>
+                                    <th class="text-center"><input type="checkbox"></th>
                                     <th class="text-center">ID</th>
-                                    <th class="text-center">系列号:</th>
-                                    <th class="text-center">状态:</th>
+                                    <th class="text-center">激活码</th>
+                                    <th class="text-center">状态</th>
                                     <th class="text-center">操作</th>
                                 </tr>
                             </thead>
                             <tbody class="text-center">
                                 <tr>
+                                    <td><input type="checkbox"></td>
                                     <td>1</td>
                                     <td>1330-1570-6911-1944-1775-4209</td>
-                                    <td>激活</td>
+                                    <td><a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)"><i class="fa fa-check-circle-o"></i> 启用</a>
+                                    <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)"><i class="fa fa-ban"></i> 停用</a></td>
                                     <td class="text-right">
-                                        <a href="javascript:;" type="button" class="btn" disabled="disabled"><i class="fa fa-pencil"></i> 激活 </a><br/>
-                                        <a href="javascript:;" type="button" class="btn" disabled="disabled"><i class="fa fa-edit"></i> 修改 </a>
-                                        <a href="" type="button" class="btn"><i class="fa fa-trash-o"></i> 删除 </a>
-                                    </td>
+                                        <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#store_edit_tab" disabled="disabled"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                        <div class="close_bomb">
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                                        <div class="close_box">
+                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                        </div>
+                                    </div></td>
                                 </tr>
                                 <tr>
+                                    <td><input type="checkbox"></td>
                                     <td>2</td>
                                     <td>1330-1642-2756-9196-6949-7762</td>
-                                    <td>未激活</td>
+                                    <td><a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)"><i class="fa fa-check-circle-o"></i> 启用</a>
+                                    <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)"><i class="fa fa-ban"></i> 停用</a></td>
                                     <td class="text-right">
-                                        <a href="javascript:;" type="button" class="btn"><i class="fa fa-pencil"></i> 激活 </a><br/>
-                                        <a href="javascript:;" type="button" class="btn"><i class="fa fa-edit"></i> 修改 </a>
-                                        <a href="" type="button" class="btn"><i class="fa fa-trash-o"></i> 删除 </a>
-                                    </td>
+                                        <a href="javascript:;" type="button" class="btn" data-toggle="modal" data-target="#store_edit_tab"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                        <div class="close_bomb">
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                                        <div class="close_box">
+                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                        </div>
+                                    </div></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -262,7 +286,126 @@
     </div>
     <div class="dec_txt">海报正在生成,请稍等片刻....</div>
 </div>
-<script type="text/javascript">    
+<div class="modal fade in" id="store_edit_tab" tabindex="-1" role="dialog" aria-labelledby="store_edit_tabLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="store_edit_tabLabel">激活码</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <input class="form-control" placeholder="1000" type="text">
+                            <span class="input-group-addon">~</span>
+                            <input class="form-control" placeholder="1000" type="text">
+                            <span class="input-group-addon">~</span>
+                            <input class="form-control" placeholder="1000" type="text">
+                            <span class="input-group-addon">~</span>
+                            <input class="form-control" placeholder="1000" type="text">
+                            <span class="input-group-addon">~</span>
+                            <input class="form-control" placeholder="1000" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">            
+                <div class="row">
+                    <div class="col-lg-6 text-left">
+                        <label class="js-switch ui-switcher ui-switcher-on"></label>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                        <a href="JavaScript:;" class="btn btn-success">生成</a>
+                        <a href="JavaScript:;" class="btn btn-info">保存</a>
+                        <a href="JavaScript:;" class="btn btn-default" data-dismiss="modal">取消</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade in" id="select_use" tabindex="-1" role="dialog" aria-labelledby="select_useLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+                <h4 class="modal-title" id="select_useLabel">查询粉丝</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="navbar navbar-default">
+                            <div class="container-fluid">
+                                <div class="collapse navbar-collapse">
+                                    <div class="navbar-form navbar-right" role="search">
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="请输入昵称" type="text">
+                                        </div>
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="请输入OPENID" type="text">
+                                        </div>
+                                        <a href="javascript:;" class="btn btn-info">查询</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="table-responsive">
+                            <table class="table table-condensed table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">昵称</th>
+                                        <th class="text-center">头像</th>
+                                        <th class="text-center">OPENID</th>
+                                        <th class="text-center">操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center">
+                                    <tr>
+                                        <td>派送员A</td>
+                                        <td><img src="images/fans/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>OLEBMT1DV3OAUXEQI4SE2URLAE1W</td>
+                                        <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>派送员B</td>
+                                        <td><img src="images/fans/teacher2.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>OLEBMT1DV3OAUXEQI4SE2UR1223W</td>
+                                        <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td>派送员D</td>
+                                        <td><img src="images/fans/teacher4.jpg" alt="..." class="img-circle img-small"></td>
+                                        <td>OLEBMT1DV3FFFFEQI4SE2URLAE1W</td>
+                                        <td><a href="javascript:;" type="button" class="btn"><i class="fa fa-check-square-o"></i> 授权</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <nav class="navbar-right">
+                                <ul class="pagination">
+                                    <li class="disabled">
+                                        <a href="javascript:;" aria-label="Previous">
+                                            <span aria-hidden="true">«</span>
+                                        </a>
+                                    </li>
+                                    <li class="active">
+                                        <a href="javascript:;">1</a>
+                                    </li>
+                                    <li class="disabled">
+                                        <a href="javascript:;" aria-label="Next">
+                                            <span aria-hidden="true">»</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
     _init_area();
     $("#s_province").change(function () {
         var province = $("#s_province option:selected").text();
