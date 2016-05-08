@@ -78,19 +78,6 @@
                 </div>
             </div>
         </div>
-            <!-- <div class="col-lg-4">
-                <div class="input-group">
-                    <div class="input-group-btn">
-                        <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  平台版本<span class="caret"></span></a>
-                        <ul class="dropdown-menu" aria-labelledby="dLabel">
-                            <li><a href="javascript:;" class="btn">基础版</a></li>
-                            <li><a href="javascript:;" class="btn">至尊版</a></li>
-                            <li><a href="javascript:;" class="btn">豪华至尊版</a></li>
-                        </ul>
-                    </div>
-                    <input type="text" class="form-control" placeholder="选择平台版本" readonly="">
-                </div>
-            </div> -->
         <div class="row">
             <div class="col-lg-4">
                 <div class="input-group">
@@ -155,7 +142,7 @@
                             <th class="text-center">应用模块</th>
                             <th class="text-center">到期时间</th>
                             <th class="text-center">标签状态</th>
-                            <th class="text-center">缴费金额</th>
+                            <th class="text-center">账号余额</th>
                             <th class="text-center">销售代理</th>
                             <th class="text-center">销售经理</th>
                             <th class="text-center">操作</th>
@@ -175,7 +162,7 @@
                             <td><a href="javascript:;" class="btn success_btn hide" onclick="upcircle(this)"><i class="fa fa-check-circle-o"></i> 启用</a>
                                 <a href="javascript:;" class="btn error_btn" onclick="downcircle(this)"><i class="fa fa-ban"></i> 停用</a>
                                 <a href="javascript:;" data-toggle="modal" data-target="#client_edit" class="btn"><i class="fa fa-edit"></i> 修改 </a><br/>
-                                <a href="javascript:;" class="btn" onclick="srcpage('view-admin/agent_client_book.html')" title="跟踪日志"><i class="fa fa-book"></i> 跟踪</a>
+                                <a href="javascript:;" class="btn" onclick="srcpage('view-admin/client_book.html')" title="跟踪日志"><i class="fa fa-book"></i> 跟踪</a>
                                 <div class="close_bomb">
                                     <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
                                     <div class="close_box">
@@ -257,11 +244,11 @@
                     <div class="col-lg-6">
                         <div class="input-group">
                             <div class="input-group-btn">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 所用模块 <span class="caret"></span></button>
+                                <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  应用模块<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="javascript:;">分销</a></li>
-                                    <li><a href="javascript:;">积分宝</a></li>
-                                    <li><a href="javascript:;">分销和积分宝</a></li>
+                                    <li><a href="javascript:;" class="btn">分销</a></li>
+                                    <li><a href="javascript:;" class="btn">积分宝</a></li>
+                                    <li><a href="javascript:;" class="btn">分销和积分宝</a></li>
                                 </ul>
                             </div>
                             <input type="text" class="form-control" disabled="disabled">
@@ -270,15 +257,40 @@
                     <div class="col-lg-6">
                         <div class="input-group">
                             <div class="input-group-btn">
-                                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 平台版本 <span class="caret"></span></button>
+                                <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  平台版本<span class="caret"></span></a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="javascript:;">基础版</a></li>
-                                    <li><a href="javascript:;">尊享版</a></li>
-                                    <li><a href="javascript:;">至尊版</a></li>
-                                    <li><a href="javascript:;">商城运营</a></li>
+                                    <li><a href="javascript:;" class="btn">基础版</a></li>
+                                    <li><a href="javascript:;" class="btn">尊享版</a></li>
+                                    <li><a href="javascript:;" class="btn">至尊版</a></li>
+                                    <li><a href="javascript:;" class="btn">商城运营</a></li>
                                 </ul>
                             </div>
                             <input type="text" class="form-control" disabled="disabled">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">  标签状态<span class="caret"></span></a>
+                                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                    <li><a href="javascript:;" class="btn">全部</a></li>
+                                    <li><a href="javascript:;" class="btn">有意向</a></li>
+                                    <li><a href="javascript:;" class="btn">已开户</a></li>
+                                    <li><a href="javascript:;" class="btn">签合同</a></li>
+                                    <li><a href="javascript:;" class="btn">已缴费</a></li>
+                                    <li><a href="javascript:;" class="btn">已过期</a></li>
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control" disabled="disabled">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">充值金额</span>
+                            <input type="text" class="form-control" placeholder="0.00">
+                            <span class="input-group-addon">元</span>
                         </div>
                     </div>
                 </div>

@@ -1,0 +1,158 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">微信账号</li>
+    </ol>
+    <form>
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">公众微信号</span>
+                            <input type="text" class="form-control" placeholder="" readonly="">
+                            <div class="input-group-btn">
+                                <a href="JavaScript:;" id="bindingBtn" class="btn btn-default">微信授权</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">公众号昵称</span>
+                            <input type="text" class="form-control" placeholder="" readonly="">
+                        </div>                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">公众号类型</span>
+                            <input type="text" class="form-control" placeholder="" readonly="">
+                        </div>                        
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="alert alert-info fade in" role="alert">
+                            <a class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></a>
+                            您的店铺已获得该公众号的所有接口权限，可以正常对接微信<br/>如果使用中发现接口有异常，请点此 
+                            <a href="JavaScript:;" data-toggle="modal" data-target="#again_modal">重新授权</a> 试试 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <img src="images/public/code.jpg" class="img-max" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">            
+                <a href="javascript:;" class="btn btn-info">保存信息</a>
+            </div>
+        </div>
+    </form>
+</div>
+<!-- 解除绑定 -->
+<div class="modal fade" id="unbinding_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <p class="red">解除绑定微信号，会造成当前店铺的重要信息丢失（包括图文素材、自动回复、自定义菜单等），请谨慎操作；</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <input name="optionsRadios" type="checkbox" id="checkBtn">
+                            </span>
+                            <input class="form-control" placeholder="已知晓解除绑定的风险，确认解绑" disabled="disabled" type="text">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-warning" data-loading-text="提交中.." disabled="disabled" id="checkInfo">解绑</a>
+                <a class="btn btn-default" data-dismiss="modal">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 重新绑定 -->
+<div class="modal fade" id="again_modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <ul class="wxsettled-prompt col-lg-12">
+                        <li>请您注意：</li>
+                        <li class="red"><i class="fa fa-cog"></i> 必须使用当前绑定的公众号进行授权，否则将可能导致某些重要数据丢失或其它异常情况</li>
+                        <li class="red"><i class="fa fa-cog"></i> 为保证您在有赞平台功能的正常使用，授权时请保持默认选择，把权限统一授权给有赞。</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-info" href="https://mp.weixin.qq.com/cgi-bin/componentloginpage?component_appid=wx7cd6227fafe53336&pre_auth_code=preauthcode@@@a8r25O16tfTKHn7EBP7hT2eRYLeii_sCzQrMFtFMEl-Fg8gnpt51jwq7asvQIr66&redirect_uri=http://koudaitong.com/v2/weixin/component/receiveauthcode" target="_blank" id="okGoonBtn">我知道了,继续</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 绑定成功 -->
+<div class="modal fade" id="settingWechatModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">提示</h4>
+            </div>
+            <div class="modal-body">
+                <p>请在新窗口中完成微信公众号授权</p>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-success" data-dismiss="modal">已成功设置</a>
+                <a class="btn btn-default" href="https://mp.weixin.qq.com/cgi-bin/componentloginpage?component_appid=wx7cd6227fafe53336&pre_auth_code=preauthcode@@@a8r25O16tfTKHn7EBP7hT2eRYLeii_sCzQrMFtFMEl-Fg8gnpt51jwq7asvQIr66&redirect_uri=http://koudaitong.com/v2/weixin/component/receiveauthcode" target="_blank">授权失败,重试</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    $(function () {
+        var status = "yes"; // yes,已经绑定. not 没有绑定
+        $("#bindingBtn").click(function() {
+            if ( status == "not" ) {
+                srcpage('view-platform/cash_wechat_binding.html');
+            } else {
+                $(this).attr({
+                    'data-toggle': 'modal',
+                    'data-target': '#unbinding_modal'
+                });
+            }
+        });
+        $("#checkBtn").click(function() { //确认风险,解绑可选
+            if ($(this).attr('checked') == 'checked') {
+                $(this).removeAttr('checked');
+                $("#checkInfo").attr('disabled', 'disabled');
+            }else{
+                $(this).attr('checked', true);
+                $("#checkInfo").removeAttr('disabled');
+            }
+        });
+        $("#checkInfo").click(function() { //清空信息            
+        });
+        $("#okGoonBtn").click(function() { //知道了,继续绑定
+            $("#again_modal").modal('hide');
+            $("#settingWechatModal").modal('show');
+        });
+    })
+</script>
+<script type="text/javascript" src='js/public.js'></script>

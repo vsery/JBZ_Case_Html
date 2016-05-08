@@ -52,7 +52,7 @@
                                     </a>
                                 </li>
                             </ul>
-                            <a href="javascript:;" class="btn btn-info">插入至页面</a>
+                            <a href="javascript:;" class="btn btn-info" onclick="abc()">插入至页面</a>
                             </nav>
                         </div>
                     </div>
@@ -416,7 +416,7 @@
                                     </a>
                                 </li>
                             </ul>
-                            <a href="javascript:;" class="btn btn-info">插入至页面</a>
+                            <a href="javascript:;" class="btn btn-info" id="musicSelectBtn">插入至页面</a>
                             </nav>
                         </div>
                     </div>
@@ -619,4 +619,8 @@
             $(e).addClass('active');
         }
     };
+    function abc() {
+        var a = "$('#resourceUrl').val()";
+        return a;
+    }
 </script>

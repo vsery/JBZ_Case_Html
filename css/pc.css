@@ -1,6 +1,6 @@
 [class^="icon-"],
-[class*=" icon-"] {
-    background-image: url("/v2/image/glyphicons-halflings.png")
+[class*="icon-"] {
+    background-image: url("../images/public/glyphicons-halflings.png")
 }
 
 .icon-white,
@@ -20,9 +20,13 @@
 .dropdown-submenu:focus>a>[class^="icon-"],
 .dropdown-submenu:hover>a>[class*=" icon-"],
 .dropdown-submenu:focus>a>[class*=" icon-"] {
-    background-image: url("/v2/image/glyphicons-halflings-white.png")
+    background-image: url("../images/public/glyphicons-halflings-white.png")
 }
-
+.chosen-container ,p.help-inline{
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+}
 pre {
     display: inline-block;
     background-color: transparent;
@@ -274,7 +278,7 @@ form .input-center-no-padding {
 
 .chosen-container-single .chosen-search input[type="text"] {
     padding-left: 20px;
-    background: url("/v2/image/chosen-sprite.png") no-repeat -30px -20px, linear-gradient(#eee 1%, #fff 15%)
+    background: url("../images/public/chosen-sprite.png") no-repeat -30px -20px, linear-gradient(#eee 1%, #fff 15%)
 }
 
 .well {
@@ -735,7 +739,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .ui-header-logo>a {
-        background-image: url("/v2/image/youzan_logo_1127@2x.png?v=3");
+        background-image: url("../images/logo.png");
         background-size: 130px 35px
     }
 }
@@ -805,7 +809,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .sprite-vip_2,
 .sprite-tiegan_2,
 .sprite-business_2 {
-    background-image: url("/v2/image/icons/sprite/icons_2.png");
+    background-image: url("../images/public/icons/sprite/icons_2.png");
     background-repeat: no-repeat;
     background-size: 60px 45px;
     width: 18px;
@@ -831,7 +835,7 @@ screen and (min-resolution: 2dppx) {
     .sprite-vip_2,
     .sprite-tiegan_2,
     .sprite-business_2 {
-        background-image: url("/v2/image/icons/sprite/icons_2@2x.png")
+        background-image: url("../images/public/icons_2@2x.png")
     }
 }
 
@@ -912,7 +916,7 @@ screen and (min-resolution: 2dppx) {
     left: -26px;
     width: 26px;
     height: 26px;
-    background: url("/v2/image/lock.png") no-repeat center;
+    background: url("../images/public/lock.png") no-repeat center;
     background-size: cover
 }
 
@@ -921,7 +925,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .ui-header-user.ui-header-user-lock::before {
-        background-image: url("/v2/image/lock@2x.png")
+        background-image: url("../images/public/lock@2x.png")
     }
 }
 
@@ -1023,11 +1027,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .ui-sidebar i.enable {
-    background: url("/v2/image/ui/ui-sidebar/enable.png") center center no-repeat
+    background: url("../images/public/enable.png") center center no-repeat
 }
 
 .ui-sidebar i.disable {
-    background: url("/v2/image/ui/ui-sidebar/disable.png") center center no-repeat
+    background: url("../images/public/disable.png") center center no-repeat
 }
 
 .ui-sidebar .ui-btn {
@@ -1056,7 +1060,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     display: inline-block;
     width: 95px;
     height: 93px;
-    background: url("/v2/image/fenxiao/sidebar_fenxiao_0917@1x.jpg")
+    background: url("../images/public/sidebar_fenxiao_0917@1x.jpg")
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
@@ -1064,13 +1068,13 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .ui-sidebar .ui-sidebar-fenxiao {
-        background-image: url("/v2/image/fenxiao/sidebar_fenxiao_0917@2x.jpg");
+        background-image: url("../images/public/sidebar_fenxiao_0917@2x.jpg");
         background-size: 95px 93px
     }
 }
 
 .ui-sidebar .ui-sidebar-fenxiao-77 {
-    background: url("/v2/image/fenxiao/sidebar_fenxiao_77@1x.jpg")
+    background: url("../images/public/sidebar_fenxiao_77@1x.jpg")
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
@@ -1078,7 +1082,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .ui-sidebar .ui-sidebar-fenxiao-77 {
-        background-image: url("/v2/image/fenxiao/sidebar_fenxiao_77@2x.jpg");
+        background-image: url("../images/public/sidebar_fenxiao_77@2x.jpg");
         background-size: 95px 93px
     }
 }
@@ -1088,11 +1092,11 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .ui-sidebar i.enable {
-        background-image: url("/v2/image/ui/ui-sidebar/enable@2x.png");
+        background-image: url("../images/public/enable@2x.png");
         background-size: 12px
     }
     .ui-sidebar i.disable {
-        background-image: url("/v2/image/ui/ui-sidebar/disable@2x.png");
+        background-image: url("../images/public/disable@2x.png");
         background-size: 12px
     }
 }
@@ -1209,7 +1213,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .loading {
-    background: url("/v2/image/loader.gif") center center no-repeat
+    background: url("../images/public/loader.gif") center center no-repeat
 }
 
 .loading.absolute {
@@ -1231,7 +1235,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .loading {
-        background-image: url("/v2/image/loader@2x.gif");
+        background-image: url("../images/public/loader@2x.gif");
         background-size: 16px
     }
 }
@@ -1454,7 +1458,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .image-loading .module-loading {
-    background: url("/v2/image/loader.gif") center center no-repeat
+    background: url("../images/public/loader.gif") center center no-repeat
 }
 
 .image-loading .module-loading.absolute {
@@ -1549,7 +1553,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
     height: 100%;
     line-height: 50px;
     text-align: center;
-    cursor: pointer
+    cursor: pointer;
+    padding: 17px;
 }
 
 .module-goods-list li:hover .close-modal,
@@ -1866,15 +1871,15 @@ input.get-web-img-input {
 
 .audio-on,
 .audio-off {
-    background: url("/v2/image/bell_on.png") no-repeat scroll left center;
-    background-image: -webkit-image-set( url("/v2/image/bell_on.png") 1x, url("/v2/image/bell_on@2x.png") 2x);
+    background: url("../images/public/bell_on.png") no-repeat scroll left center;
+    background-image: -webkit-image-set( url("../images/public/bell_on.png") 1x, url("../images/public/bell_on@2x.png") 2x);
     display: block;
     padding-left: 20px
 }
 
 .audio-off {
-    background-image: url("/v2/image/../image/bell_off.png");
-    background-image: -webkit-image-set( url("/v2/image/bell_off.png") 1x, url("/v2/image/bell_off@2x.png") 2x)
+    background-image: url("../images/public/bell_off.png");
+    background-image: -webkit-image-set( url("../images/public/bell_off.png") 1x, url("../images/public/bell_off@2x.png") 2x)
 }
 
 .modal-header .title,
@@ -2825,23 +2830,23 @@ input[type="text"] {
 }
 
 .popover-template .popover-template-list li .template-1 {
-    background-image: url("/v2/image/pop/template/1.jpg")
+    background-image: url("../images/public/1.jpg")
 }
 
 .popover-template .popover-template-list li .template-2 {
-    background-image: url("/v2/image/pop/template/2-2.jpg")
+    background-image: url("../images/public/2-2.jpg")
 }
 
 .popover-template .popover-template-list li .template-3 {
-    background-image: url("/v2/image/pop/template/3-2.jpg")
+    background-image: url("../images/public/3-2.jpg")
 }
 
 .popover-template .popover-template-list li .template-4 {
-    background-image: url("/v2/image/pop/template/4.jpg")
+    background-image: url("../images/public/4.jpg")
 }
 
 .popover-template .popover-template-list li .template-5 {
-    background-image: url("/v2/image/pop/template/5.jpg")
+    background-image: url("../images/public/5.jpg")
 }
 
 .popover-template .popover-template-list li .popover-template-item-title {
@@ -2855,7 +2860,7 @@ input[type="text"] {
     top: -5px;
     width: 25px;
     height: 18px;
-    background: url("/v2/image/new.png");
+    background: url("../images/public/new.png");
     background-size: cover
 }
 
@@ -2868,7 +2873,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .popover-template .popover-template-list li .new {
-        background-image: url("/v2/image/new@2x.png")
+        background-image: url("../images/public/new@2x.png")
     }
 }
 
@@ -3030,7 +3035,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .popover-category2 .popover-content-categories .category-check-none {
     height: 12px;
     width: 12px;
-    background-image: url("/v2/image/ui/ui-checkbox/1x-1416811495653.png");
+    background-image: url("../images/public/1x-1416811495653.png");
     background-repeat: no-repeat
 }
 
@@ -3062,7 +3067,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     .popover-category2 .popover-content-categories .category-check-all,
     .popover-category2 .popover-content-categories .category-check-portion,
     .popover-category2 .popover-content-categories .category-check-none {
-        background-image: url("/v2/image/ui/ui-checkbox/2x-1416811495653.png");
+        background-image: url("../images/public/2x-1416811495653.png");
         background-size: 12px auto
     }
 }
@@ -3145,7 +3150,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     border-radius: 3px;
     width: 22px;
     height: 22px;
-    background: url("/v2/image/emoticons/1.png");
+    background: url("../images/public/1.png");
     background-size: cover
 }
 
@@ -3259,7 +3264,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     width: 14px;
     height: 14px;
     margin-bottom: 3px;
-    background: transparent url("/v2/image/widget/notice-center/icon_help_q@2x.png") center center no-repeat;
+    background: transparent url("../images/public/icon_help_q@2x.png") center center no-repeat;
     background-size: 14px
 }
 
@@ -3321,8 +3326,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
     border: 1px solid #ddd;
     margin: 0;
     padding-left: 20px;
-    background: #fff url("/v2/image/ico-search.png") 4px center no-repeat;
-    background-image: -webkit-image-set( url("/v2/image/ico-search.png") 1x, url("/v2/image/ico-search@2x.png") 2x);
+    background: #fff url("../images/public/ico-search.png") 4px center no-repeat;
+    background-image: -webkit-image-set( url("../images/public/ico-search.png") 1x, url("../images/public/ico-search@2x.png") 2x);
     border-radius: 2px;
     -webkit-transition: width linear 0.25s;
     -moz-transition: width linear 0.25s;
@@ -3355,8 +3360,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
     border: 1px solid #ccc;
     margin: 0;
     padding-left: 20px;
-    background: #fff url("/v2/image/ico-search.png") 4px center no-repeat;
-    background-image: -webkit-image-set( url("/v2/image/ico-search.png") 1x, url("/v2/image/ico-search@2x.png") 2x)
+    background: #fff url("../images/public/ico-search.png") 4px center no-repeat;
+    background-image: -webkit-image-set( url("../images/public/ico-search.png") 1x, url("../images/public/ico-search@2x.png") 2x)
 }
 
 .form--search .txt {
@@ -3499,7 +3504,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     font-size: 1px;
     text-decoration: none;
     border: 0;
-    background: url("/v2/image/select2.png") right top no-repeat;
+    background: url("../images/public/select2.png") right top no-repeat;
     cursor: pointer;
     outline: 0
 }
@@ -3597,7 +3602,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     display: block;
     width: 100%;
     height: 100%;
-    background: url("/v2/image/select2.png") no-repeat 0 1px
+    background: url("../images/public//select2.png") no-repeat 0 1px
 }
 
 .select2-search {
@@ -3625,11 +3630,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
     border-radius: 0;
     -webkit-box-shadow: none;
     box-shadow: none;
-    background: #fff url("/v2/image/select2.png") no-repeat 100% -22px;
-    background: url("/v2/image/select2.png") no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #fff), color-stop(0.99, #eee));
-    background: url("/v2/image/select2.png") no-repeat 100% -22px, -webkit-linear-gradient(center bottom, #fff 85%, #eee 99%);
-    background: url("/v2/image/select2.png") no-repeat 100% -22px, -moz-linear-gradient(center bottom, #fff 85%, #eee 99%);
-    background: url("/v2/image/select2.png") no-repeat 100% -22px, linear-gradient(to bottom, #fff 85%, #eee 99%)
+    background: #fff url("../images/public/select2.png") no-repeat 100% -22px;
+    background: url("../images/public/select2.png") no-repeat 100% -22px, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #fff), color-stop(0.99, #eee));
+    background: url("../images/public/select2.png") no-repeat 100% -22px, -webkit-linear-gradient(center bottom, #fff 85%, #eee 99%);
+    background: url("../images/public/select2.png") no-repeat 100% -22px, -moz-linear-gradient(center bottom, #fff 85%, #eee 99%);
+    background: url("../images/public/select2.png") no-repeat 100% -22px, linear-gradient(to bottom, #fff 85%, #eee 99%)
 }
 
 .select2-drop.select2-drop-above .select2-search input {
@@ -3637,11 +3642,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .select2-search input.select2-active {
-    background: #fff url("/v2/image/select2-spinner.gif") no-repeat 100%;
-    background: url("/v2/image/select2-spinner.gif") no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #fff), color-stop(0.99, #eee));
-    background: url("/v2/image/select2-spinner.gif") no-repeat 100%, -webkit-linear-gradient(center bottom, #fff 85%, #eee 99%);
-    background: url("/v2/image/select2-spinner.gif") no-repeat 100%, -moz-linear-gradient(center bottom, #fff 85%, #eee 99%);
-    background: url("/v2/image/select2-spinner.gif") no-repeat 100%, linear-gradient(to bottom, #fff 85%, #eee 99%)
+    background: #fff url("../images/public/select2-spinner.gif") no-repeat 100%;
+    background: url("../images/public/select2-spinner.gif") no-repeat 100%, -webkit-gradient(linear, left bottom, left top, color-stop(0.85, #fff), color-stop(0.99, #eee));
+    background: url("../images/public/select2-spinner.gif") no-repeat 100%, -webkit-linear-gradient(center bottom, #fff 85%, #eee 99%);
+    background: url("../images/public/select2-spinner.gif") no-repeat 100%, -moz-linear-gradient(center bottom, #fff 85%, #eee 99%);
+    background: url("../images/public/select2-spinner.gif") no-repeat 100%, linear-gradient(to bottom, #fff 85%, #eee 99%)
 }
 
 .select2-container-active .select2-choice,
@@ -3803,7 +3808,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .select2-more-results.select2-active {
-    background: #f4f4f4 url("/v2/image/select2-spinner.gif") no-repeat 100%
+    background: #f4f4f4 url("../images/public/select2-spinner.gif") no-repeat 100%
 }
 
 .select2-more-results {
@@ -3887,7 +3892,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .select2-container-multi .select2-choices .select2-search-field input.select2-active {
-    background: #fff url("/v2/image/select2-spinner.gif") no-repeat 100% !important
+    background: #fff url("../images/public/select2-spinner.gif") no-repeat 100% !important
 }
 
 .select2-default {
@@ -3939,7 +3944,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     top: 4px;
     font-size: 1px;
     outline: none;
-    background: url("/v2/image/select2.png") right top no-repeat
+    background: url("../images/public/select2.png") right top no-repeat
 }
 
 .select2-container-multi .select2-search-choice-close {
@@ -4013,7 +4018,7 @@ only screen and (min-resolution: 1.5dppx) {
     .select2-search-choice-close,
     .select2-container .select2-choice abbr,
     .select2-container .select2-choice .select2-arrow b {
-        background-image: url("/v2/image/select2x2.png") !important;
+        background-image: url("../images/public/select2x2.png") !important;
         background-repeat: no-repeat !important;
         background-size: 60px 40px !important
     }
@@ -4060,7 +4065,7 @@ only screen and (min-resolution: 1.5dppx) {
 }
 
 .emoji {
-    background: url("/v2/image/iphone_emoji.png") top left no-repeat;
+    background: url("../images/public/iphone_emoji.png") top left no-repeat;
     width: 20px;
     height: 20px;
     display: -moz-inline-stack;
@@ -9639,7 +9644,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     width: 115px;
     height: 115px;
     background-size: cover;
-    background-image: url("/v2/image/service_0318.png")
+    background-image: url("../images/public/service_0318.png")
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
@@ -9647,7 +9652,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .float-service-wrap .float-service {
-        background-image: url("/v2/image/service_0318@2x.png")
+        background-image: url("../images/public/service_0318@2x.png")
     }
 }
 
@@ -9685,7 +9690,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .right-arrow {
     padding-right: 15px;
-    background: url("/v2/image/wap/arrow.png") no-repeat scroll 0 0;
+    background: url("../images/public/arrow.png") no-repeat scroll 0 0;
     background-size: 15px 30px;
     width: 15px;
     height: 15px;
@@ -9697,7 +9702,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .right-arrow {
-        background-image: url("/v2/image/wap/arrow@2x.png")
+        background-image: url("../images/public/arrow@2x.png")
     }
 }
 
@@ -9972,7 +9977,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
     cursor: pointer;
     background: #a0ce3d;
     vertical-align: middle;
-    margin-left: 7px
+    margin-left: 7px;
+    margin-right: 5px
 }
 
 .voice-player .stop {
@@ -9986,7 +9992,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     width: 17px;
     height: 20px;
     margin-top: 2px;
-    background: url("/v2/image/icon_voice_play.gif") no-repeat
+    background: url("../iamges/public/icon_voice_play.gif") no-repeat
 }
 
 .voice-player .second {
@@ -10321,18 +10327,18 @@ only screen and (min-device-pixel-ratio: 1.5) {
     width: 18px;
     height: 16px;
     background-repeat: no-repeat;
-    background-image: url("/v2/image/raty/star-off.png");
+    background-image: url("../images/public/star-off.png");
     cursor: pointer
 }
 
 .ui-star span.active {
-    background-image: url("/v2/image/raty/star-on.png")
+    background-image: url("../images/public/star-on.png")
 }
 
 .ui-star span:first-child,
 .ui-star span.active:first-child {
     visibility: hidden;
-    background-image: url("/v2/image/raty/cancel-custom-off.png")
+    background-image: url("../images/public/cancel-custom-off.png")
 }
 
 .ui-star:hover span:first-child,
@@ -10436,7 +10442,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    background: url("/v2/image/scroll/play.png") no-repeat center center
+    background: url("../images/public/scroll/play.png") no-repeat center center
 }
 
 .music-v2-modal .music-content {
@@ -10452,7 +10458,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .music-v2-modal .playing {
-    background: url("/v2/image/scroll/pause.png") no-repeat center center
+    background: url("../images/public/pause.png") no-repeat center center
 }
 
 .music-v2-modal .music-upload {
@@ -10560,7 +10566,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .qq-server-wrap .qq-server-content .qq-server-after {
     display: none;
-    background: url("/v2/image/home/qq_server.png") no-repeat;
+    background: url("../images/publichome/qq_server.png") no-repeat;
     padding-top: 60px;
     cursor: pointer
 }
@@ -10654,7 +10660,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .app-design .app-preview .app-config .app-field h1 {
     margin: 0;
     padding: 18px 60px 0 60px;
-    height: 46px;
+    height: 64px;
     line-height: 46px;
     font-size: 16px;
     color: #fff;
@@ -10939,11 +10945,11 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-design .app-preview .app-header {
-        background-image: url("/v2/image/widget/showcase/iphone_head@2x.png");
+        background-image: url("../iamges/public/iphone_head@2x.png");
         background-size: 80px 34px
     }
     .app-design .app-preview .app-config .app-field h1 {
-        background-image: url("/v2/image/widget/showcase/titlebar@2x.png");
+        background-image: url("../iamges/public/titlebar@2x.png");
         background-size: 320px 64px
     }
 }
@@ -11035,7 +11041,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     right: 5px;
     width: 15px;
     height: 15px;
-    background: url("/v2/image/wap/showcase/goods/goods_c9431a6d41.png") no-repeat;
+    background: url("../images/public/goods_c9431a6d41.png") no-repeat;
     background-size: 58px 48px;
     background-position: -20px -15px
 }
@@ -11044,7 +11050,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .share-mp-info .mp-search::before {
-        background-image: url("/v2/image/wap/showcase/goods/goods@2x_c9431a6d41.png")
+        background-image: url("../images/public/goods@2x_c9431a6d41.png")
     }
 }
 
@@ -11595,7 +11601,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     margin: 7px 4px 0;
     width: 5px;
     height: 5px;
-    background: url("/v2/image/pagination.png") no-repeat scroll -1px -1px;
+    background: url("../images/public/pagination.png") no-repeat scroll -1px -1px;
     cursor: pointer
 }
 
@@ -11603,7 +11609,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .swiper-pagination-switch {
-        background-image: url("/v2/image/pagination@2x.png");
+        background-image: url("../images/public/pagination@2x.png");
         background-position: 0 0;
         background-size: 5px 10px
     }
@@ -11617,7 +11623,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .swiper-active-switch {
-        background-image: url("/v2/image/pagination@2x.png");
+        background-image: url("../images/public/pagination@2x.png");
         background-position: 0px -5px;
         background-size: 5px 10px
     }
@@ -11775,9 +11781,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
     padding: 10px;
     line-height: 22px;
     border: 0px none;
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-top: 2px solid #e5e5e5;
     overflow: hidden
 }
@@ -11829,9 +11835,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .app-preview .block {
     overflow: hidden;
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-top: 2px solid #e5e5e5;
     border-bottom: 2px solid #e5e5e5;
     margin: 10px 0;
@@ -11951,7 +11957,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .block.block-list li span.clear {
-        background: url("/v2/image/wap/icon_clear@2x.png") center center no-repeat;
+        background: url("../images/public/icon_clear@2x.png") center center no-repeat;
         background-size: 100%
     }
 }
@@ -11962,9 +11968,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
     font-size: 14px;
     background-color: #fff;
     overflow: visible;
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-top: 2px solid #e5e5e5;
     border-bottom: 2px solid #e5e5e5
 }
@@ -12218,7 +12224,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     z-index: 100;
     width: 90px;
     height: 90px;
-    background: url("/v2/image/wsc/card/timeout_icon.png") no-repeat center center;
+    background: url("../images/public/timeout_icon.png") no-repeat center center;
     background-size: 90px
 }
 
@@ -12228,7 +12234,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     bottom: 0;
     width: 100%;
     height: 5px;
-    background: url("/v2/image/wsc/card/dot.png") repeat-x left bottom;
+    background: url("../images/public/dot.png") repeat-x left bottom;
     background-size: auto 5px
 }
 
@@ -12259,9 +12265,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
     margin-bottom: 10px;
     background: #fff;
     border-bottom-width: 1px;
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-radius: 5px
 }
 
@@ -12299,7 +12305,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     margin-right: 15px;
     width: 20px;
     height: 20px;
-    background: url("/v2/image/wsc/card/code_icon.png") no-repeat center center;
+    background: url("../images/public/code_icon.png") no-repeat center center;
     background-size: 20px
 }
 
@@ -12321,7 +12327,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .app-preview .qr-code-box {
     min-height: 185px;
-    background: url("/v2/image/loader@2x.gif") no-repeat center center;
+    background: url("../images/public/loader@2x.gif") no-repeat center center;
     background-size: 16px
 }
 
@@ -12342,7 +12348,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     width: 185px;
     height: 185px;
     margin: 10px auto;
-    background: url("/v2/image/loader@2x.gif") no-repeat center center;
+    background: url("../images/public/loader@2x.gif") no-repeat center center;
     background-size: 16px
 }
 
@@ -12366,7 +12372,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     margin-top: -55px;
     width: 140px;
     height: 110px;
-    background: url("/v2/image/wsc/card/success_layer.png") no-repeat center center;
+    background: url("../images/public/success_layer.png") no-repeat center center;
     background-size: 140px
 }
 
@@ -12456,7 +12462,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     top: 2px;
     width: 5px;
     height: 88px;
-    background: url("/v2/image/wsc/card/vertical_dot.png") repeat-y left top;
+    background: url("../images/public/vertical_dot.png") repeat-y left top;
     background-size: 4px
 }
 
@@ -12487,7 +12493,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     top: 0;
     width: 12px;
     height: 24px;
-    background: url("/v2/image/wsc/card/corner.png") no-repeat center top;
+    background: url("../images/public/corner.png") no-repeat center top;
     background-size: 12px
 }
 
@@ -12723,7 +12729,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .custom-title {
-    background: url("/v2/image/wap/bottom_line.png") left top no-repeat;
+    background: url("../images/public/bottom_line.png") left top no-repeat;
     background-size: 100% 1px;
     background-position: left bottom;
     padding: 0 10px;
@@ -12812,7 +12818,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .app-preview .custom-nav li,
 .app-preview .custom-link li {
     height: 44px;
-    background: url("/v2/image/wap/bottom_line.png") left top no-repeat;
+    background: url("../images/public/bottom_line.png") left top no-repeat;
     background-size: 100% 1px;
     background-position: left bottom;
     margin: 0 10px;
@@ -12828,7 +12834,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .app-preview .custom-nav li:first-child,
 .app-preview .custom-link li:first-child {
-    background: url("/v2/image/wap/bottom_line.png") left top no-repeat;
+    background: url("../images/public/bottom_line.png") left top no-repeat;
     background-size: 100% 1px;
     background-position: left bottom
 }
@@ -12941,7 +12947,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     color: #fff;
     font-size: 14px;
     text-indent: -9999px;
-    background: #fff url("/v2/image/wap/search_icon.png") center center no-repeat;
+    background: #fff url("../images/public/search_icon.png") center center no-repeat;
     background-size: 16px 16px;
     border-radius: 5px 0 0 5px
 }
@@ -12992,7 +12998,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     left: 10px;
     height: 18px;
     width: 18px;
-    background: url("/v2/image/wap/showcase/goods/goods_c9431a6d41.png") no-repeat;
+    background: url("../images/public/goods_c9431a6d41.png") no-repeat;
     background-size: 58px 48px;
     background-position: -40px 0
 }
@@ -13031,15 +13037,15 @@ only screen and (min-device-pixel-ratio: 1.5) {
     right: 10px;
     width: 6px;
     height: 11px;
-    background: url("/v2/image/wap/showcase/goods/goods_c9431a6d41.png") no-repeat;
+    background: url("../images/public/goods_c9431a6d41.png") no-repeat;
     background-position: -40px -18px;
     background-size: 58px 48px
 }
 
 .app-preview .custom-store.border {
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-top: 2px solid #e5e5e5;
     border-bottom: 2px solid #e5e5e5
 }
@@ -13069,10 +13075,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .custom-store .custom-store-img {
-        background-image: url("/v2/image/wap/showcase/goods/goods@2x_c9431a6d41.png")
+        background-image: url("../images/public/goods@2x_c9431a6d41.png")
     }
     .app-preview .custom-store:after {
-        background-image: url("/v2/image/wap/showcase/goods/goods@2x_c9431a6d41.png")
+        background-image: url("../images/public/goods@2x_c9431a6d41.png")
     }
 }
 
@@ -13138,7 +13144,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .app-preview .custom-audio-unread,
 .app-preview .custom-audio-btn,
 .app-preview .custom-audio-animation-static {
-    background: url("/v2/image/wap/audio/sprite_v5.png") no-repeat scroll 0 0;
+    background: url("../images/public/sprite_v5.png") no-repeat scroll 0 0;
     background-size: 400px 175px
 }
 
@@ -13344,7 +13350,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .app-preview .rangeslider__fill {
     position: absolute;
     top: 0;
-    background: url("/v2/image/wap/audio/progress.png") repeat-x scroll 0 0;
+    background: url("../images/public/progress.png") repeat-x scroll 0 0;
     background-size: 1px 19px
 }
 
@@ -13355,14 +13361,14 @@ only screen and (min-device-pixel-ratio: 1.5) {
     height: 21px;
     position: absolute;
     top: -1px;
-    background: url("/v2/image/wap/audio/button.png") no-repeat scroll 0 0
+    background: url("../images/public/button.png") no-repeat scroll 0 0
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .rangeslider__handle {
-        background-image: url("/v2/image/wap/audio/button@2x.png");
+        background-image: url("../images/public/button@2x.png");
         background-size: 46px 21px
     }
 }
@@ -13392,9 +13398,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .custom-notice {
-        -webkit-border-image: url("/v2/image/wap/border-line-f2f2f2.png") 2 stretch;
-        -moz-border-image: url("/v2/image/wap/border-line-f2f2f2.png") 2 stretch;
-        border-image: url("/v2/image/wap/border-line-f2f2f2.png") 2 stretch
+        -webkit-border-image: url("../images/public/border-line-f2f2f2.png") 2 stretch;
+        -moz-border-image: url("../images/public/border-line-f2f2f2.png") 2 stretch;
+        border-image: url("../images/public/border-line-f2f2f2.png") 2 stretch
     }
 }
 
@@ -13922,7 +13928,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     text-align: center;
     line-height: 24px;
     font-size: 12px;
-    background-image: url("/v2/image/wap/showcase-1416814739063.png");
+    background-image: url("../images/public/showcase-1416814739063.png");
     background-position: 0 -88px;
     background-repeat: no-repeat
 }
@@ -13933,7 +13939,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .custom-tag-list .custom-tag-list-goods .custom-tag-list-goods-detail .custom-tag-list-goods-buy .ajax-loading {
-    background-image: url("/v2/image/wap/common/loading.gif");
+    background-image: url("../images/public/loading.gif");
     background-repeat: no-repeat;
     background-position: center center
 }
@@ -13942,11 +13948,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .custom-tag-list .custom-tag-list-goods .custom-tag-list-goods-detail .custom-tag-list-goods-buy .ajax-loading {
-        background-image: url("/v2/image/wap/common/loading@2x.gif");
+        background-image: url("../images/public/loading@2x.gif");
         background-size: 16px
     }
     .app-preview .custom-tag-list .custom-tag-list-goods .custom-tag-list-goods-detail .custom-tag-list-goods-buy span {
-        background-image: url("/v2/image/wap/showcase2x-1416814739063.png");
+        background-image: url("../images/public/showcase2x-1416814739063.png");
         background-size: 40px auto
     }
 }
@@ -13971,7 +13977,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     margin-top: 10px;
     width: 16px;
     height: 16px;
-    background: url("/v2/image/loader.gif") no-repeat center center;
+    background: url("../images/public/loader.gif") no-repeat center center;
     background-size: 16px 16px
 }
 
@@ -13980,7 +13986,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .list-finished span,
     .app-preview .loading-more span {
-        background-image: url("/v2/image/loader@2x.gif")
+        background-image: url("../images/public/loader@2x.gif")
     }
 }
 
@@ -13990,9 +13996,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
     font-size: 14px;
     background-color: #fff;
     overflow: visible;
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-top: 2px solid #e5e5e5;
     border-bottom: 2px solid #e5e5e5
 }
@@ -14073,7 +14079,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .app-preview .custom-tags .custom-tags-more {
     display: none;
-    background-image: url("/v2/image/wap/showcase/shadow.png");
+    background-image: url("../images/public/shadow.png");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: auto 100%
@@ -14115,9 +14121,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
     right: 0;
     z-index: 999;
     background-color: #fff;
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-bottom: 2px solid #e5e5e5
 }
 
@@ -14137,7 +14143,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     height: 14px;
     right: 11px;
     top: 13px;
-    background-image: url("/v2/image/wap/showcase_e270134134.png");
+    background-image: url("../images/public/showcase_e270134134.png");
     background-position: -36px 0;
     background-repeat: no-repeat
 }
@@ -14146,7 +14152,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .custom-tags .custom-tags-show-more .custom-tags-more:after {
-        background-image: url("/v2/image/wap/showcase@2x_e270134134.png");
+        background-image: url("../images/public/showcase@2x_e270134134.png");
         background-size: 51px 30px
     }
 }
@@ -14178,7 +14184,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     height: 50px;
     line-height: 50px;
     padding-left: 35px;
-    background-image: url("/v2/image/activity/77/ui/icon.png");
+    background-image: url("../images/public/icon.png");
     background-repeat: no-repeat;
     background-size: 10px;
     background-position: 20px -26px;
@@ -14277,7 +14283,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .custom-coupon .custom-coupon-price {
-    height: 24px;
+    height: 40px;
     line-height: 24px;
     padding-top: 12px;
     font-size: 24px;
@@ -14302,9 +14308,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
     font-size: 14px;
     background-color: #fff;
     overflow: visible;
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-top: 2px solid #e5e5e5;
     border-bottom: 2px solid #e5e5e5
 }
@@ -14376,7 +14382,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .app-preview .custom-home-nav .tabber-inner.tabber-nav:before,
 .app-preview .custom-home-nav .tabber-inner.tabber-home:before {
-    background-image: url("/v2/image/wap/showcase_e270134134.png");
+    background-image: url("../images/public/showcase_e270134134.png");
     background-position: 0 -16px;
     background-repeat: no-repeat;
     width: 16px;
@@ -14396,7 +14402,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .custom-home-nav .tabber-inner.tabber-nav:before,
     .app-preview .custom-home-nav .tabber-inner.tabber-home:before {
-        background-image: url("/v2/image/wap/showcase@2x_e270134134.png");
+        background-image: url("../images/public/showcase@2x_e270134134.png");
         background-size: 51px 30px
     }
 }
@@ -14458,9 +14464,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     background-color: #fff;
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-bottom: 2px solid #e5e5e5
 }
 
@@ -14709,7 +14715,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .tpl-scroll .ui-music-btn {
-    background: rgba(0, 0, 0, 0.3) url("/v2/image/scroll/music@2x.png") no-repeat scroll 50% 50%;
+    background: rgba(0, 0, 0, 0.3) url("../images/public/music@2x.png") no-repeat scroll 50% 50%;
     width: 44px;
     height: 44px;
     border-radius: 24px;
@@ -14718,7 +14724,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .tpl-scroll .ui-music-off {
-    background-image: url("/v2/image/scroll/music_off@2x.png")
+    background-image: url("../images/public/music_off@2x.png")
 }
 
 .app-preview .tpl-scroll .ui-up-arrow {
@@ -14746,7 +14752,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .ui-homepage-btn {
-    background: rgba(0, 0, 0, 0.3) url("/v2/image/scroll/homepage@2x.png") no-repeat scroll 50% 50%;
+    background: rgba(0, 0, 0, 0.3) url("../images/public/homepage@2x.png") no-repeat scroll 50% 50%;
     width: 44px;
     height: 44px;
     border-radius: 24px;
@@ -14797,7 +14803,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .poster-content .ui-music-btn {
-    background: rgba(0, 0, 0, 0.3) url("/v2/image/scroll/music@2x.png") no-repeat scroll 50% 50%;
+    background: rgba(0, 0, 0, 0.3) url("../images/public/music@2x.png") no-repeat scroll 50% 50%;
     width: 44px;
     height: 44px;
     border-radius: 24px;
@@ -14806,7 +14812,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .poster-content .ui-music-off {
-    background-image: url("/v2/image/scroll/music_off@2x.png")
+    background-image: url("../images/public/music_off@2x.png")
 }
 
 .app-preview .poster-content .ui-up-arrow {
@@ -15763,9 +15769,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
     padding: 10px;
     line-height: 22px;
     border: 0px none;
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-top: 2px solid #e5e5e5;
     overflow: hidden
 }
@@ -15817,9 +15823,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .app-preview .block {
     overflow: hidden;
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-top: 2px solid #e5e5e5;
     border-bottom: 2px solid #e5e5e5;
     margin: 10px 0;
@@ -15939,7 +15945,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .block.block-list li span.clear {
-        background: url("/v2/image/wap/icon_clear@2x.png") center center no-repeat;
+        background: url("../images/public/icon_clear@2x.png") center center no-repeat;
         background-size: 100%
     }
 }
@@ -16058,9 +16064,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .order-related .uc-order.list-horizon>li+li {
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-left: 2px solid #e5e5e5
 }
 
@@ -16088,7 +16094,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     left: 5px;
     width: 25px;
     height: 25px;
-    background-image: url("/v2/image/wap/uc/uc_icon.png");
+    background-image: url("../images/public/uc_icon.png");
     background-repeat: no-repeat;
     background-size: 18px 218px
 }
@@ -16097,12 +16103,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .order-related .block.block-list.list-vertical>a.link::before {
-        background-image: url("/v2/image/wap/uc/uc_icon@2x.png")
+        background-image: url("../images/public/uc_icon@2x.png")
     }
 }
 
 .app-preview .order-related .block.block-list.list-vertical>a.link.ico-saler-center::before {
-    background-image: url("/v2/image/wap/uc/sale_new.png");
+    background-image: url("../images/public/sale_new.png");
     background-size: 19px 18px;
     left: 6px
 }
@@ -16111,7 +16117,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .order-related .block.block-list.list-vertical>a.link.ico-saler-center::before {
-        background-image: url("/v2/image/wap/uc/sale_new@2x.png")
+        background-image: url("../images/public/sale_new@2x.png")
     }
 }
 
@@ -16156,7 +16162,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .order-related .block.block-list.list-vertical>a.link.ico-wish-gift::before {
-    background-image: url("/v2/image/wap/uc/wish_gift.png");
+    background-image: url("../images/public/wish_gift.png");
     background-size: 20px 20px;
     top: 11px;
     left: 7px
@@ -16291,7 +16297,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     width: 9px;
     height: 12px;
     margin-top: -6px;
-    background: url("/v2/image/wap/ios7_arrow.png") left center no-repeat;
+    background: url("../images/public/ios7_arrow.png") left center no-repeat;
     background-size: 100% 100%
 }
 
@@ -16440,7 +16446,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     height: 18px;
     line-height: 18px;
     margin-bottom: 3px;
-    background: url("/v2/image/me.png") no-repeat center center;
+    background: url("../images/public/me.png") no-repeat center center;
     background-size: contain
 }
 
@@ -16448,7 +16454,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .tpl-shop-content .user {
-        background-image: url("/v2/image/me@2x.png")
+        background-image: url("../images/public/me@2x.png")
     }
 }
 
@@ -16897,7 +16903,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .app-preview .sc-goods-list .goods-buy.btn2,
 .app-preview .sc-goods-list .goods-buy.btn3,
 .app-preview .sc-goods-list .goods-buy.btn4 {
-    background-image: url("/v2/image/wap/showcase-1416814739063.png");
+    background-image: url("../images/public/showcase-1416814739063.png");
     background-repeat: no-repeat
 }
 
@@ -16954,7 +16960,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .sc-goods-list .goods-buy.ajax-loading {
-    background-image: url("/v2/image/wap/common/loading.gif");
+    background-image: url("../images/public/loading.gif");
     width: 16px;
     height: 16px;
     background-size: 16px 16px;
@@ -16986,7 +16992,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .sc-goods-list .goods-wish.btn-wish {
-    background-image: url("/v2/image/wap/goods_list/wish_list.png")
+    background-image: url("../images/public/wish_list.png")
 }
 
 .app-preview .sc-goods-list .wish-response {
@@ -17005,7 +17011,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .sc-goods-list .goods-buy.btn2,
     .app-preview .sc-goods-list .goods-buy.btn3,
     .app-preview .sc-goods-list .goods-buy.btn4 {
-        background-image: url("/v2/image/wap/showcase2x-1416814739063.png");
+        background-image: url("../images/public/showcase2x-1416814739063.png");
         background-repeat: no-repeat;
         background-size: 40px auto
     }
@@ -17013,12 +17019,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
         background-position: 0 -50px
     }
     .app-preview .sc-goods-list .goods-buy.ajax-loading {
-        background-image: url("/v2/image/wap/common/loading.gif");
+        background-image: url("../images/public/loading.gif");
         background-size: 16px 16px;
         background-position: top left
     }
     .app-preview .sc-goods-list .goods-wish.btn-wish {
-        background-image: url("/v2/image/wap/goods_list/wish_list@2x.png")
+        background-image: url("../images/public/wish_list@2x.png")
     }
     .app-preview .sc-goods-list .goods-wish.added-wish {
         background-position: 0px -40px
@@ -17219,9 +17225,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .app-preview .sc-goods-list.pic .goods-card.big-pic.card .link {
     margin: 0px 4px;
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-top: 2px solid #e5e5e5;
     border-right: 2px solid #e5e5e5;
     border-bottom: 2px solid #e5e5e5;
@@ -17346,9 +17352,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .sc-goods-list.pic .goods-card.small-pic.card .link {
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-top: 2px solid #e5e5e5;
     border-right: 2px solid #e5e5e5;
     border-bottom: 2px solid #e5e5e5;
@@ -17408,9 +17414,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .sc-goods-list.pic.waterfall .goods-card.small-pic .link {
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-top: 2px solid #e5e5e5;
     border-right: 2px solid #e5e5e5;
     border-bottom: 2px solid #e5e5e5;
@@ -17455,9 +17461,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .sc-goods-list.pic .goods-card.small-pic.promotion .link {
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-top: 2px solid #e5e5e5;
     border-right: 2px solid #e5e5e5;
     border-bottom: 2px solid #e5e5e5;
@@ -17545,9 +17551,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .sc-goods-list.pic.size-4 .goods-card.multi-pic {
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-bottom: 2px solid #e5e5e5
 }
 
@@ -17661,14 +17667,14 @@ only screen and (min-device-pixel-ratio: 1.5) {
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 51px 30px;
-    background-image: url("/v2/image/wap/showcase_e270134134.png")
+    background-image: url("../images/public/showcase_e270134134.png")
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5),
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .sc-goods-list.pic.size-4 .goods-card.multi-pic .goods-operate .goods-share {
-        background-image: url("/v2/image/wap/showcase@2x_e270134134.png")
+        background-image: url("../images/public/showcase@2x_e270134134.png")
     }
 }
 
@@ -17749,9 +17755,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .sc-goods-list.list .goods-card.normal {
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-bottom: 2px solid #e5e5e5;
     padding: 10px 0
 }
@@ -17775,9 +17781,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .app-preview .sc-goods-list.list .goods-card.card {
     padding: 5px 0px 5px 5px;
     margin: 8px;
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-top: 2px solid #e5e5e5;
     border-right: 2px solid #e5e5e5;
     border-bottom: 2px solid #e5e5e5;
@@ -17898,9 +17904,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .app-preview .www-tpl-usercenter hr {
     margin: 10px 0;
     border: 0px none;
-    -webkit-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    -moz-border-image: url("/v2/image/wap/border-line.png") 2 stretch;
-    border-image: url("/v2/image/wap/border-line.png") 2 stretch;
+    -webkit-border-image: url("../images/public/border-line.png") 2 stretch;
+    -moz-border-image: url("../images/public/border-line.png") 2 stretch;
+    border-image: url("../images/public/border-line.png") 2 stretch;
     border-top: 2px solid #e5e5e5
 }
 
@@ -18026,7 +18032,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .www-tpl-usercenter .loading {
-    background-image: url("/v2/image/loader.gif") !important;
+    background-image: url("../images/public/loader.gif") !important;
     background-repeat: no-repeat !important;
     background-position: center center !important;
     background-size: 16px 16px
@@ -18036,13 +18042,13 @@ only screen and (min-device-pixel-ratio: 1.5) {
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .www-tpl-usercenter .loading {
-        background-image: url("/v2/image/loader@2x.gif") !important
+        background-image: url("../images/public/loader@2x.gif") !important
     }
 }
 
 .app-preview .www-tpl-usercenter .with-bs-top,
 .app-preview .www-tpl-usercenter .with-bs-bottom {
-    background: url("/v2/image/wap/bottom_line.png") left top no-repeat;
+    background: url("../images/public/bottom_line.png") left top no-repeat;
     background-size: 100% 1px
 }
 
@@ -18084,7 +18090,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .www-tpl-scroll .ui-music-btn {
-    background: url("/v2/image/scroll/music.png") no-repeat scroll 50% 50%;
+    background: url("../images/public/music.png") no-repeat scroll 50% 50%;
     width: 16px;
     height: 16px;
     border-radius: 8px;
@@ -18101,7 +18107,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .www-tpl-scroll .ui-homepage-btn {
-    background: url("/v2/image/scroll/homepage.png") no-repeat scroll 50% 50%;
+    background: url("../images/public/homepage.png") no-repeat scroll 50% 50%;
     width: 16px;
     height: 16px;
     border-radius: 8px;
@@ -18113,11 +18119,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
 only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-preview .www-tpl-scroll .ui-music-btn {
-        background-image: url("/v2/image/scroll/music@2x.png");
+        background-image: url("../iamges/public/music@2x.png");
         background-size: 18px
     }
     .app-preview .www-tpl-scroll .ui-homepage-btn {
-        background-image: url("/v2/image/scroll/homepage@2x.png");
+        background-image: url("../images/public/homepage@2x.png");
         background-size: 18px
     }
 }
@@ -18300,9 +18306,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
     display: inline-block;
     width: 14px;
     height: 14px;
-    background-image: url("/v2/image/widget/showcase/icon-add.png");
+    background-image: url("../images/public/icon-add.png");
     background-repeat: no-repeat;
-    background-position: 0
+    background-position: 0;
+    vertical-align: middle;
 }
 
 .app-design .app-sidebar {
@@ -18339,8 +18346,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
     border-width: 8px 10px 8px 0;
     border-color: transparent #d1d1d1 transparent transparent;
     position: absolute;
-    left: -10px;
-    top: 19px
+    left: -9px;
+    top: 20px
 }
 
 .app-design .app-sidebar .arrow:after {
@@ -18389,11 +18396,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-design .app-sidebar .control-label {
-    width: auto;
+    width: 87px;
     cursor: default;
     font-weight: normal;
     display: block;
     float: left;
+    padding: 5px 0px 0px 0px
 }
 
 .app-design .app-sidebar .controls {
@@ -18797,7 +18805,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-sidebar .edit-audio .controls>.radio {
-    padding-top: 5px
+    padding-top: 5px;
+    font-weight: normal;
 }
 
 .app-sidebar .edit-audio .control-group-inner {
@@ -18943,15 +18952,15 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .app-design .icon-add {
-        background-image: url("/v2/image/widget/showcase/icon-add@2x.png");
+        background-image: url("../images/public/icon-add@2x.png");
         background-size: 14px 14px
     }
     .custom-scroll .music-preview {
-        background-image: url("/v2/image/scroll/play@2x.png");
+        background-image: url("../images/public/play@2x.png");
         background-size: 20px
     }
     .custom-scroll .playing {
-        background-image: url("/v2/image/scroll/pause@2x.png");
+        background-image: url("../images/public/pause@2x.png");
         background-size: 20px
     }
 }
@@ -19136,7 +19145,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    background: url("/v2/image/scroll/play.png") no-repeat center center
+    background: url("../images/public/play.png") no-repeat center center
 }
 
 .music-v2-modal .music-content {
@@ -19152,7 +19161,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .music-v2-modal .playing {
-    background: url("/v2/image/scroll/pause.png") no-repeat center center
+    background: url("../images/public/pause.png") no-repeat center center
 }
 
 .music-v2-modal .music-upload {
@@ -19518,7 +19527,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     width: 15px;
     float: left;
     margin-right: 3px;
-    background-image: url("/v2/image/widget/image/fuwu.png");
+    background-image: url("../images/public/fuwu.png");
     background-repeat: no-repeat;
     background-size: 14px 14px
 }
@@ -19528,7 +19537,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .widget-feature-template .widget-feature-template-filter li.shop-decoration span {
-        background-image: url("/v2/image/widget/image/fuwu@2x.png")
+        background-image: url("../images/public/fuwu@2x.png")
     }
 }
 
@@ -19594,7 +19603,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     display: inline-block;
     width: 14px;
     height: 17px;
-    background: transparent url("/v2/image/widget/notice-center/ring.png") center center no-repeat
+    background: transparent url("../images/public/ring.png") center center no-repeat
 }
 
 .widget-notice-center-txt {
@@ -19608,7 +19617,7 @@ only screen and (min--moz-device-pixel-ratio: 1.5),
 only screen and (-o-min-device-pixel-ratio: 3/2),
 only screen and (min-device-pixel-ratio: 1.5) {
     .widget-notice-center-ring {
-        background-image: url("/v2/image/widget/notice-center/ring@2x.png");
+        background-image: url("../images/public/ring@2x.png");
         background-size: 14px
     }
 }
@@ -19989,46 +19998,46 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .widget-ueditor-emotion .emotion-content span.jd {
-    background: url("/v2/image/ueditor_emotion/jxface2.gif?v=1.1");
+    background: url("../images/public/jxface2.gif?v=1.1");
     background-repeat: no-repeat
 }
 
 .widget-ueditor-emotion .emotion-content span.tsj {
-    background: url("/v2/image/ueditor_emotion/tface.gif?v=1.1");
+    background: url("../images/public/tface.gif?v=1.1");
     background-repeat: no-repeat
 }
 
 .widget-ueditor-emotion .emotion-content span.ldw {
-    background: url("/v2/image/ueditor_emotion/wface.gif?v=1.1");
+    background: url("../images/public/wface.gif?v=1.1");
     background-repeat: no-repeat
 }
 
 .widget-ueditor-emotion .emotion-content span.bb {
-    background: url("/v2/image/ueditor_emotion/bface.gif?v=1.1");
+    background: url("../images/public/bface.gif?v=1.1");
     background-repeat: no-repeat
 }
 
 .widget-ueditor-emotion .emotion-content span.cat {
-    background: url("/v2/image/ueditor_emotion/cface.gif?v=1.1");
+    background: url("../images/public/cface.gif?v=1.1");
     background-repeat: no-repeat
 }
 
 .widget-ueditor-emotion .emotion-content span.pp {
     width: 24px !important;
     height: 24px !important;
-    background: url("/v2/image/ueditor_emotion/fface.gif?v=1.1");
+    background: url("../images/public/fface.gif?v=1.1");
     background-repeat: no-repeat
 }
 
 .widget-ueditor-emotion .emotion-content span.youa {
-    background: url("/v2/image/ueditor_emotion/yface.gif?v=1.1");
+    background: url("../images/public/yface.gif?v=1.1");
     background-repeat: no-repeat
 }
 
 .widget-ueditor-emotion .emotion-content span.qq {
     width: 24px !important;
     height: 24px !important;
-    background: url("/v2/image/ueditor_emotion/qq.gif?v=1.1");
+    background: url("../images/public/qq.gif?v=1.1");
     background-repeat: no-repeat
 }
 
@@ -20341,7 +20350,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     height: 40px;
     background: #ddd;
     background-size: 40px 40px;
-    background-image: url("/v2/image/showcase/attachment/voice/play.png")
+    background-image: url("../images/public/play.png")
 }
 
 .userproperty .control-group {

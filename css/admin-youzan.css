@@ -2,6 +2,7 @@ body { font-family: "Microsoft Yahei", "Hiragino Sans GB", SimSun, Arial, "Helve
 body.login { margin-top: 0px; background-image: url(../images/public/wp5.jpg); overflow-x: hidden; padding: 50px; }
 input.password { width: 100%; }
 input[type='color'] { vertical-align: middle; }
+.controls input { padding: 4px 6px; line-height: 20px; color: #555; }
 h2 { margin-bottom: 30px; }
 h3.name-title { font-size: 20px; white-space: nowrap; line-height: 34px; }
 h4.store_name { margin: 0 0 5px 0; padding: 0.2em 0; }
@@ -29,7 +30,7 @@ table tr.info th { background-color: #eee !important; }
 table.tablesorter thead { cursor: pointer; }
 th.length { width: 140px; }
 td.length { max-width: 80px; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; white-space: nowrap; }
-td.leng { max-width: 120px; }
+td.leng { max-width: 120px; } td.max-leng { min-width: 150px; width: auto; } td.max-length { width: auto; max-width: 250px; }
 td.leng .btn { width: 100%; white-space: nowrap; text-align: center; text-indent: 0; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; }
 td span.nowrap { width: auto; max-width: 200px; white-space: nowrap; overflow: hidden; overflow: -moz-hidden-unscrollable; -ms-text-overflow: ellipsis; text-overflow: ellipsis; display: inline-block; }
 tr td, select { height: 34px; line-height: 29px !important; vertical-align: middle !important; }
@@ -53,6 +54,7 @@ a.thumbnail { width: auto; height: auto; max-width: 80px; max-height: 80px; marg
 .left_tab_nav { display: none; }
 .left_tab_nav.open { display: block; }
 .fa { width: 16px; height: 16px; text-align: center; }
+.fa-2x, .fa-3x, .fa-4x, .fa-5x { width: auto; height: auto; }
 .fa-caret-left { margin-left: -15px; }
 .fa-caret-right { margin-right: -15px; }
 .float-right { float: right; }

@@ -39,6 +39,8 @@
                 <li class="divide">|</li>
                 <li><a class="top_nav_btn btn client_btn" href="javascript:;" onclick="srcpage('view-admin/client_list.html')">商户管理</a></li>
                 <li class="divide">|</li>
+                <li><a class="top_nav_btn btn business_btn" href="javascript:;" onclick="srcpage('view-admin/business_list.html')">业务管理</a></li>
+                <li class="divide">|</li>
                 <li><a class="top_nav_btn btn feedback_btn" href="javascript:;" onclick="srcpage('view-admin/feedback_list.html')">问题反馈</a></li>
                 <li class="divide">|</li>
                 <li><a class="top_nav_btn btn help_btn" href="javascript:;" onclick="srcpage('view-admin/help_list.html')">操作帮助</a></li>
@@ -86,6 +88,12 @@
                 <h4>商户管理</h4>
                 <ul>
                     <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-admin/client_list.html')">商户管理</a></li>
+                </ul>
+            </nav>
+            <nav class="left_tab_nav business_btn">
+                <h4>业务管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-admin/business_list.html')">业务管理</a></li>
                 </ul>
             </nav>
             <nav class="left_tab_nav feedback_btn">
@@ -184,6 +192,7 @@
                 if($(this).hasClass("admin_btn")){ open= "admin_btn"; }
                 if($(this).hasClass("agent_btn")){ open= "agent_btn"; }
                 if($(this).hasClass("client_btn")){ open= "client_btn"; }
+                if($(this).hasClass("business_btn")){ open= "business_btn"; }
                 if($(this).hasClass("feedback_btn")){ open= "feedback_btn"; }
                 if($(this).hasClass("help_btn")){ open= "help_btn"; }
                 if($(this).hasClass("user_btn")){ open= "user_btn"; var user_btn_num = $('.top_nav_btn.user_btn').index(this); }

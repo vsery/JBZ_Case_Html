@@ -1,0 +1,85 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb"> 
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-platform/app_columns.html')">栏目分类</a></li>
+        <li class="active">编辑栏目</li>
+        <li class="float-right"><a href="javascript:;">操作帮助</a></li>
+    </ol>
+    <div class="app__content js-app-main" id="PhoneEditAdmin">
+        <div class="app-design clearfix">
+            <div class="app-preview">
+                <div class="app-header">
+                </div>
+                <div class="app-entry">
+                    <div class="app-config js-config-region">
+                    </div>
+                    <div class="app-fields js-fields-region ui-sortable">
+                    </div>
+                </div>
+                <div class="js-add-region">
+                    <div>
+                        <div class="app-add-field">
+                            <h4>添加内容</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="app-sidebar" style="margin-top: 71px;">
+                <div class="arrow"></div>
+                <div class="app-sidebar-inner js-sidebar-region">
+                </div>
+            </div>
+            <div class="app-actions" style="bottom: 0px;">
+                <div class="form-actions text-center">
+                    <input class="btn btn-info btn-save" value="保存发布" data-loading-text="保存发布...">
+                    <input class="btn btn-default btn-preview" value="取消编辑" data-loading-text="取消编辑...">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="FileAdmin"></div>
+<script type="text/javascript">
+    fileobj = $.ajax({ type:"GET", url:"plugins/resourceManager/FileAdmin.html", dataType:"html", async:false });
+    $("#FileAdmin").html( fileobj.responseText); //ajax加载资源管理器
+</script>
+<script type="text/javascript" src="plugins/PowerPage/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="plugins/PowerPage/ueditor/ueditor.all.js"></script>
+<script type="text/javascript" src="plugins/PowerPage/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" src="plugins/PowerPage/PowerPage.js"></script>
+<script type="text/javascript">
+    $("input.btn-save").click(function() {
+        alert('保存成功');
+    });
+    $("input.btn-preview").click(function() {
+        alert('预览成功');
+    });
+</script>
+<script type="text/javascript">
+// PowerPage.Set.Pichost="http://image.psp.ya3w.com/";
+// var pichost=PowerPage.Set.Pichost;
+$(function(){
+    //$(".ui-sortable").sortable({ containment: 'parent'});
+    PowerPage.Common.CSH([{
+        name:"pagetitle",config:true,candelete:false
+    }],0);
+});
+//   $(".btn-add").click(function(){
+//       create(1);
+//   });
+//   $(".btn-save").click(function(){
+//       create(0);
+//   });
+//   function create(status){
+//       var data={
+//               pageid:"0",
+//               pagename:PowerPage.Get.GetPageTitle(),
+//               pagedesc:PowerPage.Get.GetPageDesc(),
+//               pagecont:PowerPage.Get.GetPageCont(),
+//               status:status
+//       }
+//       $.post("createok",data,function(result){
+//           alert(result);
+//       });
+//   }
+</script>
