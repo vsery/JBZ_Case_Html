@@ -1,4 +1,3 @@
-<!-- <link rel="stylesheet" type="text/css" href="plugins/PowerPage/ueditor/app.css"> -->
 <div class="app-design clearfix">
     <div class="app-preview">
         <div class="app-header"></div>
@@ -38,10 +37,15 @@
 <script type="text/javascript" src="plugins/PowerPage/ueditor/lang/zh-cn/zh-cn.js"></script>
 <script type="text/javascript" src="plugins/PowerPage/PowerPage.js"></script>
 <script type="text/javascript">
+$(function(){
+    PowerPage.Common.CSH([{
+        name:"pagetitle",config:true,candelete:false
+    }],0);
     $("input.btn-save").click(function() {
         alert('保存成功');
     });
     $("input.btn-preview").click(function() {
         alert('预览成功');
     });
+});
 </script>

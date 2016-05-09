@@ -48,38 +48,15 @@
 <script type="text/javascript" src="plugins/PowerPage/ueditor/lang/zh-cn/zh-cn.js"></script>
 <script type="text/javascript" src="plugins/PowerPage/PowerPage.js"></script>
 <script type="text/javascript">
+$(function(){
+    PowerPage.Common.CSH([{
+        name:"pagetitle",config:true,candelete:false
+    }],0);
     $("input.btn-save").click(function() {
         alert('保存成功');
     });
     $("input.btn-preview").click(function() {
         alert('预览成功');
     });
-</script>
-<script type="text/javascript">
-// PowerPage.Set.Pichost="http://image.psp.ya3w.com/";
-// var pichost=PowerPage.Set.Pichost;
-$(function(){
-    //$(".ui-sortable").sortable({ containment: 'parent'});
-    PowerPage.Common.CSH([{
-        name:"pagetitle",config:true,candelete:false
-    }],0);
 });
-//   $(".btn-add").click(function(){
-//       create(1);
-//   });
-//   $(".btn-save").click(function(){
-//       create(0);
-//   });
-//   function create(status){
-//       var data={
-//               pageid:"0",
-//               pagename:PowerPage.Get.GetPageTitle(),
-//               pagedesc:PowerPage.Get.GetPageDesc(),
-//               pagecont:PowerPage.Get.GetPageCont(),
-//               status:status
-//       }
-//       $.post("createok",data,function(result){
-//           alert(result);
-//       });
-//   }
 </script>

@@ -20,12 +20,12 @@
             </div>
         </div>
     </div>
+    <br/>
+    <div class="row">
+        <div class="col-lg-12 text-center">
+        <a href="javascript:;" onclick="srcpage('view-platform/new_add_must_answer2.html')" class="btn btn-info">下一步</a></div>
+    </div>
     <div class="app__content js-app-main" id="PhoneEditAdmin">
     </div>
 </div>
 <script type="text/javascript" src="js/public.js"></script>
-<script type="text/javascript">
-    $("body").off();
-    fileobj = $.ajax({ type:"GET", url:"plugins/PowerPage/PowerPage.html", dataType:"html", async:false });
-    $("#PhoneEditAdmin").html( fileobj.responseText); //ajax打开手机编辑界面
-</script>

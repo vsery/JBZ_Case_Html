@@ -14,15 +14,15 @@
     <div class="row">
         <div class="col-lg-12">
             <ul class="nav nav-tabs" role="tablist">
-                <li role="presentation" class="active"><a href="#prod_commission_tab" aria-controls="prod_commission_tab" role="tab" data-toggle="tab">产品分佣</a></li>
-                <li role="presentation"><a href="#not_commission_tab" aria-controls="not_commission_tab" role="tab" data-toggle="tab">不计分佣</a></li>
+                <li role="presentation"><a href="#repeat_buy_tab" aria-controls="repeat_buy_tab" role="tab" data-toggle="tab">复购分佣</a></li>
+                <li role="presentation"><a href="#not_repeat_tab" aria-controls="not_repeat_tab" role="tab" data-toggle="tab">不计复购</a></li>
             </ul>
             <div class="tab-content">
-                <div role="tabpanel" class="tab-pane active" id="prod_commission_tab">
+                <div role="tabpanel" class="tab-pane" id="repeat_buy_tab">
                     <nav class="navbar navbar-default">
                         <div class="container-fluid">
                             <div class="collapse navbar-collapse">
-                                <ul class="nav navbar-nav"><li><a href="javascript:;" class='btn' data-toggle="modal" data-target="#cash_prod_modal">添加</a></li></ul>
+                                <ul class="nav navbar-nav"><li><a href="javascript:;" class='btn' data-toggle="modal" data-target="#repeat_buy_modal">添加</a></li></ul>
                                 <div class="navbar-form navbar-right" role="search">
                                     <div class="input-group"><input type="text" class="form-control" placeholder="请输入产品名称"></div>
                                     <a href="javascript:;" class="btn btn-info">查询</a>
@@ -41,7 +41,7 @@
                             </tr></thead>
                             <tbody class="text-center">
                                 <tr>
-                                    <td>青果槟榔黑色包装</td>
+                                    <td>老湘潭大包装</td>
                                     <td><ul>
                                         <li>99.9</li>
                                         <li>99.9</li>
@@ -57,73 +57,13 @@
                                         <li>粉丝</li>
                                     </ul></td>
                                     <td><ul>
-                                        <li>4.55</li>
-                                        <li>3.55</li>
-                                        <li>2.55</li>
-                                        <li>1.55</li>
-                                        <li>0.55</li>
+                                        <li>7.15</li>
+                                        <li>6.15</li>
+                                        <li>5.15</li>
+                                        <li>4.15</li>
+                                        <li>3.15</li>
                                     </ul></td>
-                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#cash_prod_modal"><i class="fa fa-edit"></i> 修改 </a><br/>
-                                    <div class="close_bomb">
-                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
-                                        <div class="close_box text-right">
-                                            <span class='colse_txt text-center'>您确定删除么?</span>
-                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
-                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
-                                        </div>
-                                    </div></td>
-                                </tr>
-                                <tr>
-                                    <td>高档槟榔味赢天下</td>
-                                    <td>99.9</td>
-                                    <td>粉丝</td>
-                                    <td>2.81</td>
-                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#cash_prod_modal"><i class="fa fa-edit"></i> 修改 </a><br/>
-                                    <div class="close_bomb">
-                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
-                                        <div class="close_box text-right">
-                                            <span class='colse_txt text-center'>您确定删除么?</span>
-                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
-                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
-                                        </div>
-                                    </div></td>
-                                </tr>
-                                <tr>
-                                    <td>高档槟榔</td>
-                                    <td>99.9</td>
-                                    <td>粉丝</td>
-                                    <td>2.81</td>
-                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#cash_prod_modal"><i class="fa fa-edit"></i> 修改 </a><br/>
-                                    <div class="close_bomb">
-                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
-                                        <div class="close_box text-right">
-                                            <span class='colse_txt text-center'>您确定删除么?</span>
-                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
-                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
-                                        </div>
-                                    </div></td>
-                                </tr>
-                                <tr>
-                                    <td>口味王槟郎</td>
-                                    <td>99.9</td>
-                                    <td>粉丝</td>
-                                    <td>2.81</td>
-                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#cash_prod_modal"><i class="fa fa-edit"></i> 修改 </a><br/>
-                                    <div class="close_bomb">
-                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
-                                        <div class="close_box text-right">
-                                            <span class='colse_txt text-center'>您确定删除么?</span>
-                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
-                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
-                                        </div>
-                                    </div></td>
-                                </tr>
-                                <tr>
-                                    <td>口味王青果槟榔</td>
-                                    <td>99.9</td>
-                                    <td>粉丝</td>
-                                    <td>2.81</td>
-                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#cash_prod_modal"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#repeat_buy_modal"><i class="fa fa-edit"></i> 修改 </a><br/>
                                     <div class="close_bomb">
                                         <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
                                         <div class="close_box text-right">
@@ -137,24 +77,20 @@
                         </table>
                         <nav class='navbar-right'>
                             <ul class="pagination">
-                                <li><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                <li class="disabled"><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
                                 <li class="active"><a href="javascript:;">1</a></li>
-                                <li><a href="javascript:;">2</a></li>
-                                <li><a href="javascript:;">3</a></li>
-                                <li><a href="javascript:;">4</a></li>
-                                <li><a href="javascript:;">5</a></li>
-                                <li><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                                <li class="disabled"><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
                             </ul>
                         </nav>
-                    </div>
+                    </div>                    
                 </div>
-                <div role="tabpanel" class="tab-pane" id="not_commission_tab">
+                <div role="tabpanel" class="tab-pane" id="not_repeat_tab">
                     <div class="navbar navbar-default modal-body">
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="input-group">
                                     <span class="input-group-addon">产品名称</span>
-                                    <input class="form-control" placeholder="请输入不计算佣金产品" type="text">
+                                    <input class="form-control" placeholder="请输入不计算佣金复购产品" type="text">
                                     <div class="input-group-btn">
                                         <a class="btn btn-default" data-toggle="modal" data-target="#prod_list">添加产品</a>
                                     </div>
@@ -183,39 +119,14 @@
                                         </div>
                                     </div></td>
                                 </tr>
-                                <tr>
-                                    <td>青果槟榔黑色包装3</td>
-                                    <td><div class="close_bomb">
-                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
-                                        <div class="close_box text-right">
-                                            <span class='colse_txt text-center'>您确定删除么?</span>
-                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)" onclick="del(this)">确定</a>
-                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
-                                        </div>
-                                    </div></td>
-                                </tr>
-                                <tr>
-                                    <td>青果槟榔黑色包装4</td>
-                                    <td><div class="close_bomb">
-                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
-                                        <div class="close_box text-right">
-                                            <span class='colse_txt text-center'>您确定删除么?</span>
-                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)" onclick="del(this)">确定</a>
-                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
-                                        </div>
-                                    </div></td>
-                                </tr>
                             </tbody>
                         </table>
                         <nav class='navbar-right'>
                             <ul class="pagination">
                                 <li><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                                <li class="active"><a href="javascript:;">1</a></li>
-                                <li><a href="javascript:;">2</a></li>
-                                <li><a href="javascript:;">3</a></li>
-                                <li><a href="javascript:;">4</a></li>
-                                <li><a href="javascript:;">5</a></li>
-                                <li><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                                <li><a href="javascript:;">1</a></li>
+                                <li class="active"><a href="javascript:;">2</a></li>
+                                <li class="disabled"><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
                             </ul>
                         </nav>
                     </div>
@@ -224,12 +135,12 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="cash_prod_modal" tabindex="-1" role="dialog" aria-labelledby="cash_prod_modalLabel"><!--分销产品分佣设置-->
+<div class="modal fade" id="repeat_buy_modal" tabindex="-1" role="dialog" aria-labelledby="cash_prod_modalLabel"><!--分销产品复购分佣设置-->
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <a class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></a>
-                <h4 class="modal-title" id="cash_prod_modalLabel">产品分佣</h4>
+                <h4 class="modal-title" id="cash_prod_modalLabel">复购分佣</h4>
             </div>
             <div class="modal-body">
                 <div class="row">
