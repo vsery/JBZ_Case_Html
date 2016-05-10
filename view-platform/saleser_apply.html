@@ -1,0 +1,237 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb">
+        <li><a href="index.html">首页</a></li>
+        <li class="active">申请审核</li>
+    </ol>
+    <div class="row">
+        <div class="col-lg-12">
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#applySaleserTab" aria-controls="applySaleserTab" role="tab" data-toggle="tab">申请审核</a></li>
+                <li role="presentation"><a href="#okApplyTab" aria-controls="okApplyTab" role="tab" data-toggle="tab">通过成员</a></li>
+                <li role="presentation"><a href="#notApplyTab" aria-controls="notApplyTab" role="tab" data-toggle="tab">拒绝成员</a></li>
+            </ul>
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane active" id="applySaleserTab">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="javascript:;" class="btn close_btn" data-toggle="modal" data-target="#myModal">通过</a></li>
+                                    <li><div class="close_bomb">
+                                            <a href="javascript:;" class="btn close_btn">拒绝</a>
+                                            <div class="close_box text-right" id="all">
+                                                <span class='colse_txt text-center'>您确定拒绝么?</span>
+                                                <a href="javascript:;" class="btn btn-danger bomb_close_btn error_btn">拒绝</a>
+                                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                            </div>
+                                    </div></li>
+                                </ul>
+                                <div class="navbar-form navbar-right" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="请输入昵称">
+                                    </div>
+                                    <div class="input-group">
+                                        <input class="form-control datetimepicker" placeholder="申请初始时间" type="text">
+                                        <span class="input-group-addon">~</span>
+                                        <input class="form-control datetimepicker" placeholder="申请结束时间" type="text">
+                                    </div>
+                                    <a href="javascript:;" class="btn btn-info">查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center"><input type="checkbox"></th>
+                                    <th class="text-center">微信昵称</th>
+                                    <th class="text-center">微信头像</th>
+                                    <th class="text-center">姓名</th>
+                                    <th class="text-center">手机号</th>
+                                    <th class="text-center">电子邮箱</th>
+                                    <th class="text-center">提交时间</th>
+                                    <th class="text-center">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td><input type="checkbox"></td>
+                                    <td>小戴</td>
+                                    <td><img src="images/fans/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                                    <td>戴亚明</td>
+                                    <td>138384138</td>
+                                    <td class="length">xiaodai@qq.com</td>
+                                    <td>2016-04-22 20:22:22</td>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#myModal"><i class="fa fa-check"></i> 通过</a>
+                                    <div class="close_bomb">
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-close"></i> 拒绝</a>
+                                        <div class="close_box text-right">
+                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                            <a href="javascript:;" class="btn btn-danger bomb_close_btn error_btn">拒绝</a>
+                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                        </div>
+                                    </div></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <nav class='navbar-right'>
+                            <ul class="pagination">
+                                <li class="disabled"><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                <li class="active"><a href="javascript:;">1</a></li>
+                                <li class="disabled"><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="okApplyTab">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse">
+                                <div class="navbar-form navbar-right" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="请输入昵称">
+                                    </div>
+                                    <div class="input-group">
+                                        <input class="form-control datetimepicker" placeholder="通过初始时间" type="text">
+                                        <span class="input-group-addon">~</span>
+                                        <input class="form-control datetimepicker" placeholder="通过结束时间" type="text">
+                                    </div>
+                                    <a href="javascript:;" class="btn btn-info">查询</a>
+                                    <a href="text/commission.et" class="btn btn-warning">下载</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">微信昵称</th>
+                                    <th class="text-center">微信头像</th>
+                                    <th class="text-center">姓名</th>
+                                    <th class="text-center">手机号</th>
+                                    <th class="text-center">电子邮箱</th>
+                                    <th class="text-center">提交时间</th>
+                                    <th class="text-center">状态</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td>小戴</td>
+                                    <td><img src="images/fans/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                                    <td>戴亚明</td>
+                                    <td>138384138</td>
+                                    <td class="length">xiaodai@qq.com</td>
+                                    <td>2016-04-22 20:22:22</td>
+                                    <td>通过</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <nav class='navbar-right'>
+                            <ul class="pagination">
+                                <li class="disabled"><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                <li class="active"><a href="javascript:;">1</a></li>
+                                <li class="disabled"><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="notApplyTab">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse">
+                                <div class="navbar-form navbar-right" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="请输入昵称">
+                                    </div>
+                                    <div class="input-group">
+                                        <input class="form-control datetimepicker" placeholder="拒绝初始时间" type="text">
+                                        <span class="input-group-addon">~</span>
+                                        <input class="form-control datetimepicker" placeholder="拒绝结束时间" type="text">
+                                    </div>
+                                    <a href="javascript:;" class="btn btn-info">查询</a>
+                                    <a href="text/commission.et" class="btn btn-warning">下载</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">微信昵称</th>
+                                    <th class="text-center">微信头像</th>
+                                    <th class="text-center">姓名</th>
+                                    <th class="text-center">手机号</th>
+                                    <th class="text-center">电子邮箱</th>
+                                    <th class="text-center">提交时间</th>
+                                    <th class="text-center">状态</th>
+                                </tr>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr>
+                                    <td>小戴</td>
+                                    <td><img src="images/fans/teacher1.jpg" alt="..." class="img-circle img-small"></td>
+                                    <td>戴亚明</td>
+                                    <td>138384138</td>
+                                    <td class="length">xiaodai@qq.com</td>
+                                    <td>2016-04-22 20:22:22</td>
+                                    <td>拒绝</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <nav class='navbar-right'>
+                            <ul class="pagination">
+                                <li class="disabled"><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                <li class="active"><a href="javascript:;">1</a></li>
+                                <li class="disabled"><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="js-message success">
+    <div class="message-suceess">销售员激活了,可以使用生成海报功能!</div>
+</div>
+<div class="js-message error">
+    <div class="message-error">销售员冻结了,不能使用生成海报功能!</div>
+</div>
+<div class="mask hide"></div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">通过审核/设定等级</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 设置等级 <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="btn" href="javascript:;">太阳</a></li>
+                                    <li><a class="btn" href="javascript:;">月亮</a></li>
+                                    <li><a class="btn" href="javascript:;">星星</a></li>
+                                    <li><a class="btn" href="javascript:;">会员</a></li>
+                                    <li><a class="btn" href="javascript:;">粉丝</a></li>
+                                </ul>
+                            </div>
+                            <input type="text" class="form-control" placeholder="分成等级" disabled="disable">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-success success_btn" data-dismiss="modal">确定</a>
+                <a class="btn btn-default" data-dismiss="modal">取消</a>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="js/public.js"></script>
