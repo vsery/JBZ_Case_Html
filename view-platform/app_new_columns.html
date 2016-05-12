@@ -14,7 +14,7 @@
     fileobj = $.ajax({ type:"GET", url:"plugins/PowerPage/PowerPage.html", dataType:"html", async:false });
     $("#PhoneEditAdmin").html( fileobj.responseText); //ajax打开手机编辑界面
     $(".ui-sortable").sortable({ containment: 'parent'});
-    PowerPage.Common.CSH([{ name:"pagetitle", title:"新建微页面标题", config:true, candelete:false }],0);
+    PowerPage.Common.CSH([{ name:"categroy", categroyname:"新建栏目页标题", config:true, candelete:false }],3);
     $("input.btn-save").click(function() { alert('保存成功'); });
     $("input.btn-preview").click(function() { alert('预览成功'); });
 </script>

@@ -18860,8 +18860,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .controls-card {
-    padding: 20px;
-    margin-right: 20px;
+    /*padding: 20px;
+    margin-right: 20px;*/
+    padding: 15px;
+    margin-right: 15px;
     border: 1px solid #e5e5e5;
     background: #fff
 }

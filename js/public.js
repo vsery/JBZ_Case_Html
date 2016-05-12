@@ -76,6 +76,32 @@ function readFile() {
         result.innerHTML = '<img src="' + this.result + '" alt=""/>'
     }
 }
+
+// 显示时间面板
+function ShowTime(e) {
+    $(e).datetimepicker({
+        lang:'ch',
+        datepicker:false,
+        format:'H:i'
+    });
+}
+
+// 初始化时间面板
+function ShowDate(e) {
+    $(e).datetimepicker({
+        lang:'ch',
+        format: 'Y-m-d H:i:s'
+    });
+}
+// 显示日期面板
+function ShowDateNotTime(e) {
+    $(e).datetimepicker({
+        lang:'ch',
+        timepicker:false,
+        format:'Y-m-d'
+    });
+}
+
 $(function () {
     $("body").off();
     

@@ -53,7 +53,6 @@ a.thumbnail { width: auto; height: auto; max-width: 80px; max-height: 80px; marg
 .modal-body { padding: 15px 15px 0 15px; }
 .left_tab_nav { display: none; }
 .left_tab_nav.open { display: block; }
-.fa { width: 16px; height: 16px; text-align: center; }
 .fa-2x, .fa-3x, .fa-4x, .fa-5x { width: auto; height: auto; }
 .fa-caret-left { margin-left: -15px; }
 .fa-caret-right { margin-right: -15px; }
@@ -80,7 +79,7 @@ a.thumbnail { width: auto; height: auto; max-width: 80px; max-height: 80px; marg
 .input-group-btn:last-child > .btn { border-top-right-radius: 4px !important; border-bottom-right-radius: 4px !important; }
 .input-group-btn .fa { font-size: 15px; height: 20px; line-height: 20px; text-align: center; }
 .form-group .form-control:last-child { border-top-left-radius: 0; border-bottom-left-radius: 0; }
-.form-horizontal .control-group { min-height: 30px; `}
+/*.form-horizontal .control-group { min-height: 30px; }*/
 .breadcrumb > li.float-right:before { content: "\f059"; color: #337ab7; font: normal normal normal 14px/1 FontAwesome; }
 .prod-info { position: absolute; width: 20em; height: 32em; left: 50%; margin-left: -10em; top: 9em; overflow-y: hidden; overflow-x: hidden; background-color: #eee; }
 .prod { padding-top: 5px; padding-bottom: 5px; background-color: white; width: 20em; line-height: 3em; padding-right: 5px; padding-left: 5px; border-radius: 10px; margin-bottom: 15px; }

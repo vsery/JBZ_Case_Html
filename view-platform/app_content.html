@@ -1,14 +1,14 @@
 <div id="page-wrapper">
-    <ol class="breadcrumb"> <!-- 路径导航 -->
+    <ol class="breadcrumb"> 
         <li><a href="index.html">首页</a></li>
-        <li><a href="javascript:;" onclick="srcpage('view-platform/Raise_vote.html')">投票管理</a></li>
-        <li class="active">投票项列表</li>
-    </ol>    
+        <li class="active">内容管理</li>
+        <li class="float-right"><a href="javascript:;">操作帮助</a></li>
+    </ol>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li><a href="javascript:;" class="btn" onclick="srcpage('view-platform/Raise_vote_admin_add.html')">新建</a></li>
+                <ul class="nav navbar-nav">            
+                    <li><a href="javascript:;" class='btn' onclick="srcpage('view-platform/app_new_page.html')" >添加</a></li>
                     <li>
                         <div class="close_bomb">
                             <a href="javascript:;" class="btn close_btn">删除</a>
@@ -20,49 +20,47 @@
                         </div>
                     </li>
                 </ul>
-                <form class="navbar-form navbar-right" role="search">
+                <div class="navbar-form navbar-right" role="search">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="请输入投票选项">
-                    </div>
+                        <input type="text" class="form-control" placeholder="请输入产品名称/商品码"></div>
                     <a href="javascript:;" class="btn btn-info">查询</a>
-                </form>
+                </div>
             </div>
         </div>
     </nav>
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-12 ">
             <div class="table-responsive">
                 <table class="table table-condensed table-hover">
                     <thead>
                         <tr>
-                            <th class="text-center"><input type="checkbox"></th>
-                            <th class="text-center">名称</th>
-                            <th class="text-center">数量</th>
-                            <th class="text-center">地址</th>
-                            <th class="text-center">单价</th>
-                            <th class="text-center">联系</th>
-                            <th class="text-center">展示</th>
-                            <th class="text-center">介绍</th>
-                            <th class="text-center">状态</th>
-                            <th class="text-center">票数</th>
+                            <th class="text-center">页面标题</th>
+                            <th class="text-center">所谓图</th>
+                            <th class="text-center">所属类别</th>
+                            <th class="text-center">创建时间</th>
                             <th class="text-center">操作</th>
                         </tr>
                     </thead>
                     <tbody class="text-center">
                         <tr>
-                            <td><input type="checkbox"></td>
-                            <td>我要上农货</td>
-                            <td>12</td>
-                            <td class="leng">湖南长沙岳麓区银盆岭大桥西世茂铂翠湾2期2栋2单元805</td>
-                            <td>11</td>
-                            <td>07319881104</td>
-                            <td>prod_head1.jpg</td>
-                            <td class="leng">我需要上农货我需要上农货</td>
-                            <td>通过</td>
-                            <td>30</td>
-                            <td>
-                                <a href="javascript:;" class="btn" onclick="srcpage('view-platform/Raise_vote_admin_add.html')"><i class="fa fa-fw fa-edit"></i> 修改</a><br/>
-                                <a href="javascript:;" class="btn success_btn"><i class="fa fa-fw fa-check"></i> 审核</a><br/>
+                            <td class="length">绿色建材</td>
+                            <td><img src="images/books/book05.jpg" alt="" class="img-small"></td>
+                            <td>早会</td>
+                            <td>2016-03-23 18:50:06</td>
+                            <td class="text-right">
+                                <a href="javascript:;" class="btn" onclick="srcpage('view-platform/app_new_page.html')"><i class="fa fa-fw fa-home" ></i> 主页</a>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn"><i class="fa fa-fw fa-link"></i> 链接</a>
+                                    <div class="close_box text-right">                                    
+                                        <div class="input-group">
+                                            <input class="form-control" placeholder="http://wap.koudaitong.com/v2/category/pqbxzebn" disabled="disabled" type="text">
+                                            <span class="input-group-btn">
+                                                <a href="javascript:;" class="btn btn-default bomb_close_btn">复制</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div><br/>
+                                <a href="javascript:;" class="btn" onclick="srcpage('view-platform/app_new_page.html')"><i class="fa fa-fw fa-edit" ></i> 修改</a>
                                 <div class="close_bomb">
                                     <a href="javascript:;" class="btn close_btn"><i class="fa fa-fw fa-trash-o"></i> 删除</a>
                                     <div class="close_box text-right">
@@ -85,8 +83,5 @@
             <li class="disabled"><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
         </ul>
     </nav>
-    <div class="js-message success">
-        <div class="message-suceess">投票选项审核成功!</div>
-    </div>
 </div>
-<script type="text/javascript" src='js/public.js'></script>
+<script type="text/javascript" src="js/public.js"></script>

@@ -1,7 +1,7 @@
 <div id="page-wrapper">
     <ol class="breadcrumb"> 
         <li><a href="index.html">首页</a></li>
-        <li class="active">产品分佣</li>
+        <li class="active">复购分佣</li>
     </ol>
     <div class="row">
         <div class="col-lg-12">
@@ -33,39 +33,68 @@
                     <div class="table-responsive">
                         <table class="table table-condensed table-hover">
                             <thead><tr>
-                                    <th class="text-center">分成产品名称</th>
-                                    <th class="text-center">产品销售价(元)</th>
-                                    <th class="text-center">享受分佣等级</th>
-                                    <th class="text-center">分佣多少(元)</th>
+                                    <th class="text-center">享受分佣(等级)</th>
+                                    <th class="text-center">收益方式</th>
+                                    <th class="text-center">一级分佣(%)</th>
+                                    <th class="text-center">二级分佣(%)</th>
+                                    <th class="text-center">三级分佣(%)</th>
+                                    <th class="text-center">自己分佣(%)</th>
                                     <th class="text-center">操作</th>
                             </tr></thead>
                             <tbody class="text-center">
                                 <tr>
-                                    <td>老湘潭大包装</td>
-                                    <td><ul>
-                                        <li>99.9</li>
-                                        <li>99.9</li>
-                                        <li>99.9</li>
-                                        <li>99.9</li>
-                                        <li>99.9</li>
-                                    </ul></td>
-                                    <td><ul>
-                                        <li>太阳</li>
-                                        <li>月亮</li>
-                                        <li>星星</li>
-                                        <li>会员</li>
-                                        <li>粉丝</li>
-                                    </ul></td>
-                                    <td><ul>
-                                        <li>7.15</li>
-                                        <li>6.15</li>
-                                        <li>5.15</li>
-                                        <li>4.15</li>
-                                        <li>3.15</li>
-                                    </ul></td>
-                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#repeat_buy_modal"><i class="fa fa-edit"></i> 修改 </a><br/>
+                                    <td>全部</td>
+                                    <td>佣金</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#repeat_buy_modal"><i class="fa fa-fw fa-edit"></i> 修改 </a><br/></td>
+                                </tr>
+                                <tr>
+                                    <td>太阳</td>
+                                    <td>佣金</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#repeat_buy_modal"><i class="fa fa-fw fa-edit"></i> 修改 </a><br/>
                                     <div class="close_bomb">
-                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-fw fa-trash-o"></i> 删除</a>
+                                        <div class="close_box text-right">
+                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                        </div>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>星星</td>
+                                    <td>佣金</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#repeat_buy_modal"><i class="fa fa-fw fa-edit"></i> 修改 </a><br/>
+                                    <div class="close_bomb">
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-fw fa-trash-o"></i> 删除</a>
+                                        <div class="close_box text-right">
+                                            <span class='colse_txt text-center'>您确定删除么?</span>
+                                            <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                            <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                        </div>
+                                    </div></td>
+                                </tr>
+                                <tr>
+                                    <td>月亮</td>
+                                    <td>佣金</td>
+                                    <td>2</td>
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td><a href="javascript:;" class="btn" data-toggle="modal" data-target="#repeat_buy_modal"><i class="fa fa-fw fa-edit"></i> 修改 </a><br/>
+                                    <div class="close_bomb">
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-fw fa-trash-o"></i> 删除</a>
                                         <div class="close_box text-right">
                                             <span class='colse_txt text-center'>您确定删除么?</span>
                                             <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
@@ -111,7 +140,7 @@
                                 <tr>
                                     <td>青果槟榔黑色包装2</td>
                                     <td><div class="close_bomb">
-                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                                        <a href="javascript:;" class="btn close_btn"><i class="fa fa-fw fa-trash-o"></i> 删除</a>
                                         <div class="close_box text-right">
                                             <span class='colse_txt text-center'>您确定删除么?</span>
                                             <a href="javascript:;" class="btn btn-info" onclick="del(this)" onclick="del(this)">确定</a>
@@ -135,7 +164,7 @@
         </div>
     </div>
 </div>
-<div class="modal fade" id="repeat_buy_modal" tabindex="-1" role="dialog" aria-labelledby="cash_prod_modalLabel"><!--分销产品复购分佣设置-->
+<div class="modal fade" id="repeat_buy_modal" tabindex="-1" role="dialog" aria-labelledby="cash_prod_modalLabel">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -146,24 +175,10 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="input-group">
-                            <span class="input-group-addon">产品:</span>
-                            <input type="text" class="form-control" placeholder="'有赞'对应产品">
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="input-group">
-                            <span class="input-group-addon">价格:</span>
-                            <input type="text" class="form-control" placeholder="产品销售价">
-                            <span class="input-group-addon">元</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="input-group">
                             <div class="input-group-btn">
                                 <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="权重越大,优先级越高"> 分佣等级 <span class="caret"></span></a>
                                 <ul class="dropdown-menu">
+                                    <li><a class="btn" href="javascript:;">全部</a></li>
                                     <li><a class="btn" href="javascript:;">太阳</a></li>
                                     <li><a class="btn" href="javascript:;">月亮</a></li>
                                     <li><a class="btn" href="javascript:;">星星</a></li>
@@ -176,60 +191,55 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="分多少">
-                            <span class="input-group-addon">元</span>
                             <div class="input-group-btn">
-                                <a class="btn btn-default" onclick="delrow(this)"><i class="fa big fa-times"></i></a>
+                                <button class="btn btn-default" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 收益方式 <span class="caret"></span></button>
+                                <ul class="dropdown-menu" aria-labelledby="prod_cate_list">
+                                    <li><a href="javascript:;" class="btn">佣金</a></li>
+                                    <li><a href="javascript:;" class="btn">积分</a></li>
+                                </ul>
                             </div>
+                            <input id="gift" class="form-control" value="佣金" placeholder="" disabled="disabled">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">一级分佣</span>
+                            <input type="text" class="form-control" placeholder="请输入一级分佣">
+                            <span class="input-group-addon">%</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">二级分佣</span>
+                            <input type="text" class="form-control" placeholder="请输入二级分佣">
+                            <span class="input-group-addon">%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">三级分佣</span>
+                            <input type="text" class="form-control" placeholder="请输入三级分佣">
+                            <span class="input-group-addon">%</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">自己分佣</span>
+                            <input type="text" class="form-control" placeholder="请输入自己分佣">
+                            <span class="input-group-addon">%</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <a class="btn btn-default float-left" onclick="addrow(this)"><i class="fa big fa-plus"></i></a>
-                <a class="btn btn-info">保存</a>
+                <a class="btn btn-info" data-dismiss="modal">保存</a>
                 <a class="btn btn-default" data-dismiss="modal">取消</a>
             </div>
         </div>
     </div>
 </div>
-<script type="text/javascript">
-    function delrow(e) {
-        $(e).parents("div.row").remove();
-    }
-    function addrow(e) {
-        $(e).parents(".modal-dialog").find('.modal-body').append('<div class="row">'+
-            '<div class="col-lg-6">'+
-                '<div class="input-group">'+
-                    '<div class="input-group-btn">'+
-                        '<a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="权重越大,优先级越高"> 分佣等级 <span class="caret"></span></a>'+
-                        '<ul class="dropdown-menu">'+
-                            '<li><a class="btn" href="javascript:;">太阳</a></li>'+
-                            '<li><a class="btn" href="javascript:;">月亮</a></li>'+
-                            '<li><a class="btn" href="javascript:;">星星</a></li>'+
-                            '<li><a class="btn" href="javascript:;">会员</a></li>'+
-                            '<li><a class="btn" href="javascript:;">粉丝</a></li>'+
-                        '</ul>'+
-                    '</div>'+
-                    '<input type="text" class="form-control" placeholder="分佣等级" disabled="disable">'+
-                '</div>'+
-            '</div>'+
-            '<div class="col-lg-6">'+
-                '<div class="input-group">'+
-                    '<input type="text" class="form-control" placeholder="分多少">'+
-                    '<span class="input-group-addon">元</span>'+
-                    '<div class="input-group-btn">'+
-                        '<a class="btn btn-default" onclick="delrow(this)"><i class="fa big fa-times"></i></a>'+
-                    '</div>'+
-                '</div>'+
-            '</div>'+
-        '</div>');
-        //下拉按钮内容显示到文本框
-        $('.dropdown-menu li').on("click", "a", function() {
-            dropdown($(this));
-            form_dropdown($(this));
-            $('.danger_txt').removeClass("in");
-        });
-    }
-</script>
 <script type="text/javascript" src='js/public.js'></script>

@@ -28,24 +28,19 @@
     </div>
 </div>
 <div id="FileAdmin"></div>
-<script type="text/javascript">
-    fileobj = $.ajax({ type:"GET", url:"plugins/resourceManager/FileAdmin.html", dataType:"html", async:false });
-    $("#FileAdmin").html( fileobj.responseText); //ajax加载资源管理器
-</script>
-<script type="text/javascript" src="plugins/PowerPage/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="plugins/PowerPage/ueditor/ueditor.config.pc.js"></script>
 <script type="text/javascript" src="plugins/PowerPage/ueditor/ueditor.all.js"></script>
 <script type="text/javascript" src="plugins/PowerPage/ueditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" src="plugins/PowerPage/select.js"></script>
+<script type="text/javascript" src="plugins/PowerPage/jquery-ui.js"></script>
 <script type="text/javascript" src="plugins/PowerPage/PowerPage.js"></script>
 <script type="text/javascript">
 $(function(){
-    PowerPage.Common.CSH([{
-        name:"pagetitle",config:true,candelete:false
-    }],1);
-    $("input.btn-save").click(function() {
-        alert('保存成功');
-    });
-    $("input.btn-preview").click(function() {
-        alert('预览成功');
-    });
+    fileobj = $.ajax({ type:"GET", url:"plugins/resourceManager/FileAdmin.html", dataType:"html", async:false });
+    $("#FileAdmin").html( fileobj.responseText); //ajax加载资源管理器
+    // $(".ui-sortable").sortable({ containment: 'parent'});
+    // PowerPage.Common.CSH([{ name:"pagetitle",config:true,candelete:false }],0);
+    // $("input.btn-save").click(function() { alert('保存成功'); });
+    // $("input.btn-preview").click(function() { alert('预览成功'); });
 });
 </script>

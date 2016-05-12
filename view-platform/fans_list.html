@@ -173,22 +173,22 @@
                          渠道等级: {{fan.ChannelGrade}} <br/>
                          OTO等级: {{fan.OTOGrade}} <br/>
                          注册时间: {{fan.AddTime}} </td>
-                    <td> 本月消费: <i class="fa fa-rmb"></i> {{fan.MonthConsumer}} <br/>
-                         账号余额: <i class="fa fa-rmb"></i> {{fan.Banlance}} <br/>
+                    <td> 本月消费: <i class="fa fa-fw fa-rmb"></i> {{fan.MonthConsumer}} <br/>
+                         账号余额: <i class="fa fa-fw fa-rmb"></i> {{fan.Banlance}} <br/>
                          积分: {{fan.Initial}} </td>
                     <td> 招募人: {{fan.RecruitPeople}} <br/>
                          下级分销: 1( {{fan.InitialFirstLevel}} ), 2( {{fan.InitialSecondLevel}} ), 3( {{fan.InitialThreeLevel}} ) <br/>
                          渠道成员: 1( {{fan.ChannelFirstLevel}} ), 2( {{fan.ChannelSecondLevel}} ), 3( {{fan.ChannelThreeLevel}} ) <br/>
                          OTO成员: 1( {{fan.OTOFirstLevel}} ), 2( {{fan.OTOSecondLevel}} ), 3( {{fan.OTOThreeLelvel}} ) </td>
                     <td>
-                        <a href="javascript:;" class="btn" data-toggle="modal" data-target="#leader_modal"><i class="fa fa-user-secret"></i> 招募</a><br/>
-                        <a href="javascript:;" class="btn"><i class="fa fa-eye"></i> 详情</a>
-                        <a href="text/aGQ8hb19.et" class="btn"><i class="fa fa-cloud-download"></i> 导出</a><br/>
-                        <a href="javascript:;" class="btn" data-toggle="modal" data-target="#welfare_modal"><i class="fa fa-gift"></i> 福利</a>
-                        <a href="javascript:;" class="btn" data-toggle="modal" data-target="#pass_modal"><i class="fa fa-key"></i> 改密</a><br/>
-                        <a href="javascript:;" class="btn"><i class="fa fa-edit"></i> 编辑</a>
+                        <a href="javascript:;" class="btn" data-toggle="modal" data-target="#leader_modal"><i class="fa fa-fw fa-user-secret"></i> 招募</a><br/>
+                        <a href="javascript:;" class="btn"><i class="fa fa-fw fa-eye"></i> 详情</a>
+                        <a href="text/aGQ8hb19.et" class="btn"><i class="fa fa-fw fa-cloud-download"></i> 导出</a><br/>
+                        <a href="javascript:;" class="btn" data-toggle="modal" data-target="#welfare_modal"><i class="fa fa-fw fa-gift"></i> 福利</a>
+                        <a href="javascript:;" class="btn" data-toggle="modal" data-target="#pass_modal"><i class="fa fa-fw fa-key"></i> 改密</a><br/>
+                        <a href="javascript:;" class="btn"><i class="fa fa-fw fa-edit"></i> 编辑</a>
                         <div class="close_bomb">
-                            <a href="javascript:;" class="btn close_btn"><i class="fa fa-trash-o"></i> 删除</a>
+                            <a href="javascript:;" class="btn close_btn"><i class="fa fa-fw fa-trash-o"></i> 删除</a>
                             <div class="close_box text-right">
                                 <span class='colse_txt text-center'>您确定删除么?</span>
                                 <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
@@ -215,25 +215,9 @@
         </table>
         <nav class='navbar-right'>
             <ul class="pagination">
-                <li>
-                    <a href="javascript:;" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="javascript:;">1</a>
-                </li>
-                <li class="active">
-                    <a href="javascript:;">2</a>
-                </li>
-                <li>
-                    <a href="javascript:;">3</a>
-                </li>
-                <li>
-                    <a href="javascript:;" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
+                <li class="disabled"><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                <li class="active"><a href="javascript:;">1</a></li>
+                <li class="disabled"><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
             </ul>
         </nav>
     </div>
@@ -483,7 +467,7 @@
                                         <td><img src="images/fans/teacher3.jpg" alt="..." class="img-circle img-small"></td>
                                         <td>太阳</td>
                                         <td>
-                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-user-secret"></i> 设为招募人</a>
+                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-fw fa-user-secret"></i> 设为招募人</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -491,7 +475,7 @@
                                         <td><img src="images/fans/teacher2.jpg" alt="..." class="img-circle img-small"></td>
                                         <td>太阳</td>
                                         <td>
-                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-user-secret"></i> 设为招募人</a>
+                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-fw fa-user-secret"></i> 设为招募人</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -499,7 +483,7 @@
                                         <td><img src="images/fans/teacher1.jpg" alt="..." class="img-circle img-small"></td>
                                         <td>月亮</td>
                                         <td>
-                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-user-secret"></i> 设为招募人</a>
+                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-fw fa-user-secret"></i> 设为招募人</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -507,7 +491,7 @@
                                         <td><img src="images/fans/teacher5.jpg" alt="..." class="img-circle img-small"></td>
                                         <td>月亮</td>
                                         <td>
-                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-user-secret"></i> 设为招募人</a>
+                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-fw fa-user-secret"></i> 设为招募人</a>
                                         </td>
                                     </tr>
                                     <tr>
@@ -515,38 +499,16 @@
                                         <td><img src="images/fans/teacher4.jpg" alt="..." class="img-circle img-small"></td>
                                         <td>太阳</td>
                                         <td>
-                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-user-secret"></i> 设为招募人</a>
+                                            <a href="javascript:;" class="btn" data-dismiss="modal"><i class="fa fa-fw fa-user-secret"></i> 设为招募人</a>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                             <nav class='navbar-right'>
                                 <ul class="pagination">
-                                    <li>
-                                        <a href="javascript:;" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">1</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">2</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">3</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">4</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;">5</a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:;" aria-label="Next">
-                                            <span aria-hidden="true">&raquo;</span>
-                                        </a>
-                                    </li>
+                                    <li class="disabled"><a href="javascript:;" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                                    <li class="active"><a href="javascript:;">1</a></li>
+                                    <li class="disabled"><a href="javascript:;" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
                                 </ul>
                             </nav>
                         </div>

@@ -1,0 +1,149 @@
+<!-- <!DOCTYPE html> -->
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../../font/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/jquery.datetimepicker.css">    
+        <link rel="stylesheet" type="text/css" href="../../css/pc.css">
+        <link rel="stylesheet" type="text/css" href="../../css/assembly.css">
+        <link rel="stylesheet" type="text/css" href="../../css/admin-youzan.css">
+        <script type="text/javascript" src='../../js/jquery.min.js'></script>
+        <script type="text/javascript" src="../../js/bootstrap.js"></script>
+    </head>
+<body>
+
+<header class="ui-header">
+    <div class="ui-header-inner clearfix">
+        <h1 class="ui-header-logo">
+            <a class="top_nav_btn index_btn" href="javascript:;" onclick="srcpage('view-platform/index_body.html')" title="希尚科技"></a>
+        </h1>
+        <nav class="ui-header-nav">
+            <ul class="clearfix" id='top_nav_btn'>
+                <li class="divide">|</li>
+                <li><a class="top_nav_btn btn prod_btn" href="javascript:;" onclick="srcpage('view-platform/product_list.html')">产品</a></li>
+                <li><a class="top_nav_btn btn qecode_btn" href="javascript:;" onclick="srcpage('view-platform/code_batch_list.html')">二维码</a></li>
+                <li class="divide">|</li>
+                <li><a class="top_nav_btn btn merketing_btn" href="javascript:;" onclick="srcpage('view-platform/activity_list.html')">营销</a></li>
+                <li><a class="top_nav_btn btn distr_btn" href="javascript:;" onclick="srcpage('view-platform/cash_initial_setting.html')">分销</a></li>
+                <li><a class="top_nav_btn btn oto_btn" href="javascript:;" onclick="srcpage('view-platform/order_list.html')">o2o</a></li>
+                <li><a class="top_nav_btn btn fans_btn" href="javascript:;" onclick="srcpage('view-platform/fans_list.html')">粉丝</a></li>
+                <li class="divide">|</li>
+                <li><a class="top_nav_btn btn finance_btn" href="javascript:;" onclick="srcpage('view-platform/finance_index.html')">财务</a></li>
+                <li class="divide">|</li>
+                <li><a class="top_nav_btn btn data_btn" href="javascript:;" onclick="srcpage('view-platform/table_list.html')">大数据</a></li>
+                <li class="divide">|</li>
+            </ul>
+        </nav>
+        <div class="ui-header-user ">
+            <div class="customer-wrap"></div>
+            <div class="dropdown hover dropdown-right">
+                <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown">
+                    <span class="txt">
+                        <span class="ellipsis team_name">商家/用户</span>
+                        <span class="dash"> - </span>设置
+                    </span>
+                    <i class="caret"></i>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a class="btn top_nav_btn user_btn" href="javascript:;" onclick="srcpage('view-platform/account_list.html')">账号管理</a></li>
+                    <li><a class="btn top_nav_btn user_btn" href="javascript:;" onclick="srcpage('view-platform/role_list.html')">角色设置</a></li>
+                    <li class="divide"></li>
+                    <li><a class="btn top_nav_btn user_btn" href="javascript:;" onclick="srcpage('view-platform/cash_business_setting.html')">店铺设置</a></li>
+                    <li><a class="btn top_nav_btn user_btn" href="javascript:;" onclick="srcpage('view-platform/cash_wechat_account.html')">微信账号</a></li>
+                    <li><a class="btn top_nav_btn user_btn" href="javascript:;" onclick="srcpage('view-platform/user_setting.html')">基础设置</a></li>
+                    <li><a class="btn top_nav_btn user_btn" href="javascript:;" onclick="srcpage('view-platform/cash_company_payment.html')">付款设置</a></li>
+                    <li class="divide"></li>
+                    <li><a class="btn top_nav_btn user_btn" href="javascript:;" onclick="srcpage('view-platform/user_passtxt.html')">修改密码</a></li>
+                    <li><a class="btn" href="login.html">退出</a></li>
+                </ul>
+            </div>
+        </div>
+        <aside class="ui-sidebar sidebar">
+            <nav class="left_tab_nav index_btn open">
+                <ul><li class="active"><a href="javascript:;" onclick="srcpage('view-platform/index_body.html)">整体概况</a></li></ul>
+            </nav>
+            <nav class="left_tab_nav prod_btn open ">
+                <h4>产品管理</h4>
+                <ul>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/product_list.html')">产品列表</a></li>
+                    <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-platform/product_category_list.html')">产品类别</a></li>
+                </ul>
+            </nav>
+        </aside>
+    </div>
+    </header>
+
+<div class="container">
+    <div class="app">
+        <div class="app-inner">
+            <div class="app-init-container">
+
+                <div id="page-wrapper">
+                    <ol class="breadcrumb"> 
+                        <li><a href="index.html">首页</a></li>
+                        <li><a href="javascript:;" onclick="srcpage('view-platform/activity_list.html')">促销活动</a></li>
+                        <li class="active">活动编辑</li>
+                    </ol>
+
+
+
+
+                    <div class="app-design clearfix">
+                        <div class="app-preview">
+                            <div class="app-header"></div>
+                            <div class="app-entry">
+                                <div class="app-config js-config-region">
+                                </div>
+                                <div class="app-fields js-fields-region ui-sortable">
+                                </div>
+                            </div>
+                            <div class="js-add-region">
+                                <div>
+                                    <div class="app-add-field">
+                                        <h4>添加内容</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="app-sidebar" style="margin-top: 71px;">
+                            <div class="arrow"></div>
+                            <div class="app-sidebar-inner js-sidebar-region">
+                            </div>
+                        </div>
+                        <div class="app-actions" style="bottom: 0px;">
+                            <div class="form-actions text-center">
+                                <input class="btn btn-info btn-save" value="保存发布" data-loading-text="保存发布...">
+                                <input class="btn btn-default btn-preview" value="页面预览" data-loading-text="页面预览...">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="FileAdmin"></div>
+<script type="text/javascript" src="ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="ueditor/ueditor.all.js"></script>
+<script type="text/javascript" src="ueditor/lang/zh-cn/zh-cn.js"></script>
+<script type="text/javascript" src="select.js"></script>
+<script type="text/javascript" src="jquery-ui.js"></script>
+<script type="text/javascript" src="PowerPage.js"></script>
+<script type="text/javascript">
+    $(function(){
+        fileobj = $.ajax({ type:"GET", url:"plugins/resourceManager/FileAdmin.html", dataType:"html", async:false });
+        $("#FileAdmin").html( fileobj.responseText); //ajax加载资源管理器
+        // $(".ui-sortable").sortable({ containment: 'parent'});
+        // PowerPage.Common.CSH([{ name:"pagetitle",config:true,candelete:false }],0);
+        // $("input.btn-save").click(function() { alert('保存成功'); });
+        // $("input.btn-preview").click(function() { alert('预览成功'); });
+    });
+</script>
+</body>
+</html>
