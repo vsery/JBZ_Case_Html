@@ -1,4 +1,3 @@
-
     function AngularList($scope) {
     $scope.phones = [
         {"name": "Nexus S",

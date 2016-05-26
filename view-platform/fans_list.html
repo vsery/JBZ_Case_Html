@@ -1,3 +1,5 @@
+<script type="text/javascript" src="AngularData/fans_list.js"></script>
+<script type="text/javascript" src="AngularData/Angular.min.js"></script>
 <div id="page-wrapper">
     <ol class="breadcrumb">
         <li><a href="index.html">首页</a></li>
@@ -518,9 +520,9 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="AngularData/Angular.min.js"></script>
-<script type="text/javascript" src="AngularData/fans_list.js"></script>
+ 
 <script type="text/javascript">
+$(function () {
     _init_area();
     $("#all_check_btn").click(function () {
         $(this).parents("table").find("input[type='checkbox']").prop('checked', true).attr("checked","checked");
@@ -573,5 +575,6 @@
             $(this).attr("href","javascript:;");
         }
     });
+})
 </script>
 <script type="text/javascript" src="js/public.js"></script>

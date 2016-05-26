@@ -13,7 +13,7 @@ function selectpic(callback, max) {
     _dialog = BootstrapDialog.show({
         title: '图片管理器',
         size: BootstrapDialog.SIZE_WIDE,
-        message: $('<div></div>').load('/home/source'),
+        message: $('<div class=""></div>').load('/home/source'),
         size: "size-wide",
         onshown: function() {
             $("body").scrollTop(_NowScroll);
@@ -35,7 +35,6 @@ $(function() {
     $("body").on("click", ".lflex .image-add", function() {
         if ($(".lflex .logoupload").length == 0) {
             $(".lflex").append('<input style="display:none" class="js-fileupload-input logoupload" type="file>');
-
         }
         alert("123");
         $(".lflex .logoupload").click();

@@ -1,71 +1,96 @@
 $(function() {
-    //  清楚已经绑定JS,重新绑定(以防止事件重复执行)
+    /*  清楚已经绑定JS,重新绑定(以防止事件重复执行)  */
     $("body").off();
-    //  加载 手机端 格式样式
-    $("head").append('<link rel="stylesheet" type="text/css" href="plugins/PowerPage/app.css">');
-    //  初始化菜单 (菜单列表)
+    /*  $("head").append('<script type="text/javascript" src="plugins/PowerPage/uppic.js"></script>');  */
+    /*  初始化菜单 (菜单列表)  */
     $(".js-add-region .app-add-field").append('<ul>' +
-        // '<li><a class="js-new-field" data-field-type="defaultval">默认值       </a></li>' +
-        // '<li><a class="js-new-field" data-field-type="categroy"> 类别          </a></li>' +
-        // '<li><a class="js-new-field" data-field-type="maintop">  主页头部      </a></li>' +
-        // '<li><a class="js-new-field" data-field-type="pagetitle">页面标题      </a></li>' +
-        '<li><a class="js-new-field" data-field-type="richtext"> 富文本        </a></li>' +
-        '<li><a class="js-new-field" data-field-type="goods">    商品          </a></li>' +
-        '<li><a class="js-new-field" data-field-type="goodslist">商品<br>列表  </a></li>' +
-        '<li><a class="js-new-field" data-field-type="imagead">  图片<br>广告  </a></li>' +
-        '<li><a class="js-new-field" data-field-type="cube2">    魔方          </a></li>' +
-        '<li><a class="js-new-field" data-field-type="title">    标题          </a></li>' +
-        '<li><a class="js-new-field" data-field-type="textnav">  文本<br>导航  </a></li>' +
-        '<li><a class="js-new-field" data-field-type="imagenav"> 图片<br>导航  </a></li>' +
-        '<li><a class="js-new-field" data-field-type="link">     关联<br>链接  </a></li>' +
-        '<li><a class="js-new-field" data-field-type="search">   商品<br>搜索  </a></li>' +
-        '<li><a class="js-new-field" data-field-type="showcase"> 橱窗          </a></li>' +
-        '<li><a class="js-new-field" data-field-type="line">     辅助线        </a></li>' +
-        '<li><a class="js-new-field" data-field-type="space">    辅助<br>空白  </a></li>' +
-        '<li><a class="js-new-field" data-field-type="component">自定义<br>模块</a></li>' +
-        '<li><a class="js-new-field" data-field-type="store">    进入<br>店铺  </a></li>' +
-        '<li><a class="js-new-field" data-field-type="tag_list"> 商品<br>分组1 </a></li>' +
-        '<li><a class="js-new-field" data-field-type="tags">     商品<br>分组2 </a></li>' +
-        '<li><a class="js-new-field" data-field-type="audio">    语音          </a></li>' +
-        '<li><a class="js-new-field" data-field-type="audiolist">语音<br>列表  </a></li>' +
-        '<li><a class="js-new-field" data-field-type="notice">   公告          </a></li>' +
-        '<li><a class="js-new-field" data-field-type="coupon">   优惠券        </a></li>' +
+        '<li><a class="js-new-field" data-field-type="richtext">    富文本        </a></li>' +
+        /*'<li><a class="js-new-field" data-field-type="goods">       商品          </a></li>' +*/
+        '<li><a class="js-new-field" data-field-type="contents">    内容          </a></li>' +
+        '<li><a class="js-new-field" data-field-type="contentslist">内容<br>列表  </a></li>' +
+        '<li><a class="js-new-field" data-field-type="contentstaglist">内容<br>分组  </a></li>' +
+        /*'<li><a class="js-new-field" data-field-type="goodslist">   商品<br>列表  </a></li>' +*/
+        '<li><a class="js-new-field" data-field-type="imagead">     图片<br>广告  </a></li>' +
+        /*'<li><a class="js-new-field" data-field-type="cube2">       魔方          </a></li>' +*/
+        /*'<li><a class="js-new-field" data-field-type="title">       标题          </a></li>' +*/
+        '<li><a class="js-new-field" data-field-type="textnav">     文本<br>导航  </a></li>' +
+        '<li><a class="js-new-field" data-field-type="topnav">      切换<br>导航  </a></li>' +
+        /*'<li><a class="js-new-field" data-field-type="imagenav">    图片<br>导航  </a></li>' +*/
+        /*'<li><a class="js-new-field" data-field-type="link">        关联<br>链接  </a></li>' +*/
+        /*'<li><a class="js-new-field" data-field-type="search">      商品<br>搜索  </a></li>' +*/
+        /*'<li><a class="js-new-field" data-field-type="showcase">    橱窗          </a></li>' +*/
+        '<li><a class="js-new-field" data-field-type="line">        辅助线        </a></li>' +
+        '<li><a class="js-new-field" data-field-type="space">       辅助<br>空白  </a></li>' +
+        /*'<li><a class="js-new-field" data-field-type="component">   自定义<br>模块</a></li>' +*/
+        /*'<li><a class="js-new-field" data-field-type="store">       进入<br>店铺  </a></li>' +*/
+        /*'<li><a class="js-new-field" data-field-type="tag_list">    商品<br>分组1 </a></li>' +*/
+        /*'<li><a class="js-new-field" data-field-type="tags">        商品<br>分组2 </a></li>' +*/
+        '<li><a class="js-new-field" data-field-type="audio">       语音          </a></li>' +
+        '<li><a class="js-new-field" data-field-type="audiolist">   语音<br>列表  </a></li>' +
+        '<li><a class="js-new-field" data-field-type="video">       视频          </a></li>' +
+        '<li><a class="js-new-field" data-field-type="videolist">   视频<br>列表  </a></li>' +
+        /*'<li><a class="js-new-field" data-field-type="notice">      公告          </a></li>' +*/
+        /*'<li><a class="js-new-field" data-field-type="coupon">      优惠券        </a></li>' +*/
         '</ul>');
-    //  添加列表项 (添加选项并编辑)
+    /*  添加列表项 (添加选项并编辑)  */
     $("body").on("click", ".js-new-field", function() {
         PowerPage.Format.FormatBox({
             name: $(this).attr("data-field-type")
         });
         PowerPage.Common.LastClick();
     });
-    //  删除列表项 (删除选项) ,在后面构造函数中重新定义删除(FormatBox)
+    /*  删除列表项 (删除选项) ,在后面构造函数中重新定义删除(FormatBox)  */
     $("body").on("click", ".app-field .actions .actions-wrap .delete", function() {
-        //$(this).parentsUntil(".app-fields").remove();
-        //PowerPage.Common.LastClick();
-        //PowerPage.ReDate.ReDataTextNav(obj);
-        //PowerPage.Common.LastClick();
     });
-    //  选中状态
+    /*  选中状态  */
     $("body").on("click", ".app-field .actions .actions-wrap .edit", function() {
         PowerPage.Common.LastClick();
     });
-    //  选中 内容项 ,并编辑
+    /*  选中 内容项 ,并编辑  */
     $("body").on("click", ".app-field", function() {
         $(".app-field").removeClass("editing");
         $(this).addClass("editing");
         $(".app-sidebar").css("marginTop", $(this).position().top);
-        console.log('正在内容距离顶部: (相距 ' + $(this).position().top + 'px),\t编辑内容上边距离:(' + $('.app-sidebar').css("marginTop") + ')');
         PowerPage.Modify.Modify($(this).find("desc").html());
     });
 });
+/* function NavList(obj) {
+    var box = $(".js-add-region .app-add-field");
+    box.append("<ul></ul>");
+    for (var i = 0; i < obj.length; i++) {
+        if ( obj[i] == 'richtext' ) { box.find('ul').append('<li><a class="js-new-field" data-field-type="richtext">    语音          </a></li>'); }
+        if ( obj[i] == 'goods' )    { box.find('ul').append('<li><a class="js-new-field" data-field-type="goods">       商品          </a></li>');}
+        if ( obj[i] == 'goodslist' ){ box.find('ul').append('<li><a class="js-new-field" data-field-type="goodslist">   商品<br>列表  </a></li>');}
+        if ( obj[i] == 'imagead' )  { box.find('ul').append('<li><a class="js-new-field" data-field-type="imagead">     图片<br>广告  </a></li>');}
+        if ( obj[i] == 'cube2' )    { box.find('ul').append('<li><a class="js-new-field" data-field-type="cube2">       魔方          </a></li>');}
+        if ( obj[i] == 'title' )    { box.find('ul').append('<li><a class="js-new-field" data-field-type="title">       标题          </a></li>');}
+        if ( obj[i] == 'textnav' )  { box.find('ul').append('<li><a class="js-new-field" data-field-type="textnav">     文本<br>导航  </a></li>');}
+        if ( obj[i] == 'imagenav' ) { box.find('ul').append('<li><a class="js-new-field" data-field-type="imagenav">    图片<br>导航  </a></li>');}
+        if ( obj[i] == 'link' )     { box.find('ul').append('<li><a class="js-new-field" data-field-type="link">        关联<br>链接  </a></li>');}
+        if ( obj[i] == 'search' )   { box.find('ul').append('<li><a class="js-new-field" data-field-type="search">      商品<br>搜索  </a></li>');}
+        if ( obj[i] == 'showcase' ) { box.find('ul').append('<li><a class="js-new-field" data-field-type="showcase">    橱窗          </a></li>');}
+        if ( obj[i] == 'line' )     { box.find('ul').append('<li><a class="js-new-field" data-field-type="line">        辅助线        </a></li>');}
+        if ( obj[i] == 'space' )    { box.find('ul').append('<li><a class="js-new-field" data-field-type="space">       辅助<br>空白  </a></li>');}
+        if ( obj[i] == 'component' ){ box.find('ul').append('<li><a class="js-new-field" data-field-type="component">   自定义<br>模块</a></li>');}
+        if ( obj[i] == 'store' )    { box.find('ul').append('<li><a class="js-new-field" data-field-type="store">       进入<br>店铺  </a></li>');}
+        if ( obj[i] == 'tag_list' ) { box.find('ul').append('<li><a class="js-new-field" data-field-type="tag_list">    商品<br>分组1 </a></li>');}
+        if ( obj[i] == 'tags' )     { box.find('ul').append('<li><a class="js-new-field" data-field-type="tags">        商品<br>分组2 </a></li>');}
+        if ( obj[i] == 'audio' )    { box.find('ul').append('<li><a class="js-new-field" data-field-type="audio">       语音          </a></li>');}
+        if ( obj[i] == 'audiolist' ){ box.find('ul').append('<li><a class="js-new-field" data-field-type="audiolist">   语音<br>列表  </a></li>');}
+        if ( obj[i] == 'video' )    { box.find('ul').append('<li><a class="js-new-field" data-field-type="video">       视频          </a></li>');}
+        if ( obj[i] == 'videolist' ){ box.find('ul').append('<li><a class="js-new-field" data-field-type="videolist">   视频<br>列表  </a></li>');}
+        if ( obj[i] == 'notice' )   { box.find('ul').append('<li><a class="js-new-field" data-field-type="notice">      公告          </a></li>');}
+        if ( obj[i] == 'coupon' )   { box.find('ul').append('<li><a class="js-new-field" data-field-type="coupon">      优惠券        </a></li>');}
+    }
+} */
 var PowerPage = {
-    //  页面加载 接收数据
+    /*  页面加载 接收数据  */
     Set: {
-        //  图片域名
+        /*  图片域名  */
         Pichost: "",
-        //  富文本编辑器是否实例化过
+        /*  富文本编辑器是否实例化过  */
         HasUedit: false,
-        //  店铺信息
+        /*  店铺信息  */
         ShopMess: {
             id: 0,
             shopname: "聚宝赞",
@@ -82,42 +107,21 @@ var PowerPage = {
         Field: $(".app-preview .app-field"),
         Configs: $(".app-preview .app-config"),
     },
-    //  定义模板数据
+    /*  定义模板数据  */
     EditTemp: {
-        //  默认值 (初始化数据)
+        /*  默认值 (初始化数据)  */
         defaultval: {
-            //  图片广告
+            /*  图片广告  */
             imageadpic: [
                 {
-                    id: 0,
+                    id: -1,
                     name: "此处显示广告标题",
                     pic: "images/public/image_ad.jpg",
                     url: "",
                     urldesc: "设置链接到的页面地址",
-                },
-                {
-                    id: 0,
-                    name: "此处显示广告标题",
-                    pic: "images/public/image_ad.jpg",
-                    url: "",
-                    urldesc: "设置链接到的页面地址",
-                },
-                {
-                    id: 0,
-                    name: "此处显示广告标题",
-                    pic: "images/public/image_ad.jpg",
-                    url: "",
-                    urldesc: "设置链接到的页面地址",
-                },
-                {
-                    id: 0,
-                    name: "此处显示广告标题",
-                    pic: "images/public/image_ad.jpg",
-                    url: "",
-                    urldesc: "设置链接到的页面地址",
-                },
+                }
             ],
-            //  商品/商品列表
+            /*  商品/商品列表  */
             goods: [
                 {
                     id: 0,
@@ -127,29 +131,61 @@ var PowerPage = {
                     url: "",
                     price: 99.99,
                 }, {
-                    id: 0,
+                    id: 1,
                     name: "此处显示商品标题",
                     desc: '此处显示商品描述',
                     pic: "images/public/goods2.jpg",
                     url: "",
                     price: 59.99,
                 }, {
-                    id: 0,
+                    id: 2,
                     name: "此处显示商品标题",
                     desc: '此处显示商品描述',
                     pic: "images/public/goods3.jpg",
                     url: "",
                     price: 19.99,
                 }, {
-                    id: 0,
+                    id: 3,
                     name: "此处显示商品标题",
                     desc: '此处显示商品描述',
                     pic: "images/public/goods4.jpg",
                     url: "",
                     price: 9.99,
                 }
+            ],            
+            /*  内容/内容列表  */
+            contents: [
+                {
+                    id: 0,
+                    name: "此处显示内容标题",
+                    desc: '此处显示内容描述',
+                    pic: "images/public/goods1.jpg",
+                    url: "",
+                    price: 99.99,
+                }, {
+                    id: 1,
+                    name: "此处显示内容标题",
+                    desc: '此处显示内容描述',
+                    pic: "images/public/goods2.jpg",
+                    url: "",
+                    price: 99.99,
+                }, {
+                    id: 2,
+                    name: "此处显示内容标题",
+                    desc: '此处显示内容描述',
+                    pic: "images/public/goods3.jpg",
+                    url: "",
+                    price: 99.99,
+                }, {
+                    id: 3,
+                    name: "此处显示内容标题",
+                    desc: '此处显示内容描述',
+                    pic: "images/public/goods4.jpg",
+                    url: "",
+                    price: 99.99,
+                }
             ],
-            //  文本导航
+            /*  文本导航  */
             textnav: [
                 {
                     name: "点此添加一个『文本导航』",
@@ -157,20 +193,44 @@ var PowerPage = {
                     urldesc: "置链接到的页面地址",
                 }
             ],
-            //  页面标题
+            /*  页面标题  */
             pagetitle: {
                 background: "#000",
             },
-            //  富文本默认值
+            /*  富文本默认值  */
             richtext: {
                 background: "#fff",
             },
-            //  首页头部
+            /*  首页头部  */
             maintop: {
                 background: '#fff',
             },
+            /*  音频列表  */
+            audio: [
+                {
+                    id: 0,
+                    name: "audio",
+                    title: "请输入音频标题",
+                    desc: "",
+                    time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                    src: "",
+                    loop: "",
+                }
+            ],
+            /*  视频列表  */
+            video: [
+                {
+                    id: 0,
+                    name: "video",
+                    title: "请输入视频标题",
+                    desc: "",
+                    time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                    src: "",
+                    loop: "",
+                }
+            ],
         },
-        //  类别
+        /*  类别  */
         categroy: {
             name: "categroy",
             categroyname: "分组名称",
@@ -180,7 +240,7 @@ var PowerPage = {
             secondorder: 1,
             config: true,
         },
-        //  主页头部
+        /*  主页头部  */
         maintop: {
             name: "maintop",
             logo: "images/public/logo.jpg",
@@ -189,26 +249,50 @@ var PowerPage = {
             allgoods: 500,
             newgoods: 99,
             shopname: "PSP商城",
-            caldelete: false,
+            candelete: false,
         },
-        //  页面标题
+        /*  页面标题  */
         pagetitle: {
             name: "pagetitle",
             title: "微页面标题",
             desc: "",
+            categroydesc: "置链接到的页面地址",
             categroy: "",
             background: "#000",
             config: true,
             candelete: false,
         },
-        //  富文本
+        /*  富文本  */
         richtext: {
             name: "richtext",
-            content: encodeURIComponent('<p>点此编辑『富文本』内容——&gt;</p><p>你可以对文字进行<strong>加粗</strong>、<em>斜体</em>、<span style="text-decoration: underline;">下划线</span>、<span style="text-decoration: line-through;">删除线</span>、文字<span style="color: rgb(0, 176, 240);">颜色</span>、<span style="background-color: rgb(255, 192, 0); color: rgb(255, 255, 255);">背景色</span>、以及字号<span style="font-size: 20px;">大</span><span style="font-size: 14px;">小</span>等简单排版操作。</p><p>还可以在这里加入表格了</p><table><tbody><tr><td width="93" valign="top" style="word-break: break-all;">中奖客户</td><td width="93" valign="top" style="word-break: break-all;">发放奖品</td><td width="93" valign="top" style="word-break: break-all;">备注</td></tr><tr><td width="93" valign="top" style="word-break: break-all;">猪猪</td><td width="93" valign="top" style="word-break: break-all;">内测码</td><td width="93" valign="top" style="word-break: break-all;"><em><span style="color: rgb(255, 0, 0);">已经发放</span></em></td></tr><tr><td width="93" valign="top" style="word-break: break-all;">大麦</td><td width="93" valign="top" style="word-break: break-all;">积分</td><td width="93" valign="top" style="word-break: break-all;"><a href="javascript: void(0);" target="_blank">领取地址</a></td></tr></tbody></table><p style="text-align: left;"><span style="text-align: left;">也可在这里插入图片、并对图片加上超级链接，方便用户点击。</span></p>'),
+            content: encodeURIComponent('<p>点此编辑『富文本』内容——&gt;</p>' +
+                '<p>你可以对文字进行<strong>加粗</strong>、' +
+                    '<em>斜体</em>、<span style="text-decoration: underline;">下划线</span>、' +
+                    '<span style="text-decoration: line-through;">删除线</span>、文字' +
+                    '<span style="color: rgb(0, 176, 240);">颜色</span>、' +
+                    '<span style="background-color: rgb(255, 192, 0); color: rgb(255, 255, 255);">背景色</span>、以及字号' +
+                    '<span style="font-size: 20px;">大</span><span style="font-size: 14px;">小</span>等简单排版操作。</p>' +
+                '<p>还可以在这里加入表格了</p>' +
+                '<table><tbody>' +
+                    '<tr><td width="93" valign="top" style="word-break: break-all;">中奖客户</td>' +
+                        '<td width="93" valign="top" style="word-break: break-all;">发放奖品</td>' +
+                        '<td width="93" valign="top" style="word-break: break-all;">备注</td>' +
+                    '</tr><tr>' +
+                        '<td width="93" valign="top" style="word-break: break-all;">猪猪</td>' +
+                        '<td width="93" valign="top" style="word-break: break-all;">内测码</td>' +
+                        '<td width="93" valign="top" style="word-break: break-all;"><em><span style="color: rgb(255, 0, 0);">已经发放</span></em></td>' +
+                    '</tr><tr>' +
+                        '<td width="93" valign="top" style="word-break: break-all;">大麦</td>' +
+                        '<td width="93" valign="top" style="word-break: break-all;">积分</td>' +
+                        '<td width="93" valign="top" style="word-break: break-all;"><a href="javascript: void(0);" target="_blank">领取地址</a></td>' +
+                    '</tr></tbody></table>' +
+                '<p style="text-align: left;">' +
+                    '<span style="text-align: left;">也可在这里插入图片、并对图片加上超级链接，方便用户点击。</span>' +
+                '</p>'),
             fullscreen: false,
             background: "#fff",
         },
-        //  商品
+        /*  商品  */
         goods: {
             name: "goods",
             goods: [],
@@ -220,21 +304,50 @@ var PowerPage = {
             showdesc: false,
             showprice: true,
         },
-        //  商品列表
+        /*  商品列表  */
         goodslist: {
             name: "goodslist",
             categroy: 0,
             categroydesc: "从商品分组中选择",
             goodscount: 0,
         },
-        //  图片广告
+        /*  内容  */
+        contents: {
+            name: "contents",
+            contents: [],
+            size: 2,
+            sizetype: 0,
+            showname: false,
+            showbuy: true,
+            buytype: 1,
+            showdesc: false,
+            showprice: true,
+        },
+        /*  内容列表  */
+        contentslist: {
+            name: "contentslist",
+            categroy: 0,
+            categroydesc: "从内容分组中选择",
+            contentscount: 0,
+        },
+        /*  类别  */
+        contentscategroy: {
+            name: "contentscategroy",
+            categroyname: "内容分组名称",
+            background: "#000",
+            showcategroyname: true,
+            firstorder: 1,
+            secondorder: 1,
+            config: true,
+        },
+        /*  图片广告  */
         imagead: {
             name: "imagead",
             showtype: 0,
             showsize: 0,
             pics: [],
         },
-        //  标题
+        /*  标题  */
         title: {
             name: "title",
             title: "点击编辑『标题』",
@@ -248,51 +361,59 @@ var PowerPage = {
             author: "",
             nav: {},
         },
-        //  文本导航
+        /*  文本导航  */
         textnav: {
             name: "textnav",
             navs: [],
         },
-        //  商品搜索
+        /*  商品搜索  */
         search: {
             name: "search",
             url: "/ushop/goods/search"
         },
-        //  辅助线
+        /*  辅助线  */
         line: {
             name: "line",
         },
-        //  辅助空白 
+        /*  辅助空白   */
         space: {
             name: "space",
             height: 0,
         },
-        //  进入店铺
+        /*  进入店铺  */
         store: {
             name: "store",
         },
-        //  音频
+        /*  音频  */
         audio: {
             name: "audio",
-            src: "",
-            title: "请输入音频标题",
-            loop: "loop",
-            pic: "",
-            time: "",
+            audio: [],
         },
-        //  音频列表
+        /*  音频列表  */
         audiolist: {
             name: "audiolist",
             categroy: 0,
             categroydesc: "从音频分组中选择",
-            goodscount: 0,
+            audiocount: 0,
         },
-        //  公告
+        /*  视频  */
+        video: {
+            name: "video",
+            video: [],
+        },
+        /*  视频列表  */
+        videolist: {
+            name: "videolist",
+            categroy: 0,
+            categroydesc: "从视频分组中选择",
+            audiocount: 0,
+        },
+        /*  公告  */
         notice: {
             name: "notice",
             value: "请填写内容，如果过长，将会在手机上滚动显示",
         },
-        //  优惠券
+        /*  优惠券  */
         coupon: {
             name: "coupon",
             categroy: 3,
@@ -300,88 +421,109 @@ var PowerPage = {
             goodscount: 0,
         }
     },
-    //  格式工厂 (内容模板)
+    /*  格式工厂 (内容模板)  */
     Format: {
-        //  格式入口
+        /*  格式入口  */
         Format: function(obj) {
             var result = null;
             switch (obj.name) {
-                case PowerPage.EditTemp.categroy.name:      //  类别
-                    result = PowerPage.Format.FormatCategroy($.extend(true, {}, PowerPage.EditTemp.goods, PowerPage.EditTemp.categroy, obj));
+                case PowerPage.EditTemp.categroy.name:      /*  商品类别  */
+                    result = PowerPage.Format.FormatCategroy($.extend(true, {}, PowerPage.EditTemp.categroy, obj));
                     break;
-                case PowerPage.EditTemp.maintop.name:       //  主页头部
+                case PowerPage.EditTemp.contentscategroy.name: /*  内容类别  */
+                    result = PowerPage.Format.FormatContentscategroy($.extend(true,{},PowerPage.EditTemp.contents,PowerPage.EditTemp.categroy,obj));
+                    break;
+                case PowerPage.EditTemp.maintop.name:       /*  主页头部  */
                     result = PowerPage.Format.FormatMainTop(obj);
                     break;
-                case PowerPage.EditTemp.pagetitle.name:     //  页面标题
+                case PowerPage.EditTemp.pagetitle.name:     /*  页面标题  */
                     result = PowerPage.Format.FormatPageTitle($.extend(true, {}, PowerPage.EditTemp.pagetitle, obj));
                     break;
-                case PowerPage.EditTemp.richtext.name:      //  富文本
+                case PowerPage.EditTemp.richtext.name:      /*  富文本  */
                     result = PowerPage.Format.FormatRich($.extend(true, {}, PowerPage.EditTemp.richtext, obj));
                     break;
-                case PowerPage.EditTemp.goods.name:         //  商品
+                case PowerPage.EditTemp.goods.name:         /*  商品  */
                     result = PowerPage.Format.FormatGoods($.extend(true, {}, PowerPage.EditTemp.goods, obj));
                     break;
-                case PowerPage.EditTemp.goodslist.name:     //  商品列表
+                case PowerPage.EditTemp.goodslist.name:     /*  商品列表  */
                     var json = $.extend(true, {}, PowerPage.EditTemp.goodslist, obj);
                     json = $.extend(true, {}, PowerPage.EditTemp.goods, json);
                     result = PowerPage.Format.FormatGoods($.extend(true, {}, PowerPage.EditTemp.goods, PowerPage.EditTemp.goodslist, obj));
                     break;
-                case PowerPage.EditTemp.imagead.name:       //  图片广告
+                case PowerPage.EditTemp.contents.name:      /*  内容  */
+                    result = PowerPage.Format.FormatContents($.extend(true, {}, PowerPage.EditTemp.contents, obj));
+                    break;
+                case PowerPage.EditTemp.contentslist.name:  /*  内容列表  */
+                    var json = $.extend(true, {}, PowerPage.EditTemp.contentslist, obj);
+                    json = $.extend(true, {}, PowerPage.EditTemp.contents, json);
+                    result = PowerPage.Format.FormatContents($.extend(true, {}, PowerPage.EditTemp.contents, PowerPage.EditTemp.contentslist, obj));
+                    break;
+                case PowerPage.EditTemp.imagead.name:       /*  图片广告  */
                     result = PowerPage.Format.FormatImageAd($.extend(true, {}, PowerPage.EditTemp.imagead, obj));
                     break;
-                // case PowerPage.EditTemp.cube.name:       //  魔方
-                //     result = PowerPage.Format.FormatImageAd($.extend(true, {}, PowerPage.EditTemp.cube, obj));
-                //     break;
-                case PowerPage.EditTemp.title.name:         //  标题
+                /*case PowerPage.EditTemp.cube.name:        魔方
+                    result = PowerPage.Format.FormatImageAd($.extend(true, {}, PowerPage.EditTemp.cube, obj));
+                    break;*/
+                case PowerPage.EditTemp.title.name:         /*  标题  */
                     result = PowerPage.Format.FormatTitle($.extend(true, {}, PowerPage.EditTemp.title, obj));
                     break;
-                case PowerPage.EditTemp.textnav.name:       //  文本导航
+                case PowerPage.EditTemp.textnav.name:       /*  文本导航 */
                     result = PowerPage.Format.FormatTextNav($.extend(true, {}, PowerPage.EditTemp.textnav, obj));
                     break;
-                // case PowerPage.EditTemp.imagenav.name:   //  图片导航
-                //     result = PowerPage.Format.FormatTextNav($.extend(true, {}, PowerPage.EditTemp.imagenav, obj));
-                //     break;
-                // case PowerPage.EditTemp.link.name:       //  关联链接
-                //     result = PowerPage.Format.FormatTextNav($.extend(true, {}, PowerPage.EditTemp.link, obj));
-                //     break;
-                case PowerPage.EditTemp.search.name:        //  商品搜索
+                /*case PowerPage.EditTemp.imagenav.name:    图片导航
+                    result = PowerPage.Format.FormatTextNav($.extend(true, {}, PowerPage.EditTemp.imagenav, obj));
+                    break;
+                case PowerPage.EditTemp.link.name:          关联链接
+                    result = PowerPage.Format.FormatTextNav($.extend(true, {}, PowerPage.EditTemp.link, obj));
+                    break;*/
+                case PowerPage.EditTemp.search.name:        /*  商品搜索  */
                     result = PowerPage.Format.FormatSearch(PowerPage.EditTemp.search);
                     break;
-                // case PowerPage.EditTemp.showcase.name:   //  橱窗
-                //     result = PowerPage.Format.FormatTextNav($.extend(true, {}, PowerPage.EditTemp.showcase, obj));
-                //     break;
-                case PowerPage.EditTemp.line.name:          //  辅助线
+                /*case PowerPage.EditTemp.showcase.name:    橱窗
+                    result = PowerPage.Format.FormatTextNav($.extend(true, {}, PowerPage.EditTemp.showcase, obj));
+                    break;*/
+                case PowerPage.EditTemp.line.name:          /*  辅助线  */
                     result = PowerPage.Format.FormatLine(PowerPage.EditTemp.line);
                     break;
-                case PowerPage.EditTemp.space.name:         //  辅助空白
+                case PowerPage.EditTemp.space.name:         /*  辅助空白  */
                     result = PowerPage.Format.FormatSpace($.extend(true, {}, PowerPage.EditTemp.space, obj));
                     break;
-                // case PowerPage.EditTemp.component.name:  //  自定义模块
-                //     result = PowerPage.Format.FormatSpace($.extend(true, {}, PowerPage.EditTemp.component, obj));
-                //     break;
-                case PowerPage.EditTemp.store.name:         //  进入店铺
+                /*case PowerPage.EditTemp.component.name:   自定义模块
+                    result = PowerPage.Format.FormatSpace($.extend(true, {}, PowerPage.EditTemp.component, obj));
+                    break;*/
+                case PowerPage.EditTemp.store.name:         /*  进入店铺  */
                     result = PowerPage.Format.FormatStore(PowerPage.EditTemp.store);
                     break;
-                // case PowerPage.EditTemp.tag_list.name:   //  商品列表
-                //     var json = $.extend(true, {}, PowerPage.EditTemp.tag_list, obj);
-                //     json = $.extend(true, {}, PowerPage.EditTemp.goods, json);
-                //     result = PowerPage.Format.FormatGoods($.extend(true, {}, PowerPage.EditTemp.goods, PowerPage.EditTemp.tag_list, obj));
-                //     break;
-                // case PowerPage.EditTemp.tags.name:       //  商品列表
-                //     var json = $.extend(true, {}, PowerPage.EditTemp.tags, obj);
-                //     json = $.extend(true, {}, PowerPage.EditTemp.goods, json);
-                //     result = PowerPage.Format.FormatGoods($.extend(true, {}, PowerPage.EditTemp.goods, PowerPage.EditTemp.tags, obj));
-                //     break;
-                case PowerPage.EditTemp.audio.name:         //  音频
+                /*case PowerPage.EditTemp.tag_list.name:    商品列表1
+                    var json = $.extend(true, {}, PowerPage.EditTemp.tag_list, obj);
+                    json = $.extend(true, {}, PowerPage.EditTemp.goods, json);
+                    result = PowerPage.Format.FormatGoods($.extend(true, {}, PowerPage.EditTemp.goods, PowerPage.EditTemp.tag_list, obj));
+                    break;
+                case PowerPage.EditTemp.tags.name:          商品列表2
+                    var json = $.extend(true, {}, PowerPage.EditTemp.tags, obj);
+                    json = $.extend(true, {}, PowerPage.EditTemp.goods, json);
+                    result = PowerPage.Format.FormatGoods($.extend(true, {}, PowerPage.EditTemp.goods, PowerPage.EditTemp.tags, obj));
+                    break;*/
+                case PowerPage.EditTemp.audio.name:         /*  音频  */
                     result = PowerPage.Format.FormatAudio($.extend(true, {}, PowerPage.EditTemp.audio, obj));
                     break;
-                case PowerPage.EditTemp.audiolist.name:     //  音频列表
-                    result = PowerPage.Format.FormatAudio($.extend(true, {}, PowerPage.EditTemp.audiolist, obj));
+                case PowerPage.EditTemp.audiolist.name:     /*  音频列表  */
+                    var json = $.extend(true, {}, PowerPage.EditTemp.audiolist, obj);
+                    json = $.extend(true, {}, PowerPage.EditTemp.audio, json);
+                    result = PowerPage.Format.FormatAudio($.extend(true, {}, PowerPage.EditTemp.audio, PowerPage.EditTemp.audiolist, obj));
                     break;
-                case PowerPage.EditTemp.notice.name:        //  公告
+                case PowerPage.EditTemp.video.name:         /*  视频  */
+                    result = PowerPage.Format.FormatVideo($.extend(true, {}, PowerPage.EditTemp.video, obj));
+                    break;
+                case PowerPage.EditTemp.videolist.name:     /*  视频列表  */
+                    var json = $.extend(true, {}, PowerPage.EditTemp.videolist, obj);
+                    json = $.extend(true, {}, PowerPage.EditTemp.video, json);
+                    result = PowerPage.Format.FormatVideo($.extend(true, {}, PowerPage.EditTemp.video, PowerPage.EditTemp.videolist, obj));
+                    break;
+                case PowerPage.EditTemp.notice.name:        /*  公告  */
                     result = PowerPage.Format.FormatNotice($.extend(true, {}, PowerPage.EditTemp.notice, obj));
                     break;
-                case PowerPage.EditTemp.coupon.name: //  优惠券
+                case PowerPage.EditTemp.coupon.name:        /*  优惠券  */
                     result = PowerPage.Format.FormatCoupon($.extend(true, {}, PowerPage.EditTemp.coupon, obj));
                     break;
             }
@@ -398,14 +540,14 @@ var PowerPage = {
             sort.html('<i class="sort-handler"></i>');
             action.html('<div class="actions-wrap">' +
                 '<span class="action edit">编辑</span>' +
-                '<div class="close_bomb">' +
-                    '<a href="javascript:;" class="close_btn" type="button">' + (obj.candelete == null ? '<span class="action delete">删除</span>' : '') + '</a>' +
+                (obj.candelete == null ? '<div class="close_bomb">' +
+                    '<a href="javascript:;" class="close_btn" type="button"><span class="action delete">删除</span></a>' +
                     '<div class="close_box text-right">' +
-                        '<span class="colse_txt text-center" style="padding:6px 12px; background: white; color:black">您确定删除么?</span>' +
+                        '<span class="colse_txt text-center">您确定删除么?</span>' +
                         '<a href="javascript:;" class="btn btn-info deleteOKBtn" style="margin-right: 5px">确定</a>' +
                         '<a href="javascript:;" class="btn btn-default delectCloseBtn">取消</a>' +
                     '</div>' +
-                '</div>' +
+                '</div>': '') +
             '</div>');
             group.html(PowerPage.Format.Format(obj));
             var box = $('<div class="app-field clearfix"></div>');
@@ -436,13 +578,12 @@ var PowerPage = {
         FormatBoxReturn: function(obj) {
             return PowerPage.Format.Format(obj);
         },
-        //  类别模板
+        //  类别
         FormatCategroy: function(obj) {
             var box = $('<div></div>');
             box.append('<h1 class="page-title" style="background-color:' + obj.background + '">' +
                 '<span>' + obj.categroyname + '</span>' +
             '</h1>');
-            box.append(PowerPage.Format.FormatGoods(obj));
             box.find("desc").remove();
             box.append('<desc>' + JSON.stringify(obj) + '</desc>');
             return box;
@@ -539,7 +680,7 @@ var PowerPage = {
                 var info = $('<div class="info"></div>');
                 var title = $('<p class="goods-title">' + goods[i].name + '</p>');
                 var price = $('<p class="goods-price"><em>￥' + goods[i].price + '</em></p>');
-                var desc = $('<p class="goods-sub-title c-black ">此处显示商品描述</p>');
+                var desc = $('<p class="goods-sub-title c-black ">' + goods[i].desc + '</p>');
                 var buy = $('<div class="goods-buy btn' + obj.buytype + '"></div>');
                 if (obj.showname || obj.size == 3) {
                     info.append(title);
@@ -602,17 +743,150 @@ var PowerPage = {
             box.append('<desc>' + JSON.stringify(obj) + '</desc>');
             return box;
         },
+        //  内容
+        FormatContents: function(obj) {
+            var box = $('<ul class="sc-goods-list clearfix"></ul>');
+            box.addClass("size-" + obj.size);
+            switch (obj.sizetype) {
+                case 0:
+                    box.addClass("card");
+                    break;
+                case 1:
+                    box.addClass("waterfall");
+                    break;
+                case 2:
+                    box.addClass("normal");
+                    break;
+                case 3:
+                    box.addClass("promotion");
+                    break;
+            }
+            if (obj.size == 3) {
+                box.addClass("list");
+            } else {
+                box.addClass("pic");
+            }
+            var contents = [];
+            if (obj.contents.length == 0) {
+                if (obj.formatempty == null) {
+                    $.extend(true, contents, PowerPage.EditTemp.defaultval.contents, obj.contents);
+                    if (obj.size != 1) {
+                        contents.pop();
+                    }
+                } else {
+                    contents = obj.contents;
+                }
+            } else {
+                contents = obj.contents;
+            }
+            for (var i = 0; i < contents.length; i++) {
+                var contentscard = $('<li class="goods-card"></li>');
+                var a = $('<a href="/ushop/goods.html?goodsid=' + contents[i].id + '" class="link js-goods clearfix"></a>');
+                var photo = $('<div class="photo-block"></div>');
+                var img = $('<img src=""/>');
+                var info = $('<div class="info"></div>');
+                var title = $('<p class="goods-title">' + contents[i].name + '</p>');
+                var price = $('<p class="goods-price"><em>￥' + contents[i].price + '</em></p>');
+                var desc = $('<p class="goods-sub-title c-black ">' + contents[i].desc + '</p>');
+                var buy = $('<div class="goods-buy btn' + obj.buytype + '"></div>');
+                if (obj.showname || obj.size == 3) {
+                    info.append(title);
+
+                } else {
+                    info.addClass("info-no-title");
+                }
+                //  显示商品描述并显示样式为大图
+                if (obj.showdesc && obj.size == 0) {
+                    info.append(desc);
+                }
+                if (obj.showprice) {
+                    info.addClass("info-price");
+                    info.append(price);
+                }
+                switch (obj.size) {
+                    case 0:
+                        contentscard.addClass("big-pic");
+                        break;
+                    case 1:
+                        contentscard.addClass("small-pic");
+                        break;
+                    case 2:
+                        if (i % 3 == 0) {
+                            contentscard.addClass("big-pic");
+                        } else {
+                            contentscard.addClass("small-pic");
+                        }
+                        break;
+                    case 3:
+                        break;
+                }
+                switch (obj.sizetype) {
+                    case 0:
+                        contentscard.addClass("card");
+                        break;
+                    case 1:
+                        contentscard.attr("class", "sc-waterfall-half");
+                        break;
+                    case 2:
+                        contentscard.addClass("normal");
+                        break;
+                    case 3:
+                        contentscard.addClass("promotion");
+                        break;
+                }
+                img.attr("src", PowerPage.Common.AddPicHost(contents[i].pic));
+                photo.append(img);
+                a.append(photo);
+                a.append(info);
+                if (obj.sizetype == 3 && obj.size == 1) {
+                    buy.html("我要抢购");
+                }
+                if (obj.showbuy && obj.sizetype != 2) {
+                    a.append(buy);
+                }
+                contentscard.append(a);
+                box.append(contentscard);
+            }
+            box.append('<desc>' + JSON.stringify(obj) + '</desc>');
+            return box;
+        },
+        //  内容类别
+        FormatContentscategroy: function(obj) {
+            var box = $('<div></div>');
+            box.append('<h1 class="page-title" style="background-color:' + obj.background + '">' +
+                '<span>' + obj.categroyname + '</span>' +
+            '</h1>');
+            box.append(PowerPage.Format.FormatContents(obj));
+            box.find("desc").remove();
+            box.append('<desc>' + JSON.stringify(obj) + '</desc>');
+            return box;
+        },
         //  图片广告
         FormatImageAd: function(obj) {
             if (obj.pics.length == 0) {
                 obj.pics = $.extend(PowerPage.EditTemp.defaultval.imageadpic, obj.pics);
             }
             if (obj.showtype == 0) {
-                var box = $('<div class="custom-image-swiper"></div>');
-                var swiper_wrapper = $('<div class="swiper-wrapper"></div>');
+                // var box = $('<div class="custom-image-swiper"></div>');
+                /*var swiper_wrapper = $('<div class="swiper-wrapper"></div>');*/
+                var box = $('<div id="topBannerList" class="carousel slide" data-ride="carousel"></div>');
+                var boxNav = $('<ol class="carousel-indicators"></ol>');
+                var swiper_wrapper = $('<div class="carousel-inner" role="listbox"></div>');
                 for (var i = 0; i < obj.pics.length; i++) {
-                    swiper_wrapper.append('<img src="' + PowerPage.Common.AddPicHost(obj.pics[i].pic) + '"/>');
+                    /*swiper_wrapper.append('<img src="' + PowerPage.Common.AddPicHost(obj.pics[i].pic) + '"/>');*/
+                    /*swiper_wrapper.append('<div class="swiper-slide">' +
+                        '<a href="javascript: void(0);">' +
+                            '<h3 class="title">' + obj.pics[i].name + '</h3>' +
+                            '<img src="' + PowerPage.Common.AddPicHost(obj.pics[i].pic) + '" />' +
+                        '</a>' +
+                    '</div>');*/
+                    boxNav.append('<li data-target="#topBannerList" data-slide-to="' + i + '" class="' + ( i == 0 ? 'active': '') + '"></li>');
+                    swiper_wrapper.append('<div class="item ' + ( i == 0 ? 'active': '') + '">'+
+                        '<img src="' + PowerPage.Common.AddPicHost(obj.pics[i].pic) + '" alt="...">'+
+                        '<div class="carousel-caption">' + obj.pics[i].name + '</div>'+
+                    '</div>');
                 }
+                box.append(boxNav);
                 box.append(swiper_wrapper);
                 box.append('<desc>' + JSON.stringify(obj) + '</desc>');
                 return box;
@@ -690,7 +964,7 @@ var PowerPage = {
             } else {
                 textnavs = obj.navs;
             }
-            var box = $('<div class="custom-nav clearfix"></div>');
+            var box = $('<div class="custom-nav clearfix"><ul></ul></div>');
             for (var i = 0; i < textnavs.length; i++) {
                 var li = $('<li><a class="clearfix" href="' + textnavs[i].url + '">' +
                     '<span class="custom-nav-title">' + 
@@ -698,7 +972,7 @@ var PowerPage = {
                     '</span>' + 
                     '<i class="pull-right right-arrow"></i>' +
                     '</a></li>');
-                box.append(li);
+                box.find('ul').append(li);
 
             }
             box.append('<desc>' + JSON.stringify(obj) + '</desc>');
@@ -744,6 +1018,28 @@ var PowerPage = {
         },
         //  音频模板
         FormatAudio: function(obj) {
+            var box = $('<div></div>');
+            var group = $('<ul class="items reading active"></ul>');
+            box.append(group);
+            var audio = [];
+            if (obj.audio.length == 0) {
+                $.extend(true, audio, PowerPage.EditTemp.defaultval.audio, obj.audio);      
+            } else {
+                audio = obj.audio;
+            }
+            for ( var i = 0; i < audio.length ; i++ ) {
+                box.find('ul').append('<li class="item">' +
+                    '<a href="' + audio[i].src + '" class="titleMusic" id="' + audio[i].id + '">' +
+                        '<i class="fa fa-wifi"></i>' +
+                        '<title class="bookName custom-audio-title">' + audio[i].title +'</title>' +
+                        '<span class="dec">' + audio[i].desc + '</span>' +
+                        '<time>' + audio[i].time + '</time>' +
+                        '<audio loop="loop" src="" class="hide" style="display:none"></audio>' +
+                    '</a>' +
+                '</li>');
+            }
+            box.append('<desc>' + JSON.stringify(obj) + '</desc>');
+            return box;
             // var box = $('<div class="control-group">'+
             //     '<div class="custom-audio">'+
             //         '<div class="custom-audio-music">'+
@@ -758,15 +1054,28 @@ var PowerPage = {
             //         '</div>'+
             //     '</div>'+
             // '</div>');
-            var box = $('<ul class="items reading active"><li class="item">' +
-                '<a href="javascript:;" class="titleMusic">' +
-                    '<i class="fa fa-wifi"></i>' +
-                    '<title class="bookName custom-audio-title"></title>' +
-                    '<span class="dec"></span>' +
-                    '<time></time>' +
-                    '<audio loop="loop" src="" class="hide" style="display:none"></audio>' +
-                '</a>' +
-            '</li></ul>');
+            // box.append('<desc>' + JSON.stringify(obj) + '</desc>');
+            // return box;
+        },
+        //  视频模板
+        FormatVideo: function(obj) {
+            var box = $('<div></div>');
+            var group = $('<ul class="items reading active"></ul>');
+            box.append(group);
+            var video = [];
+            if (obj.video.length == 0) {
+                $.extend(true, video, PowerPage.EditTemp.defaultval.video, obj.video);         
+            } else {
+                video = obj.video;
+            }
+            for ( var i = 0; i < video.length ; i++ ) {
+                box.find('ul').append('<li class="item">' +
+                    // '<embed id="' + video[i].id + '" src="' + video[i].src + '" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" bgcolor="#000000" allowscriptaccess="always" wmode="direct" quality="high" allowfullscreen="true" version="10" flashvars="uu=u1k8j2zfn5&amp;vu=9f776786a5&amp;auto_play=1&amp;gpcflag=1&amp;width=640&amp;height=360&amp;pageControls=1&amp;" width="100%" height="auto" align="middle">'+
+                    '<video controls="" id="embed" width="100%" height="auto">' +
+                        '<source src="' + video[i].src + '" type="video/mp4" />' +
+                    '</video>' +
+                '</li>');
+            }
             box.append('<desc>' + JSON.stringify(obj) + '</desc>');
             return box;
         },
@@ -809,7 +1118,7 @@ var PowerPage = {
         Modify: function(obj) {
             obj = eval('(' + obj + ')');
             switch (obj.name) {
-                case PowerPage.EditTemp.categroy.name:  //  类别
+                case PowerPage.EditTemp.categroy.name:  //  商品类别
                     PowerPage.Modify.ModifyCategroy(obj);
                     break;
                 case PowerPage.EditTemp.maintop.name:   //  主页头部
@@ -826,6 +1135,15 @@ var PowerPage = {
                     break;
                 case PowerPage.EditTemp.goodslist.name: //  商品列表
                     PowerPage.Modify.ModifyGoodsList(obj);
+                    break;
+                case PowerPage.EditTemp.contents.name:     //  内容
+                    PowerPage.Modify.ModifyContents(obj);
+                    break;
+                case PowerPage.EditTemp.contentslist.name: //  内容列表
+                    PowerPage.Modify.ModifyContentsList(obj);
+                    break;
+                case PowerPage.EditTemp.contentscategroy.name://  内容类别
+                    PowerPage.Modify.ModifyContentsCategroy(obj);
                     break;
                 case PowerPage.EditTemp.imagead.name:   //  图片广告
                     PowerPage.Modify.ModifyImageAd(obj);
@@ -848,8 +1166,14 @@ var PowerPage = {
                 case PowerPage.EditTemp.audio.name:     //  语音
                     PowerPage.Modify.ModifyAudio(obj);
                     break;
-                case PowerPage.EditTemp.audiolist.name:     //  语音
+                case PowerPage.EditTemp.audiolist.name: //  语音列表
                     PowerPage.Modify.ModifyAudioList(obj);
+                    break;
+                case PowerPage.EditTemp.video.name:     //  语音
+                    PowerPage.Modify.ModifyVideo(obj);
+                    break;
+                case PowerPage.EditTemp.videolist.name: //  语音列表
+                    PowerPage.Modify.ModifyVideoList(obj);
                     break;
                 case PowerPage.EditTemp.notice.name:    //  公告
                     PowerPage.Modify.ModifyNotice(obj);
@@ -859,19 +1183,19 @@ var PowerPage = {
                     break;
             }
         },
-        //  修改 类别
+        //  修改 商品类别
         ModifyCategroy: function(obj) {
-            PowerPage.Modify.ModifyGoods(obj);
-            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).html("");
+            var box = $('<div></div>');
+            var categroys = $('<div class="form-horizontal"></div>');
             var group = $('<div class="control-group">' +
                 '<label class="control-label">' +
-                    '<em class="required">*</em>分组名称：' +
+                    '<em class="required">*</em>分类名称：' +
                 '</label>' +
                 '<div class="controls">' +
                     '<input class="input-xxlarge" type="text" name="title" value="' + obj.categroyname + '">' +
                 '</div>' +
             '</div>');
-            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).append(group);
+            categroys.append(group);
             group = $('<div class="control-group">' +
                 '<div class="controls">' +
                     '<label class="checkbox">' +
@@ -880,7 +1204,7 @@ var PowerPage = {
                     '</label>' +
                 '</div>' +
             '</div>');
-            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).append(group);
+            categroys.append(group);
             group = $('<div class="control-group">' +
                 '<label class="control-label">第一优先级：</label>' +
                 '<div class="controls">' +
@@ -890,7 +1214,7 @@ var PowerPage = {
                     '</select>' +
                 '</div>' +
             '</div>');
-            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).append(group);
+            categroys.append(group);
             group = $('<div class="control-group">' +
                 '<label class="control-label">第二优先级：</label>' +
                 '<div class="controls">' +
@@ -901,7 +1225,9 @@ var PowerPage = {
                     '</select>' +
                 '</div>' +
             '</div>');
-            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).append(group);
+            categroys.append(group);
+            box.append(categroys);
+            PowerPage.Dom.SidBar.html(box);
             PowerPage.Dom.SidBar.find("input[name='title']").blur(function() {
                 obj.categroyname = $(this).val();
                 PowerPage.Common.ReView(obj);
@@ -994,30 +1320,30 @@ var PowerPage = {
                 '</div>' +
             '</div>');
             box.append(group);
-            group = $('<div class="control-group">' +
-                '<label class="control-label">分类：</label>' +
+            // group = $('<div class="control-group">' +
+            //     '<label class="control-label"><em class="required">*</em>分类：</label>' +
+            //     '<div class="controls">' +
+            //         '<a href="javascript:;" class="js-choose-pageTitle control-action">选择分类</a>' +
+            //     '</div>' +
+            // '</div>');
+             group = $('<div class="control-group">' +
+                '<label class="control-label"><em class="required">*</em>分类：</label>' +
                 '<div class="controls">' +
-                    '<select class="js-category chosen-select" name="category" data-selected-id="" multiple="" data-placeholder="选择微页面分类" style="display: none;">' +
-                        '<option value="6322440">最热分类</option>' +
-                        '<option value="6322439">最新分类</option>' +
-                        '<option value="6322438">未分类</option>' +
-                    '</select>' +
-                    '<div class="chosen-container chosen-container-multi" style="width: 220px;" title="">' +
-                        '<ul class="chosen-choices">' +
-                            '<li class="search-field"><input type="text" value="选择微页面分类" class="default" autocomplete="off" style="width: 116px;"></li>' +
-                        '</ul>' +
-                        '<div class="chosen-drop">' +
-                            '<ul class="chosen-results"></ul>' +
-                        '</div>' +
+                    '<div class="dropdown hover">' +
+                        '<a class="js-dropdown-toggle dropdown-toggle control-action" href="javascript:void(0);">' +
+                            '<span class="label label-success" id=" '+ obj.id +'"" url="' + obj.src + '">' + obj.categroydesc + '</span>' +
+                            '<i class="caret"></i>' +
+                        '</a>' +
                     '</div>' +
-                    '<p class="help-inline">' +
-                        '<a class="js-refresh-category" href="javascript:void(0);">刷新</a>' +
-                        '<span>|</span>' +
-                        '<a class="new_window" target="_blank" href="//koudaitong.com/v2/showcase/category#create">+新建</a>' +
-                    '</p>' +
                 '</div>' +
             '</div>');
+            PowerPage.Common.AddSelectPageGroupLink(group.find('.dropdown'), function() {                
+                obj.categroy=PowerPage.Dom.SidBar.find('.dropdown>a>span').attr("id");
+                console.log('回调成功后改变的ID\t'+ PowerPage.Dom.SidBar.find('.dropdown>a>span').attr("id") + '\n修改后的JSON' + JSON.stringify(obj));
+                PowerPage.Common.ReView(obj);
+            });
             box.append(group);
+            var pageTitle = $('<div class="js-audio-style-region form-horizontal"><ul class="choices ui-audio-sortable"></ul></div>');
             group = $('<div class="control-group">' +
                 '<label class="control-label">背景颜色：</label>' +
                 '<div class="controls">' +
@@ -1039,11 +1365,22 @@ var PowerPage = {
                 obj.desc = $(this).val();
                 $(".editing desc").html(JSON.stringify(obj));
             });
-            //  更改演示
+            //  添加分类
+            /*$(".js-choose-pageTitle").click(function() {
+                var _this = $(this);
+                selectpagegroup(function(result) {
+                    obj.categroy = result.id;
+                    alert(result.id);
+                    obj.categroydesc = result.name;
+                    _this.html(result.name);
+                    PowerPage.Common.ReView(obj);
+                });
+            });*/
+            //  更改颜色
             box.find("input[name='color']").change(function() {
                 obj.background = $(this).val();
                 PowerPage.Common.ReView(obj);
-                console.log('修改后的颜色'+ obj.background + '\t' + PowerPage.EditTemp);
+                //console.log('修改后的颜色'+ obj.background + '\t' + PowerPage.EditTemp);
                 $(".editing desc").html(JSON.stringify(obj));
             });
             //  颜色重置
@@ -1089,7 +1426,7 @@ var PowerPage = {
             box.find("input[name='color']").change(function() {
                 obj.background = $(this).val();
                 PowerPage.Common.ReView(obj);
-                console.log('修改后的颜色'+ obj.background + '\t' + PowerPage.EditTemp);
+                //console.log('修改后的颜色'+ obj.background + '\t' + PowerPage.EditTemp);
                 $(".editing desc").html(JSON.stringify(obj));
             });
             //  颜色重置
@@ -1123,6 +1460,7 @@ var PowerPage = {
         //  修改 商品
         ModifyGoods: function(obj) {
             var box = $('<div></div>');
+            var controls = $('<div class="controls"></div>');
             var goods = $('<div class="form-horizontal"></div>');
             var group = $('<div class="control-group">' +
                 '<label class="control-label">选择商品：</label>' +
@@ -1315,6 +1653,264 @@ var PowerPage = {
                 });
             });
         },
+        //  修改 内容
+        ModifyContents: function(obj) {
+            var box = $('<div></div>');
+            var controls = $('<div class="controls"></div>');
+            var contents = $('<div class="form-horizontal"></div>');
+            var group = $('<div class="control-group">' +
+                '<label class="control-label">选择内容：</label>' +
+                '<div class="controls">' +
+                    '<ul class="module-goods-list clearfix ui-sortable" name="goods"></ul>' +
+                '</div>' +
+            '</div>');
+            for (var i = 0; i < obj.contents.length; i++) {
+                group.find('ul').append('<li class="sort">' +
+                    '<data style="display:none;">' + JSON.stringify(obj.contents[i]) + '</data>' +
+                    '<a href="' + obj.contents[i].url + '" target="_blank">' +
+                        '<img src="' + PowerPage.Common.AddPicHost(obj.contents[i].pic) + '" alt="内容图" width="50" height="50">' +
+                    '</a>' +
+                    '<a class="close-modal js-delete-goods small hide" data-id="" title="删除">×</a>' +
+                '</li>');
+            }
+            group.find('ul').append('<li>' +
+                '<a href="javascript:void(0);" class="js-add-goods add-goods">' +
+                    '<i class="icon-add"></i>'+
+                '</a>' +
+            '</li>');
+            contents.append(group);
+            var region = $('<div class="js-goods-style-region form-horizontal"></div>');
+            group = $('<div class="control-group">' +
+                '<label class="control-label">列表样式：</label>' +
+                '<div class="controls">' +
+                    '<label class="radio inline">' +
+                        '<input type="radio" name="size" ' + (obj.size == 0 ? 'checked=""' : '') + ' value="0">大图'+
+                    '</label>' +
+                    '<label class="radio inline">' +
+                        '<input type="radio" name="size" ' + (obj.size == 1 ? 'checked=""' : '') + ' value="1">小图' +
+                    '</label>' +
+                    '<label class="radio inline">' +
+                        '<input type="radio" name="size" ' + (obj.size == 2 ? 'checked=""' : '') + ' value="2">一大两小' +
+                    '</label>' +
+                    '<label class="radio inline">' +
+                        '<input type="radio" name="size" ' + (obj.size == 3 ? 'checked=""' : '') + ' value="3">详细列表' +
+                    '</label>' +
+                '</div>' +
+            '</div>');
+            region.append(group);
+            group = $('<div class="control-group"></div>');
+            var controls = $('<div class="controls"></div>');
+            var controlscard = $('<div class="controls-card"></div>');
+            var sizetype = $('<div class="controls-card-tab"></div>');
+            var sizetype1 = $('<label class="radio inline"><input type="radio" name="size_type" value="0" ' + (obj.sizetype == 0 ? 'checked=""' : '') + '>卡片样式</label>');
+            //var sizetype2 = $('<label class="radio inline"><input type="radio" name="size_type" value="1" ' + (obj.sizetype == 1 ? 'checked=""' : '') + '>瀑布流</label>');
+            var sizetype3 = $('<label class="radio inline"><input type="radio" name="size_type" value="2" ' + (obj.sizetype == 2 ? 'checked=""' : '') + '>极简样式</label>');
+            var sizetype4 = $('<label class="radio inline"><input type="radio" name="size_type" value="3" ' + (obj.sizetype == 3 ? 'checked=""' : '') + '>促销</label>');
+            //  选择小图模式
+            if ( obj.size == 1 ) {
+                sizetype.append(sizetype1);
+                //sizetype.append(sizetype2);
+                sizetype.append(sizetype3);
+                sizetype.append(sizetype4);
+            } else {
+                sizetype.append(sizetype1);
+                sizetype.append(sizetype3);
+            }
+            controlscard.append(sizetype);
+            var carditem = $('<div class="controls-card-item"></div>');
+            var showbuybox = $('<label class="checkbox inline">' +
+                '<input type="checkbox" name="buy_btn" value="1" ' + (obj.showbuy ? 'checked=""' : '') + '>显示购买按钮'+
+            '</label>');
+            var buytype = $('<div style="margin: 10px 0 0 15px;">' +
+                '<label class="radio inline"><input type="radio" name="buy_btn_type" value="1" ' + (obj.buytype == 1 ? 'checked=""' : '') + '>样式1</label>' +
+                '<label class="radio inline"><input type="radio" name="buy_btn_type" value="2" ' + (obj.buytype == 2 ? 'checked=""' : '') + '>样式2</label>' +
+                '<label class="radio inline"><input type="radio" name="buy_btn_type" value="3" ' + (obj.buytype == 3 ? 'checked=""' : '') + '>样式3</label>' +
+                '<label class="radio inline"><input type="radio" name="buy_btn_type" value="4" ' + (obj.buytype == 4 ? 'checked=""' : '') + '>样式4</label>' +
+            '</div>');
+            carditem.append(showbuybox);
+            if (obj.showbuy) {
+                carditem.append(buytype);
+            }
+            controlscard.append(carditem);
+            var showname = $('<div class="controls-card-item">' +
+                '<label class="checkbox inline">' +
+                    '<input type="checkbox" name="title" value="0" ' + (obj.showname ? 'checked=""' : '') + '>显示内容名 (小图不显示名称)' +
+                '</label>' +
+            '</div>');
+            if (obj.size != 3) {
+                controlscard.append(showname);
+            }
+            var showdesc = $('<div class="controls-card-item">' +
+                '<label class="checkbox inline">' +
+                    '<input type="checkbox" name="show_sub_title" value="0" ' + (obj.showdesc ? 'checked=""' : '') + '>显示内容简介' +
+                '</label>' +
+            '</div>');
+            if (obj.size == 0) {
+                controlscard.append(showdesc);
+            }
+            var showprice = $('<div class="controls-card-item">' +
+                '<label class="checkbox inline">' +
+                    '<input type="checkbox" name="price" value="1" ' + (obj.showprice ? 'checked=""' : '') + '>显示价格' +
+                '</label>' +
+            '</div>');
+            if (obj.size != 3) {
+                controlscard.append(showprice);
+            }
+            controls.append(controlscard);
+            group.append(controls);
+            region.append(group);
+            box.append(contents);
+            box.append(region);
+            PowerPage.Dom.SidBar.html(box);
+            $("input[name='buy_btn']").click(function() {
+                obj.showbuy = $(this).is(":checked");
+                PowerPage.Common.ReView(obj);
+                PowerPage.Common.EditClick();
+            });
+            $("input[name='size']").change(function() {
+                obj.size = parseInt($(this).val());
+                PowerPage.Common.ReView(obj);
+                PowerPage.Common.EditClick();
+            });
+            $("input[name='size_type']").change(function() {
+                obj.sizetype = parseInt($(this).val());
+                PowerPage.Common.ReView(obj);
+                PowerPage.Common.EditClick();
+            });
+            $("input[name='buy_btn_type']").change(function() {
+                obj.buytype = parseInt($(this).val());
+                PowerPage.Common.ReView(obj);
+            });
+            $("input[name='title']").click(function() {
+                obj.showname = $(this).is(":checked");
+                PowerPage.Common.ReView(obj);
+            });
+            $("input[name='price']").click(function() {
+                obj.showprice = $(this).is(":checked");
+                PowerPage.Common.ReView(obj);
+            });
+            $("input[name='show_sub_title']").click(function() {
+                obj.showdesc = $(this).is(":checked");
+                PowerPage.Common.ReView(obj);
+            });
+            $(".add-goods").click(function() {
+                selectcontents(function(result) {
+                    for (var i = 0; i < result.length; i++) {
+                        obj.contents.push(result[i]);
+                    }
+                    PowerPage.Common.ReView(obj);
+                    PowerPage.Common.EditClick();
+                });
+            });
+            PowerPage.Dom.SidBar.find(".ui-sortable").sortable({
+                containment: 'parent',
+                items: 'li.sort',
+                update: function() {
+                    PowerPage.ReDate.ReDataContents(obj);
+                }
+            });
+            PowerPage.Dom.SidBar.find(".js-delete-goods").click(function() {
+                $(this).parent().remove();
+                PowerPage.ReDate.ReDataContents(obj);
+            });
+        },
+        //  修改 内容列表
+        ModifyContentsList: function(obj) {
+            PowerPage.Modify.ModifyContents(obj);
+            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).html("");
+            var group = $('<div class="control-group">' +
+                '<label class="control-label">内容来源：</label>' +
+                '<div class="controls">'+
+                    '<a href="javascript:void(0);" class="js-add-goods add-goods control-action">' + obj.categroydesc + '</a>' +
+                    '<p class="help-desc">选择内容来源后，左侧实时预览暂不支持显示其包含的内容数据</p>' +
+                '</div>' +
+            '</div>');
+            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).append(group);
+            group = $('<div class="control-group">' +
+                '<label class="control-label">显示个数：</label>' +
+                '<div class="controls">' +
+                    '<label class="radio inline"><input type="radio" name="goods_number_type" value="0" ' + (obj.contentscount == 0 ? 'checked=""' : '') + '>6</label>' +
+                    '<label class="radio inline"><input type="radio" name="goods_number_type" value="1" ' + (obj.contentscount == 1 ? 'checked=""' : '') + '>12</label>' +
+                    '<label class="radio inline"><input type="radio" name="goods_number_type" value="2" ' + (obj.contentscount == 2 ? 'checked=""' : '') + '>18</label>' +
+                '</div>' +
+            '</div>');
+            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).append(group);
+            $("input[name='goods_number_type']").change(function() {
+                obj.contentscount = parseInt($(this).val());
+                PowerPage.Common.ReView(obj);
+            });
+            $(".add-goods").click(function() {
+                var _this = $(this);
+                selectcontentsgroup(function(result) {
+                    obj.categroy = result.id;
+                    obj.categroydesc = result.name;
+                    _this.html(result.name);
+                    PowerPage.Common.ReView(obj);
+                });
+            });
+        },
+        //  修改 内容类别
+        ModifyContentsCategroy: function(obj) {
+            PowerPage.Modify.ModifyContents(obj);
+            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).html("");
+            var group = $('<div class="control-group">' +
+                '<label class="control-label">' +
+                    '<em class="required">*</em>分类名称：' +
+                '</label>' +
+                '<div class="controls">' +
+                    '<input class="input-xxlarge" type="text" name="title" value="' + obj.categroyname + '">' +
+                '</div>' +
+            '</div>');
+            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).append(group);
+            group = $('<div class="control-group">' +
+                '<div class="controls">' +
+                    '<label class="checkbox">' +
+                        '<input type="checkbox" name="show_tag_title" value="1" ' + (obj.showcategroyname ? 'checked=""' : '') + '>' +
+                        '<span>页面上显示商品分组名称</span>' +
+                    '</label>' +
+                '</div>' +
+            '</div>');
+            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).append(group);
+            group = $('<div class="control-group">' +
+                '<label class="control-label">第一优先级：</label>' +
+                '<div class="controls">' +
+                    '<select name="first_priority">' +
+                        '<option value="1" selected="">序号越大越靠前</option>' +
+                        '<option value="2">最热的排在前面</option>' +
+                    '</select>' +
+                '</div>' +
+            '</div>');
+            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).append(group);
+            group = $('<div class="control-group">' +
+                '<label class="control-label">第二优先级：</label>' +
+                '<div class="controls">' +
+                    '<select name="second_priority">' +
+                        '<option value="1" selected="">创建时间越晚越靠前</option>' +
+                        '<option value="2">创建时间越早越靠前</option>' +
+                        '<option value="3">最热的排在前面</option>' +
+                    '</select>' +
+                '</div>' +
+            '</div>');
+            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).append(group);
+            PowerPage.Dom.SidBar.find("input[name='title']").blur(function() {
+                obj.categroyname = $(this).val();
+                PowerPage.Common.ReView(obj);
+            });
+            PowerPage.Dom.SidBar.find("input[name='show_tag_title']").click(function() {
+                obj.showcategroyname = $(this).is(":checked");
+                PowerPage.Common.ReView(obj);
+            });
+            PowerPage.Dom.SidBar.find("select[name='first_priority']").val(obj.firstorder);
+            PowerPage.Dom.SidBar.find("select[name='first_priority']").change(function() {
+                obj.firstorder = $(this).val();
+                PowerPage.Common.ReView(obj);
+            });
+            PowerPage.Dom.SidBar.find("select[name='second_priority']").val(obj.secondorder);
+            PowerPage.Dom.SidBar.find("select[name='second_priority']").change(function() {
+                obj.secondorder = $(this).val();
+                PowerPage.Common.ReView(obj);
+            });
+        },
         //  修改 图片广告
         ModifyImageAd: function(obj) {
             var box = $('<div class="form-horizontal"></div>');
@@ -1366,7 +1962,37 @@ var PowerPage = {
             group = $('<div class="control-group js-choices-region"><ul class="choices ui-sortable"></ul></div>');
             for (var i = 0; i < obj.pics.length; i++) {
                 if (obj.pics[i].pic != PowerPage.EditTemp.defaultval.imageadpic[0].pic) {
-                    var dataitem = $('<li class="choice"><div class="choice-image">             <img src="' + PowerPage.Common.AddPicHost(obj.pics[i].pic) + '" data-src="' + obj.pics[i].pic + '"  width="118" height="118" class="thumb-image">         <a class="modify-image js-trigger-image" href="javascript: void(0);">重新上传</a>         <!-- for error msg -->     <div class="control-group">         <div class="controls">                     </div>     </div> </div> <div class="choice-content">     <div class="control-group">         <label class="control-label">标题：</label>         <div class="controls">             <input class="" type="text" name="title" value="' + obj.pics[i].name + '">         </div>     </div>     <div class="control-group">         <label class="control-label">链接：</label>         <div class="controls"> <div class="dropdown hover"> <a class="js-dropdown-toggle dropdown-toggle control-action" href="javascript:void(0);"><span class="label label-success" url="' + obj.pics[i].url + '" >' + obj.pics[i].urldesc + '</span> <i class="caret"></i></a>  </div> </div>        </div>     </div> </div> <div class="actions"><span class="action delete close-modal" title="删除">×</span> </div> </li>');
+                    var dataitem = $('<li class="choice">' +
+                        '<div class="choice-image">' +
+                            '<img src="' + PowerPage.Common.AddPicHost(obj.pics[i].pic) + '" data-src="' + obj.pics[i].pic + '"  width="118" height="118" class="thumb-image">' +
+                            '<a class="modify-image js-trigger-image" href="javascript: void(0);">重新上传</a>' +
+                            '<div class="control-group">' +
+                                '<div class="controls"></div>' +
+                            '</div>' +
+                        '</div>' +
+                        '<div class="choice-content">' +
+                            '<div class="control-group">' +
+                                '<label class="control-label">标题：</label>' +
+                                '<div class="controls">' +
+                                    '<input class="" type="text" name="title" value="' + obj.pics[i].name + '">' +
+                                '</div>' +
+                            '</div>' +
+                            '<div class="control-group">' +
+                                '<label class="control-label">链接：</label>' +
+                                '<div class="controls"> <div class="dropdown hover">' +
+                                    '<a class="js-dropdown-toggle dropdown-toggle control-action" href="javascript:void(0);">' +
+                                        '<span class="label label-success" url="' + obj.pics[i].url + '" >' + obj.pics[i].urldesc + '</span>' +
+                                        '<i class="caret"></i>' +
+                                    '</a>' +
+                                '</div>' +
+                            '</div>' +
+                        '</div>' +
+                    // '</div>' +
+                    // '</div>' +
+                    '<div class="actions">' +
+                        '<span class="action delete close-modal" title="删除">×</span>' +
+                    '</div>' +
+                    '</li>');
                     PowerPage.Common.AddSelectLink(dataitem.find('.dropdown'), function() {
                         PowerPage.ReDate.ReDataImageAd(obj);
                     });
@@ -1376,7 +2002,6 @@ var PowerPage = {
             box.append(group);
             group = $('<div class="control-group options"> <a href="javascript:void(0);" class="add-option js-add-option"><i class="icon-add"></i> 添加一个广告</a> </div>');
             box.append(group);
-
             PowerPage.Dom.SidBar.html(box);
             $(".choices .delete").click(function() {
                 $(this).parentsUntil(".choices").remove();
@@ -1392,6 +2017,12 @@ var PowerPage = {
                 PowerPage.Common.ReView(obj);
             });
             $(".js-add-option").click(function() {
+                // obj.pics.push($.extend(true, {}, PowerPage.EditTemp.defaultval.imageadpic[0]));
+                // PowerPage.Common.ReView(obj);
+                // PowerPage.Common.EditClick();
+                if( JSON.stringify(obj.pics[0].id) == -1){
+                    obj.pics.pop();
+                }
                 selectpic(function(result) {
                     for (var i = 0; i < result.length; i++) {
                         $(".editing .swiper-wrapper").append('<div class="swiper-slide"><img src="' + PowerPage.Common.AddPicHost(result[i]) + '" data-src="' + result[i] + '"/></div>');
@@ -1401,7 +2032,6 @@ var PowerPage = {
                     }
                     PowerPage.Common.ReView(obj);
                     PowerPage.Common.EditClick();
-
                 });
             });
             $(".choices .choice input").blur(function() {
@@ -1565,6 +2195,7 @@ var PowerPage = {
             var box = $('<div class="form-horizontal"></div>');
             var group = $('<div class="control-group js-collection-region"></div>');
             var databox = $('<ul class="choices ui-sortable"></ul>');
+            //console.log(obj.navs.length);
             for (var i = 0; i < obj.navs.length; i++) {
                 var dataitem = $('<li class="choice">' +
                     '<div class="control-group">' +
@@ -1590,6 +2221,7 @@ var PowerPage = {
                 '</li>');
                 PowerPage.Common.AddSelectLink(dataitem.find('.dropdown'), function() {
                     PowerPage.ReDate.ReDataTextNav(obj);
+                    console.log(JSON.stringify(obj));
                 });
                 databox.append(dataitem);
             }
@@ -1622,75 +2254,148 @@ var PowerPage = {
         },
         //  修改 商品搜索
         ModifySearch: function(obj) {
-            var box = $('<div><div class="app-component-desc"> <p>可随意插入任何页面和位置，方便粉丝快速搜索商品.</p> <p>注意：记得给商品添加合适的商品标签吧。</p> </div> </div>');
+            var box = $('<div class="app-component-desc">' +
+                '<p>可随意插入任何页面和位置，方便粉丝快速搜索商品.</p>' +
+                '<p>注意：记得给商品添加合适的商品标签吧。</p>' +
+            '</div>');
             PowerPage.Dom.SidBar.html(box);
         },
         //  修改 辅助线
         ModifyLine: function(obj) {
-            var box = $('<div><div class="app-component-desc"> <p>辅助线</p> </div></div>');
+            var box = $('<div class="app-component-desc"><p>辅助线</p></div>');
             PowerPage.Dom.SidBar.html(box);
         },
         //  修改 辅助空白
         ModifySpace: function(obj) {
             var box = $('<div class="form-horizontal"></div>');
-            var group = $('<div class="control-group white-space-group"> <label class="control-label">空白高度：</label> <div class="controls controls-slider"> <div class="js-slider white-space-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false"><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 31.4286%;"></a></div> <div class="slider-height"><span class="js-height">52</span> 像素</div> </div> </div>');
+            var group = $('<div class="control-group white-space-group">' +
+                '<label class="control-label">空白高度：</label>' +
+                '<div class="controls controls-slider">' +
+                '<div class="js-slider white-space-slider ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false">' +
+                '<a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 31.4286%;"></a>'+
+                '</div>'+
+                '<div class="slider-height"><span class="js-height">52</span> 像素</div>' +
+                '</div>' +
+            '</div>');
             box.append(group);
             PowerPage.Dom.SidBar.html(box);
         },
         //  修改 进入店铺
         ModifyStore: function(obj) {
-            var box = $('<div><div class="app-component-desc"> <p>进入店铺</p> </div> </div>');
+            var box = $('<div class="app-component-desc"><p>进入店铺</p></div>');
             PowerPage.Dom.SidBar.html(box);
         },
         //  修改 语音
         ModifyAudio: function(obj) {
-            var box = $('<form class="form-horizontal edit-audio" novalidate="">' +
+            var box = $('<div></div>');
+            var group = $('<div class="form-horizontal">' +
                 '<div class="control-group">' +
-                '<label class="control-label">音频：</label>' +
-                '<div class="controls">' +
-                '<audio name="audio" src=" ' + obj.src + ' " class="hide" ' + obj.loop + '></audio>' +
-                '<span class="voice-player">' +
-                '<span class="stop">点击播放</span>' +
-                '<span class="second"></span>' +
-                '<i class="play" style="display:none;"></i>' +
-                '</span>' +
-                '<a href="javascript:;" class="js-choose-audio control-action">选择音频</a>' +
+                    '<label class="control-label">选择商品：</label>' +
+                    '<a href="javascript:;" class="js-choose-audio control-action">选择音频</a>' +
                 '</div>' +
+            '</div>');
+            var audio = $('<div class="js-audio-style-region form-horizontal"><ul class="choices ui-audio-sortable"></ul></div>');
+            // if ( obj.audio.length == 0 ) {
+            //      $.extend(true, {}, PowerPage.EditTemp.defaultval.audio, obj.audio);
+            //       obj.audio = PowerPage.EditTemp.defaultval.audio;
+            //     // obj.audio.push( $.extend( true, {}, PowerPage.EditTemp.defaultval.audio , obj.audio ));
+            //     // $.extend(true, audio, PowerPage.EditTemp.defaultval.audio, obj.audio);
+            //     // $.extend(true, {}, PowerPage.EditTemp.defaultval.audio.length, obj.audio);
+            //     // obj.audio.push($.extend(true, audio, PowerPage.EditTemp.defaultval.audio[0], obj.audio));
+            // } else {
+            //     audio = obj.audio;
+            // }
+            // console.log( '初始化的长度' + PowerPage.EditTemp.defaultval.audio.length +'\t 实际长度'+ obj.audio.length );
+            for ( var i = 0; i < obj.audio.length; i++) {
+                audio.find("ul").append('<li class="choice audio"><div class="control-group">' +
+                    '<data style="display:none;">' + JSON.stringify(obj.audio[i]) + '</data>' +
+                    '<label class="control-label">音频：</label>' +
+                    '<div class="controls">' +
+                        '<audio name="audio" src=" ' + obj.audio[i].src + ' " value=" ' + obj.audio[i].src + ' " class="hide"></audio>' +
+                        '<span class="voice-player">' +
+                        '<span class="stop">点击播放</span>' +
+                        '<span class="second"></span>' +
+                            '<i class="play" style="display:none;"></i>' +
+                        '</span>' +
+                    '</div>' +
                 '</div>' +
                 '<div class="control-group">' +
-                '<label class="control-label">标题：</label>' +
-                '<div class="controls">' +
-                '<input placeholder="标题" name="title" value="' + obj.title + '" type="text" class="input-xxlarge">' +
+                    '<label class="control-label">标题：</label>' +
+                    '<div class="controls">' +
+                        '<input placeholder="" name="title" value="' + obj.audio[i].title + '" type="text" class="input-xxlarge">' +
+                    '</div>' +
                 '</div>' +
+                '<div class="control-group">' +
+                    '<label class="control-label">描述：</label>' +
+                    '<div class="controls">' +
+                        '<input placeholder="" name="desc" value="' + obj.audio[i].desc + '" type="text" class="input-xxlarge">' +
+                    '</div>' +
                 '</div>' +
-                // '<div class="control-group">' +
-                //     '<label class="control-label">循环：</label>' +
-                //     '<div class="controls">' +
-                //         '<label class="checkbox inline">' +
-                //         '<input name="loop" value="0" type="checkbox">开启循环播放' +
-                //         '</label>' +
-                //     '</div>' +
+                '<div class="control-group">' +
+                    '<label class="control-label">时间：</label>' +
+                    '<div class="controls">' +
+                        '<input placeholder="" name="time" value="' + obj.audio[i].time + '" type="text" class="input-xxlarge" onclick="ShowDateNotTime(this)">' +
+                    '</div>' +
+                '</div>' +
+                '<div class="control-group">' +
+                    '<label class="control-label">循环：</label>' +
+                    '<div class="controls">' +
+                        '<label class="checkbox inline">' +
+                            '<input name="loop" value="' + obj.audio[i].loop + '" type="checkbox"> 开启循环播放' +
+                        '</label>' +
+                    '</div>' +
                 // '</div>' +
                 // '<div class="control-group">' +
                 //     '<label class="control-label">播放：</label>' +
                 //     '<div class="controls">' +
-                //         '<label class="radio inline"><input name="reload" value="1" type="radio">暂停后再恢复播放时，从头开始</label>' +
-                //         '<label class="radio inline"><input name="reload" value="0" checked="" type="radio">暂停后再恢复播放时，从暂停位置开始</label>' +
+                //         '<label class="radio inline"><input name="reload" value="1" type="radio"> 暂停后再恢复播放时，从头开始</label>' +
+                //         '<label class="radio inline"><input name="reload" value="0" type="radio" checked=""> 暂停后再恢复播放时，从暂停位置开始</label>' +
                 //     '</div>' +
-                // '</div>' +
-                '</form>');
+                '</div>' +
+                '<div class="actions"><span class="action delete close-modal" title="删除">×</span></div>' +
+                '</li>');
+            }
+            box.append(group);
+            box.append(audio);
             PowerPage.Dom.SidBar.html(box);
             box.find("input[name='title']").blur(function() {
-                obj.title = $(this).val();
-                $(".editing title.custom-audio-title").html(obj.title);
-                $(".editing desc").html(JSON.stringify(obj));
+                PowerPage.ReDate.ReDataAudio(obj);
+                // obj.title = $(this).val();
+                // $(".editing title.custom-audio-title").html(obj.title);
+                // $(".editing desc").html(JSON.stringify(obj));
+            });
+            box.find("input[name='desc']").blur(function() {
+                PowerPage.ReDate.ReDataAudio(obj);
+                // obj.title = $(this).val();
+                // $(".editing span.dec").html(obj.title);
+                // $(".editing desc").html(JSON.stringify(obj));
+            });
+            box.find("input[name='time']").blur(function() {
+                PowerPage.ReDate.ReDataAudio(obj);
+                // obj.title = $(this).val();
+                // $(".editing time").html(obj.title);
+                // $(".editing desc").html(JSON.stringify(obj));
             });
             box.find(".js-choose-audio").click(function() {
-                $("#FileAdminBox").addClass('open');
+                //$("#FileAdminBox").addClass('open');
+                var _this = $(this);
+                selectaudio(function(result) {
+                    for (var i = 0; i < result.length; i++) {
+                        obj.audio.push(result[i]);
+                    }
+                    PowerPage.Common.ReView(obj);
+                    PowerPage.Common.EditClick();
+                });
             });
             box.find("span.voice-player").click(function() {
                 var ts = $(this).parents('.controls').children("audio.hide");
                 if (ts[0].paused) { //判断是否暂停状态
+                    $("ul.choices li").each(function(index, el) { //关闭上一音频
+                        if( $(this).find('span.voice-player').hasClass('active') ) {
+                            $(this).find('span.voice-player').removeClass('active'); 
+                            $(this).find("audio.hide")[0].pause();
+                        }
+                    });
                     $(this).addClass('active');
                     ts[0].play(); //播放音频
                 } else {
@@ -1698,33 +2403,190 @@ var PowerPage = {
                     ts[0].pause(); //暂停播放
                 }
             });
-            $('#music-admin-tab a.btn.btn-info').click(function() {
-                $("#FileAdminBox").removeClass('open');
-                obj.src = 'music/峰人院1.mp3';
-                //obj.src = abc();
-                $(".editing desc").html(JSON.stringify(obj));
-                PowerPage.Dom.SidBar.find(".js-choose-audio").text('重新选择音频');
-                PowerPage.Dom.SidBar.find(".voice-player").removeClass('hide');
-                PowerPage.Dom.SidBar.find(".js-choose-audio").parent().find('audio.hide').attr('src', obj.src);
-                $(".editing").find('audio.hide').attr('src', obj.src);
-                //$(".editing desc").html(JSON.stringify(obj));
+            PowerPage.Dom.SidBar.find(".ui-audio-sortable").sortable({
+                containment: 'parent',
+                items: 'li.audio',
+                update: function() {
+                    PowerPage.ReDate.ReDataAudio(obj);
+                }
+            });
+            PowerPage.Dom.SidBar.find(".delete").click(function() {
+                $(this).parent().parent().remove();
+                PowerPage.ReDate.ReDataAudio(obj);
             });
         },
         //  修改 语音列表
         ModifyAudioList: function(obj) {
-            //PowerPage.Modify.ModifyAudio(obj);
+            // PowerPage.Modify.ModifyAudio(obj);
             PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).html("");
-            var group = $('<div class="control-group"> <label class="control-label">音频来源：</label> <div class="controls"> <a href="javascript:void(0);" class="js-add-goods add-goods control-action">' + obj.categroydesc + '</a> <p class="help-desc">选择商品来源后，左侧实时预览暂不支持显示其包含的商品数据</p> </div> </div>');
+            var group = $('<div class="control-group">' +
+                '<label class="control-label">音频来源：</label>' +
+                '<div class="controls">' +
+                    '<a href="javascript:void(0);" class="js-add-goods add-goods control-action">' + obj.categroydesc + '</a>' +
+                    '<p class="help-desc">选择音频来源后，左侧实时预览暂不支持显示其包含的音频数据</p>' +
+                '</div>' +
+            '</div>');
             PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).append(group);
-            group = $('<div class="control-group"> <label class="control-label">显示个数：</label> <div class="controls"> <label class="radio inline"> <input type="radio" name="goods_number_type" value="0" ' + (obj.goodscount == 0 ? 'checked=""' : '') + '>6 </label> <label class="radio inline"> <input type="radio" name="goods_number_type" value="1" ' + (obj.goodscount == 1 ? 'checked=""' : '') + '>12 </label> <label class="radio inline"> <input type="radio" name="goods_number_type" value="2" ' + (obj.goodscount == 2 ? 'checked=""' : '') + '>18 </label> </div> </div>');
+            group = $('<div class="control-group">' +
+                '<label class="control-label">显示个数：</label>' +
+                '<div class="controls">' +
+                    '<label class="radio inline"><input type="radio" name="goods_number_type" value="0" ' + (obj.audiocount == 0 ? 'checked=""' : '') + '>6</label>' +
+                    '<label class="radio inline"><input type="radio" name="goods_number_type" value="1" ' + (obj.audiocount == 1 ? 'checked=""' : '') + '>12</label>' +
+                    '<label class="radio inline"><input type="radio" name="goods_number_type" value="2" ' + (obj.audiocount == 2 ? 'checked=""' : '') + '>18</label>' +
+                '</div>' +
+            '</div>');
             PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).append(group);
+            PowerPage.Dom.SidBar.find(".js-audio-style-region").eq(0).html("");
             $("input[name='goods_number_type']").change(function() {
-                obj.goodscount = parseInt($(this).val());
+                obj.audiocount = parseInt($(this).val());
                 PowerPage.Common.ReView(obj);
             });
             $(".add-goods").click(function() {
                 var _this = $(this);
-                selectgoodsgroup(function(result) {
+                selectaudiolist(function(result) {
+                    obj.categroy = result.id;
+                    obj.categroydesc = result.name;
+                    _this.html(result.name);
+                    PowerPage.Common.ReView(obj);
+                });
+            });
+        },
+        //  修改 视频
+        ModifyVideo: function(obj) {
+            var box = $('<div></div>');
+            var group = $('<div class="form-horizontal">' +
+                '<div class="control-group">' +
+                    '<label class="control-label">选择商品：</label>' +
+                    '<a href="javascript:;" class="js-choose-audio control-action">选择视频</a>' +
+                '</div>' +
+            '</div>');
+            var video = $('<div class="js-video-style-region form-horizontal"><ul class="choices ui-video-sortable"></ul></div>');
+            for ( var i = 0; i < obj.video.length; i++) {
+                video.find("ul").append('<li class="choice video"><div class="control-group">' +
+                    '<data style="display:none;">' + JSON.stringify(obj.video[i]) + '</data>' +
+                    '<label class="control-label">音频：</label>' +
+                    '<div class="controls">' +
+                        '<video name="video" src=" ' + obj.video[i].src + ' " value=" ' + obj.video[i].src + ' " class="hide"></video>' +
+                        '<span class="voice-player">' +
+                        '<span class="stop">点击播放</span>' +
+                        '<span class="second"></span>' +
+                            '<i class="play" style="display:none;"></i>' +
+                        '</span>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="control-group">' +
+                    '<label class="control-label">标题：</label>' +
+                    '<div class="controls">' +
+                        '<input placeholder="" name="title" value="' + obj.video[i].title + '" type="text" class="input-xxlarge">' +
+                    '</div>' +
+                '</div>' +
+                '<div class="control-group">' +
+                    '<label class="control-label">描述：</label>' +
+                    '<div class="controls">' +
+                        '<input placeholder="" name="desc" value="' + obj.video[i].desc + '" type="text" class="input-xxlarge">' +
+                    '</div>' +
+                '</div>' +
+                '<div class="control-group">' +
+                    '<label class="control-label">时间：</label>' +
+                    '<div class="controls">' +
+                        '<input placeholder="" name="time" value="' + obj.video[i].time + '" type="text" class="input-xxlarge" onclick="ShowDateNotTime(this)">' +
+                    '</div>' +
+                '</div>' +
+                '<div class="control-group">' +
+                    '<label class="control-label">循环：</label>' +
+                    '<div class="controls">' +
+                        '<label class="checkbox inline">' +
+                            '<input name="loop" value="' + obj.video[i].loop + '" type="checkbox"> 开启循环播放' +
+                        '</label>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="actions"><span class="action delete close-modal" title="删除">×</span></div>' +
+                '</li>');
+            }
+            box.append(group);
+            box.append(video);
+            PowerPage.Dom.SidBar.html(box);
+            box.find("input[name='title']").blur(function() {
+                PowerPage.ReDate.ReDataVideo(obj);
+            });
+            box.find("input[name='desc']").blur(function() {
+                PowerPage.ReDate.ReDataVideo(obj);
+            });
+            box.find("input[name='time']").blur(function() {
+                PowerPage.ReDate.ReDataVideo(obj);
+            });
+            box.find(".js-choose-audio").click(function() {
+                var _this = $(this);
+                selectvideo(function(result) {
+                    for (var i = 0; i < result.length; i++) {
+                        obj.video.push(result[i]);
+                    }
+                    PowerPage.Common.ReView(obj);
+                    PowerPage.Common.EditClick();
+                });
+            });
+            box.find("span.voice-player").click(function() {
+                var ts = $(this).parents('.controls').children("video.hide");
+                var td = $('.editing .items');
+                if (ts[0].paused) { //判断是否暂停状态
+                    $("ul.choices li").each(function(index, el) { //关闭上一音频
+                        if( $(this).find('span.voice-player').hasClass('active') ) {
+                            $(this).find('span.voice-player').removeClass('active');
+                            alert(index);
+                            //td.find('li').eq(index).find('video').pause();
+                            $(this).find("video.hide")[0].pause();
+                        }
+                    });
+                    $(this).addClass('active');
+                    td.find('li').eq(index).find('video').play();
+                    //ts[0].play(); //播放音频
+                } else {
+                    $(this).removeClass('active');
+                    td.find('li').eq(index).find('video').pause();
+                    //ts[0].pause(); //暂停播放
+                }
+            });
+            PowerPage.Dom.SidBar.find(".ui-audio-sortable").sortable({
+                containment: 'parent',
+                items: 'li.audio',
+                update: function() {
+                    PowerPage.ReDate.ReDataVideo(obj);
+                }
+            });
+            PowerPage.Dom.SidBar.find(".delete").click(function() {
+                $(this).parents('li.choice.video').remove();
+                PowerPage.ReDate.ReDataVideo(obj);
+            });
+        },
+        //  修改 视频列表
+        ModifyVideoList: function(obj) {
+            // PowerPage.Modify.ModifyAudio(obj);
+            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).html("");
+            var group = $('<div class="control-group">' +
+                '<label class="control-label">视频来源：</label>' +
+                '<div class="controls">' +
+                    '<a href="javascript:void(0);" class="js-add-goods add-goods control-action">' + obj.categroydesc + '</a>' +
+                    '<p class="help-desc">选择商品来源后，左侧实时预览暂不支持显示其包含的商品数据</p>' +
+                '</div>' +
+            '</div>');
+            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).append(group);
+            group = $('<div class="control-group">' +
+                '<label class="control-label">显示个数：</label>' +
+                '<div class="controls">' +
+                    '<label class="radio inline"><input type="radio" name="goods_number_type" value="0" ' + (obj.audiocount == 0 ? 'checked=""' : '') + '>6</label>' +
+                    '<label class="radio inline"><input type="radio" name="goods_number_type" value="1" ' + (obj.audiocount == 1 ? 'checked=""' : '') + '>12</label>' +
+                    '<label class="radio inline"><input type="radio" name="goods_number_type" value="2" ' + (obj.audiocount == 2 ? 'checked=""' : '') + '>18</label>' +
+                '</div>' +
+            '</div>');
+            PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).append(group);
+            PowerPage.Dom.SidBar.find(".js-audio-style-region").eq(0).html("");
+            $("input[name='goods_number_type']").change(function() {
+                obj.audiocount = parseInt($(this).val());
+                PowerPage.Common.ReView(obj);
+            });
+            $(".add-goods").click(function() {
+                var _this = $(this);
+                selectvideolist(function(result) {
                     obj.categroy = result.id;
                     obj.categroydesc = result.name;
                     _this.html(result.name);
@@ -1735,7 +2597,12 @@ var PowerPage = {
         //  修改 公告
         ModifyNotice: function(obj) {
             var box = $('<div class="form-horizontal"></div>');
-            box.append('<div class="control-group"> <label class="control-label">公告：</label> <div class="controls"> <input type="text" name="content" value="' + (obj.value == PowerPage.EditTemp.notice.value ? "" : obj.value) + '" class="input-xxlarge" placeholder="请填写内容，如果过长，将会在手机上滚动显示"> </div> </div>');
+            box.append('<div class="control-group">' +
+                '<label class="control-label">公告：</label>' +
+                '<div class="controls">' +
+                    '<input type="text" name="content" value="' + (obj.value == PowerPage.EditTemp.notice.value ? "" : obj.value) + '" class="input-xxlarge" placeholder="请填写内容，如果过长，将会在手机上滚动显示">' +
+                '</div>' +
+            '</div>');
             PowerPage.Dom.SidBar.html(box);
             $("input[name='content']").blur(function() {
                 obj.value = $(this).val();
@@ -1746,13 +2613,13 @@ var PowerPage = {
         ModifyCoupon: function(obj) { //优惠券
             var box = $('<form class="form-horizontal edit-custom-coupon" novalidate="" onsubmit="return false">' +
                 '<div class="control-group">' +
-                '<label class="control-label">优惠券：</label>' +
-                '<div class="controls">' +
-                '<a href="javascript:;" class="control-action js-add-coupon">添加优惠券</a>' +
-                '<input name="coupon" type="hidden">' +
+                    '<label class="control-label">优惠券：</label>' +
+                    '<div class="controls">' +
+                        '<a href="javascript:;" class="control-action js-add-coupon">添加优惠券</a>' +
+                        '<input name="coupon" type="hidden">' +
+                    '</div>' +
                 '</div>' +
-                '</div>' +
-                '</form>');
+            '</form>');
             PowerPage.Dom.SidBar.html(box);
         },
     },
@@ -1916,6 +2783,14 @@ var PowerPage = {
     //  返回数据
     ReDate: {
         //  返回数据 商品
+        ReDataContents: function(obj) {
+            obj.contents.length = 0;
+            PowerPage.Dom.SidBar.find(".sort data").each(function() {
+                obj.contents.push(eval('(' + $(this).html() + ')'));
+            });
+            PowerPage.Common.ReView(obj);
+        },
+        //  返回数据 商品
         ReDataGoods: function(obj) {
             obj.goods.length = 0;
             PowerPage.Dom.SidBar.find(".sort data").each(function() {
@@ -1944,6 +2819,37 @@ var PowerPage = {
                     name: $(this).find("input").val(),
                     url: $(this).find(".label").attr("url"),
                     urldesc: $(this).find(".label").html(),
+                });
+            });
+            PowerPage.Common.ReView(obj);
+        },
+        // 返回数据 音频
+        ReDataAudio: function(obj){
+            obj.audio.length = 0;
+            $(".choices .choice").each(function() {
+                //console.log( $(this).attr('src') + '\t' + $(this).find('input').val());
+                //alert( $(this).find("audio[name='audio']").attr('class'));
+                obj.audio.push({
+                    title: $(this).find("input[name='title']").val(),
+                    desc: $(this).find("input[name='desc']").val(),
+                    time: $(this).find("input[name='time']").val(),
+                    src: $(this).find("audio").attr("src"),
+                    loop: $(this).find("input[name='loop']").val(),
+                });
+            });
+            PowerPage.Common.ReView(obj);
+        },
+        // 返回数据 视频
+        ReDataVideo: function(obj){
+            obj.video.length = 0;
+            $(".choices .choice").each(function() {
+                console.log( $(this).attr('src') + '\t' + $(this).find('input').val());
+                obj.video.push({
+                    title: $(this).find("input[name='title']").val(),
+                    desc: $(this).find("input[name='desc']").val(),
+                    time: $(this).find("input[name='time']").val(),
+                    src: $(this).find("video").attr("src"),
+                    loop: $(this).find("input[name='loop']").val(),
                 });
             });
             PowerPage.Common.ReView(obj);
@@ -1983,34 +2889,67 @@ var PowerPage = {
     Common: {
         //  添加选中项链接说明
         AddSelectLink: function(dom, callback) {
-            var dropmenu = $('<ul class="dropdown-menu"> <li> <a class="js-modal-magazine" data-type="feature" href="javascript:void(0);">微页面</a> </li> <li> <a class="js-modal-magazine" data-type="featurecategroy" href="javascript:void(0);">微页面分类</a> </li> <li> <a class="js-modal-goods" data-type="goodscategroy" href="javascript:void(0);">商品分类</a> </li> <li> <a class="js-modal-goods" data-type="goods" href="javascript:void(0);">商品</a> </li> </ul>');
+            var dropmenu = $('<ul class="dropdown-menu">' +
+                '<li><a class="js-modal-magazine" data-type="page" href="javascript:void(0);">微页面</a></li>' +
+                '<li><a class="js-modal-magazine" data-type="pagegroup" href="javascript:void(0);">微页面分类</a></li>' +
+                '<li><a class="js-modal-goods" data-type="contents" href="javascript:void(0);">内容</a></li>' +
+                '<li><a class="js-modal-goods" data-type="contentsgroup" href="javascript:void(0);">内容分组</a></li>' +
+            '</ul>');
             dom.append(dropmenu);
             dropmenu.find("a").click(function() {
-                var _this = $(this).parent().parent().parent().find("span");
+                var _this = $(this).parents(".dropdown").find("span");
                 switch ($(this).attr("data-type")) {
-                    case "feature":
+                    case "page":
                         selectpage(function(result) {
+                            _this.attr("id", result.id);
                             _this.attr("url", result.url);
                             _this.html("微页面|" + result.name);
                             callback();
                         });
                         break;
-                    case "featurecategroy":
-                        break;
-                    case "goods":
-                        selectgoods(function(result) {
-                            _this.attr("url", result[0].url);
-                            _this.html("商品|" + result[0].name);
-                            callback();
-                        });
-                        break;
-                    case "goodscategroy":
-                        selectgoodsgroup(function(result) {
+                    case "pagegroup":
+                        selectpagegroup(function(result) {
+                            _this.attr("id", result.id);
                             _this.attr("url", result.url);
-                            _this.html("商品分类|" + result.name);
+                            _this.html("页面分类|" + result.name);
                             callback();
                         });
                         break;
+                    case "contents":
+                        selectcontents(function(result) {
+                            _this.attr("id", result[0].id);
+                            _this.attr("url", result[0].url);
+                            _this.html("内容|" + result[0].name);
+                            callback();
+                        });
+                        break;
+                    case "contentsgroup":
+                        selectcontentsgroup(function(result) {
+                            _this.attr("id", result.id);
+                            _this.attr("url", result.url);
+                            _this.html("内容分组|" + result.name);
+                            callback();
+                        });
+                        break;
+                }
+            });
+        },
+        //  添加选中项链接说明 (页面分类)
+        AddSelectPageGroupLink: function(dom, callback) {
+            var dropmenu = $('<ul class="dropdown-menu">' +
+                '<li><a class="js-modal-magazine" data-type="pagegroup" href="javascript:void(0);">微页面分类</a></li>' +
+            '</ul>');
+            dom.append(dropmenu);
+            dropmenu.find("a").click(function() {
+                var _this = $(this).parents(".dropdown").find("span");
+                switch ($(this).attr("data-type")) {
+                    case "pagegroup":
+                        selectpagegroup(function(result) {
+                            //alert(JSON.stringify(result));
+                            _this.attr("id", result.id);
+                            _this.html("页面分类|" + result.name);
+                            callback();
+                        });
                 }
             });
         },

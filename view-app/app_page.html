@@ -1,0 +1,206 @@
+<script type="text/javascript">
+    function PageList($scope) {
+        $scope.pages = [
+            {
+                id: 8,
+                sort: 2,
+                title: "第2问：怎样与装饰公司展开合作？",
+                categroy: "必答",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "http://wap.koudaitong.com/v2/category/pqbxzebn",
+                eye: 837
+            },
+            {
+                id: 7,
+                sort: 1,
+                title: "第1问：顾客自己很喜欢，但同行的人却不买账。",
+                categroy: "必答",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "http://wap.koudaitong.com/v2/category/pqbxzebn",
+                eye: 837
+            },
+            {
+                id: 6,
+                sort: 2,
+                title: "早会第2讲：大佬玩营销",
+                categroy: "早会内容",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "http://wap.koudaitong.com/v2/category/pqbxzebn",
+                eye: 237
+            },
+            {
+                id: 5,
+                sort: 1,
+                title: "早会第1讲：一念天堂",
+                categroy: "早会内容",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "http://wap.koudaitong.com/v2/category/pqbxzebn",
+                eye: 37
+            },
+            {
+                id: 4,
+                sort: 4,
+                title: "转型：互联网+时代的企业突破之路（下）",
+                categroy: "启峰书院",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "http://wap.koudaitong.com/v2/category/pqbxzebn",
+                eye: 537
+            },
+            {
+                id: 3,
+                sort: 3,
+                title: "转型：互联网+时代的企业突破之路（上）",
+                categroy: "启峰书院",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "http://wap.koudaitong.com/v2/category/pqbxzebn",
+                eye: 537
+            },
+            {
+                id: 2,
+                sort: 2,
+                title: "定位——有史以来对美国营销影响最大的观念",
+                categroy: "启峰书院",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "http://wap.koudaitong.com/v2/category/pqbxzebn",
+                eye: 732
+            },
+            {
+                id: 1,
+                sort: 1,
+                title: "超预期",
+                categroy: "启峰书院",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "http://wap.koudaitong.com/v2/category/pqbxzebn",
+                eye: 837
+            }
+        ];
+    }
+</script>
+<div id="page-wrapper">
+    <ol class="breadcrumb"> 
+        <li><a href="index.html">首页</a></li>
+        <li class="active">微页面</li>
+        <li class="float-right"><a href="javascript:;">操作帮助</a></li>
+    </ol>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="javascript:;" class='btn' onclick="srcpage('view-app/app_new_page.html')" >添加</a></li>
+                    <li>
+                        <div class="close_bomb">
+                            <a href="javascript:;" class="btn close_btn">删除</a>
+                            <div class="close_box text-right" id="all">
+                                <span class='colse_txt text-center'>您确定删除么?</span>
+                                <a href="javascript:;" class="btn btn-info">确定</a>
+                                <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="navbar-form navbar-right" role="search">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="页面标题"></div>
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 页面分类 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a class="btn" href="javascript:;">全部</a></li>
+                                <li><a class="btn" href="javascript:;">最新解读</a></li>
+                                <li><a class="btn" href="javascript:;">启峰书院</a></li>
+                                <li><a class="btn" href="javascript:;">早会内容</a></li>
+                                <li><a class="btn" href="javascript:;">早会流程</a></li>
+                                <li><a class="btn" href="javascript:;">必答</a></li>
+                                <li><a class="btn" href="javascript:;">有问</a></li>
+                                <li><a class="btn" href="javascript:;">推荐导师</a></li>
+                                <li><a class="btn" href="javascript:;">线下活动</a></li>
+                            </ul>
+                        </div>
+                        <input class="form-control" placeholder="请选择状态" disabled="disabled" type="text">
+                    </div>
+                    <a href="javascript:;" class="btn btn-info">查询</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="table-responsive">
+                <table class="table table-condensed table-hover" id="pageList">
+                    <thead>
+                        <tr>
+                            <th class="text-center"><input type="checkbox"></th>
+                            <th class="text-center">排序</th>
+                            <th class="text-center">页面标题</th>
+                            <th class="text-center">页面分类</th>
+                            <th class="text-center">创建时间</th>
+                            <th class="text-center">浏览量(PV)</th>
+                            <th class="text-center">操作</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-center" ng-controller="PageList">
+                        <tr ng-repeat="page in pages" data-show="{{page.show}}">
+                            <td><input type="checkbox"></td>
+                            <td><span class="SequenceID">{{page.sort}}</span></td>
+                            <td class="text-left">{{page.title}}</td>
+                            <td>{{page.categroy}}</td>
+                            <td>{{page.time}}</td>
+                            <td class="text-danger"><i class="fa fa-fw fa-eye"></i> {{page.eye}}</td>
+                            <td class="text-center">
+                                <a href="javascript:;" class="btn success_btn" onclick="upcircle(this)"><i class="fa fa-fw fa-eye"></i> 显示</a>
+                                <a href="javascript:;" class="btn error_btn hide" onclick="downcircle(this)"><i class="fa fa-fw fa-eye-slash"></i> 隐藏</a>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn"><i class="fa fa-fw fa-link"></i> 链接</a>
+                                    <div class="close_box text-right">
+                                        <div class="input-group">
+                                            <input class="form-control" vlaue="{{page.src}}" placeholder="{{page.src}}" disabled="disabled" type="text" id="pageSrc{{page.id}}">
+                                            <span class="input-group-btn">
+                                                <a href="javascript:;" class="btn btn-default bomb_close_btn" id="copy_btn{{page.id}}">复制</a>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <a href="javascript:;" class="btn" onclick="srcpage('view-app/app_new_page.html')"><i class="fa fa-fw fa-edit" ></i> 修改</a>
+                                <div class="close_bomb">
+                                    <a href="javascript:;" class="btn close_btn"><i class="fa fa-fw fa-trash-o"></i> 删除</a>
+                                    <div class="close_box text-right">
+                                        <span class='colse_txt text-center'>您确定删除么?</span>
+                                        <a href="javascript:;" class="btn btn-info" onclick="del(this)">确定</a>
+                                        <a href="javascript:;" class="btn btn-default bomb_close_btn">取消</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <nav class='navbar-right'>
+        <ul class="pagination" id="pagination"></ul>
+    </nav>
+</div>
+<div class="js-message success">
+    <div class="message-suceess">显示此页面,会员可读!</div>
+</div>
+<div class="js-message error">
+    <div class="message-error">隐藏此页面,会员不可读!</div>
+</div>
+<script type="text/javascript" src="AngularData/Angular.min.js"></script>
+<script type="text/javascript">
+$(function () {
+    $.jqPaginator('#pagination', {
+        totalPages: 5,
+        visiblePages: 3,
+        currentPage: 3,
+        prev: '<li class="prev"><a href="javascript:;">&laquo;</a></li>',
+        next: '<li class="next"><a href="javascript:;">&raquo;</a></li>',
+        page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+        onPageChange: function(num, type) {
+            console.log(type + '：第' + num + '页');
+        }
+    });
+})
+</script>
+<script type="text/javascript" src="js/public.js"></script>

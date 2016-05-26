@@ -1,0 +1,145 @@
+<script type="text/javascript">
+    function contentGrouptList($scope) {
+        $scope.contentGrups = [
+            {
+                id: 1,
+                sort: 1,
+                name: "导师(刘翔)",
+                categroy: "",
+                course: 26,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                eye: 228,
+                buy: 76,
+                prize: 980,
+                src: "plugins/bootstrap-dialog/pagegroup.html?pagegroupid=1",
+            },
+            {
+                id: 2,
+                sort: 2,
+                name: "导师(杨建)",
+                categroy: "",
+                course: 54,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                eye: 278,
+                buy: 126,
+                prize: 1280,
+                src: "plugins/bootstrap-dialog/pagegroup.html?pagegroupid=2",
+            },
+            {
+                id: 3,
+                sort: 3,
+                name: "导师(李武)",
+                categroy: "",
+                course: 32,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                eye: 2238,
+                buy: 96,
+                prize: 1290,
+                src: "plugins/bootstrap-dialog/pagegroup.html?pagegroupid=3",
+            },
+            {
+                id: 4,
+                sort: 4,
+                name: "导师(张宇)",
+                categroy: "",
+                course: 12,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                eye: 38,
+                buy: 96,
+                prize: 290,
+                src: "plugins/bootstrap-dialog/pagegroup.html?pagegroupid=4",
+            },
+            {
+                id: 5,
+                sort: 5,
+                name: "认同感",
+                categroy: "导师(刘翔)",
+                course: 12,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                eye: 38,
+                buy: 96,
+                prize: 290,
+                src: "plugins/bootstrap-dialog/pagegroup.html?pagegroupid=5",
+            },
+            {
+                id: 6,
+                sort: 6,
+                name: "怎样建好一个故事",
+                categroy: "导师(张宇)",
+                course: 12,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                eye: 38,
+                buy: 96,
+                prize: 290,
+                src: "plugins/bootstrap-dialog/pagegroup.html?pagegroupid=6",
+            },
+            {
+                id: 7,
+                sort: 7,
+                name: "沟通圣经",
+                categroy: "导师(张宇)",
+                course: 12,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                eye: 38,
+                buy: 96,
+                prize: 290,
+                src: "plugins/bootstrap-dialog/pagegroup.html?pagegroupid=7",
+            }
+        ];
+    }
+</script>
+<div class="row">
+    <div class="col-lg-12" id="js-module-pagegroup">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse">
+                    <div class="navbar-form navbar-right" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="请输入内容分组名"></div>
+                        <a href="javascript:;" class="btn btn-info">查询</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <table class="table table-condensed table-hover" ng-controller="contentGrouptList">
+            <thead>
+                <tr>
+                    <th class="text-center">内容分组</th>
+                    <th class="text-center">内容数量</th>
+                    <th class="text-center">跟新时间</th>
+                    <th class="text-center">内容价格</th>
+                    <th class="text-center">操作</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr ng-repeat="ctg in contentGrups" data-id="{{ctg.id}}" data-title="{{ctg.name}}" data-url="{{ctg.src}}">
+                    <td>{{ctg.name}}</td>
+                    <td>{{ctg.course}}</td>
+                    <td>{{ctg.time}}</td>
+                    <td>{{ctg.prize}}</td>
+                    <td><a class="btn js-choose" href="javascript:;">选取</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="modal-footer clearfix">
+            <div style="display:none;" class="js-confirm-choose pull-left">
+                <a class="btn btn-primary" href="javascript:;">确定使用</a>
+            </div>
+            <ul class="pagination pagination"></ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="AngularData/Angular.min.js"></script>
+<script type="text/javascript">
+$.jqPaginator('.pagination', {
+    totalPages: 3,
+    visiblePages: 3,
+    currentPage: 3,
+    prev: '<li class="prev"><a href="javascript:;">&laquo;</a></li>',
+    next: '<li class="next"><a href="javascript:;">&raquo;</a></li>',
+    page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+    onPageChange: function(num, type) {
+        //$('#pagetitle').text(type + '：' + num);
+    }
+});
+</script>

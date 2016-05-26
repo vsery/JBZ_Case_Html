@@ -1,0 +1,27 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb"> 
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-app/app_page_group_navigation.html')">页面导航</a></li>
+        <li class="active">编辑导航</li>
+        <li class="float-right"><a href="javascript:;">操作帮助</a></li>
+    </ol>
+    <br/>
+    <div class="app__content js-app-main" id="PhoneEditAdmin"></div>
+</div>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript">
+    $("body").off();
+    var url = location.search;
+    console.log(url);
+    fileobj = $.ajax({ type:"GET", url:"plugins/PowerPage/PowerPage.html", dataType:"html", async:false });
+    $("#PhoneEditAdmin").html( fileobj.responseText); //ajax打开手机编辑界面
+    $(".ui-sortable").sortable({ containment: 'parent'});    
+    PowerPage.Common.CSH([{"name":"categroy","goods":[],"config":true,"candelete":false}],3);
+    // PowerPage.Common.CSH([{
+    //     name:"categroy", categroyname:"页面分类名称", config:true, candelete:false
+    // },{
+    //    name:"goods", config:true, candelete:false 
+    // }],0);
+    $("input.btn-save").click(function() { alert('保存成功'); });
+    $("input.btn-preview").click(function() { alert('预览成功'); });
+</script>

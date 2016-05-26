@@ -76,7 +76,6 @@ function readFile() {
         result.innerHTML = '<img src="' + this.result + '" alt=""/>'
     }
 }
-
 // 显示时间面板
 function ShowTime(e) {
     $(e).datetimepicker({

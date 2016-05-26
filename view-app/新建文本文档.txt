@@ -1,0 +1,18 @@
+app_page                                微页面
+app_new_page                            新建/编辑微页面
+
+app_page_group                          页面分类
+app_new_page_group                      新建/编辑页面分类
+
+app_content                             内容管理
+app_new_content                         新建/编辑内容
+
+app_page_group_navigation               页面导航
+app_new_page_group_navigation           编辑导航
+
+
+app_content_group                       内容分组
+app_new_content_group                   新建/编辑内容分组
+
+app_home                平台主页
+app_setting             初始设置

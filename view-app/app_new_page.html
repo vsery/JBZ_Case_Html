@@ -1,0 +1,24 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb"> 
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-app/app_page.html')">微页面</a></li>
+        <li class="active">编辑微页面</li>
+        <li class="float-right"><a href="javascript:;" onclick="srcpage('view-app/app_new_page.html')">刷新</a></li>
+        <li class="float-right"><a href="javascript:;">操作帮助</a></li>
+    </ol>
+    <div class="app__content js-app-main" id="PhoneEditAdmin"></div>
+</div>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript">
+    $("body").off();
+    fileobj = $.ajax({ type:"GET", url:"plugins/PowerPage/PowerPage.html", dataType:"html", async:false });
+    $("#PhoneEditAdmin").html( fileobj.responseText);
+    $(".ui-sortable").sortable({ containment: 'parent'});
+    PowerPage.Common.CSH([{
+        name:"pagetitle", title:"微页面标题", config:true, candelete:false
+    }],0);
+    /*var temp = ['audio','audiolist'];
+    NavList(temp);*/
+    $("input.btn-save").click(function() { alert('保存成功'); });
+    $("input.btn-preview").click(function() { alert('预览成功'); });
+</script>

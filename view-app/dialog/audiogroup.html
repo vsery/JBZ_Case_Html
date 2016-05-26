@@ -1,0 +1,71 @@
+<div class="row">
+    <div class="col-lg-12">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#audioCategroyTab" aria-controls="audioCategroyTab" role="tab" data-toggle="tab">选择音频</a></li>
+        </ul> 
+         <div class="tab-content">
+            <div id="js-module-audiolist" class="tab-pane module-audio active">
+                <div role="tabpanel" class="tab-pane active" id="audioCategroyTab">
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <div class="collapse navbar-collapse">
+                                <div class="navbar-form navbar-right" role="search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="请输入商品名称"></div>
+                                    <a href="javascript:;" class="btn btn-info">查询</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <table class="table table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center">音频分组</th>
+                                <th class="text-center">创建时间</th>
+                                <th class="text-center">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-center">
+                            <tr data-id="1" data-title="领读" data-url="plugins/bootstrap-dialog/audio.html?audioid=1">
+                                <td><a target="_blank" href="音频分组页面">领读</a></td>
+                                <td>2014-01-13 05:20:10</td>
+                                <td><a class="btn js-choose" href="javascript:;">选取</a></td>
+                            </tr>
+                            <tr data-id="2" data-title="早会" data-url="plugins/bootstrap-dialog/audio.html?audioid=2">
+                                <td><a target="_blank" href="音频分组页面">早会</a></td>
+                                <td>2014-01-13 05:20:10</td>
+                                <td><a class="btn js-choose" href="javascript:;">选取</a></td>
+                            </tr>
+                            <tr data-id="3" data-title="必答" data-url="plugins/bootstrap-dialog/audio.html?audioid=3">
+                                <td><a target="_blank" href="音频分组页面">必答</a></td>
+                                <td>2014-01-13 05:20:10</td>
+                                <td><a class="btn js-choose" href="javascript:;">选取</a></td>
+                            </tr>
+                            <tr data-id="4" data-title="有问" data-url="plugins/bootstrap-dialog/audio.html?audioid=4">
+                                <td><a target="_blank" href="音频分组页面">有问</a></td>
+                                <td>2014-01-13 05:20:10</td>
+                                <td><a class="btn js-choose" href="javascript:;">选取</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="modal-footer clearfix">
+                        <ul class="pagination" id="pagination"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+$.jqPaginator('#pagination', {
+    totalPages: 3,
+    visiblePages: 3,
+    currentPage: 3,
+    prev: '<li class="prev"><a href="javascript:;">&laquo;</a></li>',
+    next: '<li class="next"><a href="javascript:;">&raquo;</a></li>',
+    page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+    onPageChange: function(num, type) {
+        //$('#pagetitle').text(type + '：' + num);
+    }
+});
+</script>

@@ -1,0 +1,117 @@
+<div id="page-wrapper">
+    <ol class="breadcrumb"> 
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:;" onclick="srcpage('view-app/app_content_group.html')">内容分组</a></li>
+        <li class="active">编辑分组</li>
+        <li class="float-right"><a href="javascript:;">操作帮助</a></li>
+    </ol>
+    <div class="info">
+        <div class="row text-center">
+            <div class="col-lg-3 text-center">
+                <img src="images/public/wp6.jpg" alt="" id="FrontCover">
+            </div>
+            <div class="col-lg-9">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">显示排序</span>
+                            <input class="form-control" placeholder="数字越大,越前面" type="text" id="article_name">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">发布时间</span>
+                            <input class="form-control date_select_panel" placeholder="选择时间" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">浏览数量</span>
+                            <input class="form-control" placeholder="3000" type="text">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-addon">购买数量</span>
+                            <input class="form-control" placeholder="1000" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <a class="btn btn-default file_btn" onclick="showFile()">上传封面</a>
+                            </span>
+                            <input class="file_info form-control" placeholder="请上传图片,作为封面" disabled="disabled" type="text">
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <a class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> 选择父组 <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="btn" href="javascript:;">没有</a></li>
+                                    <li><a class="btn" href="javascript:;">导师(刘翔)</a></li>
+                                    <li><a class="btn" href="javascript:;">导师(杨建)</a></li>
+                                    <li><a class="btn" href="javascript:;">导师(李武)</a></li>
+                                    <li><a class="btn" href="javascript:;">导师(张宇)</a></li>
+                                </ul>
+                            </div>
+                            <input class="form-control" placeholder="没有" disabled="disabled" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="input-group">
+                            <div class="input-group-btn">
+                                <a class="btn btn-default" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    选择权限
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dLabel">
+                                    <li><a href="javascript:;" class="btn" data-toggle="collapse" data-parent="#competence" data-target="#competence0">会员可读</a></li>
+                                    <li><a href="javascript:;" class="btn" data-toggle="collapse" data-parent="#competence" data-target="#competence1">来访可读</a></li>
+                                    <li><a href="javascript:;" class="btn" data-toggle="collapse" data-parent="#competence" data-target="#competence2">购买可读</a></li>
+                                </ul>
+                            </div>
+                            <input class="form-control" placeholder="会员可读" disabled="disabled" type="text">
+                        </div>
+                    </div>                    
+                    <div class="col-lg-6">
+                        <div class="panel-group" id="competence" role="tablist">
+                            <div class="panel">
+                                <div id="competence0" class="panel-collapse collapse"></div>
+                            </div>
+                            <div class="panel">
+                                <div id="competence1" class="panel-collapse collapse"></div>
+                            </div>
+                            <div class="panel">
+                                <div id="competence2" class="panel-collapse collapse">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">购买价格</span>
+                                        <input type="text" class="form-control" placeholder="99">
+                                        <span class="input-group-addon">元</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="JavaScript:;" class="btn btn-info" onclick="srcpage('view-app/app_new_content_group_info.html')">保存并下一步</a>
+        </div>
+    </div>
+    <hr/>
+</div>
+<div id="FileAdmin"></div>
+<script type="text/javascript" src="js/public.js"></script>
+<script type="text/javascript">
+    $("body").off();
+    fileobj = $.ajax({ type:"GET", url:"plugins/resourceManager/FileAdmin.html", dataType:"html", async:false });
+    $("#FileAdmin").html( fileobj.responseText); //ajax加载资源管理器
+    function showFile() { $("#FileAdminBox").addClass('open'); } //打开资源管理
+</script>

@@ -10,7 +10,7 @@ label { padding: 6px 12px; }
 label.not { padding: 0; font-weight: normal; }
 p { padding: 6px 12px; }
 p.store_info { margin: 0px; line-height: 1.5; font-size: 13px; text-indent: 2em; width: 320px; }
-span.SequenceID { width: 50px; display: block; }
+span.SequenceID { width: 50px; display: block; margin: 0 auto; }
 span.SequenceID input { width: inherit; }
 span.title { display: block; padding: 5px; }
 span.title i { display: inline-block; border-radius: 5px; width: 30px; height: 10px; margin-right: 15px; margin-left: 15px; }

@@ -22,11 +22,14 @@
 .dropdown-submenu:focus>a>[class*=" icon-"] {
     background-image: url("../images/public/glyphicons-halflings-white.png")
 }
-.chosen-container ,p.help-inline{
+
+.chosen-container,
+p.help-inline {
     display: inline-block;
     margin-bottom: 0;
     vertical-align: middle;
 }
+
 pre {
     display: inline-block;
     background-color: transparent;
@@ -186,7 +189,7 @@ pre {
 
 .radio,
 .checkbox {
-    padding-left: 16px
+    padding-left: 20px
 }
 
 .radio input[type="radio"],
@@ -195,8 +198,9 @@ pre {
     margin-top: 2px
 }
 
-.input-xxlarge {
-    width: 310px
+.input-xxlarge,
+#PhoneEditAdmin s {
+    width: 90%
 }
 
 form .input-center-no-padding {
@@ -633,7 +637,7 @@ img {
 }
 
 .page-content,
-.app__content {    
+.app__content {
     min-height: 420px;
     zoom: 1
 }
@@ -2497,15 +2501,23 @@ input.get-web-img-input {
 .form-horizontal .control-group {
     margin-bottom: 10px
 }
+.form-horizontal .control-group:after {
+    display: table;
+    line-height: 0;
+    content: "";
+    clear: both;
+}
 
 .form-horizontal .control-group .input-append,
 .form-horizontal .control-group .checkbox.inline {
     display: inline-block;
     font-weight: normal;
 }
+
 .form-horizontal .control-group .checkbox.inline input[type='checkbox'],
 .form-horizontal .control-group .radio.inline input[type='radio'] {
     top: 8px;
+    margin: 0px 0px 0px -20px
 }
 
 .form-horizontal .control-group:hover .help-block,
@@ -2607,6 +2619,16 @@ input.get-web-img-input {
     line-height: 18px
 }
 
+.form-horizontal .controls .dropdown span.label-success {
+    display: inline-block;
+    padding: 0.45em 1em;
+    min-width: 120px
+}
+
+.form-horizontal .dropdown ul.dropdown-menu {
+    top: 28px;
+    right: 10px
+}
 .form-actions .btn {
     margin-right: 6px
 }
@@ -9967,7 +9989,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .voice-player {
     border-radius: 5px;
     position: relative;
-    border: 1px solid #85ac4c;
+    border: 1px solid #46b8da;
     display: inline-block;
     width: 90px;
     height: 25px;
@@ -9975,16 +9997,20 @@ only screen and (min-device-pixel-ratio: 1.5) {
     font-size: 12px !important;
     line-height: 25px;
     cursor: pointer;
-    background: #a0ce3d;
+    background: #5bc0de;
     vertical-align: middle;
     margin-left: 7px;
     margin-right: 5px
 }
 
+.voice-player.active {
+    background: #a0ce3d;
+    border: 1px solid #85ac4c;
+}
+
 .voice-player .stop {
     display: inline-block;
     color: #fff;
-    text-shadow: 1px 1px 1px #8ab433
 }
 
 .voice-player .play {
@@ -10027,6 +10053,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
     width: 0;
     height: 0;
     border: 6px solid transparent;
+    border-right: 6px solid #5bc0de
+}
+
+.voice-player.active::after {
     border-right: 6px solid #a0ce3d
 }
 
@@ -13260,7 +13290,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     line-height: 1em;
     font-size: 14px;
     color: #333;
-    width: 250px;
+    width: 180px;
     display: block;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -17109,7 +17139,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .app-preview .sc-goods-list.pic .goods-card.normal .info .goods-title {
     float: left;
     margin: 0;
-    padding-left: 10px;
+    padding: 0px 0px 0px 10px;
     max-width: 70%;
     line-height: 22px;
     color: #fff;
@@ -18407,6 +18437,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .app-design .app-sidebar .controls {
     margin-left: 93px;
 }
+
 .app-design .app-sidebar .checkbox.inline,
 .app-design .app-sidebar .radio.inline {
     display: inline-block;
@@ -18482,6 +18513,10 @@ only screen and (min-device-pixel-ratio: 1.5) {
     zoom: 1
 }
 
+.app-design .app-sidebar .choice.audio {
+    cursor: pointer;
+}
+
 .app-design .app-sidebar .choice:after {
     content: "";
     display: table;
@@ -18543,7 +18578,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .app-design .app-sidebar .choice .choice-content {
     float: left;
-    width: 280px
+    width: 250px
 }
 
 .app-design .app-sidebar .choice .choice-content .control-label {
@@ -20179,10 +20214,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
     display: none;
 }
 
-.widget-attachment {
+.widget-attachment .modal-dialog {
     width: 862px;
+    top: 10%;
     border: 1px solid #ccc;
-    border-radius: 0;
+    border-radius: 50%;
     -webkit-box-shadow: none;
     box-shadow: none;
     -webkit-box-sizing: border-box;
@@ -20190,11 +20226,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
     box-sizing: border-box
 }
 
-.widget-attachment .modal-header {
+/*.widget-attachment .modal-header {
     padding: 6px 0 6px 15px;
     margin-right: 20px;
     border-bottom: 1px solid #e5e5e5
-}
+}*/
 
 .widget-attachment .modal-header .close {
     font-size: 32px
@@ -20248,13 +20284,13 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .widget-attachment .modal-body .attachment-list-region {
     padding: 20px 20px 10px 160px;
-    width: 680px
+    width: 860px
 }
 
 .widget-attachment .modal-body .attachment-pagination {
     position: absolute;
     bottom: 10px;
-    width: 680px;
+    width: 860px;
     padding: 6px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -20295,7 +20331,13 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .widget-attachment .modal-body .image-list {
     height: 400px;
-    margin-left: 5px
+    margin-left: 5px;
+    display: none;
+    overflow: hidden
+}
+
+.widget-attachment .modal-body .image-list.active{
+    display: block
 }
 
 .widget-attachment .modal-body .image-list .image-item {

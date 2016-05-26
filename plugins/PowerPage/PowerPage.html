@@ -27,20 +27,12 @@
         </div>
     </div>
 </div>
-<div id="FileAdmin"></div>
+<link rel="stylesheet" type="text/css" href="plugins/PowerPage/app.css">
+<link rel="stylesheet" type="text/css" href="plugins/bootstrap-dialog/bootstrap-dialog.css">
 <script type="text/javascript" src="plugins/PowerPage/ueditor/ueditor.config.pc.js"></script>
 <script type="text/javascript" src="plugins/PowerPage/ueditor/ueditor.all.js"></script>
 <script type="text/javascript" src="plugins/PowerPage/ueditor/lang/zh-cn/zh-cn.js"></script>
-<script type="text/javascript" src="plugins/PowerPage/select.js"></script>
 <script type="text/javascript" src="plugins/PowerPage/jquery-ui.js"></script>
 <script type="text/javascript" src="plugins/PowerPage/PowerPage.js"></script>
-<script type="text/javascript">
-$(function(){
-    fileobj = $.ajax({ type:"GET", url:"plugins/resourceManager/FileAdmin.html", dataType:"html", async:false });
-    $("#FileAdmin").html( fileobj.responseText); //ajax加载资源管理器
-    // $(".ui-sortable").sortable({ containment: 'parent'});
-    // PowerPage.Common.CSH([{ name:"pagetitle",config:true,candelete:false }],0);
-    // $("input.btn-save").click(function() { alert('保存成功'); });
-    // $("input.btn-preview").click(function() { alert('预览成功'); });
-});
-</script>
+<script type="text/javascript" src="plugins/PowerPage/selectModal.js"></script>
+<script type="text/javascript" src="plugins/bootstrap-dialog/bootstrap-dialog.js"></script>
