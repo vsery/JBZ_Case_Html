@@ -14,11 +14,29 @@
     fileobj = $.ajax({ type:"GET", url:"plugins/PowerPage/PowerPage.html", dataType:"html", async:false });
     $("#PhoneEditAdmin").html( fileobj.responseText);
     $(".ui-sortable").sortable({ containment: 'parent'});
+    var temp = "aaaa";
     PowerPage.Common.CSH([{
         name:"pagetitle", title:"微页面标题", config:true, candelete:false
     }],0);
-    /*var temp = ['audio','audiolist'];
-    NavList(temp);*/
-    $("input.btn-save").click(function() { alert('保存成功'); });
-    $("input.btn-preview").click(function() { alert('预览成功'); });
+    $("input.btn-save").click(function() {
+        var data={
+            pagename:PowerPage.Get.GetPageTitle(),
+            pagedesc:PowerPage.Get.GetPageDesc(),
+            pagecont:PowerPage.Get.GetPageCont(),
+        }
+        console.log(data);
+        // $.getJSON('data', function(data) {
+        //     var items = [];
+        //     $.each(data, function(key, val) {
+        //         items.push('<li id="' + key + '">' + val + '</li>');
+        //     });
+        //     $('<ul/>', {
+        //         'class': 'list',
+        //         html: items.join('')
+        //     }).appendTo('body');
+        // });
+    });
+    $("input.btn-preview").click(function() { 
+        alert('预览成功');
+    });
 </script>

@@ -1,63 +1,75 @@
 <div class="row">
-    <div class="col-lg-12">
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#videoCategroyTab" aria-controls="videoCategroyTab" role="tab" data-toggle="tab">选择视频</a></li>
-        </ul> 
-         <div class="tab-content">
-            <div id="js-module-videolist" class="tab-pane module-video active">
-                <div role="tabpanel" class="tab-pane active" id="videoCategroyTab">
-                    <nav class="navbar navbar-default">
-                        <div class="container-fluid">
-                            <div class="collapse navbar-collapse">
-                                <div class="navbar-form navbar-right" role="search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="请输入商品名称"></div>
-                                    <a href="javascript:;" class="btn btn-info">查询</a>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                    <table class="table table-condensed table-hover">
-                        <thead>
-                            <tr>
-                                <th class="text-center">视频分组</th>
-                                <th class="text-center">创建时间</th>
-                                <th class="text-center">操作</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-center">
-                            <tr data-id="1" data-title="领读" data-url="plugins/bootstrap-dialog/video.html?videoid=1">
-                                <td><a target="_blank" href="视频分组页面">领读</a></td>
-                                <td>2014-01-13 05:20:10</td>
-                                <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                            </tr>
-                            <tr data-id="2" data-title="早会" data-url="plugins/bootstrap-dialog/video.html?videoid=2">
-                                <td><a target="_blank" href="视频分组页面">早会</a></td>
-                                <td>2014-01-13 05:20:10</td>
-                                <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                            </tr>
-                            <tr data-id="3" data-title="必答" data-url="plugins/bootstrap-dialog/video.html?videoid=3">
-                                <td><a target="_blank" href="视频分组页面">必答</a></td>
-                                <td>2014-01-13 05:20:10</td>
-                                <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                            </tr>
-                            <tr data-id="4" data-title="有问" data-url="plugins/bootstrap-dialog/video.html?videoid=4">
-                                <td><a target="_blank" href="视频分组页面">有问</a></td>
-                                <td>2014-01-13 05:20:10</td>
-                                <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <div class="modal-footer clearfix">
-                        <ul class="pagination" id="pagination"></ul>
+    <div class="col-lg-12" id="js-module-pagegroup">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse">
+                    <div class="navbar-form navbar-right" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="请输入视频分组名" ng-model="queryvideo"></div>
+                        <a href="javascript:;" class="btn btn-info">查询</a>
                     </div>
                 </div>
             </div>
+        </nav>
+        <table class="table table-condensed table-hover" ng-controller="videoGrouptList">
+            <thead>
+                <tr>
+                    <th class="text-center">视频分组</th>
+                    <th class="text-center">视频数量</th>
+                    <th class="text-center">跟新时间</th>
+                    <th class="text-center">操作</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr ng-repeat="video in videoGrups | filter:queryvideo" data-id="{{video.id}}" data-title="{{video.name}}" data-url="{{video.src}}">
+                    <td>{{video.name}}</td>
+                    <td>{{video.course}}</td>
+                    <td>{{video.time}}</td>
+                    <td><a class="btn js-choose" href="javascript:;">选取</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="modal-footer clearfix">
+            <div style="display:none;" class="js-confirm-choose pull-left">
+                <a class="btn btn-primary" href="javascript:;">确定使用</a>
+            </div>
+            <ul class="pagination pagination"></ul>
         </div>
     </div>
 </div>
 <script type="text/javascript">
-$.jqPaginator('#pagination', {
+    function videoGrouptList($scope) {
+        $scope.videoGrups = [
+            {
+                id: 1,
+                sort: 1,
+                name: "视频分组A",
+                course: 4,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "plugins/bootstrap-dialog/videogroup.html?videogroupid=1",
+            },
+            {
+                id: 2,
+                sort: 2,
+                name: "视频分组B",
+                course: 3,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "plugins/bootstrap-dialog/videogroup.html?videogroupid=2",
+            },
+            {
+                id: 3,
+                sort: 3,
+                name: "视频分组C",
+                course: 2,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "plugins/bootstrap-dialog/videogroup.html?videogroupid=3",
+            }
+        ];
+    }
+</script>
+<script type="text/javascript" src="AngularData/Angular.min.js"></script>
+<script type="text/javascript">
+$.jqPaginator('.pagination', {
     totalPages: 3,
     visiblePages: 3,
     currentPage: 3,

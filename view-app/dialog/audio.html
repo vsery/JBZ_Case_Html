@@ -1,220 +1,142 @@
 <div class="row">
-    <div class="col-lg-12">
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#audioTab1" aria-controls="audioTab1" role="tab" data-toggle="tab">领读</a></li>
-            <li role="presentation"><a href="#audioTab2" aria-controls="audioTab2" role="tab" data-toggle="tab">早会</a></li>
-            <li role="presentation"><a href="#audioTab3" aria-controls="audioTab3" role="tab" data-toggle="tab">必答</a></li>
-            <li role="presentation"><a href="#audioTab4" aria-controls="audioTab4" role="tab" data-toggle="tab">有问</a></li>
-        </ul>        
-        <div class="tab-content" id="js-module-audio">
-            <div role="tabpanel" class="tab-pane active" id="audioTab1">
-                <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <div class="collapse navbar-collapse">
-                            <div class="navbar-form navbar-right" role="search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="请输入音频名称"></div>
-                                <a href="javascript:;" class="btn btn-info">查询</a>
-                            </div>
-                        </div>
+    <div class="col-lg-12" id="js-module-audio">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse">
+                    <div class="navbar-form navbar-right" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="请输入音频名称" ng-model="queryaudio"></div>
+                        <a href="javascript:;" class="btn btn-info">查询</a>
                     </div>
-                </nav>
-                <table class="table table-condensed table-hover">
-                    <thead>
-                        <tr>
-                            <th class="text-center">音频名称</th>
-                            <th class="text-center">创建时间</th>
-                            <th class="text-center">操作</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-center">
-                        <tr data-id="1" data-title="Ballas Hough Band - Closer" data-desc="音频描述" data-time="2015-02-11" data-src='music/Ballas Hough Band - Closer.mp3' data-loop="loop">
-                            <td><a target="_blank" href="音频页面">Ballas Hough Band - Closer</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                        <tr data-id="2" data-title="Geologic Of The Blue Scholars,Jeff Bernat - Call You Mine" data-desc="音频描述" data-time="2015-02-11" data-src='music/Geologic Of The Blue Scholars,Jeff Bernat - Call You Mine.mp3' data-loop="loop">
-                            <td><a target="_blank" href="音频页面">Geologic Of The Blue Scholars,Jeff Bernat - Call You Mine</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                        <tr data-id="3" data-title="Latif - Promise Me" data-desc="音频描述" data-time="2015-02-11" data-src='music/Latif - Promise Me.mp3' data-loop="loop0">
-                            <td><a target="_blank" href="音频页面">Latif - Promise Me</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                        <tr data-id="4" data-title="Matt Palmer - Six Whole Days" data-desc="音频描述" data-time="2015-02-11" data-src='music/Matt Palmer - Six Whole Days.mp3' data-loop="loop">
-                            <td><a target="_blank" href="音频页面">Matt Palmer - Six Whole Days</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="modal-footer clearfix">
-                    <div style="display:none;" class="js-confirm-choose pull-left">
-                        <a class="btn btn-primary" href="javascript:;">确定使用</a>
-                    </div>
-                    <ul class="pagination"></ul>
                 </div>
             </div>
-            <div role="tabpane2" class="tab-pane" id="audioTab2">
-                <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <div class="collapse navbar-collapse">
-                            <div class="navbar-form navbar-right" role="search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="请输入音频名称"></div>
-                                <a href="javascript:;" class="btn btn-info">查询</a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <table class="table table-condensed table-hover">
-                    <thead>
-                        <tr>
-                            <th class="text-center">音频名称</th>
-                            <th class="text-center">创建时间</th>
-                            <th class="text-center">操作</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-center">
-                        <tr data-id="5" data-title="墨明棋妙 - 女娲" data-desc="音频描述" data-time="2015-02-11" data-src='music/墨明棋妙 - 女娲.mp3' data-loop="loop">
-                            <td><a target="_blank" href="音频页面">墨明棋妙 - 女娲</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                        <tr data-id="6" data-title="墨明棋妙 - 且试天下" data-desc="音频描述" data-time="2015-02-11" data-src='music/墨明棋妙 - 且试天下.mp3' data-loop="loop0">
-                            <td><a target="_blank" href="音频页面">墨明棋妙 - 且试天下</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                        <tr data-id="7" data-title="墨明棋妙 - 书成" data-desc="音频描述" data-time="2015-02-11" data-src='music/墨明棋妙 - 书成.mp3' data-loop="loop">
-                            <td><a target="_blank" href="音频页面">墨明棋妙 - 书成</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                        <tr data-id="8" data-title="墨明棋妙 - 甩墨" data-desc="音频描述" data-time="2015-02-11" data-src='music/墨明棋妙 - 甩墨.mp3' data-loop="loop">
-                            <td><a target="_blank" href="音频页面">墨明棋妙 - 甩墨</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="modal-footer clearfix">
-                    <div style="display:none;" class="js-confirm-choose pull-left">
-                        <a class="btn btn-primary" href="javascript:;">确定使用</a>
-                    </div>
-                    <ul class="pagination"></ul>
-                </div>
+        </nav>
+        <table class="table table-condensed table-hover">
+            <thead>
+                <tr>
+                    <th class="text-left">音频名称</th>
+                    <th class="text-center">创建时间</th>
+                    <th class="text-center">操作</th>
+                </tr>
+            </thead>
+            <tbody class="text-center" ng-controller="audioModal">
+                <tr ng-repeat="audio in audios | filter:queryaudio"  data-id="{{audio.id}}" data-title="{{audio.title}}" data-src="{{audio.src}}" data-time="{{audio.time}}" data-desc="{{audio.desc}}" data-loop="{{audio.loop}}">
+                    <td class="length text-left">{{audio.title}}</td>
+                    <td>{{audio.time}}</td>
+                    <td><a class="btn js-choose" href="javascript:;">选取</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="modal-footer clearfix">
+            <div style="display:none;" class="js-confirm-choose pull-left">
+                <a class="btn btn-primary" href="javascript:;">确定使用</a>
             </div>
-            <div role="tabpane3" class="tab-pane" id="audioTab3">
-                <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <div class="collapse navbar-collapse">
-                            <div class="navbar-form navbar-right" role="search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="请输入音频名称"></div>
-                                <a href="javascript:;" class="btn btn-info">查询</a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <table class="table table-condensed table-hover">
-                    <thead>
-                        <tr>
-                            <th class="text-center">音频名称</th>
-                            <th class="text-center">创建时间</th>
-                            <th class="text-center">操作</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-center">
-                        <tr data-id="9" data-title="墨明棋妙 - 雨碎江南.印象" data-desc="音频描述" data-time="2015-02-11" data-src='music/墨明棋妙 - 雨碎江南.印象.mp3' data-loop="loop">
-                            <td><a target="_blank" href="音频页面">墨明棋妙 - 雨碎江南.印象</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                        <tr data-id="10" data-title="小爱的妈 - 兰若词" data-desc="音频描述" data-time="2015-02-11" data-src='music/小爱的妈 - 兰若词.mp3' data-loop="loop">
-                            <td><a target="_blank" href="音频页面">小爱的妈 - 兰若词</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                        <tr data-id="11" data-title="墨明棋妙 - 又年" data-desc="音频描述" data-time="2015-02-11" data-src='music/墨明棋妙 - 又年.mp3' data-loop="loop0">
-                            <td><a target="_blank" href="音频页面">墨明棋妙 - 又年</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                        <tr data-id="12" data-title="墨明棋妙 - 桃花不见" data-desc="音频描述" data-time="2015-02-11" data-src='music/墨明棋妙 - 桃花不见.mp3' data-loop="loop">
-                            <td><a target="_blank" href="音频页面">墨明棋妙 - 桃花不见</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="modal-footer clearfix">
-                    <div style="display:none;" class="js-confirm-choose pull-left">
-                        <a class="btn btn-primary" href="javascript:;">确定使用</a>
-                    </div>
-                    <ul class="pagination"></ul>
-                </div>
-            </div>
-            <div role="tabpane4" class="tab-pane" id="audioTab4">
-                <nav class="navbar navbar-default">
-                    <div class="container-fluid">
-                        <div class="collapse navbar-collapse">
-                            <div class="navbar-form navbar-right" role="search">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="请输入音频名称"></div>
-                                <a href="javascript:;" class="btn btn-info">查询</a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
-                <table class="table table-condensed table-hover">
-                    <thead>
-                        <tr>
-                            <th class="text-center">音频名称</th>
-                            <th class="text-center">创建时间</th>
-                            <th class="text-center">操作</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-center">
-                        <tr data-id="1" data-title="峰人院1" data-desc="音频描述" data-time="2015-02-11" data-src='music/峰人院1.mp3' data-loop="loop">
-                            <td><a target="_blank" href="音频页面">峰人院1</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                        <tr data-id="2" data-title="墨明棋妙 - 凡夫俗子" data-desc="音频描述" data-time="2015-02-11" data-src='music/墨明棋妙 - 凡夫俗子.mp3' data-loop="loop">
-                            <td><a target="_blank" href="音频页面">墨明棋妙 - 凡夫俗子</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                        <tr data-id="3" data-title="Becky G - Shower" data-desc="音频描述" data-time="2015-02-11" data-src='music/Becky G - Shower.mp3' data-loop="loop0">
-                            <td><a target="_blank" href="音频页面">Becky G - Shower</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                        <tr data-id="4" data-title="Pitbull - Go Girl" data-desc="音频描述" data-time="2015-02-11" data-src='music/Pitbull - Go Girl.mp3' data-loop="loop">
-                            <td><a target="_blank" href="音频页面">Pitbull - Go Girl</a></td>
-                            <td>2014-01-13 05:20:10</td>
-                            <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="modal-footer clearfix">
-                    <div style="display:none;" class="js-confirm-choose pull-left">
-                        <a class="btn btn-primary" href="javascript:;">确定使用</a>
-                    </div>
-                    <ul class="pagination"></ul>
-                </div>
-            </div>
+            <ul class="pagination"></ul>
         </div>
-    </div>
+    </div>            
 </div>
 <script type="text/javascript">
+    function audioModal($scope) {
+        $scope.audios = [
+            {
+                id: 1,
+                sort: 1,
+                title: "小爱的妈 - 兰若词",
+                desc: "小爱的妈 - 兰若词",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "music/小爱的妈 - 兰若词.mp3",
+                loop: "loop"
+            },
+            {
+                id: 2,
+                sort: 2,
+                title: "墨明棋妙 - 雨碎江南.印象",
+                desc: "墨明棋妙 - 雨碎江南.印象",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "music/墨明棋妙 - 雨碎江南.印象.mp3",
+                loop: "loop"
+            },
+            {
+                id: 3,
+                sort: 3,
+                title: "墨明棋妙 - 甩墨",
+                desc: "墨明棋妙 - 甩墨",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "music/墨明棋妙 - 甩墨.mp3",
+                loop: "loop"
+            },
+            {
+                id: 4,
+                sort: 4,
+                title: "Matt Palmer - Six Whole Days",
+                desc: "Matt Palmer - Six Whole Days",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "music/Matt Palmer - Six Whole Days.mp3",
+                loop: "loop"
+            },
+            {
+                id: 5,
+                sort: 5,
+                title: "Ballas Hough Band - Closer",
+                desc: "Ballas Hough Band - Closer",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "music/Ballas Hough Band - Closer.mp3",
+                loop: "loop"
+            },
+            {
+                id: 6,
+                sort: 6,
+                title: "墨明棋妙 - 女娲",
+                desc: "墨明棋妙 - 女娲",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "music/墨明棋妙 - 女娲.mp3",
+                loop: "loop"
+            },
+            {
+                id: 7,
+                sort: 7,
+                title: "Latif - Promise Me",
+                desc: "Latif - Promise Me",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "music/Latif - Promise Me.mp3",
+                loop: "loop"
+            },
+            {
+                id: 8,
+                sort: 8,
+                title: "墨明棋妙 - 书成",
+                desc: "墨明棋妙 - 书成",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "music/墨明棋妙 - 书成.mp3",
+                loop: "loop"
+            },
+            {
+                id: 9,
+                sort: 9,
+                title: "Geologic Of The Blue Scholars,Jeff Bernat - Call You Mine",
+                desc: "Geologic Of The Blue Scholars,Jeff Bernat - Call You Mine",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "music/Geologic Of The Blue Scholars,Jeff Bernat - Call You Mine.mp3",
+                loop: "loop"
+            },
+            {
+                id: 10,
+                sort: 10,
+                title: "墨明棋妙 - 且试天下",
+                desc: "墨明棋妙 - 且试天下",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                src: "music/墨明棋妙 - 且试天下.mp3",
+                loop: "loop"
+            }
+        ];
+    }
+</script>
+<script type="text/javascript" src="AngularData/Angular.min.js"></script>
+<script type="text/javascript">
 $.jqPaginator('.pagination', {
-    totalPages: 5,
+    totalPages: 3,
     visiblePages: 3,
-    currentPage: 2,
+    currentPage: 3,
     prev: '<li class="prev"><a href="javascript:;">&laquo;</a></li>',
     next: '<li class="next"><a href="javascript:;">&raquo;</a></li>',
     page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',

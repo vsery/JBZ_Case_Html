@@ -1,91 +1,21 @@
 <ul class="nav nav-tabs" role="tablist">
     <li role="presentation" class="active"><a href="#picTab" aria-controls="picTab" role="tab" data-toggle="tab">选择商品</a></li>
-    <li role="presentation"><a href="#newPicTab" aria-controls="newPicTab" role="tab" data-toggle="tab">新图片</a></li>
+    <!-- <li role="presentation"><a href="#newPicTab" aria-controls="newPicTab" role="tab" data-toggle="tab">新图片</a></li> -->
 </ul>
 <div class="tab-content" id="js-module-goods">
     <div role="tabpanel" class="tab-pane active" id="picTab">
         <div class="widget-list widget-attachment">
             <div class="modal-body">
                 <div class="category-list-region js-category-list-region">
-                    <ul class="category-list">
-                        <li class="js-category-item active" data-id="1"> 未分组 <span>85</span></li>
-                        <li class="js-category-item" data-id="2"> 分组A <span>15</span></li>
-                        <li class="js-category-item" data-id="3"> 分组B <span>5</span></li>
+                    <ul class="category-list" ng-controller="picsModal">
+                        <li ng-repeat="imglist in imagelists" class="js-category-item" id="{{imglist.id}}"> {{imglist.categroyname}} <span>{{imglist.picsize}}</span></li>
                     </ul>
                 </div>
-                <div class="attachment-list-region js-attachment-list-region">
-                    <ul class="image-list active">
-                        <li class="image-item js-image-item" data-src="images/Fans/head.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                        <li class="image-item js-image-item" data-src="images/Fans/head1.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head1.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                        <li class="image-item js-image-item" data-src="images/Fans/head2.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head2.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                        <li class="image-item js-image-item" data-src="images/Fans/head3.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head3.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                        <li class="image-item js-image-item" data-src="images/Fans/head4.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head4.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                        <li class="image-item js-image-item" data-src="images/Fans/head5.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head5.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                        <li class="image-item js-image-item" data-src="images/Fans/head6.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head6.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                        <li class="image-item js-image-item" data-src="images/Fans/head7.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head7.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                        <li class="image-item js-image-item" data-src="images/Fans/head8.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head8.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                        <li class="image-item js-image-item" data-src="images/Fans/head9.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                        <li class="image-item js-image-item" data-src="images/Fans/head10.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head10.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                        <li class="image-item js-image-item" data-src="images/Fans/head11.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head11.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                        <li class="image-item js-image-item" data-src="images/Fans/head12.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head12.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                        <li class="image-item js-image-item" data-src="images/Fans/head13.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head13.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                        <li class="image-item js-image-item" data-src="images/Fans/head14.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head14.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                    </ul>
-                    <ul class="image-list">
-                        <li class="image-item js-image-item" data-src="images/Fans/head.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head.jpg)"></div>
-                            <div class="image-meta">640*640</div>
-                        </li>
-                    </ul>
-                    <ul class="image-list">
-                        <li class="image-item js-image-item" data-src="images/Fans/head1.jpg">
-                            <div class="image-box" style="background-image: url(images/Fans/head1.jpg)"></div>
-                            <div class="image-meta">640*640</div>
+                <div class="attachment-list-region js-attachment-list-region" ng-controller="picsModal">
+                    <ul class="image-list" ng-repeat="imglist in imagelists" id="{{imglist.id}}">
+                        <li class="image-item js-image-item" ng-repeat="pic in imglist.pics" data-src="{{pic.src}}">
+                            <div class="image-box" style="background-image: url({{pic.src}})"></div>
+                            <div class="image-meta">{{pic.name}}</div>
                         </li>
                     </ul>
                 </div>
@@ -98,7 +28,7 @@
             </div>
         </div>
     </div>
-    <div role="tabpanel" class="tab-pane" id="newPicTab">
+    <!--  <div role="tabpanel" class="tab-pane" id="newPicTab">
         <div class="js-upload-network-region">
             <div>
                 <div class="modal-body">
@@ -117,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="js-upload-local-region">
+       <div class="js-upload-local-region">
             <div>
                 <div class="modal-body">
                     <div class="upload-local-img">
@@ -145,9 +75,154 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 </div>
 <script type="text/javascript">
+    function picsModal($scope) {
+        $scope.imagelists = [
+            {
+                categroyid: 1,
+                categroyname: "未分组",
+                picsize: 6,
+                pics: [{
+                    id: 1,
+                    src: "images/Fans/head1.jpg",
+                    name: "images1"
+                },{
+                    id: 2,
+                    src: "images/Fans/head2.jpg",
+                    name: "images1"
+                },{
+                    id: 5,
+                    src: "images/Fans/head5.jpg",
+                    name: "images1"
+                },{
+                    id: 6,
+                    src: "images/Fans/head6.jpg",
+                    name: "images1"
+                },{
+                    id: 7,
+                    src: "images/Fans/head7.jpg",
+                    name: "images1"
+                },{
+                    id: 8,
+                    src: "images/Fans/head8.jpg",
+                    name: "images1"
+                },{
+                    id: 1,
+                    src: "images/Fans/head1.jpg",
+                    name: "images1"
+                },{
+                    id: 2,
+                    src: "images/Fans/head2.jpg",
+                    name: "images1"
+                },{
+                    id: 5,
+                    src: "images/Fans/head5.jpg",
+                    name: "images1"
+                },{
+                    id: 6,
+                    src: "images/Fans/head6.jpg",
+                    name: "images1"
+                },{
+                    id: 7,
+                    src: "images/Fans/head7.jpg",
+                    name: "images1"
+                },{
+                    id: 8,
+                    src: "images/Fans/head8.jpg",
+                    name: "images1"
+                },{
+                    id: 1,
+                    src: "images/Fans/head1.jpg",
+                    name: "images1"
+                },{
+                    id: 2,
+                    src: "images/Fans/head2.jpg",
+                    name: "images1"
+                },{
+                    id: 5,
+                    src: "images/Fans/head5.jpg",
+                    name: "images1"
+                },{
+                    id: 6,
+                    src: "images/Fans/head6.jpg",
+                    name: "images1"
+                },{
+                    id: 7,
+                    src: "images/Fans/head7.jpg",
+                    name: "images1"
+                },{
+                    id: 8,
+                    src: "images/Fans/head8.jpg",
+                    name: "images1"
+                }]
+            },{
+                categroyid: 2,
+                categroyname: "分组A",
+                picsize: 8,
+                pics: [{
+                    id: 1,
+                    src: "images/Fans/head1.jpg",
+                    name: "images1"
+                },{
+                    id: 8,
+                    src: "images/Fans/head8.jpg",
+                    name: "images1"
+                },{
+                    id: 2,
+                    src: "images/Fans/head2.jpg",
+                    name: "images1"
+                },{
+                    id: 5,
+                    src: "images/Fans/head5.jpg",
+                    name: "images1"
+                },{
+                    id: 6,
+                    src: "images/Fans/head6.jpg",
+                    name: "images1"
+                },{
+                    id: 7,
+                    src: "images/Fans/head7.jpg",
+                    name: "images1"
+                },{
+                    id: 3,
+                    src: "images/Fans/head3.jpg",
+                    name: "images1"
+                },{
+                    id: 4,
+                    src: "images/Fans/head4.jpg",
+                    name: "images1"
+                }]
+            },{
+                categroyid: 3,
+                categroyname: "分组A",
+                picsize: 4,
+                pics: [{
+                    id: 5,
+                    src: "images/Fans/head5.jpg",
+                    name: "images1"
+                },{
+                    id: 6,
+                    src: "images/Fans/head6.jpg",
+                    name: "images1"
+                },{
+                    id: 7,
+                    src: "images/Fans/head7.jpg",
+                    name: "images1"
+                },{
+                    id: 8,
+                    src: "images/Fans/head8.jpg",
+                    name: "images1"
+                }]
+            }
+        ];
+    }
+</script>
+<script type="text/javascript" src="AngularData/Angular.min.js"></script>
+<script type="text/javascript">
+$("ul.category-list .js-category-item").eq(0).addClass('active');
+$("ul.image-list").eq(0).addClass('active');
 $("#picTab .category-list .js-category-item").click(function() {
     if( $(this).hasClass('active')) {
         $(this).removeClass('active');
@@ -157,9 +232,9 @@ $("#picTab .category-list .js-category-item").click(function() {
     }
 });
 $.jqPaginator('.pagination', {
-    totalPages: 5,
-    visiblePages: 3,
-    currentPage: 2,
+    totalPages: 3,
+    visiblePages: 1,
+    currentPage: 1,
     prev: '<li class="prev"><a href="javascript:;">&laquo;</a></li>',
     next: '<li class="next"><a href="javascript:;">&raquo;</a></li>',
     page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',

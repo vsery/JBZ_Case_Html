@@ -235,7 +235,7 @@ function selectvideolist(callback, max) {
         console.log(_select);
     });
 
-    /*页面列表 / 音频列表 / 视频列表 (单选并返回)*/
+    /* 页面列表 / 商品列表 / 音频列表 / 视频列表 (单选并返回) */
     $("body").on( "click", "#js-module-pagegroup .js-choose, " +
         "#js-module-audiolist .js-choose, " +
         "#js-module-videolist .js-choose", function() {
@@ -245,6 +245,20 @@ function selectvideolist(callback, max) {
             id: tr.attr("data-id"),
             name: tr.attr("data-title"),
             url: tr.attr("data-url"),
+        });
+    });
+
+    $("body").on( "click", "#js-module-contentsgroup .js-choose, " +
+        "#js-module-audiolist .js-choose, " +
+        "#js-module-videolist .js-choose", function() {
+        var tr = $(this).parents("tr");
+        _dialog.close();
+        _callback({
+            id: tr.attr("data-id"),
+            name: tr.attr("data-title"),
+            pic: tr.attr("data-pic"),
+            url: tr.attr("data-url"),
+            price: tr.attr("data-price"),
         });
     });
 

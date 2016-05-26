@@ -13877,7 +13877,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .custom-tag-list .custom-tag-list-goods .custom-tag-list-goods-list {
-    margin-left: 5px
+    margin-left: 10px
 }
 
 .app-preview .custom-tag-list .custom-tag-list-goods .custom-tag-list-single-goods {
@@ -13901,7 +13901,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     float: left;
     width: 60px;
     height: 60px;
-    padding: 10px 5px 10px 0
+    margin: 10px 10px 10px 0
 }
 
 .app-preview .custom-tag-list .custom-tag-list-goods .custom-tag-list-goods-img img {
@@ -13953,13 +13953,13 @@ only screen and (min-device-pixel-ratio: 1.5) {
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 26px;
     text-align: center;
     line-height: 24px;
     font-size: 12px;
     background-image: url("../images/public/showcase-1416814739063.png");
-    background-position: 0 -88px;
+    background-position: 0 0px;
     background-repeat: no-repeat
 }
 

@@ -5,7 +5,7 @@
                 <div class="collapse navbar-collapse">
                     <div class="navbar-form navbar-right" role="search">
                         <div class="input-group">
-                            <input type="text" class="form-control" placeholder="请输入页面分类" ng-model="querygroup"></div>
+                            <input type="text" class="form-control" placeholder="请输入页面标题" ng-model="querypage"></div>
                         <a href="javascript:;" class="btn btn-info">查询</a>
                     </div>
                 </div>
@@ -14,15 +14,17 @@
         <table class="table table-condensed table-hover">
             <thead>
                 <tr>
+                    <th class="text-left">页面标题</th>
                     <th class="text-center">页面分类</th>
                     <th class="text-center">创建时间</th>
                     <th class="text-center">操作</th>
                 </tr>
             </thead>
-            <tbody class="text-center" ng-controller="pageListGroupModal">
-                <tr ng-repeat="pages in pagegroup | filter:querygroup" data-id="{{pages.id}}" data-title="{{pages.title}}" data-url="{{pages.src}}">
-                    <td>{{pages.title}}</td>
-                    <td>{{pages.time}}</td>
+            <tbody class="text-center" ng-controller="pageModal">
+                <tr ng-repeat="page in Pages | filter:querypage" data-id="{{page.id}}" data-title="{{page.title}}" data-url="{{page.src}}">
+                    <td class="length text-left">{{page.title}}</td>
+                    <td>{{page.categroy}}</td>
+                    <td>{{page.time}}</td>
                     <td><a class="btn js-choose" href="javascript:;">选取</a></td>
                 </tr>
             </tbody>
@@ -36,55 +38,63 @@
     </div>
 </div>
 <script type="text/javascript">
-    function pageListGroupModal($scope) {
-        $scope.pagegroup = [
+    function pageModal($scope) {
+        $scope.Pages = [
             {
                 id: 1,
-                title: "最新解读",
+                title: "第2问：怎样与装饰公司展开合作？",
+                categroy: "必答",
                 time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
-                src: "plugins/bootstrap-dialog/pagegroup.html?pagegroupid=1",
+                src: "plugins/bootstrap-dialog/page.html?pageid=1",
             },
             {
                 id: 2,
-                title: "启峰学院",
+                title: "第1问：顾客自己很喜欢，但同行的人却不买账。",
+                categroy: "必答",
                 time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
-                src: "plugins/bootstrap-dialog/pagegroup.html?pagegroupid=2",
+                src: "plugins/bootstrap-dialog/page.html?pageid=2",
             },
             {
                 id: 3,
-                title: "早会内容",
+                title: "早会第2讲：大佬玩营销",
+                categroy: "早会内容",
                 time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
-                src: "plugins/bootstrap-dialog/pagegroup.html?pagegroupid=3",
+                src: "plugins/bootstrap-dialog/page.html?pageid=3",
             },
             {
                 id: 4,
-                title: "早会流程",
+                title: "早会第2讲：大佬玩营销",
+                categroy: "早会内容",
                 time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
-                src: "plugins/bootstrap-dialog/pagegroup.html?pagegroupid=4",
+                src: "plugins/bootstrap-dialog/page.html?pageid=4",
             },
             {
                 id: 5,
-                title: "必答",
+                title: "转型：互联网+时代的企业突破之路（下）",
+                categroy: "启峰书院",
                 time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
-                src: "plugins/bootstrap-dialog/pagegroup.html?pagegroupid=5",
+                src: "plugins/bootstrap-dialog/page.html?pageid=5",
             },
             {
                 id: 6,
-                title: "有问",
+                title: "转型：互联网+时代的企业突破之路（上）",
+                categroy: "启峰书院",
                 time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
-                src: "plugins/bootstrap-dialog/pagegroup.html?pagegroupid=6",
+                src: "plugins/bootstrap-dialog/page.html?pageid=6",
             },
             {
                 id: 7,
-                title: "推荐导师",
+                title: "定位——有史以来对美国营销影响最大的观念",
+                categroy: "启峰书院",
                 time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
-                src: "plugins/bootstrap-dialog/pagegroup.html?pagegroupid=7",
+                src: "plugins/bootstrap-dialog/page.html?pageid=7",
             },
             {
                 id: 8,
-                title: "线下活动",
+                title: "超预期",
+                categroy: "启峰书院",
                 time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
-                src: "plugins/bootstrap-dialog/pagegroup.html?pagegroupid=8",
+                src: "plugins/bootstrap-dialog/page.html?pageid=8",
             },
         ];
     }

@@ -1,84 +1,114 @@
 <div class="row">
-    <div class="col-lg-12">
-        <ul class="nav nav-tabs" role="tablist">
-            <li role="presentation" class="active"><a href="#goodsTab" aria-controls="goodsTab" role="tab" data-toggle="tab">选择商品</a></li>
-        </ul>        
-        <div class="tab-content">
-            <div id="js-module-goods" class="tab-pane module-goods active">
-                <div role="tabpanel" class="tab-pane active" id="goodsTab">
-                    <nav class="navbar navbar-default">
-                        <div class="container-fluid">
-                            <div class="collapse navbar-collapse">
-                                <div class="navbar-form navbar-right" role="search">
-                                    <div class="input-group">
-                                        <input type="text" class="form-control" placeholder="请输入商品名称"></div>
-                                    <a href="javascript:;" class="btn btn-info">查询</a>
-                                </div>
-                            </div>
-                        </div>
-                    </nav>
-                    <table class="table table-condensed table-hover">
-                        <thead>
-                            <tr>
-                                <th class="text-center">商品名称</th>
-                                <th class="text-center">创建时间</th>
-                                <th class="text-center">操作</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-center">
-                            <tr data-id="1" data-title="appleIpad" data-url="商品页面" data-desc="商品描述" data-pic="images/product/prod_2.jpg" data-price="3990">
-                                <td><a target="_blank" href="商品页面">appleIpad</a></td>
-                                <td>2014-01-13 05:20:10</td>
-                                <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                            </tr>
-                            <tr data-id="2" data-title="联想笔记本:ideapad" data-url="商品页面" data-desc="商品描述" data-pic="images/product/prod_5.jpg" data-price="4890">
-                                <td><a target="_blank" href="商品页面">联想笔记本:ideapad</a></td>
-                                <td>2014-01-13 05:20:10</td>
-                                <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                            </tr>
-                            <tr data-id="3" data-title="索尼单反相机:Vuisue系列" data-url="商品页面" data-desc="商品描述" data-pic="images/product/prod_9.jpg" data-price="12890">
-                                <td><a target="_blank" href="商品页面">索尼单反相机:Vuisue系列</a></td>
-                                <td>2014-01-13 05:20:10</td>
-                                <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                            </tr>
-                            <tr data-id="4" data-title="魅力7" data-url="商品页面" data-desc="商品描述" data-pic="images/product/prod_1.jpg" data-price="4890">
-                                <td><a target="_blank" href="商品页面">魅力7</a></td>
-                                <td>2014-01-13 05:20:10</td>
-                                <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                            </tr>
-                            <tr data-id="5" data-title="口味王槟榔" data-url="商品页面" data-desc="商品描述" data-pic="images/product/prod_18.jpg" data-price="9.99">
-                                <td><a target="_blank" href="商品页面">口味王槟榔</a></td>
-                                <td>2014-01-13 05:20:10</td>
-                                <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                            </tr>
-                            <tr data-id="6" data-title="合成天下" data-url="商品页面" data-desc="商品描述" data-pic="images/product/prod_12.jpg" data-price="13.99">
-                                <td><a target="_blank" href="商品页面">合成天下</a></td>
-                                <td>2014-01-13 05:20:10</td>
-                                <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                            </tr>
-                            <tr data-id="7" data-title="味赢天下" data-url="商品页面" data-desc="商品描述" data-pic="images/product/prod_11.jpg" data-price="32.99">
-                                <td><a target="_blank" href="商品页面">味赢天下</a></td>
-                                <td>2014-01-13 05:20:10</td>
-                                <td><a class="btn js-choose" href="javascript:;">选取</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+    <div class="col-lg-12" id="js-module-goods">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse">
+                    <div class="navbar-form navbar-right" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="请输入商品名称" ng-model="querygoods"></div>
+                        <a href="javascript:;" class="btn btn-info">查询</a>
+                    </div>
                 </div>
             </div>
-            <div class="modal-footer clearfix">
-                <div style="display:none;" class="js-confirm-choose pull-left">
-                    <a class="btn btn-primary" href="javascript:;">确定使用</a>
-                </div>
-                <ul class="pagination" id="pagination"></ul>
+        </nav>
+        <table class="table table-condensed table-hover">
+            <thead>
+                <tr>
+                    <th class="text-center">商品名称</th>
+                    <th class="text-center">商品价格</th>
+                    <th class="text-center">创建时间</th>
+                    <th class="text-center">操作</th>
+                </tr>
+            </thead>
+            <tbody class="text-center" ng-controller="goodsModal">
+                <tr ng-repeat="gd in goods | filter:querygoods"  data-id="{{gd.id}}" data-title="{{gd.title}}" data-url="{{gd.src}}" data-desc="{{gd.desc}}" data-pic="{{gd.img}}" data-price="{{gd.price}}">
+                    <td>{{gd.title}}</td>
+                    <td>{{gd.price}}</td>
+                    <td>{{gd.time}}</td>
+                    <td><a class="btn js-choose" href="javascript:;">选取</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="modal-footer clearfix">
+            <div style="display:none;" class="js-confirm-choose pull-left">
+                <a class="btn btn-primary" href="javascript:;">确定使用</a>
             </div>
+            <ul class="pagination pagination"></ul>
         </div>
     </div>
 </div>
 <script type="text/javascript">
-$.jqPaginator('#pagination', {
-    totalPages: 5,
+    function goodsModal($scope) {
+        $scope.goods = [
+            {
+                id: 1,
+                sort: 1,
+                title: "索尼单反相机:Vuisue系列",
+                desc: "索尼单反相机:Vuisue系列",
+                img: "images/product/prod_9.jpg",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                price: 12890,
+                src: "plugins/bootstrap-dialog/goods.html?goodsid=1",
+            },
+            {
+                id: 2,
+                sort: 2,
+                title: "联想笔记本:ideapad",
+                desc: "联想笔记本:ideapad",
+                img: "images/product/prod_5.jpg",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                price: 4890,
+                src: "plugins/bootstrap-dialog/goods.html?goodsid=2",
+            },
+            {
+                id: 3,
+                sort: 3,
+                title: "魅力7",
+                desc: "魅力7",
+                img: "images/product/prod_1.jpg",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                price: 3790,
+                src: "plugins/bootstrap-dialog/goods.html?goodsid=3",
+            },
+            {
+                id: 4,
+                sort: 4,
+                title: "口味王槟榔",
+                desc: "口味王槟榔",
+                img: "images/product/prod_18.jpg",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                price: 9.99,
+                src: "plugins/bootstrap-dialog/goods.html?goodsid=4",
+            },
+            {
+                id: 5,
+                sort: 5,
+                title: "合成天下",
+                desc: "合成天下",
+                img: "images/product/prod_12.jpg",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                price: 13.99,
+                src: "plugins/bootstrap-dialog/goods.html?goodsid=5",
+            },
+            {
+                id: 6,
+                sort: 6,
+                title: "味赢天下",
+                desc: "味赢天下",
+                img: "images/product/prod_11.jpg",
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                price: 32.99,
+                src: "plugins/bootstrap-dialog/goods.html?goodsid=6",
+            }
+        ];
+    }
+</script>
+<script type="text/javascript" src="AngularData/Angular.min.js"></script>
+<script type="text/javascript">
+$.jqPaginator('.pagination', {
+    totalPages: 3,
     visiblePages: 3,
-    currentPage: 2,
+    currentPage: 3,
     prev: '<li class="prev"><a href="javascript:;">&laquo;</a></li>',
     next: '<li class="next"><a href="javascript:;">&raquo;</a></li>',
     page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
