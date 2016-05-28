@@ -1,3 +1,12 @@
+body { font-family: "Microsoft Yahei", "Hiragino Sans GB", SimSun, Arial, "Helvetica Neue", Helvetica; }
+desc { display: none; }
+ul { margin: 0; list-style: none; padding: 0; } 
+#WeChat { width: 100%; }
+#WeChat .app-config { display: none; }
+#WeChat .actions { display: none; }
+#WeChat .app-entry { width: initial; }
+#WeChat img { width: 100%; height: auto; }
+/* 音频按钮 */
 .item { width: 100%; padding: 10px; text-align: left; list-style: none; }
 .item a.titleMusic { display: block; height: 100%; height: 40px !important; border: 1px solid #ddd; padding-left: 50px; padding-right: 70px; background-color: #fcfcfc; display: block; position: relative; }
 a.titleMusic .fa.fa-wifi { position: absolute; left: 5px; top: 8px; width: 25px; height: 25px; color: #777; font-size: 1.7em; -webkit-transform: rotate(90deg); -ms-transform: rotate(90deg); -o-transform: rotate(90deg); transform: rotate(90deg); }
@@ -5,6 +14,7 @@ a.titleMusic.active .fa.fa-wifi { color: #09bb07; }
 a.titleMusic title { font-weight: normal; line-height: 35px !important; height: 35px; padding-right: 80px; /*top: 2px !important;*/ top: -5px !important; color: black; display: block; text-align: left; font-size: 14px; font-family: "黑体"; padding: 0; width: 100%; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; }
 a.titleMusic span.dec { position: absolute; bottom: -0px; left: 45px; white-space: nowrap; overflow: hidden; max-width: 160px; -ms-text-overflow: ellipsis; text-overflow: ellipsis; }
 a.titleMusic time { width: 70px; position: absolute; right: 0px; top: 7px; display: block; }
+/* 切换菜单 */
 .app-entry ul { margin-bottom: 0; }
 .switch-nav { background-color: #eee; position: relative; left: 0; top: 0; width: 100%; }
 .switch-nav ul.swiper-wrapper { transition-duration: 0ms; height: 30px; transform: translate3d(0px, 0px, 0px); padding: 0; text-align: center; overflow: hidden; width: 100%; }

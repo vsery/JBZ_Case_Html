@@ -983,15 +983,8 @@ var PowerPage = {
                         '<div class="carousel-caption">' + obj.pics[i].name + '</div>'+
                     '</div>');
                 }
-                var switcNav = $('<a class="left carousel-control" href="#topBannerList" role="button" data-slide="prev">' +
-                    '<span class="fa fa-fw fa-angle-double-left" aria-hidden="true"></span>'+
-                '</a>'+
-                '<a class="right carousel-control" href="#topBannerList" role="button" data-slide="next">'+
-                    '<span class="fa fa-fw fa-angle-double-right" aria-hidden="true"></span>'+
-                '</a>');
                 box.append(boxNav);
                 box.append(swiper_wrapper);
-                box.append(switcNav);
                 box.append('<desc>' + JSON.stringify(obj) + '</desc>');
                 return box;
             } else if (obj.showtype == 1) {
@@ -1089,7 +1082,7 @@ var PowerPage = {
             } else {
                 switchnavs = obj.navs;
             }
-            var box = $('<div class="switch-nav swiper-container clearfix"><ul class="swiper-wrapper"></ul></div>');
+            var box = $('<div class="switch-nav clearfix"><ul class="swiper-wrapper"></ul></div>');
             for (var i = 0; i < switchnavs.length; i++) {
                 var li = $('<li class="swiper-slide '+ (i == 0 ? 'active' : '') +'">' +
                     '<a class="btn" href="' + switchnavs[i].url + '">' +
@@ -1148,8 +1141,8 @@ var PowerPage = {
                 audio = obj.audio;
             }
             for ( var i = 0; i < audio.length ; i++ ) {
-                box.append('<li class="item music">' +
-                    '<a href="javascript:;" class="titleMusic" id="' + audio[i].id + '">' +
+                box.append('<li class="item">' +
+                    '<a href="' + audio[i].src + '" class="titleMusic" id="' + audio[i].id + '">' +
                         '<i class="fa fa-wifi"></i>' +
                         '<title class="bookName custom-audio-title">' + audio[i].title +'</title>' +
                         '<span class="dec">' + audio[i].desc + '</span>' +
@@ -2082,7 +2075,7 @@ var PowerPage = {
         },
         /*  修改 图片广告  */
         ModifyImageAd: function(obj) {
-            var box = $('<div class="form-horizontal"><p class="help-desc">注:暂不支持多组广告图</p></div>');
+            var box = $('<div class="form-horizontal"></div>');
             if (obj.showtype == 0) {
                 group = $('<div class="control-group">' +
                     '<label class="control-label">显示方式：</label>' +
