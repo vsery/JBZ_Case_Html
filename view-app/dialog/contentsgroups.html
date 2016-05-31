@@ -1,0 +1,131 @@
+<div class="row">
+    <div class="col-lg-12" id="js-module-contentsgroups">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse">
+                    <div class="navbar-form navbar-right" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="请输入内容分组名" ng-model="querycontents"></div>
+                        <a href="javascript:;" class="btn btn-info">查询</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <table class="table table-condensed table-hover" ng-controller="contentGrouptList">
+            <thead>
+                <tr>
+                    <th class="text-center">内容分组</th>
+                    <th class="text-center">内容数量</th>
+                    <th class="text-center">跟新时间</th>
+                    <th class="text-center">内容价格</th>
+                    <th class="text-center">操作</th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                <tr ng-repeat="ctg in contentGrups | filter:querycontents" data-id="{{ctg.id}}" data-title="{{ctg.name}}" data-pic="{{ctg.img}}" data-url="{{ctg.src}}" data-price="{{ctg.price}}">
+                    <td>{{ctg.name}}</td>
+                    <td>{{ctg.course}}</td>
+                    <td>{{ctg.time}}</td>
+                    <td>{{ctg.price}}</td>
+                    <td><a class="btn js-choose" href="javascript:;">选取</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="modal-footer clearfix">
+            <div style="display:none;" class="js-confirm-choose pull-left">
+                <a class="btn btn-primary" href="javascript:;">确定使用</a>
+            </div>
+            <ul class="pagination pagination"></ul>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function contentGrouptList($scope) {
+        $scope.contentGrups = [
+            {
+                id: 1,
+                sort: 1,
+                img: "images/books/book01.jpg",
+                name: "导师(刘翔)",
+                course: 26,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                price: 980,
+                src: "plugins/bootstrap-dialog/contentsgroup.html?contentsgroupid=1",
+            },
+            {
+                id: 2,
+                sort: 2,
+                img: "images/books/book02.jpg",
+                name: "导师(杨建)",
+                course: 54,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                price: 1280,
+                src: "plugins/bootstrap-dialog/contentsgroup.html?contentsgroupid=2",
+            },
+            {
+                id: 3,
+                sort: 3,
+                img: "images/books/book03.jpg",
+                name: "导师(李武)",
+                course: 32,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                price: 1290,
+                src: "plugins/bootstrap-dialog/contentsgroup.html?contentsgroupid=3",
+            },
+            {
+                id: 4,
+                sort: 4,
+                img: "images/books/book04.jpg",
+                name: "导师(张宇)",
+                course: 12,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                price: 290,
+                src: "plugins/bootstrap-dialog/contentsgroup.html?contentsgroupid=4",
+            },
+            {
+                id: 5,
+                sort: 5,
+                img: "images/books/book05.jpg",
+                name: "认同感",
+                course: 42,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                price: 3290,
+                src: "plugins/bootstrap-dialog/contentsgroup.html?contentsgroupid=5",
+            },
+            {
+                id: 6,
+                sort: 6,
+                img: "images/books/book06.jpg",
+                name: "怎样建好一个故事",
+                course: 22,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                price: 790,
+                src: "plugins/bootstrap-dialog/contentsgroup.html?contentsgroupid=6",
+            },
+            {
+                id: 7,
+                sort: 7,
+                img: "images/books/book07.jpg",
+                name: "沟通圣经",
+                course: 24,
+                time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
+                price: 2390,
+                src: "plugins/bootstrap-dialog/contentsgroup.html?contentsgroupid=7",
+            }
+        ];
+    }
+</script>
+<script type="text/javascript" src="AngularData/Angular.min.js"></script>
+<script type="text/javascript">
+$.jqPaginator('.pagination', {
+    totalPages: 3,
+    visiblePages: 3,
+    currentPage: 3,
+    prev: '<li class="prev"><a href="javascript:;">&laquo;</a></li>',
+    next: '<li class="next"><a href="javascript:;">&raquo;</a></li>',
+    page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+    onPageChange: function(num, type) {
+        //$('#pagetitle').text(type + '：' + num);
+    }
+});
+</script>

@@ -20,10 +20,18 @@
     $("#PhoneEditAdmin").html( fileobj.responseText); //ajax打开手机编辑界面
     $(".ui-sortable").sortable({ containment: 'parent'});
     PowerPage.Common.CSH([{
-        name:"contentscategroy", categroyname:"内容分组名称", config:true, candelete:false
+        name:"categroy", categroyname:"内容分组名称", config:true, candelete:false
     }],3);
-    $("input.btn-save").click(function() { alert('保存成功'); });
+    MaxMenus();
+    $("input.btn-save").click(function() {
+        var data={
+            pagename:PowerPage.Get.GetPageTitle(),
+
+            pagedesc:PowerPage.Get.GetPageDesc(),
+            
+        pagecont:PowerPage.Get.GetPageCont(),
+        }
+        console.log(data);
+    });
     $("input.btn-preview").click(function() { alert('预览成功'); });
-$(function () {
-})
 </script>

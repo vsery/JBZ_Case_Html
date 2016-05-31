@@ -40,6 +40,37 @@ function FullMenus() {
         'videolist'];
     NavList(nav);
 }
+function MaxMenus() {
+    var nav = [
+        'richtext',
+        'contents',
+        'contentslist',
+        'imagead',
+        'textnav',
+        'switchnav',
+        'line',
+        'space',
+        'audio',
+        'audiolist',
+        'video',
+        'videolist'];
+    NavList(nav);
+}
+function MinMenus() {
+    var nav = [
+        'richtext',
+        'contents',
+        'imagead',
+        'textnav',
+        'switchnav',
+        'line',
+        'space',
+        'audio',
+        'audiolist',
+        'video',
+        'videolist'];
+    NavList(nav);
+}
 function SimpleMenus() {
     var nav = [
         'richtext',
@@ -853,9 +884,9 @@ var PowerPage = {
             }
             for (var i = 0; i < contents.length; i++) {
                 var contentscard = $('<li class="goods-card"></li>');
-                var a = $('<a href="/view-app/dialog/contents.html?contentsid=' + contents[i].id + '" class="link js-goods clearfix"></a>');
+                var a = $('<a href="'+ contents[i].url + '" class="link js-goods clearfix"></a>');
                 var photo = $('<div class="photo-block"></div>');
-                var img = $('<img src=""/>');
+                var img = $('<img src="' + contents[i].pic + '"/>');
                 var info = $('<div class="info"></div>');
                 var title = $('<p class="goods-title">' + contents[i].name + '</p>');
                 var price = $('<p class="goods-price"><em>￥' + contents[i].price + '</em></p>');
@@ -863,12 +894,11 @@ var PowerPage = {
                 var buy = $('<div class="goods-buy btn' + obj.buytype + '"></div>');
                 if (obj.showname || obj.size == 3) {
                     info.append(title);
-
                 } else {
                     info.addClass("info-no-title");
                 }
                 /*  显示商品描述并显示样式为大图  */
-                if (obj.showdesc && obj.size == 0) {
+                if ( (obj.showdesc && obj.size == 0) || (obj.showdesc && obj.size == 3)){
                     info.append(desc);
                 }
                 if (obj.showprice) {
@@ -933,6 +963,7 @@ var PowerPage = {
             box.append('<desc>' + JSON.stringify(obj) + '</desc>');
             return box;
         },
+        /*  内容分组  */
         FormatContentsTagList: function(obj) {
             var box = $('<div class="custom-tag-list"><div class="custom-tag-list-goods"></div></div>');
             var group = $('<ul class="custom-tag-list-goods-list"></ul>');
@@ -950,7 +981,7 @@ var PowerPage = {
                     '</div>'+
                     '<div class="custom-tag-list-goods-detail">' +
                         '<p class="custom-tag-list-goods-title">' + contentstaglist[i].name + '</p>' +
-                        '<span class="custom-tag-list-goods-price">￥' + contentstaglist[i].price + '</span>' +
+                        '<span class="custom-tag-list-goods-price">￥' + contentstaglist[i].price + '</span>'+
                         '<a class="custom-tag-list-goods-buy" id="' + contentstaglist[i].id + '" href="' + contentstaglist[i].url + '"><span></span></a>'+
                     '</div>'+
                 '</li>');
@@ -983,8 +1014,15 @@ var PowerPage = {
                         '<div class="carousel-caption">' + obj.pics[i].name + '</div>'+
                     '</div>');
                 }
+                var switcNav = $('<a class="left carousel-control" href="#topBannerList" role="button" data-slide="prev">' +
+                    '<span class="fa fa-fw fa-angle-double-left" aria-hidden="true"></span>'+
+                '</a>'+
+                '<a class="right carousel-control" href="#topBannerList" role="button" data-slide="next">'+
+                    '<span class="fa fa-fw fa-angle-double-right" aria-hidden="true"></span>'+
+                '</a>');
                 box.append(boxNav);
                 box.append(swiper_wrapper);
+                box.append(switcNav);
                 box.append('<desc>' + JSON.stringify(obj) + '</desc>');
                 return box;
             } else if (obj.showtype == 1) {
@@ -1082,7 +1120,7 @@ var PowerPage = {
             } else {
                 switchnavs = obj.navs;
             }
-            var box = $('<div class="switch-nav clearfix"><ul class="swiper-wrapper"></ul></div>');
+            var box = $('<div class="switch-nav swiper-container clearfix"><ul class="swiper-wrapper"></ul></div>');
             for (var i = 0; i < switchnavs.length; i++) {
                 var li = $('<li class="swiper-slide '+ (i == 0 ? 'active' : '') +'">' +
                     '<a class="btn" href="' + switchnavs[i].url + '">' +
@@ -1141,8 +1179,8 @@ var PowerPage = {
                 audio = obj.audio;
             }
             for ( var i = 0; i < audio.length ; i++ ) {
-                box.append('<li class="item">' +
-                    '<a href="' + audio[i].src + '" class="titleMusic" id="' + audio[i].id + '">' +
+                box.append('<li class="item music">' +
+                    '<a href="javascript:;" class="titleMusic" id="' + audio[i].id + '">' +
                         '<i class="fa fa-wifi"></i>' +
                         '<title class="bookName custom-audio-title">' + audio[i].title +'</title>' +
                         '<span class="dec">' + audio[i].desc + '</span>' +
@@ -1847,7 +1885,7 @@ var PowerPage = {
                     '<input type="checkbox" name="show_sub_title" value="0" ' + (obj.showdesc ? 'checked=""' : '') + '>显示内容简介' +
                 '</label>' +
             '</div>');
-            if (obj.size == 0) {
+            if (obj.size == 0 || obj.size == 3 ) {
                 controlscard.append(showdesc);
             }
             var showprice = $('<div class="controls-card-item">' +
@@ -1948,7 +1986,7 @@ var PowerPage = {
                     obj.categroydesc = result.name;
                     _this.html(result.name);
                     PowerPage.Common.ReView(obj);
-                });
+                });                    
             });
         },
         /*  修改 内容分组  */
@@ -2075,7 +2113,7 @@ var PowerPage = {
         },
         /*  修改 图片广告  */
         ModifyImageAd: function(obj) {
-            var box = $('<div class="form-horizontal"></div>');
+            var box = $('<div class="form-horizontal"><p class="help-desc">注:暂不支持多组广告图,一个页面最多一组广告图</p></div>');
             if (obj.showtype == 0) {
                 group = $('<div class="control-group">' +
                     '<label class="control-label">显示方式：</label>' +

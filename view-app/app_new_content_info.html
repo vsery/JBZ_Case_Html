@@ -21,6 +21,16 @@
     PowerPage.Common.CSH([{
         name:"pagetitle", title:"内容标题", config:true, candelete:false
     }],0);
-    $("input.btn-save").click(function() { alert('保存成功'); });
+    SimpleMenus();
+    $("input.btn-save").click(function() {
+        var data={
+            pagename:PowerPage.Get.GetPageTitle(),
+
+            pagedesc:PowerPage.Get.GetPageDesc(),
+            
+        pagecont:PowerPage.Get.GetPageCont(),
+        }
+        console.log(data);
+    });
     $("input.btn-preview").click(function() { alert('预览成功'); });
 </script>

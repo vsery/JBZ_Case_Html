@@ -94,6 +94,15 @@ function selectcontentsgroup(callback) {
         message: $('<div></div>').load('view-app/dialog/contentsgroup.html')
     });
 }
+function selectcontentsgroups(callback) {
+    _callback = callback;
+    _dialog = BootstrapDialog.show({
+        type: BootstrapDialog.TYPE_DEFAULT,
+        title: '内容分组/选择分组',
+        message: $('<div></div>').load('view-app/dialog/contentsgroup.html')
+    });
+}
+
 
 /*  查询弹框 { 音频 }  */
 function selectaudio(callback, max) {
@@ -234,7 +243,7 @@ $("body").on("click", "#js-module-audio .js-choose", function() {
     console.log(_select);
 });
 
-/* 页面列表 / 商品列表 / 音频列表 / 视频列表 (单选并返回)  */
+/* 页面列表 / 商品列表 / 内容列表 / 音频列表 / 视频列表 (单选并返回) */
 $("body").on( "click", "#js-module-pagegroup .js-choose, " +
     "#js-module-audiolist .js-choose, " +
     "#js-module-videolist .js-choose", function() {
@@ -246,7 +255,6 @@ $("body").on( "click", "#js-module-pagegroup .js-choose, " +
         url: tr.attr("data-url"),
     });
 });
-
 $("body").on( "click", "#js-module-contentsgroup .js-choose", function() {
     var tr = $(this).parents("tr");
     _dialog.close();
@@ -258,8 +266,40 @@ $("body").on( "click", "#js-module-contentsgroup .js-choose", function() {
         price: tr.attr("data-price"),
     });
 });
-
-/*  弹出框 确定使用 (返回数组json)  */
+$("body").on( "click", "#js-module-contentsgroups .js-choose", function() {
+    var tr = $(this).parents("tr");
+    if ($(this).hasClass("btn-info")) {
+        $(this).removeClass("btn-info");
+        $(this).html("选取");
+        var index = {
+            id: tr.attr("data-id"),
+            name: tr.attr("data-title"),
+            desc: tr.attr("data-desc"),
+            pic: tr.attr("data-pic").split(',')[0],
+            url: tr.attr("data-url"),
+            price: tr.attr("data-price"),
+        };
+        if( index !=-1 ) {
+            _select.splice(index,1);
+        }
+    } else {
+        $(this).addClass("btn-info");
+        $(this).html("取消");
+        _select.push({
+            id: tr.attr("data-id"),
+            name: tr.attr("data-title"),
+            pic: tr.attr("data-pic"),
+            url: tr.attr("data-url"),
+            price: tr.attr("data-price"),
+        });
+    }
+    if(_select.length>0){
+        $(".js-confirm-choose").show();
+    }else{
+        $(".js-confirm-choose").hide();
+    }
+});
+/*弹出框 确定使用 (返回数组json)*/
 $("body").on("click", ".js-confirm-choose", function() {
     _dialog.close();
     _callback(_select);
