@@ -8,14 +8,7 @@
     <meta name="keywords" content="聚宝赞分销代理综合信息系统">
     <meta name="description" content="聚宝赞分销代理综合信息系统">
     <link rel="icon" sizes="16x16" mask="" href="images/public/logo.ico">
-    <link rel="stylesheet" type="text/css" href="font/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css" >
-    <link rel="stylesheet" type="text/css" href="css/pc.css" />
-    <link rel="stylesheet" type="text/css" href="css/admin-youzan.css" >
-    <link rel="stylesheet" type="text/css" href="css/assembly.css">
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/lazyload.js"></script>
     <!--[if lt IE 9]>
         <script type="text/javascript" src="js/html5shiv.min.js"></script>
         <script type="text/javascript" src="js/respond.min.js"></script>
@@ -124,42 +117,33 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src='js/jquery.datetimepicker.js'></script>
-<script type="text/javascript">
-    $(function(){       //首页加载
-        htmlobj=$.ajax({
-            type:"GET", 
-            url:"view-agent/index_body.html",
-            dataType:"html", 
-            async:false
+    <script type="text/javascript">
+        LazyLoad.css([
+            'font/css/font-awesome.min.css',
+            'css/bootstrap.min.css',
+            'css/jquery.datetimepicker.css',
+            'css/pc.css',
+            'css/assembly.css',
+            'css/admin-youzan.css'
+            ], function () {
+                console.log('all css have been loaded');
         });
-        $(".app-init-container").html(htmlobj.responseText);
-        $('a.top_nav_btn').click(function () {      //顶部导航切换
-            $("a.top_nav_btn").parent().removeClass("active");
-            $(this).parent().addClass("active");
-            var open= "";
-            $(".left_tab_nav").removeClass("open");
-            if($(this).hasClass("customer_btrn")){ open= "customer_btrn"; }
-            if($(this).hasClass("agent_btn")){ open= "agent_btn"; }
-            if($(this).hasClass("user_btn")){ open= "user_btn"; var user_btn_num = $('.top_nav_btn.user_btn').index(this); }
-            $("nav.left_tab_nav").each(function () {
-                $(this).find("li").removeClass("active");
-                if($(this).hasClass(open)){                
-                    $(this).addClass("open");
-                    if($(this).hasClass("user_btn")){
-                        $(this).find("li:eq("+user_btn_num+")").addClass("active");
-                    }else{
-                        $(this).find("li:eq(0)").addClass("active");
-                    }
-                }
-            })
+        LazyLoad.js(
+            [
+                'js/jquery.min.js',
+                'js/bootstrap.js',
+                'plugins/jqPaginator/jqPaginator.min.js',
+                'js/jquery.datetimepicker.js',
+                'js/Chart.js',
+                'js/area.js',
+                'js/public.js'
+            ], function () {
+            console.log('all bind JavaScript have been loaded');
+            window.history.forward(1); 
+            htmlobj=$.ajax({ type:"GET", url:"view-platform/index_body.html", dataType:"html", async:false });
+            $(".app-init-container").html(htmlobj.responseText);
+            IndexTOPNav();
         });
-        $("a.left_nav_btn").click(function () {     //左侧导航切换
-            $("a.left_nav_btn").parent().removeClass("active");
-            $(this).parent().addClass("active");
-        });
-    });
-</script>
-<script type="text/javascript" src="js/public.js"></script>
+    </script>
 </body>
 </html>

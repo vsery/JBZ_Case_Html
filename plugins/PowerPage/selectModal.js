@@ -1,6 +1,5 @@
 /*  初始化参数  */
 var _callback = null; var _max = 0; var _select = new Array(); var _dialog;
-
 /*  查询弹框 { 页面 }  */
 function selectpage(callback) {
     _callback = callback;
@@ -19,7 +18,6 @@ function selectpage(callback) {
         }]  */
     });
 }
-
 /*  查询弹框 { 图片 }  */
 function selectpic(callback, max) {
     _callback = callback;
@@ -40,7 +38,6 @@ function selectpic(callback, max) {
         }
     });
 }
-
 /*  查询弹框 { 页面分组 }  */
 function selectpagegroup(callback) {
     _callback = callback;
@@ -50,7 +47,6 @@ function selectpagegroup(callback) {
         message: $('<div></div>').load('view-app/dialog/pagegroup.html')
     });
 }
-
 /*  查询弹框 { 商品 }  */
 function selectgoods(callback, max) {
     _callback = callback;
@@ -62,7 +58,6 @@ function selectgoods(callback, max) {
         message: $('<div></div>').load('view-app/dialog/goods.html')
     });
 }
-
 /*  查询弹框 { 商品列表 }  */
 function selectgoodsgroup(callback) {
     _callback = callback;
@@ -72,7 +67,6 @@ function selectgoodsgroup(callback) {
         message: $('<div></div>').load('view-app/dialog/goodsgroup.html')
     });
 }
-
 /*  查询弹框 { 内容 }  */
 function selectcontents(callback, max) {
     _callback = callback;
@@ -84,7 +78,6 @@ function selectcontents(callback, max) {
         message: $('<div></div>').load('view-app/dialog/contents.html')
     });
 }
-
 /*  询弹框 { 内容列表 }  */
 function selectcontentsgroup(callback) {
     _callback = callback;
@@ -102,8 +95,6 @@ function selectcontentsgroups(callback) {
         message: $('<div></div>').load('view-app/dialog/contentsgroup.html')
     });
 }
-
-
 /*  查询弹框 { 音频 }  */
 function selectaudio(callback, max) {
     _callback = callback;
@@ -115,7 +106,6 @@ function selectaudio(callback, max) {
         message: $('<div></div>').load('view-app/dialog/audio.html')
     });
 }
-
 /*  查询弹框 { 音频列表 }  */
 function selectaudiolist(callback, max) {
     _callback = callback;
@@ -125,7 +115,6 @@ function selectaudiolist(callback, max) {
         message: $('<div></div>').load('view-app/dialog/audiogroup.html')
     });
 }
-
 /*  查询弹框 { 视频 }  */
 function selectvideo(callback, max) {
     _callback = callback;
@@ -137,7 +126,6 @@ function selectvideo(callback, max) {
         message: $('<div></div>').load('view-app/dialog/video.html')
     });
 }
-
 /*  查询弹框 { 视频列表 }  */
 function selectvideolist(callback, max) {
     _callback = callback;
@@ -147,160 +135,158 @@ function selectvideolist(callback, max) {
         message: $('<div></div>').load('view-app/dialog/videogroup.html')
     });
 }
-
-$("body").on("click", ".attachment-list-region .image-item", function() {
-    if ($(this).find(".attachment-selected").length > 0) {
-        $(this).find(".attachment-selected").remove();
-        var index = _select.indexOf($(this).attr("data-src"));
-        if( index !=-1 ) {
-            _select.splice(index,1);
+$(function(){
+    $("body").on("click", ".attachment-list-region .image-item", function() {
+        if ($(this).find(".attachment-selected").length > 0) {
+            $(this).find(".attachment-selected").remove();
+            var index = _select.indexOf($(this).attr("data-src"));
+            if( index !=-1 ) {
+                _select.splice(index,1);
+            }
+        } else {
+            $(this).append('<div class="attachment-selected"> <i class="fa fa-fw fa-check"></i> </d iv>');
+            _select.push($(this).attr("data-src"));
         }
-    } else {
-        $(this).append('<div class="attachment-selected"> <i class="fa fa-fw fa-check"></i> </d iv>');
-        _select.push($(this).attr("data-src"));
-    }
-    if (_select.length > 0) {
-        $(".js-confirm-choose").show();
-    } else {
-        $(".js-confirm-choose").hide();
-    }
-    console.log(_select);
-});
-
-/*  商品弹框 选取按钮 (多选)  */
-$("body").on("click", "#js-module-goods .js-choose", function() {
-    var tr = $(this).parents("tr");
-    if ($(this).hasClass("btn-info")) {
-        $(this).removeClass("btn-info");
-        $(this).html("选取");
-        var index = {
-            id: tr.attr("data-id"),
-            name: tr.attr("data-title"),
-            desc: tr.attr("data-desc"),
-            pic: tr.attr("data-pic").split(',')[0],
-            url: tr.attr("data-url"),
-            price: tr.attr("data-price"),
-        };
-        if( index !=-1 ) {
-            _select.splice(index,1);
+        if (_select.length > 0) {
+            $(".js-confirm-choose").show();
+        } else {
+            $(".js-confirm-choose").hide();
         }
-    } else {
-        $(this).addClass("btn-info");
-        $(this).html("取消");
-        _select.push({
-            id: tr.attr("data-id"),
-            name: tr.attr("data-title"),
-            desc: tr.attr("data-desc"),
-            pic: tr.attr("data-pic").split(',')[0],
-            url: tr.attr("data-url"),
-            price: tr.attr("data-price"),
-        });
-    }
-    if (_select.length > 0) {
-        $(".js-confirm-choose").show();
-    } else {
-        $(".js-confirm-choose").hide();
-    }
-    console.log(_select);
-});
-
-/*  音频弹框 选取按钮 (多选)  */
-$("body").on("click", "#js-module-audio .js-choose", function() {
-    var tr = $(this).parents("tr");
-    if ($(this).hasClass("btn-info")) {
-        $(this).removeClass("btn-info");
-        $(this).html("选取");
-        var index = {
-            title: "请输入音频标题",
-            id: tr.attr("data-id"),
-            title: tr.attr("data-title"),
-            desc: tr.attr("data-desc"),
-            time: tr.attr("data-time"),
-            src: tr.attr("data-src"),
-            loop: tr.attr("data-loop"),
-        };
-        if( index !=-1 ) {
-            _select.splice(index,1);
-        }
-    } else {
-        $(this).addClass("btn-info");
-        $(this).html("取消");
-        _select.push({
-            title: "请输入音频标题",
-            id: tr.attr("data-id"),
-            title: tr.attr("data-title"),
-            desc: tr.attr("data-desc"),
-            time: tr.attr("data-time"),
-            src: tr.attr("data-src"),
-            loop: tr.attr("data-loop"),
-        });
-    }
-    if (_select.length > 0) {
-        $(".js-confirm-choose").show();
-    } else {
-        $(".js-confirm-choose").hide();
-    }
-    console.log(_select);
-});
-
-/* 页面列表 / 商品列表 / 内容列表 / 音频列表 / 视频列表 (单选并返回) */
-$("body").on( "click", "#js-module-pagegroup .js-choose, " +
-    "#js-module-audiolist .js-choose, " +
-    "#js-module-videolist .js-choose", function() {
-    var tr = $(this).parents("tr");
-    _dialog.close();
-    _callback({
-        id: tr.attr("data-id"),
-        name: tr.attr("data-title"),
-        url: tr.attr("data-url"),
+        console.log(_select);
     });
-});
-$("body").on( "click", "#js-module-contentsgroup .js-choose", function() {
-    var tr = $(this).parents("tr");
-    _dialog.close();
-    _callback({
-        id: tr.attr("data-id"),
-        name: tr.attr("data-title"),
-        pic: tr.attr("data-pic"),
-        url: tr.attr("data-url"),
-        price: tr.attr("data-price"),
+    /*  商品弹框 选取按钮 (多选)  */
+    $("body").on("click", "#js-module-goods .js-choose", function() {
+        var tr = $(this).parents("tr");
+        if ($(this).hasClass("btn-info")) {
+            $(this).removeClass("btn-info");
+            $(this).html("选取");
+            var index = {
+                id: tr.attr("data-id"),
+                name: tr.attr("data-title"),
+                desc: tr.attr("data-desc"),
+                pic: tr.attr("data-pic").split(',')[0],
+                url: tr.attr("data-url"),
+                price: tr.attr("data-price"),
+            };
+            if( index !=-1 ) {
+                _select.splice(index,1);
+            }
+        } else {
+            $(this).addClass("btn-info");
+            $(this).html("取消");
+            _select.push({
+                id: tr.attr("data-id"),
+                name: tr.attr("data-title"),
+                desc: tr.attr("data-desc"),
+                pic: tr.attr("data-pic").split(',')[0],
+                url: tr.attr("data-url"),
+                price: tr.attr("data-price"),
+            });
+        }
+        if (_select.length > 0) {
+            $(".js-confirm-choose").show();
+        } else {
+            $(".js-confirm-choose").hide();
+        }
+        console.log(_select);
     });
-});
-$("body").on( "click", "#js-module-contentsgroups .js-choose", function() {
-    var tr = $(this).parents("tr");
-    if ($(this).hasClass("btn-info")) {
-        $(this).removeClass("btn-info");
-        $(this).html("选取");
-        var index = {
+    /*  音频弹框 选取按钮 (多选)  */
+    $("body").on("click", "#js-module-audio .js-choose", function() {
+        var tr = $(this).parents("tr");
+        if ($(this).hasClass("btn-info")) {
+            $(this).removeClass("btn-info");
+            $(this).html("选取");
+            var index = {
+                title: "请输入音频标题",
+                id: tr.attr("data-id"),
+                title: tr.attr("data-title"),
+                desc: tr.attr("data-desc"),
+                time: tr.attr("data-time"),
+                src: tr.attr("data-src"),
+                loop: tr.attr("data-loop"),
+            };
+            if( index !=-1 ) {
+                _select.splice(index,1);
+            }
+        } else {
+            $(this).addClass("btn-info");
+            $(this).html("取消");
+            _select.push({
+                title: "请输入音频标题",
+                id: tr.attr("data-id"),
+                title: tr.attr("data-title"),
+                desc: tr.attr("data-desc"),
+                time: tr.attr("data-time"),
+                src: tr.attr("data-src"),
+                loop: tr.attr("data-loop"),
+            });
+        }
+        if (_select.length > 0) {
+            $(".js-confirm-choose").show();
+        } else {
+            $(".js-confirm-choose").hide();
+        }
+        console.log(_select);
+    });
+    /* 页面列表 / 商品列表 / 内容列表 / 音频列表 / 视频列表 (单选并返回) */
+    $("body").on( "click", "#js-module-pagegroup .js-choose, " +
+        "#js-module-audiolist .js-choose, " +
+        "#js-module-videolist .js-choose", function() {
+        var tr = $(this).parents("tr");
+        _dialog.close();
+        _callback({
             id: tr.attr("data-id"),
             name: tr.attr("data-title"),
-            desc: tr.attr("data-desc"),
-            pic: tr.attr("data-pic").split(',')[0],
             url: tr.attr("data-url"),
-            price: tr.attr("data-price"),
-        };
-        if( index !=-1 ) {
-            _select.splice(index,1);
-        }
-    } else {
-        $(this).addClass("btn-info");
-        $(this).html("取消");
-        _select.push({
+        });
+    });
+    $("body").on( "click", "#js-module-contentsgroup .js-choose", function() {
+        var tr = $(this).parents("tr");
+        _dialog.close();
+        _callback({
             id: tr.attr("data-id"),
             name: tr.attr("data-title"),
             pic: tr.attr("data-pic"),
             url: tr.attr("data-url"),
             price: tr.attr("data-price"),
         });
-    }
-    if(_select.length>0){
-        $(".js-confirm-choose").show();
-    }else{
-        $(".js-confirm-choose").hide();
-    }
-});
-/*弹出框 确定使用 (返回数组json)*/
-$("body").on("click", ".js-confirm-choose", function() {
-    _dialog.close();
-    _callback(_select);
-});
+    });
+    $("body").on( "click", "#js-module-contentsgroups .js-choose", function() {
+        var tr = $(this).parents("tr");
+        if ($(this).hasClass("btn-info")) {
+            $(this).removeClass("btn-info");
+            $(this).html("选取");
+            var index = {
+                id: tr.attr("data-id"),
+                name: tr.attr("data-title"),
+                desc: tr.attr("data-desc"),
+                pic: tr.attr("data-pic").split(',')[0],
+                url: tr.attr("data-url"),
+                price: tr.attr("data-price"),
+            };
+            if( index !=-1 ) {
+                _select.splice(index,1);
+            }
+        } else {
+            $(this).addClass("btn-info");
+            $(this).html("取消");
+            _select.push({
+                id: tr.attr("data-id"),
+                name: tr.attr("data-title"),
+                pic: tr.attr("data-pic"),
+                url: tr.attr("data-url"),
+                price: tr.attr("data-price"),
+            });
+        }
+        if(_select.length>0){
+            $(".js-confirm-choose").show();
+        }else{
+            $(".js-confirm-choose").hide();
+        }
+    });
+    /*弹出框 确定使用 (返回数组json)*/
+    $("body").on("click", ".js-confirm-choose", function() {
+        _dialog.close();
+        _callback(_select);
+    });
+})

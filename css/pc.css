@@ -601,8 +601,9 @@ a.new-window:focus {
 }
 
 img {
-    width: auto\9;
+    width: auto;
     height: auto;
+    margin: 0 auto;
     max-width: 100%;
     vertical-align: middle;
     border: 0;
@@ -2501,6 +2502,7 @@ input.get-web-img-input {
 .form-horizontal .control-group {
     margin-bottom: 10px
 }
+
 .form-horizontal .control-group:after {
     display: table;
     line-height: 0;
@@ -2622,13 +2624,18 @@ input.get-web-img-input {
 .form-horizontal .controls .dropdown span.label-success {
     display: inline-block;
     padding: 0.45em 1em;
-    min-width: 120px
+    min-width: 120px;
+    max-width: 210px;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
 }
 
 .form-horizontal .dropdown ul.dropdown-menu {
     top: 28px;
     right: 10px
 }
+
 .form-actions .btn {
     margin-right: 6px
 }
@@ -16851,6 +16858,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .sc-goods-list .info p {
+    text-align: left;
     margin: 0px
 }
 
@@ -18333,7 +18341,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-design .icon-add {
-    display: inline-block;
+    display: block;
     width: 14px;
     height: 14px;
     background-image: url("../images/public/icon-add.png");
@@ -20226,6 +20234,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     box-sizing: border-box
 }
 
+
 /*.widget-attachment .modal-header {
     padding: 6px 0 6px 15px;
     margin-right: 20px;
@@ -20336,7 +20345,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
     overflow: hidden
 }
 
-.widget-attachment .modal-body .image-list.active{
+.widget-attachment .modal-body .image-list.active {
     display: block
 }
 

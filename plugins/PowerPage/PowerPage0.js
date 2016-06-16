@@ -29,6 +29,7 @@ function FullMenus() {
         'contents',
         'contentslist',
         'contentstaglist',
+        'contentstaglist1',
         'imagead',
         'textnav',
         'switchnav',
@@ -96,6 +97,7 @@ function NavList(obj) {
         if ( obj[i] == 'contents' ){ box.find('ul').append('<li><a class="js-new-field" data-field-type="contents">    内容          </a></li>');}
         if ( obj[i] == 'contentslist' ){ box.find('ul').append('<li><a class="js-new-field" data-field-type="contentslist">内容<br>列表  </a></li>');}
         if ( obj[i] == 'contentstaglist' ){ box.find('ul').append('<li><a class="js-new-field" data-field-type="contentstaglist">内容<br>分组  </a></li>');}
+        if ( obj[i] == 'contentstaglist1' ){ box.find('ul').append('<li><a class="js-new-field" data-field-type="contentstaglist1">内容<br>分组1  </a></li>');}
         if ( obj[i] == 'cube2' )    { box.find('ul').append('<li><a class="js-new-field" data-field-type="cube2">       魔方          </a></li>');}
         if ( obj[i] == 'title' )    { box.find('ul').append('<li><a class="js-new-field" data-field-type="title">       标题          </a></li>');}
         if ( obj[i] == 'textnav' )  { box.find('ul').append('<li><a class="js-new-field" data-field-type="textnav">     文本<br>导航  </a></li>');}
@@ -422,6 +424,17 @@ var PowerPage = {
             name: "contentstaglist",
             navs: [],
         },
+        contentstaglist1:{
+            name: "contentstaglist1",
+            contents: [],
+            size: 2,
+            sizetype: 0,
+            showname: false,
+            showbuy: true,
+            buytype: 1,
+            showdesc: false,
+            showprice: true,
+        },
         /*  内容类别  */
         contentscategroy: {
             name: "contentscategroy",
@@ -461,6 +474,7 @@ var PowerPage = {
         /*  切换导航  */
         switchnav: {
             name: "switchnav",
+            deval: 1,
             navs: [],
         },
         /*  商品搜索  */
@@ -557,6 +571,9 @@ var PowerPage = {
                     break;
                 case PowerPage.EditTemp.contentstaglist.name:      /*  内容  */
                     result = PowerPage.Format.FormatContentsTagList($.extend(true, {}, PowerPage.EditTemp.contentstaglist, obj));
+                    break;
+                case PowerPage.EditTemp.contentstaglist1.name:      /*  内容1  */
+                    result = PowerPage.Format.FormatContents($.extend(true, {}, PowerPage.EditTemp.contentstaglist1, obj));
                     break;
                 case PowerPage.EditTemp.imagead.name:       /*  图片广告  */
                     result = PowerPage.Format.FormatImageAd($.extend(true, {}, PowerPage.EditTemp.imagead, obj));
@@ -989,6 +1006,11 @@ var PowerPage = {
             box.append('<desc>' + JSON.stringify(obj) + '</desc>');
             return box;    
         },
+        FormatContentsTagList1:function(obj){
+            alert("1");
+            return "1234";
+            PowerPage.Format.FormatContents(obj);
+        },
         /*  图片广告  */
         FormatImageAd: function(obj) {
             if (obj.pics.length == 0) {
@@ -1122,7 +1144,7 @@ var PowerPage = {
             }
             var box = $('<div class="switch-nav swiper-container clearfix"><ul class="swiper-wrapper"></ul></div>');
             for (var i = 0; i < switchnavs.length; i++) {
-                var li = $('<li class="swiper-slide '+ (i == 0 ? 'active' : '') +'">' +
+                var li = $('<li class="swiper-slide '+ (i == obj.deval-1 ? 'active' : '') +'">' +
                     '<a class="btn" href="' + switchnavs[i].url + '">' +
                         switchnavs[i].name +
                     '</a></li>');
@@ -1278,6 +1300,9 @@ var PowerPage = {
                     break;
                 case PowerPage.EditTemp.contentstaglist.name:/*  内容分组  */
                     PowerPage.Modify.ModifyContentsTagList(obj);
+                    break;
+                case PowerPage.EditTemp.contentstaglist1.name:/*  内容分组  */
+                    PowerPage.Modify.ModifyContentsTagList1(obj);
                     break;
                 case PowerPage.EditTemp.contentscategroy.name:/*  内容类别  */
                     PowerPage.Modify.ModifyContentsCategroy(obj);
@@ -1893,9 +1918,9 @@ var PowerPage = {
                     '<input type="checkbox" name="price" value="1" ' + (obj.showprice ? 'checked=""' : '') + '>显示价格' +
                 '</label>' +
             '</div>');
-            if (obj.size != 3) {
+            //if (obj.size != 3) {
                 controlscard.append(showprice);
-            }
+            //}
             controls.append(controlscard);
             group.append(controls);
             region.append(group);
@@ -1988,6 +2013,21 @@ var PowerPage = {
                     PowerPage.Common.ReView(obj);
                 });                    
             });
+        },
+        ModifyContentsTagList1:function(obj){
+            PowerPage.Modify.ModifyContents(obj);
+            $(".add-goods").off();
+            $(".add-goods").click(function() {
+                selectcontentsgroups(function(result) {
+                    for (var i = 0; i < result.length; i++) {
+                        obj.contents.push(result[i]);
+                    }
+                    PowerPage.Common.ReView(obj);
+                    PowerPage.Common.EditClick();
+                });
+            });
+
+
         },
         /*  修改 内容分组  */
         ModifyContentsTagList: function(obj) {
@@ -2453,9 +2493,18 @@ var PowerPage = {
         /*  修改 切换导航  */
         ModifySwitchNav: function(obj) {
             var box = $('<div class="form-horizontal"></div>');
-            var group = $('<div class="control-group js-collection-region"><p class="help-desc">第一项:默认显示项</p></div>');
+            var group=$('<div class="control-group">' +
+                '<label class="control-label">默认显示：</label>' +
+                '<select id="deval">' +
+                    '<option value="1">第一项</option>' +
+                    '<option value="2">第二项</option>' +
+                '</select>'+
+            '</div>');
+            switch(obj.deval){
+                case 1:group.find("option").eq(0).attr("selected","selected");break;
+                case 2:group.find("option").eq(1).attr("selected","selected");break;
+            }
             var databox = $('<ul class="choices ui-sortable"></ul>');
-            obj.navs = PowerPage.EditTemp.defaultval.switchnav;
             for (var i = 0; i < obj.navs.length; i++) {
                 var dataitem = $('<li class="choice">' +
                     '<div class="control-group">' +
@@ -2486,7 +2535,9 @@ var PowerPage = {
                 databox.append(dataitem);
             }
             group.append(databox);
+
             box.append(group);
+
             group = $('<div class="control-group options" style="display: block;">' +
                 '<a class="add-option js-add-option" href="javascript:void(0);"><i class="icon-add"></i> 添加一个文本导航</a>' +
             '</div>');
@@ -2497,6 +2548,7 @@ var PowerPage = {
                 PowerPage.Common.ReView(obj);
                 PowerPage.Common.EditClick();
             });
+
             PowerPage.Dom.SidBar.find("input").blur(function() {
                 PowerPage.ReDate.ReDataTextNav(obj);
             });
@@ -2510,6 +2562,11 @@ var PowerPage = {
             PowerPage.Dom.SidBar.find(".delete").click(function() {
                 $(this).parents('.choice').remove();
                 PowerPage.ReDate.ReDataTextNav(obj);
+            });
+            /*操作默认显示*/
+            PowerPage.Dom.SidBar.find("#deval").change(function(){
+                obj.deval=parseInt($(this).val());
+                PowerPage.Common.ReView(obj);
             });
         },
         /*  修改 商品搜索  */
@@ -2876,6 +2933,10 @@ var PowerPage = {
                     case PowerPage.EditTemp.goodslist.name:
                         PowerPage.Show.ShowGoods(obj[i], dom);
                         break;
+                    case PowerPage.EditTemp.contents.name:         /*  商品,商品列表  */
+                    case PowerPage.EditTemp.contentslist.name:
+                        PowerPage.Show.ShowContents(obj[i], dom);
+                        break;
                     case PowerPage.EditTemp.imagead.name:       /*  图片广告  */
                         PowerPage.Show.ShowPicsAd(obj[i], dom);
                         break;
@@ -2884,6 +2945,9 @@ var PowerPage = {
                         break;
                     case PowerPage.EditTemp.textnav.name:       /*  文本导航  */
                         PowerPage.Show.ShowTextNav(obj[i], dom);
+                        break;
+                    case PowerPage.EditTemp.switchnav.name:       /*  文本导航  */
+                        PowerPage.Show.ShowSwitchnav(obj[i], dom);
                         break;
                     case PowerPage.EditTemp.search.name:        /*  商品搜索  */
                         PowerPage.Show.ShowSearch(obj[i], dom);
@@ -2938,6 +3002,13 @@ var PowerPage = {
             box.find("desc").remove();
             dom.append(box);
         },
+        /*  显示内容  */
+        ShowContents: function(obj, dom) {
+            obj.formatempty = false;
+            var box = PowerPage.Format.FormatContents(obj);
+            box.find("desc").remove();
+            dom.append(box);
+        },
         /*  显示图片  */
         ShowPicsAd: function(obj, dom) {
             if (obj.pics.length == 1) {
@@ -2964,10 +3035,22 @@ var PowerPage = {
         },
         /*  显示文本导航  */
         ShowTextNav: function(obj, dom) {
-            var box = $('<div class="custom-nav clearfix"></div>');
+            var box = $('<div class="custom-nav clearfix"><ul></ul></div>');
             for (var i = 0; i < obj.navs.length; i++) {
                 var li = $('<li> <a class="clearfix relative arrow-right" href="' + obj.navs[i].url + '"> <span class="custom-nav-title">' + obj.navs[i].name + '</span></a> </li>');
-                box.append(li);
+                box.find('ul').append(li);
+            }
+            dom.append(box);
+        },
+        /*  显示切换导航  */
+        ShowSwitchnav: function(obj, dom) {
+            var box = $('<div class="switch-nav swiper-container clearfix"><ul class="swiper-wrapper"></ul></div>');
+            for (var j = 0; j < switchnavs.length; j++) {
+                var li = $('<li class="swiper-slide '+ ( j == obj[i].deval-1 ? 'active' : '') +'">' +
+                    '<a class="btn" href="' + switchnavs[j].url + '">' +
+                        switchnavs[j].name +
+                    '</a></li>');
+                box.find('ul').append(li);
             }
             dom.append(box);
         },
@@ -3118,6 +3201,9 @@ var PowerPage = {
                 var json = eval('(' + $(this).html() + ')');
                 if (json.name == "pagetitle") {
                     result = json.title;
+                }
+                if (json.name == "categroy") {
+                    result = json.categroyname;
                 }
             });
             return result;

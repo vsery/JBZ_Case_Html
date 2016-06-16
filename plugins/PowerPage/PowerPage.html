@@ -27,14 +27,36 @@
         </div>
     </div>
 </div>
-<link rel="stylesheet" type="text/css" href="plugins/PowerPage/app.css">
-<link rel="stylesheet" type="text/css" href="plugins/swiper/swiper.min.css">
-<link rel="stylesheet" type="text/css" href="plugins/bootstrap-dialog/bootstrap-dialog.css">
-<script type="text/javascript" src="plugins/PowerPage/ueditor/ueditor.config.pc.js"></script>
-<script type="text/javascript" src="plugins/PowerPage/ueditor/ueditor.all.js"></script>
-<script type="text/javascript" src="plugins/PowerPage/ueditor/lang/zh-cn/zh-cn.js"></script>
-<script type="text/javascript" src="plugins/swiper/swiper.min.js"></script>
-<script type="text/javascript" src="plugins/PowerPage/jquery-ui.js"></script>
 <script type="text/javascript" src="plugins/PowerPage/PowerPage.js"></script>
 <script type="text/javascript" src="plugins/PowerPage/selectModal.js"></script>
-<script type="text/javascript" src="plugins/bootstrap-dialog/bootstrap-dialog.js"></script>
+<script type="text/javascript">
+    var dataJson;
+    $("input.btn-save").click(function() {
+        var data={
+            pagename:PowerPage.Get.GetPageTitle(),
+
+            pagedesc:PowerPage.Get.GetPageDesc(),
+            
+            pagecont:PowerPage.Get.GetPageCont(),
+        }
+        console.log(data);
+    });
+    $("input.btn-preview").click(function() {
+        dataJson = {
+            pagename: PowerPage.Get.GetPageTitle(),
+            pagedesc: PowerPage.Get.GetPageDesc(),
+            pagecont: PowerPage.Get.GetPageCont(),
+        };
+        console.log(dataJson);
+        window.open("App.html","_blank");
+        /*window.location.href = 'App.html?data='+dataJson;*/
+        /*var obj = $.ajax({
+            url: 'plugins/PowerPage/WebPage.html',
+            type: 'POst',
+            dataType: 'html',
+            data: dataJson,
+            async:false
+        });
+        $(".app-init-container").html(obj.responseText);*/
+    });
+</script>

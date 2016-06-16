@@ -1,23 +1,14 @@
-<!-- <!DOCTYPE html> -->
-<html lang="zh-CN">
-  <head>
-    <meta charset="utf-8">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>聚宝赞</title>
     <meta name="keywords" content="聚宝赞">
     <meta name="description" content="聚宝赞">
     <link rel="icon" sizes="16x16" mask="" href="images/public/logo.ico">
-    <link rel="stylesheet" type="text/css" href="font/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css">    
-    <link rel="stylesheet" type="text/css" href="css/pc.css">
-    <link rel="stylesheet" type="text/css" href="css/assembly.css">
-    <link rel="stylesheet" type="text/css" href="css/admin-youzan.css">
-    <script type="text/javascript" src='js/jquery.min.js'></script>
-    <script type="text/javascript" src="js/bootstrap.js"></script>
-    <script type="text/javascript" src="plugins/jqPaginator/jqPaginator.min.js"></script>
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=HKZXLyW4V6NSGYe7FWdzg9iu"></script>
+    <script type="text/javascript" src="js/lazyload.js"></script>
     <!--[if lt IE 9]>
         <script type="text/javascript" src="js/html5shiv.min.js"></script>
         <script type="text/javascript" src="js/respond.min.js"></script>
@@ -265,59 +256,57 @@
         </div>
     </div>
 </div>
-<!-- <div id="footer">
-    <div class="Copyright text-center">
-        <a href="view-platform/copyright.html">湖南长沙希尚科技有限公司</a> @2016<br/>
-        <a href="view-platform/copyright.html">使用聚宝赞前必读</a> 湘ICP证0731110号
-    </div>
-</div> -->
-    <script type="text/javascript" src="js/Chart.js"></script>
-    <script type="text/javascript" src="js/area.js"></script>
-    <script type="text/javascript" src="js/jquery.datetimepicker.js"></script>
+<!-- <div id="footer"><div class="Copyright text-center">
+    <a href="view-platform/copyright.html">湖南长沙希尚科技有限公司</a> @2016<br/>
+    <a href="view-platform/copyright.html">使用聚宝赞前必读</a> 湘ICP证0731110号
+</div></div> -->
     <script type="text/javascript">
-        $(function(){
-            htmlobj=$.ajax({
-                type:"GET", 
-                url:"view-platform/index_body.html",
-                dataType:"html", 
-                async:false
-            });
+        LazyLoad.css([
+            'font/css/font-awesome.min.css',
+            'css/bootstrap.min.css',
+            'css/jquery.datetimepicker.css',
+            'css/pc.css',
+            'css/assembly.css',
+            'css/admin-youzan.css'
+            ], function () {
+                console.log('all css have been loaded');
+        });
+        LazyLoad.js(
+            [
+                'js/jquery.min.js',
+                'js/bootstrap.js',
+                'plugins/jqPaginator/jqPaginator.min.js',
+                'js/jquery.datetimepicker.js',
+                'js/Chart.js',
+                'js/area.js',
+                'js/public.js'
+            ], function () {
+            console.log('all bind JavaScript have been loaded');
+            //window.history.forward(1);
+            htmlobj=$.ajax({ type:"GET", url:"view-platform/index_body.html", dataType:"html", async:false });
             $(".app-init-container").html(htmlobj.responseText);
-            window.history.forward(1); 
-            $('a.top_nav_btn').click(function () {
-                $("a.top_nav_btn").parent().removeClass("active");
-                $(this).parent().addClass("active");
-                var open= "";
-                $(".left_tab_nav").removeClass("open");
-                if($(this).hasClass("index_btn")){ open= "index_btn"; }
-                if($(this).hasClass("prod_btn")){ open= "prod_btn"; }
-                if($(this).hasClass("qecode_btn")){ open= "qecode_btn"; }
-                if($(this).hasClass("merketing_btn")){ open= "merketing_btn"; }
-                if($(this).hasClass("distr_btn")){ open= "distr_btn"; }
-                if($(this).hasClass("oto_btn")){ open= "oto_btn"; }
-                if($(this).hasClass("fans_btn")){ open= "fans_btn"; }
-                if($(this).hasClass("finance_btn")){ open= "finance_btn"; }
-                if($(this).hasClass("finance_btn")){ open= "finance_btn"; }
-                if($(this).hasClass("data_btn")){ open= "data_btn"; }
-                if($(this).hasClass("user_btn")){ open= "user_btn"; var user_btn_num = $('.top_nav_btn.user_btn').index(this); }
-                $("nav.left_tab_nav").each(function () {
-                    $(this).find("li").removeClass("active");
-                    if($(this).hasClass(open)){
-                        $(this).addClass("open");
-                        if($(this).hasClass("user_btn")){
-                            $(this).find("li:eq("+user_btn_num+")").addClass("active");
-                        }else{
-                            $(this).find("li:eq(0)").addClass("active");
-                        }
-                    }
-                })
-            });
-            $("a.left_nav_btn").click(function (){
-                $("a.left_nav_btn").parent().removeClass("active");
-                $(this).parent().addClass("active");
-            });
+            IndexTOPNav();
+        });
+        LazyLoad.css([
+            'plugins/PowerPage/app.css',
+            'plugins/swiper/swiper.min.css',
+            'plugins/bootstrap-dialog/bootstrap-dialog.css'
+            ], function () {
+                console.log('moblie css have been loaded');
+        });
+        LazyLoad.js(
+            [
+                'plugins/PowerPage/ueditor/ueditor.config.js',
+                'plugins/PowerPage/ueditor/ueditor.all.min.js',
+                'plugins/PowerPage/ueditor/lang/zh-cn/zh-cn.js',
+                'plugins/swiper/swiper.min.js',
+                'plugins/PowerPage/jquery-ui.js',
+                'plugins/bootstrap-dialog/bootstrap-dialog.js',
+                // 'plugins/PowerPage/PowerPage.js',
+                // 'plugins/PowerPage/selectModal.js'
+            ], function () {
+            console.log('moblie bind JavaScript have been loaded');
         });
     </script>
-    <script type="text/javascript" src="js/public.js"></script>
 </body>
 </html>
