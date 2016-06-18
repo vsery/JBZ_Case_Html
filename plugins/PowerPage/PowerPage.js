@@ -1454,9 +1454,9 @@ var PowerPage = {
             var group = $('<div class="control-group">' +
                 '<label class="control-label">背景图片：</label>' +
                 '<div class="controls">' +
-                /*  '<div class="tpl-shop-header" style="width: 320px; background-image: url('+ obj.backgroundpic + ');">' +
-                    '<a class="close-modal small hide js-delete-image" data-index="0">×</a>' +
-                '</div>' + */
+                '<div class="tpl-shop-header" style="width: 320px; background-image: url('+ obj.backgroundpic + ');">' +
+                '<a class="close-modal small hide js-delete-image" data-index="0">×</a>' +
+                '</div>' +
                 '<a class="control-action js-trigger-image" href="javascript: void(0);">修改</a>' +
                 '<p class="help-desc">最佳尺寸：640 x 200 像素。</p>' +
                 '<p class="help-desc">尺寸不匹配时，图片将被压缩或拉伸以铺满画面。</p>' +
@@ -1466,7 +1466,7 @@ var PowerPage = {
             group = $('<div class="control-group">' +
                 '<label class="control-label">背景颜色：</label>' +
                 '<div class="controls">' +
-                '<input type="color" value="#ffffff" name="backgroundColor">' +
+                '<input type="color" value="' + obj.background + '" name="backgroundColor">' +
                 '<button class="btn js-reset-bg" type="button">重置</button>' +
                 '</div>' +
                 '</div>');
@@ -1474,7 +1474,7 @@ var PowerPage = {
             group = $('<div class="control-group">' +
                 '<label class="control-label">Logo：</label>' +
                 '<div class="controls">' +
-                '<img src="images/public/logo.jpg" width="80" height="80" class="thumb-image" style="width: 80px; height: 80px;">' +
+                '<img src="' + PowerPage.Common.AddPicHost(obj.logo) + '" width="80" height="80" class="thumb-image" style="width: 80px; height: 80px;background-color: #E4E4E4; border-radius: 3px; ">' +
                 '<a class="control-action js-trigger-avatar" href="javascript: void(0);">修改店铺Logo</a>' +
                 '</div>' +
                 '</div>');
@@ -1499,6 +1499,7 @@ var PowerPage = {
             });
             PowerPage.Dom.SidBar.find(".js-trigger-avatar").click(function() {
                 selectpic(function(result) {
+                    box.find('img').attr('src', result[0]);
                     obj.logo = result[0];
                 });
                 PowerPage.Common.ReView(obj);
@@ -1573,6 +1574,7 @@ var PowerPage = {
             /*  更改颜色  */
             box.find("input[name='color']").change(function() {
                 obj.background = $(this).val();
+                box.parents('.app-design').find('.app-entry').css('background', obj.background );
                 PowerPage.Common.ReView(obj);
                 $(".editing desc").html(JSON.stringify(obj));
             });
@@ -2633,6 +2635,25 @@ var PowerPage = {
                 '<a href="javascript:;" class="js-choose-audio control-action">选择音频</a>' +
                 '</div>' +
                 '</div>');
+            // var region = $('<div class="js-goods-style-region form-horizontal"></div>');
+            // group = $('<div class="control-group">' +
+            //     '<label class="control-label">列表样式：</label>' +
+            //     '<div class="controls">' +
+            //     '<label class="radio inline">' +
+            //     '<input type="radio" name="size" ' + (obj.size == 0 ? 'checked=""' : '') + ' value="0">大图' +
+            //     '</label>' +
+            //     '<label class="radio inline">' +
+            //     '<input type="radio" name="size" ' + (obj.size == 1 ? 'checked=""' : '') + ' value="1">小图' +
+            //     '</label>' +
+            //     '<label class="radio inline">' +
+            //     '<input type="radio" name="size" ' + (obj.size == 2 ? 'checked=""' : '') + ' value="2">一大两小' +
+            //     '</label>' +
+            //     '<label class="radio inline">' +
+            //     '<input type="radio" name="size" ' + (obj.size == 3 ? 'checked=""' : '') + ' value="3">详细列表' +
+            //     '</label>' +
+            //     '</div>' +
+            //     '</div>');
+            // region.append(group);
             var audio = $('<div class="js-audio-style-region form-horizontal"><ul class="choices ui-audio-sortable"></ul></div>');
             for (var i = 0; i < obj.audio.length; i++) {
                 audio.find("ul").append('<li class="choice audio"><div class="control-group">' +
@@ -2736,7 +2757,7 @@ var PowerPage = {
         },
         /*  修改 语音列表  */
         ModifyAudioList: function(obj) {
-            /*  PowerPage.Modify.ModifyAudio(obj);  */
+            PowerPage.Modify.ModifyAudio(obj);
             PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).html("");
             var group = $('<div class="control-group">' +
                 '<label class="control-label">音频来源：</label>' +
@@ -2874,7 +2895,7 @@ var PowerPage = {
         },
         /*  修改 视频列表  */
         ModifyVideoList: function(obj) {
-            /*  PowerPage.Modify.ModifyAudio(obj);  */
+            PowerPage.Modify.ModifyAudio(obj);
             PowerPage.Dom.SidBar.find(".form-horizontal").eq(0).html("");
             var group = $('<div class="control-group">' +
                 '<label class="control-label">视频来源：</label>' +

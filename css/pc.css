@@ -1556,10 +1556,9 @@ only screen and (min-device-pixel-ratio: 1.5) {
     display: inline-block;
     width: 100%;
     height: 100%;
-    line-height: 50px;
     text-align: center;
     cursor: pointer;
-    padding: 17px;
+    padding: 12px;
 }
 
 .module-goods-list li:hover .close-modal,
@@ -10668,6 +10667,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-design .app-preview iframe {
+    width: auto;
+    max-width: 100% !important;
     border: 0 none
 }
 
@@ -11717,7 +11718,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .custom-richtext p {
-    margin: 0 0 1em 0
+    margin: 0 0 1em 0;
+    padding: 0px; 
+}
+
+.app-preview .custom-richtext p:last-child {
+    margin: 0px;
 }
 
 .app-preview .custom-richtext a {
@@ -11728,8 +11734,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
     background: none;
     max-width: 100% !important;
     min-height: 1px;
-    width: auto !important;
-    height: auto !important;
+    width: auto;
+    height: auto;
     vertical-align: middle
 }
 
@@ -12568,7 +12574,12 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-preview .custom-richtext p {
-    margin: 0 0 1em 0
+    margin: 0 0 1em 0;
+    padding: 0px; 
+}
+
+.app-preview .custom-richtext p:last-child {
+    margin: 0px;
 }
 
 .app-preview .custom-richtext a {
@@ -12579,8 +12590,8 @@ only screen and (min-device-pixel-ratio: 1.5) {
     background: none;
     max-width: 100% !important;
     min-height: 1px;
-    width: auto !important;
-    height: auto !important;
+    width: auto;
+    height: auto;
     vertical-align: middle
 }
 
@@ -18341,7 +18352,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 }
 
 .app-design .icon-add {
-    display: block;
+    display: inline-block;
     width: 14px;
     height: 14px;
     background-image: url("../images/public/icon-add.png");
@@ -18448,6 +18459,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 .app-design .app-sidebar .checkbox.inline,
 .app-design .app-sidebar .radio.inline {
+    margin: 0;
     display: inline-block;
     padding-top: 5px;
     margin-bottom: 0;
@@ -20420,4 +20432,165 @@ only screen and (min-device-pixel-ratio: 1.5) {
 .picbox img {
     width: 100%;
     height: 100%;
+}
+
+body {
+    font-family: "Microsoft Yahei", "Hiragino Sans GB", SimSun, Arial, "Helvetica Neue", Helvetica;
+}
+
+desc {
+    display: none;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+#WeChat {
+    width: 100%;
+}
+
+#WeChat .app-config {
+    display: none;
+}
+
+#WeChat .actions {
+    display: none;
+}
+
+#WeChat .app-entry {
+    width: initial;
+}
+
+#WeChat img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* 音频按钮 */
+
+.item {
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    list-style: none;
+}
+
+.item a.titleMusic {
+    display: block;
+    height: 100%;
+    height: 40px !important;
+    border: 1px solid #ddd;
+    padding-left: 50px;
+    padding-right: 70px;
+    background-color: #fcfcfc;
+    display: block;
+    position: relative;
+}
+
+a.titleMusic .fa.fa-wifi {
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    width: 25px;
+    height: 25px;
+    color: #777;
+    font-size: 1.7em;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+a.titleMusic.active .fa.fa-wifi {
+    color: #09bb07;
+}
+
+a.titleMusic title {
+    font-weight: normal;
+    line-height: 35px !important;
+    height: 35px;
+    padding-right: 80px;
+    /*top: 2px !important;*/
+    top: -5px !important;
+    color: black;
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    font-family: "黑体";
+    padding: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+a.titleMusic span.dec {
+    position: absolute;
+    bottom: -0px;
+    left: 45px;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 160px;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+a.titleMusic time {
+    width: 70px;
+    position: absolute;
+    right: 0px;
+    top: 7px;
+    display: block;
+}
+
+
+/* 切换菜单 */
+
+.app-entry ul {
+    margin-bottom: 0;
+}
+
+.switch-nav {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.switch-nav ul.swiper-wrapper {
+    transition-duration: 0ms;
+    height: 30px;
+    transform: translate3d(0px, 0px, 0px);
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    width: 100%;
+}
+
+.switch-nav ul.swiper-wrapper li.swiper-slide {
+    width: 50% !important;
+    height: 100%;
+    position: relative;
+}
+
+.switch-nav ul.swiper-wrapper li.swiper-slide a {
+    font-size: 1em;
+    color: #777;
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all ease .3s;
+    -o-transition: all ease .3s;
+    transition: all ease .3s;
+}
+
+.switch-nav ul.swiper-wrapper li.swiper-slide.active a {
+    color: #26bfa1;
+    border-bottom: 1.5px solid #26bfa1;
+    border-radius: 0;
 }

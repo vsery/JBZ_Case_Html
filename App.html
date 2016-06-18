@@ -36,12 +36,13 @@
     <script type="text/javascript" src="js/ShowData.js"></script>
     <script type="text/javascript">
     $(function() {
-            var dom = $('#WebPage');
-            PowerPage.Show.Show(obj, dom);
-            var swiper = new Swiper('.swiper-container ', {
-                paginationClickable: true
-            });
-        })
+        var pagecontjosn = $.parseJSON(obj);
+        var dom = $('#WebPage');
+        PowerPage.Show.Show(pagecontjosn, dom);
+        var swiper = new Swiper('.swiper-container ', {
+            paginationClickable: true
+        });
+    })
     </script>
 </body>
 

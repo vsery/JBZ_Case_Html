@@ -1,5 +1,5 @@
 <ul class="nav nav-tabs" role="tablist">
-    <li role="presentation" class="active"><a href="#picTab" aria-controls="picTab" role="tab" data-toggle="tab">选择商品</a></li>
+    <li role="presentation" class="active"><a href="#picTab" aria-controls="picTab" role="tab" data-toggle="tab">选择图片</a></li>
     <!-- <li role="presentation"><a href="#newPicTab" aria-controls="newPicTab" role="tab" data-toggle="tab">新图片</a></li> -->
 </ul>
 <div class="tab-content" id="js-module-goods">
@@ -77,169 +77,31 @@
         </div>
     </div> -->
 </div>
-<script type="text/javascript">
-    function picsModal($scope) {
-        $scope.imagelists = [
-            {
-                categroyid: 1,
-                categroyname: "未分组",
-                picsize: 6,
-                pics: [{
-                    id: 1,
-                    src: "images/Fans/head1.jpg",
-                    name: "images1"
-                },{
-                    id: 2,
-                    src: "images/Fans/head2.jpg",
-                    name: "images1"
-                },{
-                    id: 5,
-                    src: "images/Fans/head5.jpg",
-                    name: "images1"
-                },{
-                    id: 6,
-                    src: "images/Fans/head6.jpg",
-                    name: "images1"
-                },{
-                    id: 7,
-                    src: "images/Fans/head7.jpg",
-                    name: "images1"
-                },{
-                    id: 8,
-                    src: "images/Fans/head8.jpg",
-                    name: "images1"
-                },{
-                    id: 1,
-                    src: "images/Fans/head1.jpg",
-                    name: "images1"
-                },{
-                    id: 2,
-                    src: "images/Fans/head2.jpg",
-                    name: "images1"
-                },{
-                    id: 5,
-                    src: "images/Fans/head5.jpg",
-                    name: "images1"
-                },{
-                    id: 6,
-                    src: "images/Fans/head6.jpg",
-                    name: "images1"
-                },{
-                    id: 7,
-                    src: "images/Fans/head7.jpg",
-                    name: "images1"
-                },{
-                    id: 8,
-                    src: "images/Fans/head8.jpg",
-                    name: "images1"
-                },{
-                    id: 1,
-                    src: "images/Fans/head1.jpg",
-                    name: "images1"
-                },{
-                    id: 2,
-                    src: "images/Fans/head2.jpg",
-                    name: "images1"
-                },{
-                    id: 5,
-                    src: "images/Fans/head5.jpg",
-                    name: "images1"
-                },{
-                    id: 6,
-                    src: "images/Fans/head6.jpg",
-                    name: "images1"
-                },{
-                    id: 7,
-                    src: "images/Fans/head7.jpg",
-                    name: "images1"
-                },{
-                    id: 8,
-                    src: "images/Fans/head8.jpg",
-                    name: "images1"
-                }]
-            },{
-                categroyid: 2,
-                categroyname: "分组A",
-                picsize: 8,
-                pics: [{
-                    id: 1,
-                    src: "images/Fans/head1.jpg",
-                    name: "images1"
-                },{
-                    id: 8,
-                    src: "images/Fans/head8.jpg",
-                    name: "images1"
-                },{
-                    id: 2,
-                    src: "images/Fans/head2.jpg",
-                    name: "images1"
-                },{
-                    id: 5,
-                    src: "images/Fans/head5.jpg",
-                    name: "images1"
-                },{
-                    id: 6,
-                    src: "images/Fans/head6.jpg",
-                    name: "images1"
-                },{
-                    id: 7,
-                    src: "images/Fans/head7.jpg",
-                    name: "images1"
-                },{
-                    id: 3,
-                    src: "images/Fans/head3.jpg",
-                    name: "images1"
-                },{
-                    id: 4,
-                    src: "images/Fans/head4.jpg",
-                    name: "images1"
-                }]
-            },{
-                categroyid: 3,
-                categroyname: "分组A",
-                picsize: 4,
-                pics: [{
-                    id: 5,
-                    src: "images/Fans/head5.jpg",
-                    name: "images1"
-                },{
-                    id: 6,
-                    src: "images/Fans/head6.jpg",
-                    name: "images1"
-                },{
-                    id: 7,
-                    src: "images/Fans/head7.jpg",
-                    name: "images1"
-                },{
-                    id: 8,
-                    src: "images/Fans/head8.jpg",
-                    name: "images1"
-                }]
-            }
-        ];
-    }
+<script type="text/javascript" src="view-app/dialog/imgdata.js">
 </script>
 <script type="text/javascript" src="AngularData/Angular.min.js"></script>
 <script type="text/javascript">
-$("ul.category-list .js-category-item").eq(0).addClass('active');
-$("ul.image-list").eq(0).addClass('active');
-$("#picTab .category-list .js-category-item").click(function() {
-    if( $(this).hasClass('active')) {
-        $(this).removeClass('active');
-    }else{
-        $(this).addClass('active').siblings().removeClass('active');
-        $("#picTab ul.image-list").eq($(this).index()).addClass('active').siblings().removeClass('active');
-    }
-});
-$.jqPaginator('.pagination', {
-    totalPages: 3,
-    visiblePages: 1,
-    currentPage: 1,
-    prev: '<li class="prev"><a href="javascript:;">&laquo;</a></li>',
-    next: '<li class="next"><a href="javascript:;">&raquo;</a></li>',
-    page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
-    onPageChange: function(num, type) {
-        //$('#pagetitle').text(type + '：' + num);
-    }
-});
+$(function() {
+    $("ul.category-list .js-category-item").eq(0).addClass('active');
+    $("ul.image-list").eq(0).addClass('active');
+    $("#picTab .category-list .js-category-item").click(function() {
+        if ($(this).hasClass('active')) {
+            $(this).removeClass('active');
+        } else {
+            $(this).addClass('active').siblings().removeClass('active');
+            $("#picTab ul.image-list").eq($(this).index()).addClass('active').siblings().removeClass('active');
+        }
+    });
+    $.jqPaginator('.pagination', {
+        totalPages: 3,
+        visiblePages: 1,
+        currentPage: 1,
+        prev: '<li class="prev"><a href="javascript:;">&laquo;</a></li>',
+        next: '<li class="next"><a href="javascript:;">&raquo;</a></li>',
+        page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
+        onPageChange: function(num, type) {
+            //$('#pagetitle').text(type + '：' + num);
+        }
+    });
+})
 </script>

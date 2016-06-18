@@ -27,36 +27,26 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src='plugins/PowerPage/ueditor/ueditor.config.pc.js'></script>
+<script type="text/javascript" src='plugins/PowerPage/ueditor/ueditor.all.min.js'></script>
+<script type="text/javascript" src='plugins/PowerPage/ueditor/lang/zh-cn/zh-cn.js'></script>
+<!-- <script type="text/javascript" src='plugins/swiper/swiper.min.js'></script> -->
 <script type="text/javascript" src="plugins/PowerPage/PowerPage.js"></script>
 <script type="text/javascript" src="plugins/PowerPage/selectModal.js"></script>
+<script type="text/javascript" src='plugins/PowerPage/jquery-ui.js'></script>
 <script type="text/javascript">
-    var dataJson;
+$(function() {
+    /*$(".ui-sortable").sortable({
+        containment: 'parent'
+    });*/
     $("input.btn-save").click(function() {
-        var data={
-            pagename:PowerPage.Get.GetPageTitle(),
-
-            pagedesc:PowerPage.Get.GetPageDesc(),
-            
-            pagecont:PowerPage.Get.GetPageCont(),
-        }
-        console.log(data);
+        obj = PowerPage.Get.GetPageCont();
+        console.log($.parseJSON(obj));
     });
     $("input.btn-preview").click(function() {
-        dataJson = {
-            pagename: PowerPage.Get.GetPageTitle(),
-            pagedesc: PowerPage.Get.GetPageDesc(),
-            pagecont: PowerPage.Get.GetPageCont(),
-        };
-        console.log(dataJson);
-        window.open("App.html","_blank");
-        /*window.location.href = 'App.html?data='+dataJson;*/
-        /*var obj = $.ajax({
-            url: 'plugins/PowerPage/WebPage.html',
-            type: 'POst',
-            dataType: 'html',
-            data: dataJson,
-            async:false
-        });
-        $(".app-init-container").html(obj.responseText);*/
+        obj = PowerPage.Get.GetPageCont();
+        console.log($.parseJSON(obj));
+        window.open("App.html", "_blank");
     });
+});
 </script>

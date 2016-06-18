@@ -6,7 +6,7 @@
                 sort: 1,
                 title: "第19讲:想住豪宅看这里",
                 desc: "转型：互联网+时代的企业突破之路 张启峰著",
-                img: "images/books/book05.jpg",
+                img: "images/books/book01.jpg",
                 categroy: "导师(刘翔)",
                 time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
                 eye: 78,
@@ -32,7 +32,7 @@
                 sort: 3,
                 title: "第17讲：老牛吃草",
                 desc: "转型：互联网+时代的企业突破之路 张启峰著",
-                img: "images/books/book02.jpg",
+                img: "images/books/book01.jpg",
                 categroy: "导师(杨建)",
                 time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
                 eye: 58,
@@ -45,7 +45,7 @@
                 sort: 4,
                 title: "第16讲：给我还是拿去",
                 desc: "转型：互联网+时代的企业突破之路 张启峰著",
-                img: "images/books/book04.jpg",
+                img: "images/books/book01.jpg",
                 categroy: "导师(杨建)",
                 time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
                 eye: 58,
@@ -58,7 +58,7 @@
                 sort: 5,
                 title: "第15讲：10-1=0",
                 desc: "转型：互联网+时代的企业突破之路 张启峰著",
-                img: "images/books/book05.jpg",
+                img: "images/books/book01.jpg",
                 categroy: "导师(李武)",
                 time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
                 eye: 58,
@@ -71,7 +71,7 @@
                 sort: 6,
                 title: "第14讲：蜀中无大将廖化作先锋",
                 desc: "转型：互联网+时代的企业突破之路 张启峰著",
-                img: "images/books/book06.jpg",
+                img: "images/books/book01.jpg",
                 categroy: "导师(张宇)",
                 time: new Date().getFullYear() + "-" + (new Date().getMonth()+1) + "-" + new Date().getDate(),
                 eye: 58,
@@ -147,7 +147,7 @@
                         <tr ng-repeat="content in contents">
                             <td><input type="checkbox"></td>
                             <td><span class="SequenceID">{{content.sort}}</span></td>
-                            <td><img src="{{content.img}}" alt="" class="img-small"></td>
+                            <td><img src="{{content.img}}" alt="{{content.title}}" class="img-small"></td>
                             <td class="length">{{content.title}}</td>
                             <td>{{content.categroy}}</td>
                             <td>{{content.time}}</td>
@@ -205,9 +205,8 @@ $(function () {
         next: '<li class="next"><a href="javascript:;">&raquo;</a></li>',
         page: '<li class="page"><a href="javascript:;">{{page}}</a></li>',
         onPageChange: function(num, type) {
-            console.log(type + '：第' + num + '页');
+            //console.log(type + '：第' + num + '页');
         }
     });
 })
 </script>
-<script type="text/javascript" src="js/public.js"></script>

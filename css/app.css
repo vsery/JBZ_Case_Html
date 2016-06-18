@@ -14,10 +14,10 @@ desc { display: none; } ul { margin: 0; list-style: none; padding: 0; } video { 
 .app-design .app-preview .carousel.slide a.carousel-control { background: none !important; }
 .app-design .app-preview .carousel.slide a.left.carousel-control span.fa-fw { left: 0; }
 .app-design .app-preview .carousel.slide a.right.carousel-control span.fa-fw { right: 0; }
-.app-design { text-align: center; }
+.app-design { }
 .app-design .app-preview .tpl-fbb .swiper-wrapper { width: 1000%}
 .app-design .app-preview input[disabled] { cursor: default; background-color: transparent }
-.app-design .app-preview iframe { border: 0 none}
+.app-design .app-preview iframe { width: auto; max-width: 100% !important; border: 0 none }
 .app-design .app-preview .app-entry { width: 320px; margin: 0 auto; padding-bottom: 11px; min-height: 200px; background-color: #f9f9f9}
 .app-design .app-preview .app-entry ul { margin-bottom: 0; }
 .app-design .app-preview .app-config .app-field { cursor: pointer; background-color: transparent }
@@ -51,7 +51,7 @@ desc { display: none; } ul { margin: 0; list-style: none; padding: 0; } video { 
 .app-design .app-preview .pre-inner .pre-link { color: #484848}
 .app-design .app-preview .pre-inner .view-full { border-top: 1px solid #ddd; padding: 8px 3px 0 0}
 .app-design .app-preview .pre-header { margin-bottom: 10px}
-.app-design .app-preview .pre-header .meta { font-size: 12px; color: #999; margin-bottom: 8px}
+.app-design .app-preview .pre-header .meta { font-size: 12px; color: #999; margin-bottom: 8px }
 .app-design .app-preview .pre-footer { margin-bottom: 10px}
 .app-design .app-preview .pre-content-ubb { line-height: 18px; font-size: 13px; color: #737373; white-space: pre-wrap; word-break: break-all}
 .app-design .app-preview .item { width: 100%; padding: 8px; text-align: left; list-style: none; }
@@ -61,10 +61,10 @@ desc { display: none; } ul { margin: 0; list-style: none; padding: 0; } video { 
 .app-design .app-preview .item a.titleMusic title { font-weight: normal; line-height: 35px !important; left: 45px !important; height: 35px; padding-right: 80px; top: 2px !important; color: black; display: block; text-align: left; font-size: 14px; font-family: "黑体"; padding: 0; width: 100%; white-space: nowrap; overflow: hidden; -ms-text-overflow: ellipsis; text-overflow: ellipsis; }
 .app-design .app-preview .item a.titleMusic span.dec { position: absolute; bottom: 7px; left: 45px; white-space: nowrap; overflow: hidden; max-width: 160px; -ms-text-overflow: ellipsis; text-overflow: ellipsis; }
 .app-design .app-preview .item a.titleMusic time { width: 80px; position: absolute; right: 0px; top: 7px; display: block; }
-.app-design .app-preview .switch-nav { background-color: #eee; position: relative; left: 0; top: 0; width: 100%; }
-.app-design .app-preview .switch-nav ul.swiper-wrapper { transition-duration: 0ms; height: 30px; transform: translate3d(0px, 0px, 0px); padding: 0; text-align: center; width: 100%; }
+.app-design .app-preview .switch-nav { background-color: transparent; position: relative; left: 0; top: 0; width: 100%; }
+.app-design .app-preview .switch-nav ul.swiper-wrapper { transition-duration: 0ms; height: 40px; transform: translate3d(0px, 0px, 0px); padding: 0; text-align: center; width: 100%; }
 .app-design .app-preview .switch-nav ul.swiper-wrapper li.swiper-slide { width: 50% !important; height: 100%; position: relative; }
-.app-design .app-preview .switch-nav ul.swiper-wrapper li.swiper-slide a { font-size: 1em; color: #777; display: block; width: 100%; height: 100%; -webkit-transition: all ease .3s; -o-transition: all ease .3s; transition: all ease .3s; }
+.app-design .app-preview .switch-nav ul.swiper-wrapper li.swiper-slide a { line-height: 28px; font-size: 1em; color: #777; display: block; width: 100%; height: 100%; -webkit-transition: all ease .3s; -o-transition: all ease .3s; transition: all ease .3s; }
 .app-design .app-preview .switch-nav ul.swiper-wrapper li.swiper-slide.active a { color: #26bfa1; border-bottom: 1.5px solid #26bfa1; border-radius: 0; }
 .app-design .app-add-field { position: relative; padding: 0 14px 4px 14px; background: #f8f8f8; width: 350px; margin: 0 auto; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box}
 .app-design .app-add-field h4 { text-align: center; font-size: 14px; line-height: 40px; font-weight: bold}
@@ -276,7 +276,7 @@ desc { display: none; } ul { margin: 0; list-style: none; padding: 0; } video { 
 .app-preview .custom-richtext p { margin: 0 0 1em 0 }
 .app-preview .custom-richtext p:last-child { margin-bottom: 0px; }
 .app-preview .custom-richtext a { color: #07d}
-.app-preview .custom-richtext img { background: none; max-width: 100% !important; min-height: 1px; width: auto !important; height: auto !important; vertical-align: middle}
+.app-preview .custom-richtext img { background: none; max-width: 100% !important; min-height: 1px; width: auto; height: auto; vertical-align: middle}
 .app-preview .custom-richtext ul, .app-preview .custom-richtext ol { list-style-position: inside; padding-left: 0}
 .app-preview .custom-richtext ol { width: auto !important}
 .app-preview .custom-richtext blockquote { padding: 0 0 0 15px; margin: 0 0 18px; border-left: 5px solid #EEE}
@@ -330,7 +330,8 @@ desc { display: none; } ul { margin: 0; list-style: none; padding: 0; } video { 
 .app-preview .custom-nav a:hover .right-arrow, .app-preview .custom-link a:hover .right-arrow { background-position: 0 0}
 .app-preview .custom-nav a:hover, .app-preview .custom-link a:hover { background-position: 0 15px}
 .app-preview .custom-nav .right-arrow, .app-preview .custom-link .right-arrow { padding-right: 0}
-.app-preview .custom-nav-title { overflow: hidden; display: inline-block; width: 280px; white-space: nowrap; text-overflow: ellipsis}
+.app-preview .custom-nav .right-arrow { padding-right: 15px; background: url("../images/public/arrow.png") no-repeat scroll 0 0; background-size: 15px 30px; width: 15px; height: 15px; margin-top: 15px; }
+.app-preview .custom-nav-title { text-align: left; overflow: hidden; display: inline-block; width: 280px; white-space: nowrap; text-overflow: ellipsis}
 .app-preview .custom-link .right-arrow { margin-top: 14px}
 .app-preview .custom-link-link { height: 100%; line-height: 44px; display: block}
 .app-preview .custom-link-link .title { float: left; margin: 0; line-height: 44px; height: 100%; font-size: 14px; overflow: hidden; text-overflow: ellipsis; width: 280px}

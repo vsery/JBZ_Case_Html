@@ -9,6 +9,7 @@
     <meta name="keywords" content="聚宝赞">
     <meta name="description" content="聚宝赞">
     <link rel="icon" sizes="16x16" mask="" href="images/public/logo.ico">
+    <script type="text/javascript" src="js/lazyload.js"></script>
     <!--[if lt IE 9]>
         <script type="text/javascript" src="js/html5shiv.min.js"></script>
         <script type="text/javascript" src="js/respond.min.js"></script>
@@ -16,36 +17,6 @@
     <!--[if IE 7]>
         <link rel="stylesheet" href="font/css/font-awesome-ie7.min.css">
     <![endif]-->
-    <link rel="stylesheet" type="text/css" href="">
-    <link rel="stylesheet" type="text/css" href="font/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery.datetimepicker.css">
-    <link rel="stylesheet" type="text/css" href="css/pc.css">
-    <link rel="stylesheet" type="text/css" href="css/assembly.css">
-    <link rel="stylesheet" type="text/css" href="css/admin-youzan.css">
-    <link rel="stylesheet" type="text/css" href="plugins/swiper/swiper.min.css">
-    <link rel="stylesheet" type="text/css" href="plugins/bootstrap-dialog/bootstrap-dialog.css">
-    <script type="text/javascript" src='js/jquery.min.js'></script>
-    <script type="text/javascript" src='js/bootstrap.js'></script>
-    <script type="text/javascript" src='js/jquery.datetimepicker.js'></script>
-    <script type="text/javascript" src='plugins/jqPaginator/jqPaginator.min.js'></script>
-    <script type="text/javascript" src='js/Chart.js'></script>
-    <script type="text/javascript" src='js/area.js'></script>
-    <script type="text/javascript" src='js/public.js'></script>
-    <script type="text/javascript" src='plugins/bootstrap-dialog/bootstrap-dialog.js'></script>
-    <script type="text/javascript">
-    $(function() {
-        window.history.forward(1);
-        htmlobj = $.ajax({
-            type: "GET",
-            url: "view-platform/index_body.html",
-            dataType: "html",
-            async: false
-        });
-        $(".app-init-container").html(htmlobj.responseText);
-        IndexTOPNav();
-    })
-    </script>
 </head>
 
 <body ng-app>
@@ -120,10 +91,10 @@
                     <ul>
                         <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-app/app_page.html')">微页面</a></li>
                         <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-app/app_page_group.html')">页面分类</a></li>
-                        <li><a class="left_nav_btn" href="javascript:;" onclick="srcpagemobile('view-app/app_page_group_navigation.html')">页面导航</a></li>
-                        <!-- <li><a class="left_nav_btn" href="javascript:;" onclick="srcpagemobile('view-app/app_navigation.html')">内容导航</a></li> -->
-                        <li><a class="left_nav_btn" href="javascript:;" onclick="srcpagemobile('view-app/app_home.html')">平台主页</a></li>
-                        <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-app/app_setting.html')">初始设置</a></li>
+                        <!-- <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-app/app_page_group_navigation.html')">页面导航</a></li> -->
+                        <!-- <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-app/app_navigation.html')">内容导航</a></li> -->
+                        <!-- <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-app/app_home.html')">平台主页</a></li> -->
+                        <!-- <li><a class="left_nav_btn" href="javascript:;" onclick="srcpage('view-app/app_setting.html')">初始设置</a></li> -->
                     </ul>
                     <h4>内容管理</h4>
                     <ul>
@@ -292,6 +263,61 @@
     <a href="view-platform/copyright.html">湖南长沙希尚科技有限公司</a> @2016<br/>
     <a href="view-platform/copyright.html">使用聚宝赞前必读</a> 湘ICP证0731110号
 </div></div> -->
+    <script type="text/javascript">
+    LazyLoad.css([
+        'font/css/font-awesome.min.css',
+        'css/bootstrap.min.css',
+        'css/jquery.datetimepicker.css',
+        'css/pc.css',
+        'css/assembly.css',
+        'css/admin-youzan.css'
+    ], function() {
+        console.log('all css have been loaded');
+    });
+    LazyLoad.js(
+        [
+            'js/jquery.min.js',
+            'js/bootstrap.js',
+            'js/jquery.datetimepicker.js',
+            'plugins/jqPaginator/jqPaginator.min.js',
+            'js/Chart.js',
+            'js/area.js',
+            'js/public.js'
+        ],
+        function() {
+            console.log('all bind JavaScript have been loaded');
+            window.history.forward(1);
+            htmlobj = $.ajax({
+                type: "GET",
+                url: "view-platform/index_body.html",
+                dataType: "html",
+                async: false
+            });
+            $(".app-init-container").html(htmlobj.responseText);
+            IndexTOPNav();
+        });
+    LazyLoad.css([
+        'plugins/PowerPage/app.css',
+        'plugins/swiper/swiper.min.css',
+        'plugins/bootstrap-dialog/bootstrap-dialog.css'
+    ], function() {
+        console.log('moblie css have been loaded');
+    });
+    LazyLoad.js(
+        [
+            'plugins/PowerPage/ueditor/ueditor.config.pc.js',
+            'plugins/PowerPage/ueditor/ueditor.all.min.js',
+            'plugins/PowerPage/ueditor/lang/zh-cn/zh-cn.js',
+            'plugins/swiper/swiper.min.js',
+            'plugins/PowerPage/jquery-ui.js',
+            'plugins/bootstrap-dialog/bootstrap-dialog.js',
+            // 'plugins/PowerPage/PowerPage.js',
+            // 'plugins/PowerPage/selectModal.js'
+        ],
+        function() {
+            console.log('moblie bind JavaScript have been loaded');
+        });
+    </script>
 </body>
 
 </html>

@@ -1,36 +1,28 @@
 <div id="page-wrapper">
-    <ol class="breadcrumb"> 
+    <ol class="breadcrumb">
         <li><a href="index.html">首页</a></li>
         <li><a href="javascript:;" onclick="srcpage('view-app/app_content.html')">内容管理</a></li>
         <li><a href="javascript:;" onclick="srcpage('view-app/app_new_content.html')">编辑内容</a></li>
         <li class="active">模块化</li>
-        <li class="float-right"><a href="javascript:;" onclick="srcpage('view-app/app_new_content_info.html')">刷新</a></li>
+        <li class="float-right"><a href="javascript:;" onclick="srcpagemobile('view-app/app_new_content_info.html')">刷新</a></li>
         <li class="float-right"><a href="javascript:;">操作帮助</a></li>
     </ol>
     <div class="app__content js-app-main" id="PhoneEditAdmin"></div>
 </div>
-<script type="text/javascript" src="js/public.js"></script>
 <script type="text/javascript">
     $("body").off();
-    fileobj = $.ajax({ type:"GET", url:"plugins/resourceManager/FileAdmin.html", dataType:"html", async:false });
-    $("#FileAdmin").html( fileobj.responseText); //ajax加载资源管理器
-    function showFile() { $("#FileAdminBox").addClass('open'); } //打开资源管理
-    fileobj = $.ajax({ type:"GET", url:"plugins/PowerPage/PowerPage.html", dataType:"html", async:false });
-    $("#PhoneEditAdmin").html( fileobj.responseText); //ajax打开手机编辑界面
-    $(".ui-sortable").sortable({ containment: 'parent'}); // 拖动调用
-    PowerPage.Common.CSH([{
-        name:"pagetitle", title:"内容标题", config:true, candelete:false
-    }],0);
-    SimpleMenus();
-    $("input.btn-save").click(function() {
-        var data={
-            pagename:PowerPage.Get.GetPageTitle(),
-
-            pagedesc:PowerPage.Get.GetPageDesc(),
-            
-        pagecont:PowerPage.Get.GetPageCont(),
-        }
-        console.log(data);
+    fileobj = $.ajax({
+        type: "GET",
+        url: "plugins/PowerPage/PowerPage.html",
+        dataType: "html",
+        async: false
     });
-    $("input.btn-preview").click(function() { alert('预览成功'); });
+    $("#PhoneEditAdmin").html(fileobj.responseText);
+    PowerPage.Common.CSH([{
+        name: "pagetitle",
+        title: "内容标题",
+        config: true,
+        candelete: false
+    }], 0);
+    SimpleMenus();
 </script>
